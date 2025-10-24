@@ -28,9 +28,9 @@ from typing import Dict, Any, Optional
 from dataclasses import dataclass, field
 from datetime import datetime
 
-from agents.crawler.multi_source_crawler_v2 import MultiSourceCrawlerV2
+from agents.crawler.multi_source_crawler_v2 import MultiSourceCrawler
 from agents.extraction.extraction_router import ExtractionRouter
-from agents.extraction.models import ESGMetrics
+from libs.models.esg_metrics import ESGMetrics
 from libs.data_lake.parquet_writer import ParquetWriter
 from libs.data_lake.duckdb_reader import DuckDBReader
 
@@ -93,7 +93,9 @@ class PipelineOrchestrator:
             raise ValueError("project_config cannot be None")
 
         self.project_config = project_config
-        self.crawler = MultiSourceCrawlerV2(project_config)
+        # Note: MultiSourceCrawler requires provider tiers; this is a placeholder
+        # In real usage, Phase 2 would initialize with proper provider configuration
+        self.crawler = None  # TODO: Initialize with Phase 2 providers
         self.extractor = ExtractionRouter(project_config)
         self.writer = ParquetWriter(
             base_path=project_config.get("paths", {}).get("data_lake", "data_lake/")
