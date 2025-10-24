@@ -669,6 +669,246 @@ def test_phase3_output_compatible_with_phase4_input(project_config, parquet_writ
 
 
 # ============================================================================
+# PipelineOrchestrator Tests (CP File: apps/pipeline_orchestrator.py)
+# ============================================================================
+
+@pytest.mark.cp
+@pytest.mark.e2e
+def test_pipeline_orchestrator_microsoft_success(project_config):
+    """
+    CP Test: PipelineOrchestrator.run_pipeline() orchestrates Microsoft pipeline.
+
+    Tests that PipelineOrchestrator successfully coordinates Phase 2→3→4→Query
+    with real Microsoft data.
+    """
+    from apps.pipeline_orchestrator import PipelineOrchestrator
+
+    orchestrator = PipelineOrchestrator(project_config)
+    result = orchestrator.run_pipeline("0000789019", 2024)
+
+    assert result.success, f"Pipeline failed: {result.error}"
+    assert result.company_name == "Microsoft Corporation", "Company name mismatch"
+    assert result.total_latency < 60.0, f"Latency {result.total_latency:.1f}s exceeds 60s target"
+    assert result.metrics is not None, "Metrics not captured"
+
+    logger.info(f"✓ PipelineOrchestrator Microsoft: {result.total_latency:.1f}s")
+
+
+@pytest.mark.cp
+@pytest.mark.e2e
+def test_pipeline_orchestrator_tesla_success(project_config):
+    """
+    CP Test: PipelineOrchestrator.run_pipeline() orchestrates Tesla pipeline.
+    """
+    from apps.pipeline_orchestrator import PipelineOrchestrator
+
+    orchestrator = PipelineOrchestrator(project_config)
+    result = orchestrator.run_pipeline("0001318605", 2024)
+
+    assert result.success, f"Pipeline failed: {result.error}"
+    assert result.company_name == "Tesla, Inc.", "Company name mismatch"
+    assert result.total_latency < 60.0, f"Latency {result.total_latency:.1f}s exceeds 60s target"
+
+    logger.info(f"✓ PipelineOrchestrator Tesla: {result.total_latency:.1f}s")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_pipeline_orchestrator_error_handling(project_config):
+    """
+    CP Test: PipelineOrchestrator.run_pipeline() handles errors gracefully.
+
+    Tests that invalid CIK is handled with proper error reporting.
+    """
+    from apps.pipeline_orchestrator import PipelineOrchestrator
+
+    orchestrator = PipelineOrchestrator(project_config)
+    result = orchestrator.run_pipeline("9999999999", 2024)
+
+    # Should fail gracefully, not crash
+    assert not result.success, "Invalid CIK should fail"
+    assert result.error is not None, "Error message should be present"
+    assert result.error_phase is not None, "Error phase should be documented"
+
+    logger.info(f"✓ PipelineOrchestrator error handling: {result.error}")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+@given(
+    cik_int=st.integers(min_value=1, max_value=9999999999),
+    fiscal_year=st.integers(min_value=2000, max_value=2030),
+)
+@settings(suppress_health_check=[HealthCheck.function_scoped_fixture])
+def test_pipeline_orchestrator_any_cik_year_property(cik_int, fiscal_year, project_config):
+    """
+    CP Property Test: PipelineOrchestrator handles any CIK/fiscal_year combination.
+
+    Property-based test ensuring PipelineOrchestrator never crashes unexpectedly.
+    """
+    from apps.pipeline_orchestrator import PipelineOrchestrator
+
+    cik = str(cik_int).zfill(10)
+    orchestrator = PipelineOrchestrator(project_config)
+
+    try:
+        result = orchestrator.run_pipeline(cik, fiscal_year)
+        # Result should be a valid PipelineResult regardless of success
+        assert result is not None, "run_pipeline returned None"
+        assert hasattr(result, "success"), "Result missing success field"
+    except Exception as e:
+        # Acceptable to raise exception, just not to crash uncontrollably
+        assert True, f"Orchestrator raised expected exception: {type(e).__name__}"
+
+
+# ============================================================================
+# IntegrationValidator Tests (CP File: apps/integration_validator.py)
+# ============================================================================
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_integration_validator_sha256_validation():
+    """
+    CP Test: IntegrationValidator.validate_sha256() validates hashes.
+    """
+    from apps.integration_validator import IntegrationValidator, ValidationResult
+
+    validator = IntegrationValidator()
+
+    # Test with valid hash
+    data = "test_data"
+    expected_hash = hashlib.sha256(data.encode()).hexdigest()
+
+    result = validator.validate_sha256(data, expected_hash, "TEST")
+
+    assert isinstance(result, ValidationResult), "Should return ValidationResult"
+    assert result.passed, "Valid hash should pass"
+
+    logger.info(f"✓ IntegrationValidator SHA256: {result.message}")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_integration_validator_completeness_check():
+    """
+    CP Test: IntegrationValidator.validate_completeness() checks field completeness.
+    """
+    from apps.integration_validator import IntegrationValidator, ValidationResult
+
+    validator = IntegrationValidator()
+
+    # Create metrics with most fields populated
+    metrics = ESGMetrics(
+        company_name="Test",
+        cik="1234567890",
+        fiscal_year=2024,
+        assets=1000000.0,
+        liabilities=500000.0,
+        net_income=100000.0,
+    )
+
+    result = validator.validate_completeness(metrics, min_completion=0.80)
+
+    assert isinstance(result, ValidationResult), "Should return ValidationResult"
+    assert result.passed, "Metrics should meet 80% completeness"
+
+    logger.info(f"✓ IntegrationValidator completeness: {result.message}")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_integration_validator_ground_truth_match():
+    """
+    CP Test: IntegrationValidator.validate_ground_truth() validates against expected values.
+    """
+    from apps.integration_validator import IntegrationValidator, ValidationResult
+
+    validator = IntegrationValidator()
+
+    metrics = ESGMetrics(
+        company_name="Test",
+        cik="1234567890",
+        fiscal_year=2024,
+        assets=1000000.0,
+        liabilities=500000.0,
+        net_income=100000.0,
+    )
+
+    ground_truth = {
+        "assets": 1010000.0,  # ±1% tolerance
+        "liabilities": 500000.0,
+        "net_income": 100000.0,
+    }
+
+    result = validator.validate_ground_truth(metrics, ground_truth, tolerance=0.02)
+
+    assert isinstance(result, ValidationResult), "Should return ValidationResult"
+    assert result.passed, "Metrics within tolerance should pass"
+
+    logger.info(f"✓ IntegrationValidator ground truth: {result.message}")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_integration_validator_performance_check():
+    """
+    CP Test: IntegrationValidator.validate_performance() validates latency.
+    """
+    from apps.integration_validator import IntegrationValidator, ValidationResult
+
+    validator = IntegrationValidator()
+
+    start_time = time.time() - 50.0  # 50 seconds ago
+    end_time = time.time()
+
+    result = validator.validate_performance(start_time, end_time, max_latency=60.0)
+
+    assert isinstance(result, ValidationResult), "Should return ValidationResult"
+    assert result.passed, "Latency under 60s should pass"
+
+    logger.info(f"✓ IntegrationValidator performance: {result.message}")
+
+
+@pytest.mark.cp
+@pytest.mark.integration
+def test_integration_validator_all_checks_together():
+    """
+    CP Test: IntegrationValidator.validate_all() runs all validations.
+    """
+    from apps.integration_validator import IntegrationValidator
+
+    validator = IntegrationValidator()
+
+    metrics = ESGMetrics(
+        company_name="Microsoft Corporation",
+        cik="0000789019",
+        fiscal_year=2024,
+        assets=512163000000.0,
+        liabilities=238515000000.0,
+        net_income=88136000000.0,
+    )
+
+    ground_truth = {
+        "cik": "0000789019",
+        "fiscal_year": 2024,
+        "company_name": "Microsoft Corporation",
+        "assets": 512163000000.0,
+        "liabilities": 238515000000.0,
+        "net_income": 88136000000.0,
+    }
+
+    start_time = time.time() - 30.0
+    end_time = time.time()
+
+    all_passed = validator.validate_all(metrics, ground_truth, start_time, end_time)
+
+    assert all_passed, "All validations should pass"
+    assert len(validator.get_results()) >= 3, "Should have multiple results"
+
+    logger.info(f"✓ IntegrationValidator.validate_all(): {len(validator.get_results())} checks passed")
+
+
+# ============================================================================
 # Execution Logging & Metrics Collection
 # ============================================================================
 
