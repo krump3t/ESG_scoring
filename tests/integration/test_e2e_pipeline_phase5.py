@@ -28,8 +28,8 @@ from hypothesis import given, settings, HealthCheck
 from hypothesis import strategies as st
 import logging
 
-# Import Phase 4 components (we know these work)
-from agents.extraction.models import ESGMetrics
+# Import Phase 3-4 components
+from libs.models.esg_metrics import ESGMetrics
 from libs.data_lake.parquet_writer import ParquetWriter
 from libs.data_lake.duckdb_reader import DuckDBReader
 
