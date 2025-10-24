@@ -1,0 +1,66 @@
+{
+  "task_id": "011-multi-source-phase2",
+  "phase": "context",
+  "sources": [
+    {
+      "source_id": "DATA_INGESTION_V3_PLAN_2024",
+      "title": "Data Implementation v3 — End-to-End Ingestion with Priority-Based Download",
+      "source_type": "P1",
+      "url": "file://C:/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/data_ingestion_plan.md",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Defines v3 enhancement #1: comprehensive search across ALL tiers followed by priority-based download (tier, then priority_score). Eliminates sequential fallback that could block high-value Tier 3 files with low-value Tier 1 files. Specifies SourceRef.priority_score field (0-100 scale, lower=better) and MultiSourceCrawler orchestration logic."
+    },
+    {
+      "source_id": "PHASE1_V3_ROADMAP_2024",
+      "title": "V3 Enhancement Roadmap - Phases 2-4 Implementation Plan",
+      "source_type": "P1",
+      "url": "file://C:/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/tasks/010-hybrid-ingestion-phase1/V3_ENHANCEMENT_ROADMAP.md",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Documents Phase 2 deliverables: MultiSourceCrawler with search_all + prioritize logic, SourceRef.priority_score enhancement, provider interface updates (search returns List[SourceRef], download accepts SourceRef parameter). Specifies 7-10 day timeline for Phases 2-4, with Phase 2 estimated at 2-3 days. Confirms no breaking changes to Phase 1 code."
+    },
+    {
+      "source_id": "PYTHON_SORTED_BUILTIN_DOCS_2024",
+      "title": "Python sorted() Built-in Function Documentation",
+      "source_type": "P1",
+      "url": "https://docs.python.org/3/library/functions.html#sorted",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Documents Python's stable sorting algorithm (Timsort). Guarantees deterministic ordering for same input. Supports key function for custom sort criteria (e.g., lambda c: (c.tier, c.priority_score)). Time complexity O(n log n) where n is list length. Stable sort preserves relative order of equal elements, critical for tie-breaking in prioritization."
+    },
+    {
+      "source_id": "PYDANTIC_VALIDATION_DOCS_V2_2024",
+      "title": "Pydantic V2 Data Validation and Settings Management",
+      "source_type": "P1",
+      "url": "https://docs.pydantic.dev/latest/",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Documents Pydantic v2 validation features: Field constraints (ge, le for numeric ranges), custom validators (@validator decorator), frozen models (Config.frozen=True for immutability). Validates SourceRef.priority_score is 0-100, SourceRef.tier is 1-3. Type-safe contract ensures all providers return valid SourceRef objects, catching schema violations at runtime."
+    },
+    {
+      "source_id": "HYPOTHESIS_PROPERTY_TESTING_DOCS_2024",
+      "title": "Hypothesis: Property-Based Testing for Python",
+      "source_type": "P1",
+      "url": "https://hypothesis.readthedocs.io/en/latest/",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Documents property-based testing with @given decorator. Generates random test inputs (e.g., st.lists, st.integers, st.builds) to verify invariants hold for all valid inputs. Critical for testing prioritization algorithm: generate random candidate lists, verify tier ordering always correct. Enables testing edge cases (empty lists, ties, extreme values) without manual enumeration."
+    },
+    {
+      "source_id": "SCA_V13_8_TDD_GUARD_PROTOCOL_2024",
+      "title": "SCA v13.8 Protocol - TDD Guard and Coverage Requirements",
+      "source_type": "P1",
+      "url": "file://C:/projects/Work Projects/.claude/full_protocol.md",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Specifies TDD Guard requirements: tests BEFORE implementation (verified via git timestamps), ≥1 test marked @pytest.mark.cp per CP file, ≥1 Hypothesis property test, ≥1 failure-path test. Coverage gate: ≥95% line and branch coverage on CP files only. Type safety: mypy --strict = 0 errors. Complexity: CCN ≤10, Cognitive ≤15. All gates must pass before snapshot save."
+    }
+  ],
+  "synthesis_summary": "Phase 2 implements v3 enhancement #1 (priority-based multi-source download) using Python's stable sorting algorithm (Timsort) to order candidates by (tier, priority_score). Pydantic v2 validates all SourceRef objects, ensuring type safety. Hypothesis property-based tests verify invariants (tier ordering, deterministic sorting). SCA v13.8 protocol enforces TDD-first development, ≥95% coverage, and comprehensive failure-path testing. No breaking changes to Phase 1 SEC EDGAR provider.",
+  "evidence_quality": {
+    "primary_sources": 6,
+    "secondary_sources": 0,
+    "tertiary_sources": 0,
+    "total_sources": 6
+  },
+  "retrieval_metadata": {
+    "agent": "SCA v13.8-MEA",
+    "date": "2025-10-24",
+    "session_id": "phase2-context-gate"
+  }
+}

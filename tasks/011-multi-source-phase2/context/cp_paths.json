@@ -1,0 +1,143 @@
+{
+  "task_id": "011-multi-source-phase2",
+  "phase": "context",
+  "paths": [
+    "agents/crawler/multi_source_crawler.py",
+    "libs/contracts/ingestion_contracts.py"
+  ],
+  "critical_path_files": [
+    {
+      "file": "agents/crawler/multi_source_crawler.py",
+      "rationale": "Core orchestration logic for v3 enhancement #1 (priority-based multi-source download). Implements search_company_reports() (search all tiers), _prioritize_candidates() (sort by tier + priority_score), and download_best_report() (download with fallback). Critical path because this is the PRIMARY deliverable of Phase 2.",
+      "complexity_target": "CCN ≤10 per function, Cognitive ≤15",
+      "coverage_target": "≥95% line coverage, ≥95% branch coverage",
+      "test_requirements": {
+        "unit_tests": "≥10 tests with mocked providers",
+        "property_tests": "≥3 Hypothesis tests (prioritization invariants, SourceRef validation, tier ordering)",
+        "failure_path_tests": "≥6 tests (empty candidate list, all providers fail, disabled providers, invalid SourceRef, network timeout, download fallback)",
+        "integration_tests": "≥1 test with real SEC EDGAR provider (Phase 1 compatibility)",
+        "markers": ["@pytest.mark.cp", "@pytest.mark.hypothesis (for property tests)", "@pytest.mark.integration (for real API tests)"]
+      }
+    },
+    {
+      "file": "libs/contracts/ingestion_contracts.py",
+      "rationale": "SourceRef enhancement (added priority_score field) is critical for prioritization logic. Pydantic validation ensures all providers return valid SourceRef objects (tier: 1-3, priority_score: 0-100). Type-safe contract prevents runtime errors in _prioritize_candidates(). Critical path because prioritization depends on SourceRef.priority_score field.",
+      "complexity_target": "CCN ≤5 (Pydantic models are declarative, low complexity)",
+      "coverage_target": "≥95% line coverage on SourceRef model and validators",
+      "test_requirements": {
+        "unit_tests": "≥5 tests (valid SourceRef creation, invalid tier, invalid priority_score, immutability, JSON serialization)",
+        "property_tests": "≥2 Hypothesis tests (SourceRef validation with random inputs, priority_score range)",
+        "failure_path_tests": "≥3 tests (priority_score out of range, invalid tier, missing required fields)",
+        "markers": ["@pytest.mark.cp", "@pytest.mark.hypothesis (for property tests)"]
+      }
+    }
+  ],
+  "non_cp_files": [
+    {
+      "file": "agents/crawler/data_providers/base_provider.py",
+      "rationale": "Provider interface updates (search() returns List[SourceRef], download() accepts SourceRef parameter). Not critical path because: (1) Already tested in Phase 1, (2) Interface changes are minimal (return type annotation only), (3) Real validation happens in provider implementations (SECEdgarProvider, etc.)."
+    },
+    {
+      "file": "tests/crawler/test_multi_source_crawler.py",
+      "rationale": "Test file for multi_source_crawler.py. Not counted in coverage (tests don't test themselves)."
+    },
+    {
+      "file": "tests/contracts/test_ingestion_contracts.py",
+      "rationale": "Test file for SourceRef enhancements. Not counted in coverage."
+    }
+  ],
+  "entry_points": [
+    {
+      "function": "MultiSourceCrawler.download_best_report",
+      "signature": "def download_best_report(self, company: CompanyRef, year: int) -> CompanyReport",
+      "description": "Main entry point for multi-source download. Calls search_company_reports() → _prioritize_candidates() → tries download from sorted candidates until one succeeds.",
+      "test_coverage_requirement": "100% of code paths (success, all failures, partial failures)"
+    },
+    {
+      "function": "MultiSourceCrawler.search_company_reports",
+      "signature": "def search_company_reports(self, company: CompanyRef, year: int) -> List[SourceRef]",
+      "description": "Searches ALL enabled providers across ALL tiers, returns complete candidate list. Fail-open (if one provider fails, continue with others).",
+      "test_coverage_requirement": "≥95% (includes disabled providers, search failures, empty results)"
+    },
+    {
+      "function": "MultiSourceCrawler._prioritize_candidates",
+      "signature": "def _prioritize_candidates(self, candidates: List[SourceRef]) -> List[SourceRef]",
+      "description": "Sorts candidates by (tier, priority_score) ascending. Lower tier = higher quality, lower priority_score = higher priority. Stable sort (deterministic).",
+      "test_coverage_requirement": "100% (simple algorithm, property-based tests verify invariants)"
+    }
+  ],
+  "validation_gates": {
+    "context_gate": {
+      "required_files": [
+        "context/hypothesis.md",
+        "context/design.md",
+        "context/evidence.json",
+        "context/data_sources.json",
+        "context/adr.md",
+        "context/assumptions.md",
+        "context/cp_paths.json"
+      ],
+      "evidence_requirement": "≥3 primary sources (P1)",
+      "status": "pending"
+    },
+    "tdd_guard": {
+      "requirement": "Tests committed to git BEFORE implementation (verified via git log timestamps)",
+      "test_markers": ["@pytest.mark.cp", "@pytest.mark.hypothesis"],
+      "failure_path_requirement": "≥1 failure-path test per CP file",
+      "status": "pending"
+    },
+    "coverage_gate": {
+      "line_coverage": "≥95%",
+      "branch_coverage": "≥95%",
+      "scope": "CP files only (multi_source_crawler.py, ingestion_contracts.py)",
+      "measurement": "pytest-cov with .coveragerc limiting to CP files",
+      "status": "pending"
+    },
+    "type_safety_gate": {
+      "tool": "mypy --strict",
+      "requirement": "0 errors on CP files",
+      "status": "pending"
+    },
+    "complexity_gate": {
+      "tool": "lizard",
+      "cyclomatic_complexity": "≤10",
+      "cognitive_complexity": "≤15",
+      "status": "pending"
+    },
+    "documentation_gate": {
+      "tool": "interrogate",
+      "requirement": "≥95% docstring coverage on CP files",
+      "status": "pending"
+    }
+  },
+  "phase_dependencies": {
+    "upstream": [
+      {
+        "phase": "Phase 1 (010-hybrid-ingestion-phase1)",
+        "status": "✅ COMPLETE",
+        "deliverable": "SECEdgarProvider with retry + rate limiting",
+        "integration_point": "Phase 1 provider must work with Phase 2 crawler (verified via differential tests)"
+      }
+    ],
+    "downstream": [
+      {
+        "phase": "Phase 2b (012-web-scrapers)",
+        "status": "⏸️ PLANNED",
+        "deliverable": "Real Playwright-based web scrapers (GRI, company IR)",
+        "dependency": "Requires Phase 2 multi-source crawler interface (search() → List[SourceRef], download(SourceRef))"
+      },
+      {
+        "phase": "Phase 3 (013-asymmetric-extraction)",
+        "status": "⏸️ PLANNED",
+        "deliverable": "Asymmetric extraction paths (JSON vs PDF/HTML)",
+        "dependency": "Requires Phase 2 SourceRef.content_type field for routing extraction logic"
+      }
+    ]
+  },
+  "metadata": {
+    "created_by": "SCA v13.8-MEA",
+    "created_date": "2025-10-24",
+    "last_updated": "2025-10-24",
+    "schema_version": "1.0"
+  }
+}
