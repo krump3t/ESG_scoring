@@ -1,6 +1,10 @@
 {
   "task_id": "015-pipeline-integration-phase5",
   "phase": "5",
+  "paths": [
+    "apps/pipeline_orchestrator.py",
+    "apps/integration_validator.py"
+  ],
   "critical_path_files": [
     {
       "file": "apps/pipeline_orchestrator.py",
