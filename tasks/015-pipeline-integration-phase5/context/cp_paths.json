@@ -1,0 +1,72 @@
+{
+  "task_id": "015-pipeline-integration-phase5",
+  "phase": "5",
+  "critical_path_files": [
+    {
+      "file": "apps/pipeline_orchestrator.py",
+      "lines_planned": 150,
+      "rationale": "Orchestrates Phase 2→3→4 pipeline execution with error handling, logging, and metrics collection. Core orchestration logic for end-to-end pipeline.",
+      "entry_points": [
+        "PipelineOrchestrator.run_pipeline(company_cik: str, fiscal_year: int) -> PipelineResult"
+      ],
+      "complexity_target": "CCN ≤ 8",
+      "coverage_target": "≥95% line, ≥90% branch"
+    },
+    {
+      "file": "apps/integration_validator.py",
+      "lines_planned": 100,
+      "rationale": "Validates data integrity (SHA256), completeness (≥95% fields), ground truth match (±1% tolerance), and performance (<60s latency) across phase boundaries. Critical for SC2-SC5 success criteria.",
+      "entry_points": [
+        "IntegrationValidator.validate_sha256(data: Any, expected_hash: str, phase_name: str) -> bool",
+        "IntegrationValidator.validate_completeness(metrics: ESGMetrics, min_completion: float = 0.95) -> bool",
+        "IntegrationValidator.validate_ground_truth(metrics: ESGMetrics, ground_truth: dict, tolerance: float = 0.01) -> bool",
+        "IntegrationValidator.validate_performance(start_time: float, end_time: float, max_latency: float = 60.0) -> bool"
+      ],
+      "complexity_target": "CCN ≤ 6",
+      "coverage_target": "≥95% line, ≥90% branch"
+    }
+  ],
+  "test_requirements": {
+    "test_file": "tests/integration/test_e2e_pipeline_phase5.py",
+    "total_tests_minimum": 15,
+    "test_breakdown": {
+      "authentic_data_tests": 5,
+      "integration_tests": 5,
+      "failure_path_tests": 3,
+      "performance_tests": 2,
+      "property_based_tests": 1
+    },
+    "required_markers": [
+      "@pytest.mark.cp",
+      "@pytest.mark.e2e",
+      "@pytest.mark.integration"
+    ],
+    "property_test_requirement": "@given(...) from hypothesis library for any valid CIK/fiscal_year combinations",
+    "failure_path_requirement": "≥3 tests asserting explicit exception handling (PipelineError, ValueError, etc.)",
+    "authentic_data_requirement": "Use REAL Microsoft (CIK 0000789019) & Tesla (CIK 0001318605) SEC EDGAR data; NO MOCKS"
+  },
+  "test_ordering": "TDD: Tests must be written and committed BEFORE implementation per SCA v13.8 TDD Guard",
+  "coverage_gates": {
+    "line_coverage_cp": "≥95%",
+    "branch_coverage_cp": "≥90%",
+    "overall_coverage": "≥90%"
+  },
+  "traceability_requirements": {
+    "run_log": "qa/run_log.txt (fresh + valid after test execution)",
+    "run_context": "artifacts/run_context.json (environment, timestamp)",
+    "run_manifest": "artifacts/run_manifest.json (files touched, tests run)",
+    "run_events": "artifacts/run_events.jsonl (detailed execution trace)"
+  },
+  "validation_gates": [
+    "context_gate: All 7 context files present and valid",
+    "tdd_guard: Tests written before implementation (commit order verified)",
+    "coverage_cp: ≥95% line, ≥90% branch on CP files",
+    "pytest: All tests passing (15+ tests, ≥1 property-based, ≥3 failure-path)",
+    "type_safety: mypy --strict = 0 errors on CP files",
+    "complexity: Lizard CCN ≤ 8 (orchestrator), ≤ 6 (validator)",
+    "traceability: qa/run_log.txt + artifacts/*.json all present and fresh"
+  ],
+  "sca_protocol_version": "v13.8-MEA",
+  "prepared_by": "Scientific Coding Agent v13.8-MEA",
+  "created_date": "2025-10-24"
+}
