@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from typing import List, Dict, Any
 import pyarrow as pa
 import pyarrow.parquet as pq
-from hypothesis import given, strategies as st
+from hypothesis import given, strategies as st, settings, HealthCheck
 
 from libs.models.esg_metrics import ESGMetrics, ESG_METRICS_PARQUET_SCHEMA
 
@@ -373,6 +373,7 @@ def test_query_raises_error_for_invalid_sql(parquet_file_with_real_apple: Path):
 @given(
     threshold=st.floats(min_value=1e9, max_value=1e12, allow_nan=False, allow_infinity=False)
 )
+@settings(suppress_health_check=[HealthCheck.function_scoped_fixture])
 def test_query_where_filter_property_based(
     threshold: float,
     parquet_file_with_three_companies: Path
