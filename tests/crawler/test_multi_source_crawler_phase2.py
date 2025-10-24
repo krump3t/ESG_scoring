@@ -198,7 +198,7 @@ def test_download_best_report_tries_candidates_in_priority_order():
         year=2023,
         source=SourceRef(provider="provider1", tier=1, content_type="application/pdf", priority_score=10),
         local_path="/tmp/report.pdf",
-        sha256="abc123"
+        sha256="a" * 64  # Valid SHA256 hash (64 hex characters)
     )
 
     provider2 = MagicMock()  # tier=2, priority=20 (second best)
@@ -241,7 +241,7 @@ def test_download_falls_back_to_next_candidate_on_failure():
         year=2023,
         source=SourceRef(provider="provider2", tier=2, content_type="text/html", priority_score=20),
         local_path="/tmp/report.html",
-        sha256="def456"
+        sha256="b" * 64  # Valid SHA256 hash
     )
 
     crawler = MultiSourceCrawler(tiers=[[provider1], [provider2]])
@@ -311,7 +311,7 @@ def test_download_best_report_returns_first_successful_download():
         year=2023,
         source=SourceRef(provider="provider1", tier=1, content_type="application/pdf", priority_score=10),
         local_path="/tmp/report1.pdf",
-        sha256="abc123"
+        sha256="a" * 64  # Valid SHA256 hash
     )
 
     provider2 = MagicMock()
@@ -502,8 +502,10 @@ def test_download_handles_provider_not_found():
 @pytest.mark.cp
 def test_search_handles_provider_without_enabled_attribute():
     """Failure path: search_company_reports() handles providers without 'enabled' attribute (defaults to True)."""
-    # Arrange: Provider without 'enabled' attribute
-    provider_no_attr = MagicMock(spec=[])  # spec=[] means no attributes
+    # Arrange: Provider without 'enabled' attribute (but has search method)
+    provider_no_attr = MagicMock()
+    # Remove 'enabled' attribute to test default behavior
+    del provider_no_attr.enabled
     provider_no_attr.search.return_value = [
         SourceRef(provider="provider_no_attr", tier=1, content_type="application/pdf", priority_score=10)
     ]
@@ -514,7 +516,7 @@ def test_search_handles_provider_without_enabled_attribute():
     # Act
     candidates = crawler.search_company_reports(company, year=2023)
 
-    # Assert: Provider was called (defaults to enabled=True)
+    # Assert: Provider was called (defaults to enabled=True when attribute missing)
     assert provider_no_attr.search.called
     assert len(candidates) == 1
 
@@ -538,7 +540,7 @@ def test_download_handles_rate_limit_error():
         year=2023,
         source=SourceRef(provider="provider2", tier=2, content_type="text/html", priority_score=20),
         local_path="/tmp/report.html",
-        sha256="abc123"
+        sha256="a" * 64  # Valid SHA256 hash
     )
 
     crawler = MultiSourceCrawler(tiers=[[provider1], [provider2]])
@@ -572,7 +574,7 @@ def test_download_handles_document_not_found_error():
         year=2023,
         source=SourceRef(provider="provider2", tier=2, content_type="text/html", priority_score=20),
         local_path="/tmp/report.html",
-        sha256="def456"
+        sha256="b" * 64  # Valid SHA256 hash
     )
 
     crawler = MultiSourceCrawler(tiers=[[provider1], [provider2]])
@@ -705,12 +707,13 @@ def test_phase1_provider_output_parity():
 @pytest.mark.parametrize("num_failures", [0, 1, 2, 3, 4])
 def test_fallback_handles_n_failures(num_failures):
     """Sensitivity test: Download fallback works when first N providers fail."""
-    # Arrange: 5 mock providers
+    # Arrange: 5 mock providers (use tier 1-3, cycling for tier 4-5)
     providers = []
     for i in range(5):
         provider = MagicMock()
+        tier = (i % 3) + 1  # Cycle through tiers 1-3 (valid range)
         provider.search.return_value = [
-            SourceRef(provider=f"provider{i}", tier=i+1, content_type="application/pdf", priority_score=i*10, url=f"http://example.com/{i}")
+            SourceRef(provider=f"provider{i}", tier=tier, content_type="application/pdf", priority_score=i*10, url=f"http://example.com/{i}")
         ]
 
         if i < num_failures:
@@ -721,9 +724,9 @@ def test_fallback_handles_n_failures(num_failures):
             provider.download.return_value = CompanyReport(
                 company=CompanyRef(cik="0000320193", name="Apple Inc."),
                 year=2023,
-                source=SourceRef(provider=f"provider{i}", tier=i+1, content_type="application/pdf", priority_score=i*10),
+                source=SourceRef(provider=f"provider{i}", tier=tier, content_type="application/pdf", priority_score=i*10),
                 local_path=f"/tmp/report{i}.pdf",
-                sha256=f"hash{i}"
+                sha256=str(i) * 64  # Valid SHA256 hash
             )
 
         providers.append(provider)

@@ -1,0 +1,18 @@
+[run]
+source = agents/crawler, libs/contracts
+omit =
+    */tests/*
+    */__pycache__/*
+    */.venv/*
+    */site-packages/*
+
+[report]
+include =
+    agents/crawler/multi_source_crawler_v2.py
+    libs/contracts/ingestion_contracts.py
+
+[html]
+directory = tasks/011-multi-source-phase2/qa/htmlcov
+
+[xml]
+output = tasks/011-multi-source-phase2/qa/coverage.xml
