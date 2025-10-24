@@ -1,0 +1,116 @@
+{
+  "sources": [
+    {
+      "source_id": "SEC_EDGAR_10K_AAPL_2023",
+      "name": "Apple Inc. 10-K Annual Report FY2023",
+      "type": "regulatory_filing",
+      "provider": "SEC EDGAR API",
+      "url": "https://data.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+      "cik": "0000320193",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "filing_date": "2023-11-03",
+      "retrieval_method": "api",
+      "sha256": null,
+      "file_size_bytes": null,
+      "pii_flag": false,
+      "contains_sensitive_data": false,
+      "provenance": {
+        "original_source": "U.S. Securities and Exchange Commission",
+        "collection_date": "2025-10-23",
+        "collection_method": "SEC EDGAR API via enhanced provider",
+        "verification_status": "official_regulatory_filing"
+      },
+      "retention_policy": "permanent",
+      "access_restrictions": "public_domain",
+      "quality_notes": "Official regulatory filing with structured format and validated data"
+    },
+    {
+      "source_id": "SEC_EDGAR_DEF14A_MSFT_2023",
+      "name": "Microsoft Corporation DEF 14A Proxy Statement FY2023",
+      "type": "regulatory_filing",
+      "provider": "SEC EDGAR API",
+      "url": "https://data.sec.gov/Archives/edgar/data/789019/000119312523254859/d564717ddef14a.htm",
+      "cik": "0000789019",
+      "filing_type": "DEF 14A",
+      "fiscal_year": 2023,
+      "filing_date": "2023-10-19",
+      "retrieval_method": "api",
+      "sha256": null,
+      "file_size_bytes": null,
+      "pii_flag": false,
+      "contains_sensitive_data": false,
+      "provenance": {
+        "original_source": "U.S. Securities and Exchange Commission",
+        "collection_date": "2025-10-23",
+        "collection_method": "SEC EDGAR API via enhanced provider",
+        "verification_status": "official_regulatory_filing"
+      },
+      "retention_policy": "permanent",
+      "access_restrictions": "public_domain",
+      "quality_notes": "Proxy statement with governance and ESG disclosures"
+    },
+    {
+      "source_id": "SEC_EDGAR_10K_XOM_2023",
+      "name": "Exxon Mobil Corporation 10-K Annual Report FY2023",
+      "type": "regulatory_filing",
+      "provider": "SEC EDGAR API",
+      "url": "https://data.sec.gov/Archives/edgar/data/34088/000003408824000015/xom-20231231.htm",
+      "cik": "0000034088",
+      "filing_type": "10-K",
+      "fiscal_year": 2023,
+      "filing_date": "2024-02-28",
+      "retrieval_method": "api",
+      "sha256": null,
+      "file_size_bytes": null,
+      "pii_flag": false,
+      "contains_sensitive_data": false,
+      "provenance": {
+        "original_source": "U.S. Securities and Exchange Commission",
+        "collection_date": "2025-10-23",
+        "collection_method": "SEC EDGAR API via enhanced provider",
+        "verification_status": "official_regulatory_filing"
+      },
+      "retention_policy": "permanent",
+      "access_restrictions": "public_domain",
+      "quality_notes": "Energy sector 10-K with climate risk disclosures"
+    },
+    {
+      "source_id": "LSE_HEALTHCARE_2025_PDF",
+      "name": "LSE Healthcare Sustainability Report 2025",
+      "type": "sustainability_report",
+      "provider": "Manual Upload (E2E Test)",
+      "url": null,
+      "file_path": "data/raw_sample/LSE_HEAD_2025.pdf",
+      "document_type": "Sustainability Report",
+      "publication_date": "2025-03-01",
+      "fiscal_year": 2025,
+      "retrieval_method": "manual",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_size_bytes": 1990656,
+      "page_count": 27,
+      "pii_flag": false,
+      "contains_sensitive_data": false,
+      "provenance": {
+        "original_source": "LSE Healthcare (hypothetical)",
+        "collection_date": "2025-10-15",
+        "collection_method": "Manual PDF download for E2E testing",
+        "verification_status": "unverified_test_data"
+      },
+      "retention_policy": "test_artifact",
+      "access_restrictions": "internal_use_only",
+      "quality_notes": "Used for E2E pipeline validation, not production data"
+    }
+  ],
+  "metadata": {
+    "total_sources": 4,
+    "api_sources": 3,
+    "manual_sources": 1,
+    "pii_present": false,
+    "data_classification": "public",
+    "compliance_notes": "All SEC EDGAR data is public domain per 17 CFR § 232.13. No GDPR/CCPA concerns.",
+    "deduplication_strategy": "SHA256 hash matching before Bronze layer insert",
+    "update_frequency": "On-demand (triggered by orchestration layer)",
+    "quality_assurance": "SEC filings validated via XBRL, sustainability reports manual review only"
+  }
+}

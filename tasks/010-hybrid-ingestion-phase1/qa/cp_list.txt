@@ -1,0 +1,3 @@
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\agents\crawler\data_providers\exceptions.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\agents\crawler\data_providers\sec_edgar_provider.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\crawler\test_sec_edgar_provider_enhanced.py

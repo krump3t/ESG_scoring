@@ -1,0 +1,109 @@
+{
+  "paths": [
+    "agents/crawler/data_providers/sec_edgar_provider.py",
+    "agents/crawler/data_providers/exceptions.py",
+    "tests/crawler/test_sec_edgar_provider_enhanced.py"
+  ],
+  "critical_path_files": [
+    "agents/crawler/data_providers/sec_edgar_provider.py",
+    "agents/crawler/data_providers/exceptions.py",
+    "tests/crawler/test_sec_edgar_provider_enhanced.py"
+  ],
+  "entry_points": [
+    {
+      "name": "fetch_10k",
+      "file": "agents/crawler/data_providers/sec_edgar_provider.py",
+      "function": "SECEdgarProvider.fetch_10k",
+      "description": "Fetch 10-K annual report from SEC EDGAR API with retry and rate limiting"
+    },
+    {
+      "name": "fetch_def14a",
+      "file": "agents/crawler/data_providers/sec_edgar_provider.py",
+      "function": "SECEdgarProvider.fetch_def14a",
+      "description": "Fetch DEF 14A proxy statement from SEC EDGAR API with retry and rate limiting"
+    }
+  ],
+  "test_requirements": {
+    "min_tests_per_cp_file": 1,
+    "min_property_tests_per_cp_file": 1,
+    "min_failure_path_tests_per_cp_file": 1,
+    "required_markers": ["cp"],
+    "coverage_threshold_line": 95,
+    "coverage_threshold_branch": 95
+  },
+  "supporting_files": [
+    "agents/crawler/data_providers/base_provider.py",
+    "agents/crawler/data_providers/__init__.py",
+    "tests/crawler/__init__.py",
+    "tests/conftest.py"
+  ],
+  "dependencies": {
+    "runtime": [
+      "requests>=2.31.0",
+      "beautifulsoup4>=4.12.0",
+      "lxml>=4.9.0",
+      "ratelimit>=2.2.1",
+      "tenacity>=8.2.3"
+    ],
+    "development": [
+      "pytest>=7.4.0",
+      "pytest-cov>=4.1.0",
+      "pytest-mock>=3.12.0",
+      "responses>=0.24.0",
+      "hypothesis>=6.92.0",
+      "mypy>=1.7.0",
+      "bandit>=1.7.5",
+      "interrogate>=1.5.0",
+      "lizard>=1.17.10"
+    ]
+  },
+  "artifacts": {
+    "execution": [
+      "qa/run_log.txt",
+      "artifacts/run_context.json",
+      "artifacts/run_manifest.json",
+      "artifacts/run_events.jsonl"
+    ],
+    "coverage": [
+      "qa/coverage.xml",
+      "qa/htmlcov/index.html"
+    ],
+    "quality": [
+      "qa/mypy_report.txt",
+      "qa/bandit_report.json",
+      "qa/lizard_report.html"
+    ]
+  },
+  "validation_gates": {
+    "context": {
+      "required_files": [
+        "tasks/010-hybrid-ingestion-phase1/context/hypothesis.md",
+        "tasks/010-hybrid-ingestion-phase1/context/design.md",
+        "tasks/010-hybrid-ingestion-phase1/context/evidence.json",
+        "tasks/010-hybrid-ingestion-phase1/context/data_sources.json",
+        "tasks/010-hybrid-ingestion-phase1/context/adr.md",
+        "tasks/010-hybrid-ingestion-phase1/context/assumptions.md",
+        "tasks/010-hybrid-ingestion-phase1/context/cp_paths.json"
+      ],
+      "status": "complete"
+    },
+    "phase1": {
+      "gates": [
+        "tdd_guard",
+        "coverage_cp",
+        "type_safety",
+        "complexity",
+        "docs",
+        "security",
+        "traceability"
+      ],
+      "status": "pending"
+    }
+  },
+  "notes": {
+    "tdd_enforcement": "All CP files must have git timestamps showing tests committed BEFORE implementation",
+    "integration_tests": "At least 1 integration test marked with @pytest.mark.integration and @pytest.mark.requires_api must call real SEC EDGAR API",
+    "determinism": "All tests must use fixed seeds, mocked time, and reproducible HTTP mocks via responses library",
+    "sca_compliance": "Phase 1 satisfies SCA v13.8 Authenticity Invariants: real API calls (not mocked in production), real retry logic (not trivial stubs), honest reporting (artifacts capture all operations)"
+  }
+}
