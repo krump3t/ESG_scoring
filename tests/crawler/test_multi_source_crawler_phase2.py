@@ -29,20 +29,19 @@ from unittest.mock import MagicMock, patch
 from hypothesis import given, strategies as st, settings
 from typing import List
 
-# Imports will be available after implementation
-# Using try-except to allow tests to be committed before implementation
+# Imports for Phase 2 implementation
 try:
-    from agents.crawler.multi_source_crawler import MultiSourceCrawler
+    from agents.crawler.multi_source_crawler_v2 import MultiSourceCrawler
     from libs.contracts.ingestion_contracts import CompanyRef, SourceRef, CompanyReport
     from agents.crawler.data_providers.exceptions import (
         DocumentNotFoundError,
         RateLimitExceededError,
         RequestTimeoutError
     )
-except ImportError:
+except ImportError as e:
     # Tests can be written before implementation exists
     # pytest will skip these tests if imports fail
-    pytestmark = pytest.mark.skip(reason="Implementation not yet available - TDD mode")
+    pytestmark = pytest.mark.skip(reason=f"Implementation not yet available - TDD mode: {e}")
 
 
 # ============================================================================

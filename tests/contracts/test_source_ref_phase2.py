@@ -21,11 +21,11 @@ import pytest
 from hypothesis import given, strategies as st, settings
 from pydantic import ValidationError
 
-# Import will be available after implementation
+# Import from Phase 2 implementation
 try:
     from libs.contracts.ingestion_contracts import SourceRef, CompanyRef, CompanyReport
-except ImportError:
-    pytestmark = pytest.mark.skip(reason="Implementation not yet available - TDD mode")
+except ImportError as e:
+    pytestmark = pytest.mark.skip(reason=f"Implementation not yet available - TDD mode: {e}")
 
 
 # ============================================================================
