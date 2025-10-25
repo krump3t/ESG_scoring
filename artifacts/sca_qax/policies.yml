@@ -1,0 +1,55 @@
+# SCA v13.8 QA Policies
+# Enforced gates for CI/CD pipeline
+
+version: 1.0
+protocol: SCA-v13.8
+
+coverage:
+  global_minimum: 95.0
+  api_minimum: 95.0
+  waivers: artifacts/sca_qax/coverage_waiver_demo_flow.yaml
+  enforcement: strict
+
+type_safety:
+  tool: mypy
+  flags: --strict
+  target_files:
+    - apps/api/main.py
+    - apps/pipeline/demo_flow.py
+    - libs/retrieval/**/*.py
+  enforcement: strict
+
+determinism:
+  runs: 3
+  seed: 42
+  pythonhashseed: 0
+  expect_identical: true
+  tolerance: 0.0
+  enforcement: strict
+
+parity:
+  invariant: evidence_ids_subset_of_topk
+  default_alpha: 0.6
+  default_k: 10
+  enforcement: strict
+
+authenticity:
+  no_mocks: true
+  no_fabricated_logs: true
+  no_hardcoded_metrics: true
+  require_captured_artifacts: true
+  enforcement: strict
+
+gates:
+  - name: type_safety
+    required: true
+  - name: coverage
+    required: true
+  - name: determinism
+    required: true
+  - name: parity
+    required: true
+  - name: placeholder_scan
+    required: true
+  - name: openapi_schema
+    required: true
