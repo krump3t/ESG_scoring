@@ -1,0 +1,120 @@
+{
+  "agent": "SCA-Sonnet-4.5",
+  "protocol_version": "13.8",
+  "status": "pending",
+  "phase": "11",
+  "task_id": "runtime_boot",
+  "mea_attempt": 0,
+  "timestamp": "2025-10-25",
+  "summary": "Prepare production runtime with observability, SLOs, and rollback capabilities.",
+
+  "gates": {
+    "healthcheck": "pending",
+    "latency_p95_ms": "pending",
+    "latency_p99_ms": "pending",
+    "error_rate_pct": "pending",
+    "trace_sampling": "pending",
+    "metrics_export": "pending",
+    "rollforward_rollback": "pending",
+    "deployment_validation": "pending"
+  },
+
+  "slos": {
+    "latency_p95_target_ms": 2000,
+    "latency_p99_target_ms": 5000,
+    "error_rate_max_pct": 1.0,
+    "availability_target_pct": 99.5,
+    "determinism_drift_tolerance": 0.0
+  },
+
+  "observability": {
+    "metrics_backend": "prometheus",
+    "tracing_backend": "opentelemetry",
+    "logging_backend": "structured_json",
+    "dashboards": [
+      {
+        "name": "ESG Scoring API",
+        "file": "dashboards/esg_scoring_api.json",
+        "status": "pending"
+      },
+      {
+        "name": "SCA Quality Gates",
+        "file": "dashboards/sca_quality_gates.json",
+        "status": "pending"
+      }
+    ]
+  },
+
+  "runtime_gates": {
+    "healthcheck_endpoint": "/health",
+    "readiness_endpoint": "/ready",
+    "metrics_endpoint": "/metrics",
+    "probes": [
+      {
+        "name": "API availability",
+        "command": "curl -fsS http://localhost:8000/health",
+        "timeout_sec": 5,
+        "required": true
+      },
+      {
+        "name": "Latency P95",
+        "command": "scripts/ops/check_latency.sh",
+        "threshold_ms": 2000,
+        "required": true
+      },
+      {
+        "name": "Error rate",
+        "command": "scripts/ops/check_error_rate.sh",
+        "threshold_pct": 1.0,
+        "required": true
+      }
+    ]
+  },
+
+  "deployment": {
+    "strategy": "blue_green",
+    "rollback_enabled": true,
+    "canary_percentage": 10,
+    "validation_period_sec": 300,
+    "auto_rollback_on_error": true
+  },
+
+  "artifacts": {
+    "runtime_gates_script": "scripts/ops/runtime_gates.sh",
+    "healthcheck_script": "scripts/ops/check_health.sh",
+    "latency_check_script": "scripts/ops/check_latency.sh",
+    "error_rate_check_script": "scripts/ops/check_error_rate.sh",
+    "deployment_config": "infrastructure/deployment.yml"
+  },
+
+  "next_steps": {
+    "immediate": [
+      "Implement healthcheck and readiness endpoints",
+      "Add Prometheus metrics export",
+      "Create runtime gate validation scripts",
+      "Configure OpenTelemetry tracing",
+      "Set up deployment infrastructure"
+    ],
+    "monitoring": [
+      "Create Grafana dashboards",
+      "Configure alerting rules",
+      "Set up log aggregation",
+      "Implement SLO tracking",
+      "Add determinism drift detection"
+    ],
+    "deployment": [
+      "Test blue-green deployment strategy",
+      "Validate rollback procedures",
+      "Configure canary releases",
+      "Set up production secrets",
+      "Execute smoke tests in staging"
+    ]
+  },
+
+  "compliance": {
+    "sca_v13_8": "pending",
+    "authenticity_monitoring": "pending",
+    "determinism_tracking": "pending",
+    "parity_monitoring": "pending"
+  }
+}
