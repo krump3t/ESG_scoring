@@ -49,7 +49,7 @@ class DeterministicEmbedder:
             return np.zeros(self.dim, dtype=np.float32)
 
         # Count term frequency
-        tf = {}
+        tf: dict[str, int] = {}
         for term in terms:
             tf[term] = tf.get(term, 0) + 1
 
