@@ -1,0 +1,67 @@
+{
+  "audit_name": "ESG Authenticity Audit - Baseline Run",
+  "timestamp": "2025-10-26T20:24:45Z",
+  "git_commit": "c8798c56fd71826c7cb0093d9f3c65a68059926c",
+  "git_message": "Enforce JSON schema as single source of truth for ESG rubric",
+  "status": "blocked",
+  "total_violations": 203,
+  "severity_counts": {
+    "FATAL": 34,
+    "WARN": 169
+  },
+  "violations_by_type": {
+    "nondeterministic_time": {
+      "count": 76,
+      "severity": "WARN",
+      "description": "datetime.now() and time.time() calls without override mechanism"
+    },
+    "unseeded_random": {
+      "count": 2,
+      "severity": "FATAL",
+      "description": "random.* or numpy.random.* without explicit seed control"
+    },
+    "silent_exception": {
+      "count": 74,
+      "severity": "WARN",
+      "description": "try/except blocks without logging or re-raise"
+    },
+    "eval_exec": {
+      "count": 34,
+      "severity": "FATAL",
+      "description": "eval() or exec() usage - security and determinism risk"
+    },
+    "json_as_parquet": {
+      "count": 8,
+      "severity": "WARN",
+      "description": "to_json() used where to_parquet() expected for artifacts"
+    },
+    "nondeterministic_ordering": {
+      "count": 9,
+      "severity": "WARN",
+      "description": "Unordered dict iteration in scoring/retrieval code"
+    },
+    "network_imports": {
+      "count": 0,
+      "severity": "WARN",
+      "description": "Network libraries in production code (exemptions: ingestion, api)"
+    },
+    "workspace_escape": {
+      "count": 0,
+      "severity": "FATAL",
+      "description": "Potential path traversal outside ESG_ROOT"
+    }
+  },
+  "notes": [
+    "Baseline represents pre-remediation state of production codebase",
+    "FATAL violations block audit (34 total) - primarily eval/exec in script/utils",
+    "WARN violations (169 total) - primarily non-deterministic time calls and silent exceptions",
+    "All violations scanned from /apps, /libs, /scripts, /agents, /tasks (venv excluded)",
+    "Next action: Apply remediation for FATAL violations, then re-audit"
+  ],
+  "scope": {
+    "root_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine",
+    "excluded_directories": [".venv", "__pycache__", ".pytest_cache"],
+    "exempt_paths": ["apps/ingestion/", "apps/api/", "tests/", "scripts/qa/"],
+    "files_scanned": "All .py files excluding venv and caches"
+  }
+}
