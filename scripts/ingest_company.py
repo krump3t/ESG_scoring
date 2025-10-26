@@ -1,3 +1,7 @@
+logger = logging.getLogger(__name__)
+
+import logging
+
 """
 Company Data Ingestion CLI
 
@@ -11,12 +15,22 @@ SCA v13.8 Compliance:
 - Exit codes: 0=success, 1=validation error, 2=file not found
 """
 
+logger = logging.getLogger(__name__)
+
 import argparse
+logger = logging.getLogger(__name__)
+
 import sys
+logger = logging.getLogger(__name__)
+
 import json
+logger = logging.getLogger(__name__)
+
 import shutil
 from pathlib import Path
 from typing import Dict, Any, Optional
+logger = logging.getLogger(__name__)
+
 import re
 
 # Add project root to path for imports
@@ -83,8 +97,8 @@ def ingest_pdf(
     slug = slugify(company)
     bronze_path = Path(f"artifacts/bronze/{slug}_{year}.parquet")
 
-    # Write stub parquet (using JSON for simplicity - tests accept .parquet extension)
-    # In production would use pandas.to_parquet
+    # Write true Parquet file using pandas
+    import pandas as pd
     stub_data = {
         "doc_id": [f"doc_0001"],
         "company": [company],
@@ -94,15 +108,16 @@ def ingest_pdf(
         "text": [f"PDF stub: {pdf_path.name}"]
     }
 
-    # Write as JSON with .parquet extension (tests check file existence)
-    bronze_path.write_text(json.dumps(stub_data, indent=2))
+    # Write as true Parquet format
+    df = pd.DataFrame(stub_data)
+    df.to_parquet(bronze_path, index=False)
 
     # Increment metric
     try:
         from apps.api.metrics import esg_demo_ingest_total
         esg_demo_ingest_total.labels(source="pdf").inc()
-    except ImportError:
-        pass  # Metrics not available in test environment
+    except ImportError as e:
+        logger.warning(f"Optional import failed: {e}")  # Metrics not available in test environment
 
     return {
         "company": company,
@@ -139,8 +154,8 @@ def ingest_parquet(
     try:
         from apps.api.metrics import esg_demo_ingest_total
         esg_demo_ingest_total.labels(source="parquet").inc()
-    except ImportError:
-        pass  # Metrics not available in test environment
+    except ImportError as e:
+        logger.warning(f"Optional import failed: {e}")  # Metrics not available in test environment
 
     return {
         "company": company,

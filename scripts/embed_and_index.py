@@ -1,3 +1,6 @@
+logger = logging.getLogger(__name__)
+import logging
+
 """
 Embedding & Index Building CLI
 
@@ -11,9 +14,13 @@ SCA v13.8 Compliance:
 - Exit codes: 0=success, 1=validation error
 """
 
+logger = logging.getLogger(__name__)
 import argparse
+logger = logging.getLogger(__name__)
 import sys
+logger = logging.getLogger(__name__)
 import json
+logger = logging.getLogger(__name__)
 import hashlib
 from pathlib import Path
 from typing import Dict, List, Any
@@ -287,8 +294,8 @@ def main() -> int:
         try:
             from apps.api.metrics import esg_demo_index_size
             esg_demo_index_size.labels(backend=args.backend).set(snapshot['total_docs'])
-        except ImportError:
-            pass  # Metrics not available in test environment
+        except ImportError as e:
+    logger.warning(f"Import failed: {e}")  # Metrics not available in test environment
 
         return 0
 
