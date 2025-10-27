@@ -5,9 +5,9 @@
         "AUTO": "2"
     },
     "current_task": {
-        "task_id": "014",
-        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\014-data-lake-integration-phase4",
-        "task_slug": "data-lake-integration-phase4"
+        "task_id": "018",
+        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\018-esg-query-synthesis",
+        "task_slug": "esg-query-synthesis"
     },
     "task_sequence": [
         "001-mcp-iceberg-infrastructure",
