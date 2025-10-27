@@ -311,8 +311,9 @@ class ResponseQualityEvaluator:
                     total_facts += 1
                     if len(data['findings']) > 0:
                         correct_facts += 0.5  # Partial credit for having findings
-        except:
-            pass
+        except (json.JSONDecodeError, KeyError, TypeError) as e:
+            logger.debug(f"Failed to parse response JSON for factual accuracy: {e}")
+            # Continue with empty facts (return default 0.5)
 
         if total_facts == 0:
             return 0.5
@@ -407,13 +408,15 @@ class ResponseQualityEvaluator:
                     if 'stage' in current_data and 'stage' in prev_data:
                         diff = abs(current_data['stage'] - prev_data['stage'])
                         consistency_scores.append(1.0 - (diff / 4))
-                except:
-                    pass
+                except (json.JSONDecodeError, KeyError, TypeError) as e:
+                    logger.debug(f"Failed to parse response for cross-consistency: {e}")
+                    # Skip this comparison, continue with others
 
             if consistency_scores:
                 return sum(consistency_scores) / len(consistency_scores)
-        except:
-            pass
+        except Exception as e:
+            logger.debug(f"Failed to evaluate cross-consistency: {e}")
+            # Return default moderate consistency
 
         return 0.7  # Default moderate consistency
 
@@ -515,8 +518,9 @@ class ResponseQualityEvaluator:
                         return 0.7  # Has confidence but can't verify calibration
                     else:
                         return 0.0  # Invalid confidence value
-        except:
-            pass
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError) as e:
+            logger.debug(f"Failed to evaluate calibration: {e}")
+            # Return default no confidence info
 
         return 0.5  # No confidence info
 

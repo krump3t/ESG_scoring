@@ -256,8 +256,9 @@ async def get_trace(
         try:
             parity_data = json.loads(parity_path.read_text())
             parity_verdict = parity_data.get("parity_verdict", "UNKNOWN")
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning(f"Failed to load parity verdict from {parity_path}: {e}")
+            # Continue with default UNKNOWN verdict
 
     # For now, return empty quote records (would populate from actual run)
     quote_records = []

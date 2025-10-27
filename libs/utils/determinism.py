@@ -87,5 +87,6 @@ def initialize_numpy_seed() -> None:
             except ValueError:
                 raise ValueError(f"SEED must be a valid integer, got: {seed_str}")
     except ImportError:
-        # numpy not available; skip
-        pass
+        # numpy not available; skip numpy seeding (optional dependency)
+        # This is acceptable - numpy seeding only needed for numpy-based code
+        pass  # @allow-silent:Optional dependency numpy not installed
