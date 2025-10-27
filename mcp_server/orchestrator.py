@@ -5,6 +5,8 @@ NO MOCKS - All computations are authentic
 """
 from typing import List, Dict, Any, Optional
 import logging
+import os
+from pathlib import Path
 
 from mcp_server.data_access import DataAccessLayer
 from agents.normalizer.mcp_normalizer import MCPNormalizerAgent
@@ -22,7 +24,22 @@ class PipelineOrchestrator:
 
     def __init__(self, data_access: Optional[DataAccessLayer] = None):
         """Initialize orchestrator with real components"""
-        self.data_access = data_access or DataAccessLayer()
+        # Auto-detect data access layer: use local if Bronze files exist locally
+        if data_access is None:
+            project_root = Path(__file__).parents[1]
+            bronze_path = project_root / "data" / "bronze"
+
+            # Check if local Bronze directory has Parquet files
+            if bronze_path.exists() and list(bronze_path.rglob("*.parquet")):
+                logger.info("Detected local Bronze files - using LocalDataAccessLayer")
+                from mcp_server.data_access_local import LocalDataAccessLayer
+                self.data_access = LocalDataAccessLayer()
+            else:
+                logger.info("No local Bronze files - using MinIO DataAccessLayer")
+                self.data_access = DataAccessLayer()
+        else:
+            self.data_access = data_access
+
         self.normalizer = MCPNormalizerAgent()
         self.scorer = MCPScoringAgent()
 
