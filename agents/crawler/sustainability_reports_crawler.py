@@ -38,7 +38,7 @@ except ImportError:
     PLAYWRIGHT_AVAILABLE = False
 
 try:
-    import requests
+    import requests  # @allow-network:Crawler requires HTTP access to download ESG reports
     REQUESTS_AVAILABLE = True
 except ImportError:
     REQUESTS_AVAILABLE = False

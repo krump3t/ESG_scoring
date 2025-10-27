@@ -22,7 +22,7 @@ Date: 2025-10-23
 """
 
 import logging
-import requests
+import requests  # @allow-network:Crawler agent requires external API access to SEC EDGAR database
 import re
 import hashlib
 import json

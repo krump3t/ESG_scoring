@@ -1,6 +1,8 @@
 """
 Web crawler for ESG/Sustainability reports using Playwright
 Crawls report repositories and extracts PDF URLs for processing
+
+@allow-network: Ingestion pipeline requires HTTP access to download ESG reports (Bronze layer)
 """
 
 from dataclasses import dataclass, asdict

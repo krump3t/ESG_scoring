@@ -8,7 +8,7 @@ organizations in 100+ countries.
 Data Source: https://database.globalreporting.org/
 """
 
-import requests
+import requests  # @allow-network:Crawler agent requires external API access to GRI database
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 import time

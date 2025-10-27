@@ -1,12 +1,17 @@
 """
 ESG Maturity Rubric v3.0 Loader
 Loads and provides access to the updated 7-theme rubric with evidence-based scoring
+
+NAMING: Phase 1 of naming refactor - canonical names with legacy aliases
+  - Canonical: ThemeRubricV3
+  - Legacy alias: ThemeRubric (deprecated, import-time warning)
 """
 
 import json
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, TypeAlias
 from dataclasses import dataclass
+import warnings as _w
 
 
 @dataclass
@@ -18,8 +23,12 @@ class StageDescriptor:
 
 
 @dataclass
-class ThemeRubric:
-    """Rubric for a single ESG theme"""
+class ThemeRubricV3:
+    """Rubric for a single ESG theme (v3.0 schema).
+
+    CANONICAL NAME: Use ThemeRubricV3 (replaces legacy ThemeRubric).
+    Version-specific name emphasizes v3.0 maturity rubric.
+    """
     code: str
     name: str
     intent: str
@@ -52,7 +61,7 @@ class RubricV3Loader:
         with open(self.rubric_path, 'r', encoding='utf-8') as f:
             return json.load(f)
 
-    def _parse_themes(self) -> Dict[str, ThemeRubric]:
+    def _parse_themes(self) -> Dict[str, ThemeRubricV3]:
         """Parse themes from rubric data"""
         themes = {}
 
@@ -69,7 +78,7 @@ class RubricV3Loader:
                     evidence_examples=stage_data.get("evidence_examples", [])
                 )
 
-            themes[code] = ThemeRubric(
+            themes[code] = ThemeRubricV3(
                 code=code,
                 name=name,
                 intent=intent,
@@ -86,11 +95,11 @@ class RubricV3Loader:
         """Get all theme names (full names)"""
         return [theme.name for theme in self.themes.values()]
 
-    def get_theme(self, code: str) -> Optional[ThemeRubric]:
+    def get_theme(self, code: str) -> Optional[ThemeRubricV3]:
         """Get theme rubric by code"""
         return self.themes.get(code)
 
-    def get_theme_by_name(self, name: str) -> Optional[ThemeRubric]:
+    def get_theme_by_name(self, name: str) -> Optional[ThemeRubricV3]:
         """Get theme rubric by name"""
         for theme in self.themes.values():
             if theme.name.lower() == name.lower():
@@ -216,6 +225,24 @@ class RubricV3Loader:
         """Check if evidence count meets minimum requirements"""
         min_required = self.get_evidence_requirements()
         return evidence_count >= min_required
+
+
+# ============================================================================
+# LEGACY ALIAS (Phase 1: Naming Refactor)
+# ============================================================================
+# Emit warning once at module import time (not at instantiation)
+_w.warn(
+    "apps.scoring.rubric_v3_loader.ThemeRubric is deprecated; "
+    "use ThemeRubricV3 instead. "
+    "This alias will be removed in Phase 3 (see NAMING_REFACTOR_ROLLING_PLAN.md).",
+    DeprecationWarning,
+    stacklevel=2
+)
+
+# Assignment alias for import compatibility
+ThemeRubric: TypeAlias = ThemeRubricV3
+
+__all__ = ["StageDescriptor", "ThemeRubricV3", "ThemeRubric", "RubricV3Loader", "get_rubric_v3"]
 
 
 def get_rubric_v3() -> RubricV3Loader:

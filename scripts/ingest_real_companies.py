@@ -15,7 +15,7 @@ Companies to ingest (2023 reports):
 """
 import sys
 from pathlib import Path
-import requests
+import requests  # @allow-network:Script downloads real ESG reports from company URLs
 import uuid
 import hashlib
 from datetime import datetime

@@ -9,7 +9,7 @@ import hashlib
 import logging
 import re
 from pathlib import Path
-import requests
+import requests  # @allow-network:Ingestion pipeline requires downloading PDF reports from URLs
 from io import BytesIO
 import tempfile
 

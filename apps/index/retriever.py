@@ -1,8 +1,23 @@
-from typing import Dict, Any, List
+"""
+App-layer retriever combining vector and graph search.
+
+NAMING: Phase 1 of naming refactor
+  - Canonical: IndexedHybridRetriever (distinct from libs.retrieval.HybridRetriever)
+  - Legacy alias: HybridRetriever (deprecated, import-time warning)
+"""
+
+from typing import Dict, Any, List, TypeAlias
+import warnings as _w
 from .vector_store import VectorStore
 from .graph_store import GraphStore
 
-class HybridRetriever:
+
+class IndexedHybridRetriever:
+    """Hybrid retriever for app-layer (with graph enrichment).
+
+    CANONICAL NAME: Use IndexedHybridRetriever.
+    Distinct from libs.retrieval.HybridRetriever (library variant).
+    """
     def __init__(self, vs: VectorStore, gs: GraphStore):
         self.vs = vs
         self.gs = gs
@@ -19,3 +34,21 @@ class HybridRetriever:
                     enriched.append({"id": nbr_id, "score": score * 0.9, "meta": {"via": rel}})
                     seen.add(nbr_id)
         return enriched
+
+
+# ============================================================================
+# LEGACY ALIAS (Phase 1: Naming Refactor)
+# ============================================================================
+# Emit warning once at module import time (not at instantiation)
+_w.warn(
+    "apps.index.retriever.HybridRetriever is deprecated; "
+    "use IndexedHybridRetriever instead (or use libs.retrieval.HybridRetriever for library variant). "
+    "This alias will be removed in Phase 3 (see NAMING_REFACTOR_ROLLING_PLAN.md).",
+    DeprecationWarning,
+    stacklevel=2
+)
+
+# Assignment alias for import compatibility
+HybridRetriever: TypeAlias = IndexedHybridRetriever
+
+__all__ = ["IndexedHybridRetriever", "HybridRetriever"]

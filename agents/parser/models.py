@@ -3,13 +3,18 @@ Data models for ESG evidence extraction.
 
 This module defines the core data structures used throughout the evidence
 extraction pipeline, aligned with the ESG Maturity Rubric v3.0 schema.
+
+NAMING: Phase 1 of naming refactor - canonical names with legacy aliases
+  - Canonical: EvidenceExtractionResult (replaces legacy ExtractionResult)
+  - Note: Distinct from MetricsExtractionResult in libs.contracts.extraction_contracts
 """
 
 from dataclasses import dataclass, field
-from typing import Optional, Any
+from typing import Optional, Any, TypeAlias
 from datetime import datetime
 import hashlib
 import uuid
+import warnings as _w
 
 
 @dataclass(frozen=True)
@@ -171,9 +176,13 @@ class Match:
 
 
 @dataclass
-class ExtractionResult:
+class EvidenceExtractionResult:
     """
     Result of extracting evidence from a single filing.
+
+    CANONICAL NAME: Use EvidenceExtractionResult (replaces legacy ExtractionResult).
+    This class represents evidence extraction from unstructured data (PDFs, reports).
+    Distinct from MetricsExtractionResult (libs.contracts).
 
     Attributes:
         company_name: Name of the company
@@ -219,3 +228,21 @@ class ExtractionResult:
                 "theme_count": self.get_theme_count()
             }
         }
+
+
+# ============================================================================
+# LEGACY ALIAS (Phase 1: Naming Refactor)
+# ============================================================================
+# Emit warning once at module import time (not at instantiation)
+_w.warn(
+    "agents.parser.models.ExtractionResult is deprecated; "
+    "use EvidenceExtractionResult instead. "
+    "This alias will be removed in Phase 3 (see NAMING_REFACTOR_ROLLING_PLAN.md).",
+    DeprecationWarning,
+    stacklevel=2
+)
+
+# TypeAlias for import compatibility
+ExtractionResult: TypeAlias = EvidenceExtractionResult
+
+__all__ = ["Evidence", "Match", "EvidenceExtractionResult", "ExtractionResult"]

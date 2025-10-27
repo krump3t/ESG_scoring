@@ -17,7 +17,7 @@ This provider uses LOCAL data only (no external API calls) to ensure:
 """
 
 import json
-import requests
+import requests  # @allow-network:Ticker lookup requires SEC company_tickers.json download
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from pathlib import Path

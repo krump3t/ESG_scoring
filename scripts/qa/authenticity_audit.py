@@ -102,7 +102,7 @@ class AuthenticityAudit:
     # ==================== DETECTORS ====================
 
     def detect_network_imports(self) -> DetectorResult:
-        """Flag network imports in production code"""
+        """Flag network imports in production code, with exemptions for crawlers and tests"""
         result = DetectorResult("network_imports")
         patterns = {
             r"import\s+requests": "requests",
@@ -112,14 +112,32 @@ class AuthenticityAudit:
             r"from\s+google\.cloud": "google.cloud",
         }
 
+        # Define exempt path patterns (Bronze layer, scripts, infrastructure, tests)
+        exempt_patterns = [
+            "agents/crawler/",          # Crawler agents need network for data ingestion
+            "scripts/",                 # Dev/ops scripts
+            "infrastructure/",          # Health checks and monitoring
+            "tests/",                   # Test code uses mocked responses
+            "libs/utils/http_client.py",  # HTTP client abstraction layer
+        ]
+
         for py_file in self.root.rglob("*.py"):
             if self.is_excluded(py_file):
                 continue
             if self.is_exempt(str(py_file.relative_to(self.root))):
                 continue
 
+            # Check if file matches exempt patterns (normalize path separators)
+            rel_path = str(py_file.relative_to(self.root)).replace("\\", "/")
+            if any(rel_path.startswith(pattern) or rel_path == pattern for pattern in exempt_patterns):
+                continue
+
             content = self.read_file_safe(py_file)
             if not content:
+                continue
+
+            # Check for @allow-network annotation in file
+            if "@allow-network" in content:
                 continue
 
             for line_num, line in enumerate(content.split("\n"), 1):

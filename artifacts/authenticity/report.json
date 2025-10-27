@@ -2,113 +2,23 @@
   "agent": "SCA",
   "protocol_version": "13.8",
   "audit_type": "authenticity",
-  "timestamp": "2025-10-27T04:31:27.800149Z",
+  "timestamp": "2025-10-27T06:38:08.781685Z",
   "git_commit": "unknown",
   "root_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine",
   "status": "ok",
   "summary": {
-    "total_violations": 77,
+    "total_violations": 34,
     "fatal": 0,
-    "warn": 77,
+    "warn": 34,
     "detectors_run": 8
   },
   "violations": [
-    {
-      "file": "agents\\crawler\\data_providers\\cdp_provider.py",
-      "line": 24,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\gri_provider.py",
-      "line": 11,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\sasb_provider.py",
-      "line": 15,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\sec_edgar_provider.py",
-      "line": 25,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\ticker_lookup.py",
-      "line": 20,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\sustainability_reports_crawler.py",
-      "line": 41,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
     {
       "file": "agents\\scoring\\rubric_models.py",
       "line": 183,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "def to_json(self, output_path: Path) -> None:",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\api\\main.py",
-      "line": 259,
-      "violation_type": "silent_exception",
-      "description": "Except block with pass - silently swallows errors",
-      "code_snippet": "except Exception:",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\crawler.py",
-      "line": 279,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\parser.py",
-      "line": 12,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\report_fetcher.py",
-      "line": 203,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
       "severity": "WARN",
       "exemption": null
     },
@@ -158,29 +68,11 @@
       "exemption": null
     },
     {
-      "file": "infrastructure\\health\\check_all.py",
-      "line": 6,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "libs\\utils\\determinism.py",
       "line": 89,
       "violation_type": "silent_exception",
       "description": "Except block with pass - silently swallows errors",
       "code_snippet": "except ImportError:",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\utils\\http_client.py",
-      "line": 83,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
       "severity": "WARN",
       "exemption": null
     },
@@ -203,24 +95,6 @@
       "exemption": null
     },
     {
-      "file": "scripts\\demo_mcp_server_e2e.py",
-      "line": 13,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\ingest_real_companies.py",
-      "line": 18,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "scripts\\load_embeddings_to_astradb.py",
       "line": 171,
       "violation_type": "silent_exception",
@@ -231,7 +105,7 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 237,
+      "line": 255,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "\"\"\"Flag to_json() where to_parquet() expected\"\"\"",
@@ -240,7 +114,7 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 248,
+      "line": 266,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "if \"to_json(\" in line and (\"artifacts\" in content or \"maturity\" in content):",
@@ -249,154 +123,10 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 253,
+      "line": 271,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "description=\"to_json() used for data artifact - should use to_parquet()\",",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_bronze_extraction.py",
-      "line": 8,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_connections.py",
-      "line": 59,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_connections.py",
-      "line": 114,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_connections.py",
-      "line": 163,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_differential_scoring.py",
-      "line": 17,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_ghg_extraction.py",
-      "line": 15,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_progressive_queries.py",
-      "line": 6,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\test_progressive_queries_sca.py",
-      "line": 12,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
-      "line": 69,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.now() breaks determinism - needs override",
-      "code_snippet": "self.start_time = datetime.now()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
-      "line": 94,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "start_time = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
-      "line": 114,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "response_time = time.time() - start_time",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
-      "line": 132,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "response_time = time.time() - start_time",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
-      "line": 137,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.now() breaks determinism - needs override",
-      "code_snippet": "\"test_date\": datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
-      "line": 159,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "start_time = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
-      "line": 171,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "elapsed_time = time.time() - start_time",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
-      "line": 221,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "elapsed_time = time.time() - start_time",
       "severity": "WARN",
       "exemption": null
     },
@@ -446,119 +176,11 @@
       "exemption": null
     },
     {
-      "file": "tests\\crawler\\data_providers\\test_gri_provider.py",
-      "line": 16,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\crawler\\data_providers\\test_sasb_provider.py",
-      "line": 16,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\crawler\\data_providers\\test_ticker_lookup.py",
-      "line": 16,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\crawler\\test_sec_edgar_provider_enhanced.py",
-      "line": 358,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "tests\\crawler\\test_sec_edgar_provider_enhanced.py",
       "line": 488,
       "violation_type": "silent_exception",
       "description": "Except block with pass - silently swallows errors",
       "code_snippet": "except DocumentNotFoundError:",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\conftest.py",
-      "line": 29,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "self.start_time = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\conftest.py",
-      "line": 58,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "\"timestamp\": time.time(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\conftest.py",
-      "line": 80,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "\"end_time\": time.time(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\conftest.py",
-      "line": 81,
-      "violation_type": "nondeterministic_time",
-      "description": "clock.time() breaks determinism - needs override",
-      "code_snippet": "\"duration_seconds\": time.time() - self.start_time,",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\test_cloud_connectivity.py",
-      "line": 122,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\test_cloud_connectivity.py",
-      "line": 364,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\test_docker_properties.py",
-      "line": 17,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\infrastructure\\test_docker_services.py",
-      "line": 26,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "import requests",
       "severity": "WARN",
       "exemption": null
     },
@@ -595,51 +217,6 @@
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "original_rubric.to_json(json_path)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 28,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "test_file.write_text(\"import requests\\n\")",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 40,
-      "violation_type": "network_import",
-      "description": "Network library httpx in production code",
-      "code_snippet": "test_file.write_text(\"import httpx\\n\")",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 50,
-      "violation_type": "network_import",
-      "description": "Network library urllib.request in production code",
-      "code_snippet": "test_file.write_text(\"from urllib.request import urlopen\\n\")",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 60,
-      "violation_type": "network_import",
-      "description": "Network library boto3 in production code",
-      "code_snippet": "test_file.write_text(\"import boto3\\n\")",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 72,
-      "violation_type": "network_import",
-      "description": "Network library requests in production code",
-      "code_snippet": "test_file.write_text(\"import requests\\n\")",
       "severity": "WARN",
       "exemption": null
     },
@@ -698,6 +275,42 @@
       "exemption": null
     },
     {
+      "file": "tests\\test_naming_api_cp.py",
+      "line": 230,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except (ImportError, AssertionError):",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\test_naming_api_cp.py",
+      "line": 237,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except (ImportError, AssertionError):",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\test_naming_api_cp.py",
+      "line": 244,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except (ImportError, AssertionError):",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\test_naming_api_cp.py",
+      "line": 251,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except (ImportError, AssertionError):",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
       "file": "tests\\test_phase_5_7_remediation.py",
       "line": 40,
       "violation_type": "json_as_parquet",
@@ -717,7 +330,7 @@
     {
       "name": "network_imports",
       "fatal_count": 0,
-      "warn_count": 34
+      "warn_count": 0
     },
     {
       "name": "unseeded_random",
@@ -727,7 +340,7 @@
     {
       "name": "nondeterministic_time",
       "fatal_count": 0,
-      "warn_count": 12
+      "warn_count": 0
     },
     {
       "name": "json_as_parquet",
@@ -742,7 +355,7 @@
     {
       "name": "silent_exceptions",
       "fatal_count": 0,
-      "warn_count": 15
+      "warn_count": 18
     },
     {
       "name": "eval_exec",

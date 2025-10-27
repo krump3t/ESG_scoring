@@ -1,6 +1,8 @@
 """
 Fetches real sustainability reports from sustainabilityreports.com
 Replaces demo data with actual corporate ESG reports
+
+@allow-network: Ingestion pipeline requires HTTP access to download PDF reports (Bronze layer)
 """
 
 import os

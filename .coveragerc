@@ -1,0 +1,31 @@
+[run]
+source =
+    agents
+    apps
+    libs
+
+omit =
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */site-packages/*
+    */venv/*
+    */.venv/*
+    */conftest.py
+    */setup.py
+
+[report]
+precision = 2
+show_missing = True
+skip_covered = False
+
+# Fail under these thresholds
+fail_under = 85
+
+[html]
+directory = htmlcov
+
+[paths]
+source =
+    .
+    */site-packages/

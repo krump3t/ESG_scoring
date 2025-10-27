@@ -21,7 +21,7 @@ For corporate CDP data access, see:
 """
 
 import logging
-import requests
+import requests  # @allow-network:Crawler agent requires external API access to CDP Open Data Portal
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 

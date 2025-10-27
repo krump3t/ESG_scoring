@@ -1,15 +1,15 @@
 # ESG Authenticity Audit Report
 
 **Protocol**: SCA v13.8-MEA
-**Timestamp**: 2025-10-27T04:31:27.800149Z
+**Timestamp**: 2025-10-27T06:38:08.781685Z
 **Git Commit**: unknown
 **Status**: OK
 
 ## Summary
 
-- **Total Violations**: 77
+- **Total Violations**: 34
 - **FATAL**: 0
-- **WARN**: 77
+- **WARN**: 34
 - **Detectors Run**: 8
 
 ## Violations by Type
@@ -33,15 +33,15 @@
   - to_json() used for data artifact - should use to_parquet()
   - `if not compile_md_to_json(md, out_json):`
 
-- **scripts\qa\authenticity_audit.py:237** [WARN]
+- **scripts\qa\authenticity_audit.py:255** [WARN]
   - to_json() used for data artifact - should use to_parquet()
   - `"""Flag to_json() where to_parquet() expected"""`
 
-- **scripts\qa\authenticity_audit.py:248** [WARN]
+- **scripts\qa\authenticity_audit.py:266** [WARN]
   - to_json() used for data artifact - should use to_parquet()
   - `if "to_json(" in line and ("artifacts" in content or "maturity" in content):`
 
-- **scripts\qa\authenticity_audit.py:253** [WARN]
+- **scripts\qa\authenticity_audit.py:271** [WARN]
   - to_json() used for data artifact - should use to_parquet()
   - `description="to_json() used for data artifact - should use to_parquet()",`
 
@@ -82,201 +82,7 @@
   - `"""Test pattern: replace to_json() with to_parquet()"""`
 
 
-### Network Import (34)
-
-- **agents\crawler\data_providers\cdp_provider.py:24** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **agents\crawler\data_providers\gri_provider.py:11** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **agents\crawler\data_providers\sasb_provider.py:15** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **agents\crawler\data_providers\sec_edgar_provider.py:25** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **agents\crawler\data_providers\ticker_lookup.py:20** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **agents\crawler\sustainability_reports_crawler.py:41** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **apps\ingestion\crawler.py:279** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **apps\ingestion\parser.py:12** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **apps\ingestion\report_fetcher.py:203** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **infrastructure\health\check_all.py:6** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **libs\utils\http_client.py:83** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\demo_mcp_server_e2e.py:13** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\ingest_real_companies.py:18** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_bronze_extraction.py:8** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_connections.py:59** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_connections.py:114** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_connections.py:163** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_differential_scoring.py:17** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_ghg_extraction.py:15** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_progressive_queries.py:6** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **scripts\test_progressive_queries_sca.py:12** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\crawler\data_providers\test_gri_provider.py:16** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\crawler\data_providers\test_sasb_provider.py:16** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\crawler\data_providers\test_ticker_lookup.py:16** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\crawler\test_sec_edgar_provider_enhanced.py:358** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\infrastructure\test_cloud_connectivity.py:122** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\infrastructure\test_cloud_connectivity.py:364** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\infrastructure\test_docker_properties.py:17** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\infrastructure\test_docker_services.py:26** [WARN]
-  - Network library requests in production code
-  - `import requests`
-
-- **tests\test_authenticity_audit.py:28** [WARN]
-  - Network library requests in production code
-  - `test_file.write_text("import requests\n")`
-
-- **tests\test_authenticity_audit.py:40** [WARN]
-  - Network library httpx in production code
-  - `test_file.write_text("import httpx\n")`
-
-- **tests\test_authenticity_audit.py:50** [WARN]
-  - Network library urllib.request in production code
-  - `test_file.write_text("from urllib.request import urlopen\n")`
-
-- **tests\test_authenticity_audit.py:60** [WARN]
-  - Network library boto3 in production code
-  - `test_file.write_text("import boto3\n")`
-
-- **tests\test_authenticity_audit.py:72** [WARN]
-  - Network library requests in production code
-  - `test_file.write_text("import requests\n")`
-
-
-### Nondeterministic Time (12)
-
-- **tasks\006-multi-source-ingestion\qa\phase1_integration_test.py:69** [WARN]
-  - clock.now() breaks determinism - needs override
-  - `self.start_time = datetime.now()`
-
-- **tasks\006-multi-source-ingestion\qa\phase1_integration_test.py:94** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `start_time = time.time()`
-
-- **tasks\006-multi-source-ingestion\qa\phase1_integration_test.py:114** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `response_time = time.time() - start_time`
-
-- **tasks\006-multi-source-ingestion\qa\phase1_integration_test.py:132** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `response_time = time.time() - start_time`
-
-- **tasks\007-tier2-data-providers\qa\phase2_integration_test.py:137** [WARN]
-  - clock.now() breaks determinism - needs override
-  - `"test_date": datetime.now().isoformat(),`
-
-- **tasks\007-tier2-data-providers\qa\phase2_integration_test.py:159** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `start_time = time.time()`
-
-- **tasks\007-tier2-data-providers\qa\phase2_integration_test.py:171** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `elapsed_time = time.time() - start_time`
-
-- **tasks\007-tier2-data-providers\qa\phase2_integration_test.py:221** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `elapsed_time = time.time() - start_time`
-
-- **tests\infrastructure\conftest.py:29** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `self.start_time = time.time()`
-
-- **tests\infrastructure\conftest.py:58** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `"timestamp": time.time(),`
-
-- **tests\infrastructure\conftest.py:80** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `"end_time": time.time(),`
-
-- **tests\infrastructure\conftest.py:81** [WARN]
-  - clock.time() breaks determinism - needs override
-  - `"duration_seconds": time.time() - self.start_time,`
-
-
-### Silent Exception (15)
-
-- **apps\api\main.py:259** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except Exception:`
+### Silent Exception (18)
 
 - **apps\integration_validator.py:110** [WARN]
   - Except block with pass - silently swallows errors
@@ -333,6 +139,22 @@
 - **tests\test_mcp_normalizer.py:113** [WARN]
   - Except block with pass - silently swallows errors
   - `except Exception:`
+
+- **tests\test_naming_api_cp.py:230** [WARN]
+  - Except block with pass - silently swallows errors
+  - `except (ImportError, AssertionError):`
+
+- **tests\test_naming_api_cp.py:237** [WARN]
+  - Except block with pass - silently swallows errors
+  - `except (ImportError, AssertionError):`
+
+- **tests\test_naming_api_cp.py:244** [WARN]
+  - Except block with pass - silently swallows errors
+  - `except (ImportError, AssertionError):`
+
+- **tests\test_naming_api_cp.py:251** [WARN]
+  - Except block with pass - silently swallows errors
+  - `except (ImportError, AssertionError):`
 
 
 ## Determinism Test

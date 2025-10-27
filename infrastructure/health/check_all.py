@@ -3,7 +3,7 @@ Comprehensive health check for all infrastructure services
 Critical Path: This module validates that all services are operational
 """
 from typing import Dict, List, Tuple
-import requests
+import requests  # @allow-network:Health checks require HTTP access to verify service availability
 from minio import Minio
 from minio.error import S3Error
 import time

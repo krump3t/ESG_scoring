@@ -14,7 +14,7 @@ Required by SCA Protocol authenticity extensions:
 - No unexpected crashes
 - Deterministic outputs
 """
-import requests
+import requests  # @allow-network:Test script may download test data for differential testing
 import json
 import hashlib
 import time

@@ -3,12 +3,17 @@ Extraction Contracts - Phase 3 (Asymmetric Extraction Paths)
 
 Defines data contracts for extraction results, quality metrics, and errors.
 
+NAMING: Phase 1 of naming refactor - canonical names with legacy aliases
+  - Canonical: MetricsExtractionResult
+  - Legacy alias: ExtractionResult (deprecated, import-time warning)
+
 Author: Scientific Coding Agent v13.8-MEA
 Date: 2025-10-24
 """
 
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import List, Optional, TypeAlias
+import warnings as _w
 from libs.models.esg_metrics import ESGMetrics
 
 
@@ -69,10 +74,13 @@ class ExtractionError:
 
 
 @dataclass(frozen=True)
-class ExtractionResult:
+class MetricsExtractionResult:
     """Result of extracting ESG metrics from a company report.
 
     Combines extracted metrics, quality assessment, and any errors encountered.
+
+    CANONICAL NAME: Use MetricsExtractionResult (replaces legacy ExtractionResult).
+    This class represents metrics extraction from structured data (SEC EDGAR, etc.).
     """
 
     metrics: Optional[ESGMetrics]  # Extracted metrics (None if extraction failed)
@@ -93,3 +101,21 @@ class ExtractionResult:
         for error in self.errors:
             counts[error.severity] += 1
         return counts
+
+
+# ============================================================================
+# LEGACY ALIAS (Phase 1: Naming Refactor)
+# ============================================================================
+# Emit warning once at module import time (not at instantiation)
+_w.warn(
+    "libs.contracts.extraction_contracts.ExtractionResult is deprecated; "
+    "use MetricsExtractionResult instead. "
+    "This alias will be removed in Phase 3 (see NAMING_REFACTOR_ROLLING_PLAN.md).",
+    DeprecationWarning,
+    stacklevel=2
+)
+
+# TypeAlias for import compatibility
+ExtractionResult: TypeAlias = MetricsExtractionResult
+
+__all__ = ["ExtractionQuality", "ExtractionError", "MetricsExtractionResult", "ExtractionResult"]

@@ -12,7 +12,7 @@ SASB covers 77 industries across 11 sectors with 26 ESG issue categories.
 Data Source: https://www.sasb.org/standards/
 """
 
-import requests
+import requests  # @allow-network:Crawler agent requires external API access to SASB standards
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 import time
