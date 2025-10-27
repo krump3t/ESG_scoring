@@ -1,0 +1,164 @@
+{
+  "task_id": "016-production-integration-phase1",
+  "phase": "1",
+  "paths": [
+    "requirements.txt",
+    "infrastructure/docker-compose.yml",
+    "infrastructure/Dockerfile.airflow",
+    "infrastructure/Dockerfile.mcp",
+    "scripts/setup-local.sh",
+    "scripts/test-local.sh",
+    "tests/infrastructure/test_docker_services.py",
+    "tests/infrastructure/test_docker_properties.py"
+  ],
+  "critical_path_files": [
+    {
+      "file": "requirements.txt",
+      "lines_planned": 15,
+      "rationale": "Dependency manifest with 7+ production packages (ibm-watsonx-ai, cassandra-driver, duckdb, apache-airflow, pyngrok, redis, python-dotenv). SC1 validation: pip install succeeds with zero conflicts.",
+      "entry_points": [
+        "N/A (dependency manifest)"
+      ],
+      "complexity_target": "N/A",
+      "coverage_target": "N/A (validated via pip check and import tests)"
+    },
+    {
+      "file": "infrastructure/docker-compose.yml",
+      "lines_planned": 250,
+      "rationale": "Core infrastructure orchestration with 9 service definitions (postgres, redis, minio, iceberg-rest, trino, airflow-webserver, airflow-scheduler, mcp-server, ngrok). SC2 validation: all services start with healthy status.",
+      "entry_points": [
+        "docker-compose up -d (external command)"
+      ],
+      "complexity_target": "N/A (YAML config)",
+      "coverage_target": "Validated via docker-compose config and health checks"
+    },
+    {
+      "file": "infrastructure/Dockerfile.airflow",
+      "lines_planned": 35,
+      "rationale": "Airflow webserver/scheduler container image with apache-airflow==2.7.3 base and project dependencies. SC2 validation: builds successfully, starts with healthy status.",
+      "entry_points": [
+        "CMD [\"airflow\", \"webserver\"]",
+        "CMD [\"airflow\", \"scheduler\"]"
+      ],
+      "complexity_target": "N/A (Dockerfile)",
+      "coverage_target": "Built successfully via docker build"
+    },
+    {
+      "file": "infrastructure/Dockerfile.mcp",
+      "lines_planned": 30,
+      "rationale": "MCP server container image with FastAPI, uvicorn, and ESG evaluation application code. SC2 validation: builds successfully, health check passes.",
+      "entry_points": [
+        "CMD [\"uvicorn\", \"mcp_server.server:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]"
+      ],
+      "complexity_target": "N/A (Dockerfile)",
+      "coverage_target": "Built successfully via docker build"
+    },
+    {
+      "file": "scripts/setup-local.sh",
+      "lines_planned": 100,
+      "rationale": "Automated local environment setup script. Validates prerequisites, builds images, starts services, displays ngrok URL. SC2+SC4 validation: all services start successfully.",
+      "entry_points": [
+        "./scripts/setup-local.sh (bash entrypoint)"
+      ],
+      "complexity_target": "N/A (bash script, validated via shellcheck)",
+      "coverage_target": "Execution succeeds in integration test test_setup_script_succeeds()"
+    },
+    {
+      "file": "scripts/test-local.sh",
+      "lines_planned": 80,
+      "rationale": "Service health validation script. Tests postgres, redis, minio, iceberg, trino, airflow, mcp-server, ngrok, container networking. SC2+SC4+SC5 validation.",
+      "entry_points": [
+        "./scripts/test-local.sh (bash entrypoint)"
+      ],
+      "complexity_target": "N/A (bash script, validated via shellcheck)",
+      "coverage_target": "Execution succeeds in integration test test_validation_script_succeeds()"
+    },
+    {
+      "file": "tests/infrastructure/test_docker_services.py",
+      "lines_planned": 200,
+      "rationale": "Integration tests for all 9 services. 15+ tests marked @pytest.mark.cp covering health checks, container networking, environment variables, ngrok tunnel stability.",
+      "entry_points": [
+        "test_postgres_connection() -> None",
+        "test_redis_ping() -> None",
+        "test_minio_s3_api() -> None",
+        "test_iceberg_rest_catalog() -> None",
+        "test_trino_query_engine() -> None",
+        "test_airflow_webserver_ui() -> None",
+        "test_airflow_scheduler_running() -> None",
+        "test_mcp_server_health() -> None",
+        "test_ngrok_tunnel_active() -> None",
+        "test_ngrok_public_url_accessible() -> None",
+        "test_mcp_to_redis_network() -> None",
+        "test_mcp_to_postgres_network() -> None",
+        "test_env_vars_loaded() -> None",
+        "test_docker_volumes_created() -> None",
+        "test_ngrok_tunnel_stability() -> None"
+      ],
+      "complexity_target": "CCN ≤ 5 per test (simple assertion tests)",
+      "coverage_target": "≥95% line, ≥90% branch (tests validate infrastructure, not code logic)"
+    },
+    {
+      "file": "tests/infrastructure/test_docker_properties.py",
+      "lines_planned": 50,
+      "rationale": "Property-based tests using hypothesis library. ≥1 @given(...) test for idempotent service restarts. Validates Phase 1 infrastructure robustness.",
+      "entry_points": [
+        "test_all_services_start_idempotently(restart_count: int) -> None",
+        "test_container_networking_transitive(service_pairs: List[Tuple[str, str]]) -> None"
+      ],
+      "complexity_target": "CCN ≤ 6 per test",
+      "coverage_target": "≥95% line, ≥90% branch"
+    }
+  ],
+  "test_requirements": {
+    "test_files": [
+      "tests/infrastructure/test_docker_services.py",
+      "tests/infrastructure/test_docker_properties.py"
+    ],
+    "total_tests_minimum": 17,
+    "test_breakdown": {
+      "service_health_tests": 9,
+      "network_tests": 2,
+      "env_config_tests": 1,
+      "volume_tests": 1,
+      "ngrok_stability_tests": 1,
+      "script_execution_tests": 2,
+      "property_based_tests": 2
+    },
+    "required_markers": [
+      "@pytest.mark.cp",
+      "@pytest.mark.integration",
+      "@pytest.mark.infrastructure"
+    ],
+    "property_test_requirement": "≥2 tests with @given(...) from hypothesis library for service idempotency and network transitivity",
+    "failure_path_requirement": "≥3 tests asserting explicit exception handling (e.g., docker-compose up fails with invalid config, missing .env.production, port conflicts)",
+    "authentic_data_requirement": "Tests use REAL Docker containers, REAL IBM watsonx.ai API, REAL AstraDB cloud database; NO MOCKS for infrastructure services"
+  },
+  "test_ordering": "TDD: Integration tests must be written and committed BEFORE docker-compose.yml and Dockerfiles per SCA v13.8 TDD Guard",
+  "coverage_gates": {
+    "line_coverage_cp": "≥95% (for .py test files only, not bash scripts)",
+    "branch_coverage_cp": "≥90% (for .py test files only)",
+    "overall_coverage": "≥90% (tests themselves must be well-tested)"
+  },
+  "traceability_requirements": {
+    "run_log": "qa/run_log.txt (fresh + valid after test execution)",
+    "run_context": "artifacts/run_context.json (environment, timestamp)",
+    "run_manifest": "artifacts/run_manifest.json (files touched, tests run)",
+    "run_events": "artifacts/run_events.jsonl (detailed execution trace)"
+  },
+  "validation_gates": [
+    "context_gate: All 7 context files present and valid (hypothesis.md, design.md, evidence.json, data_sources.json, adr.md, assumptions.md, cp_paths.json)",
+    "tdd_guard: Tests written before implementation (test_docker_services.py before docker-compose.yml)",
+    "coverage_cp: ≥95% line, ≥90% branch on test_docker_services.py and test_docker_properties.py",
+    "pytest: All tests passing (17+ tests, ≥2 property-based, ≥3 failure-path)",
+    "type_safety: mypy --strict = 0 errors on test .py files",
+    "complexity: Lizard CCN ≤ 5 per test function",
+    "traceability: qa/run_log.txt + artifacts/*.json all present and fresh",
+    "docker: docker-compose config validates successfully",
+    "docker: docker-compose up -d starts all 9 services",
+    "docker: All services show 'Up (healthy)' status within 60 seconds",
+    "shellcheck: setup-local.sh and test-local.sh pass shellcheck with zero warnings"
+  ],
+  "sca_protocol_version": "v13.8-MEA",
+  "prepared_by": "Scientific Coding Agent v13.8-MEA",
+  "created_date": "2025-10-24"
+}

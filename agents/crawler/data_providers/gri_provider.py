@@ -16,6 +16,8 @@ import json
 from bs4 import BeautifulSoup
 
 from agents.crawler.data_providers.base_provider import BaseDataProvider, CompanyReport
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 class GRIDatabaseProvider(BaseDataProvider):
@@ -148,7 +150,7 @@ class GRIDatabaseProvider(BaseDataProvider):
                         "publication_date": result.get("publication_date"),
                     },
                     date_published=result.get("publication_date"),
-                    date_retrieved=datetime.now().strftime("%Y-%m-%d"),
+                    date_retrieved=clock.now().strftime("%Y-%m-%d"),
                 )
                 reports.append(report)
 
@@ -236,7 +238,7 @@ class GRIDatabaseProvider(BaseDataProvider):
                         "sector": item.find('span', class_='sector').text.strip() if item.find('span', class_='sector') else None,
                     },
                     date_published=None,
-                    date_retrieved=datetime.now().strftime("%Y-%m-%d"),
+                    date_retrieved=clock.now().strftime("%Y-%m-%d"),
                 )
                 reports.append(report)
 

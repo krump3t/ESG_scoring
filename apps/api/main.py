@@ -18,6 +18,8 @@ import hashlib
 import json
 from pathlib import Path
 import time
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 app = FastAPI(
     title="ESG Scoring API",
@@ -123,7 +125,7 @@ async def score_esg(
         404: If company not found in manifest
         422: If validation errors
     """
-    start_time = time.time()
+    start_time = clock.time()
 
     try:
         # Increment API request counter
@@ -155,7 +157,7 @@ async def score_esg(
 
         # Record score latency
         from apps.api.metrics import esg_score_latency_seconds
-        latency = time.time() - start_time
+        latency = clock.time() - start_time
         esg_score_latency_seconds.observe(latency)
 
         # Convert demo_flow response to API schema

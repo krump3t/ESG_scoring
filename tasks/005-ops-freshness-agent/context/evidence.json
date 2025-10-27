@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Data Observability: The Next Frontier of Data Engineering",
+      "authors": [
+        "Barr Moses"
+      ],
+      "year": 2023,
+      "type": "article",
+      "url": "https://www.oreilly.com/library/view/data-observability/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Data observability requires monitoring freshness, volume, schema, and quality. Automated alerts enable proactive data management."
+    },
+    {
+      "id": "P1-002",
+      "title": "Apache Iceberg Snapshot Metadata and Time Travel",
+      "authors": [
+        "Apache Iceberg Community"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://iceberg.apache.org/docs/latest/evolution/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Iceberg snapshots contain commit timestamps and statistics. Time-travel queries enable historical analysis and freshness monitoring."
+    },
+    {
+      "id": "P1-003",
+      "title": "Model Context Protocol Specification",
+      "authors": [
+        "Anthropic"
+      ],
+      "year": 2024,
+      "type": "specification",
+      "url": "https://modelcontextprotocol.io/docs/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "MCP enables tool-based agent orchestration. Agents can trigger other agents via standardized tool invocations."
+    }
+  ]
+}

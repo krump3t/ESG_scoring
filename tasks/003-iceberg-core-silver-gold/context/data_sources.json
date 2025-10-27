@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "name": "silver_normalized",
+      "type": "iceberg",
+      "format": "parquet",
+      "sha256": "dynamic",
+      "pii_flag": false,
+      "provenance": "transformed",
+      "retention_days": 90
+    },
+    {
+      "name": "gold_scores",
+      "type": "iceberg",
+      "format": "parquet",
+      "sha256": "dynamic",
+      "pii_flag": false,
+      "provenance": "scored",
+      "retention_days": 365
+    }
+  ]
+}

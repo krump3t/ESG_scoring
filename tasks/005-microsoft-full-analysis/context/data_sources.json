@@ -1,0 +1,64 @@
+{
+  "task_id": "005-microsoft-full-analysis",
+  "date": "2025-10-22",
+  "sources": [
+    {
+      "source_id": "microsoft_2023_report",
+      "name": "Microsoft 2023 Environmental Sustainability Report",
+      "type": "corporate_esg_report",
+      "format": "PDF",
+      "path": "data/pdf_cache/ed9a89cf9feb626c5bb8429f8dddfba6.pdf",
+      "url": "https://www.microsoft.com/en-us/sustainability/reports",
+      "sha256": "TBD_after_download",
+      "size_bytes": "TBD",
+      "pii_flag": false,
+      "provenance": "Downloaded from Microsoft Investor Relations public website",
+      "retention_policy": "Retain indefinitely (public corporate disclosure)",
+      "access_date": "2025-10-22",
+      "validation_status": "pending_verification"
+    },
+    {
+      "source_id": "msci_rating_methodology",
+      "name": "MSCI ESG Ratings Methodology",
+      "type": "rating_methodology",
+      "format": "PDF",
+      "url": "https://www.msci.com/documents/1296102/21901542/MSCI-ESG-Ratings-Methodology-Exec-Summary.pdf",
+      "sha256": "TBD_if_downloaded",
+      "pii_flag": false,
+      "provenance": "Public MSCI methodology document",
+      "retention_policy": "Retain for validation purposes",
+      "access_date": "2025-10-22",
+      "validation_status": "reference_only"
+    },
+    {
+      "source_id": "cdp_scoring_methodology",
+      "name": "CDP Climate Change 2023 Scoring Methodology",
+      "type": "rating_methodology",
+      "format": "PDF",
+      "url": "https://www.cdp.net/en/guidance/guidance-for-companies",
+      "sha256": "TBD_if_downloaded",
+      "pii_flag": false,
+      "provenance": "Public CDP methodology document",
+      "retention_policy": "Retain for validation purposes",
+      "access_date": "2025-10-22",
+      "validation_status": "reference_only"
+    }
+  ],
+  "data_integrity_checks": [
+    {
+      "check": "sha256_verification",
+      "status": "pending",
+      "description": "Verify PDF hash matches expected value after download"
+    },
+    {
+      "check": "pii_scan",
+      "status": "pass",
+      "description": "No PII expected in corporate public reports"
+    },
+    {
+      "check": "extraction_accuracy",
+      "status": "pending",
+      "description": "Manual review of 10% sample for accuracy ≥95%"
+    }
+  ]
+}

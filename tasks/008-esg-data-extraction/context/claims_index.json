@@ -1,0 +1,62 @@
+[
+  {
+    "id": "C-01",
+    "source_type": "P1",
+    "url_or_doi": "https://www.globalreporting.org/standards/",
+    "claim": "GRI Standards 2021 provide mandatory disclosure frameworks: GRI 2-9 (governance structure), GRI 305-1/2/3 (Scope 1/2/3 emissions), GRI 2-5 (external assurance)."
+  },
+  {
+    "id": "C-02",
+    "source_type": "P1",
+    "url_or_doi": "https://www.fsb-tcfd.org/recommendations/",
+    "claim": "TCFD Recommendations require scenario analysis (1.5\u00c2\u00b0C, 2\u00c2\u00b0C pathways), physical/transition risk taxonomy, Scope 1/2/3 disclosure. TCFD alignment signals Stage "
+  },
+  {
+    "id": "C-03",
+    "source_type": "P1",
+    "url_or_doi": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s1-general-requirements/",
+    "claim": "ISSB S1 aligns with TCFD structure (Governance, Strategy, Risk, Metrics). S2 mandates Scope 1/2 emissions, encourages Scope 3. ISSB adoption signals Stage 2-3 m"
+  },
+  {
+    "id": "C-04",
+    "source_type": "P1",
+    "url_or_doi": "https://sciencebasedtargets.org/net-zero",
+    "claim": "SBTi Corporate Net-Zero Standard requires near-term (5-10 year) and long-term (2050) targets covering Scope 1/2/3. SBTi 'committed' status indicates Stage 3, 'a"
+  },
+  {
+    "id": "C-05",
+    "source_type": "P1",
+    "url_or_doi": "https://ghgprotocol.org/corporate-standard",
+    "claim": "GHG Protocol Corporate Standard defines Scope 1 (direct), Scope 2 (purchased energy), Scope 3 (value chain, 15 categories). Establishes calculation, reporting, "
+  },
+  {
+    "id": "C-06",
+    "source_type": "P2",
+    "url_or_doi": "10.1287/mnsc.2014.1984",
+    "claim": "Empirical study finds high-maturity firms characterized by C-suite ESG roles (CSO), cross-functional committees, external assurance. Board-level committees indi"
+  },
+  {
+    "id": "C-07",
+    "source_type": "P2",
+    "url_or_doi": "https://www.hbs.edu/faculty/Pages/item.aspx?num=41454",
+    "claim": "Study finds external assurance improves data reliability. Limited assurance (moderate confidence) signals Stage 3. Reasonable assurance (equivalent to financial"
+  },
+  {
+    "id": "C-08",
+    "source_type": "T",
+    "url_or_doi": "https://www.sec.gov/edgar",
+    "claim": "SEC 10-K structure: Item 1 (Business operations, ESG practices), Item 1A (Risk Factors, climate risks), Item 7 (MD&A, forward-looking targets). 20-F (foreign is"
+  },
+  {
+    "id": "C-09",
+    "source_type": "T",
+    "url_or_doi": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+    "claim": "BeautifulSoup handles malformed HTML gracefully (common in SEC filings). find_all() enables section extraction, get_text() preserves paragraph structure. Perfor"
+  },
+  {
+    "id": "C-10",
+    "source_type": "T",
+    "url_or_doi": "https://arxiv.org/abs/1810.04805",
+    "claim": "BERT and transformers provide contextual understanding for named entity recognition, semantic similarity. Higher precision than regex, but 10-100\u00c3\u2014 computationa"
+  }
+]

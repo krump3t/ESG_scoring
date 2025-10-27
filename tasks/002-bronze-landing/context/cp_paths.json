@@ -1,0 +1,10 @@
+{
+  "critical_paths": [
+    "agents/crawler/mcp_crawler.py",
+    "agents/crawler/fetchers/*.py",
+    "agents/crawler/extractors/*.py",
+    "agents/crawler/writers/parquet_writer.py"
+  ],
+  "entry_points": [{"name": "main", "path": "agents/crawler/mcp_crawler.py"}],
+  "coverage_requirements": {"line": 0.95, "branch": 0.95}
+}

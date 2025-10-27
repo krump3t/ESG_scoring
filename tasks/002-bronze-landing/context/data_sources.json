@@ -1,0 +1,7 @@
+{
+  "sources": [
+    {"name": "sustainability_reports", "type": "external", "format": "pdf", "sha256": "dynamic", "pii_flag": false, "provenance": "sustainabilityreports.com", "retention_days": 90},
+    {"name": "bronze_parquet", "type": "storage", "format": "parquet", "sha256": "dynamic", "pii_flag": false, "provenance": "extracted", "retention_days": 90}
+  ],
+  "last_updated": "2025-10-21T18:20:00Z"
+}

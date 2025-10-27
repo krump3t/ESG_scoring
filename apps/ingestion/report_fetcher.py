@@ -14,6 +14,8 @@ import hashlib
 from pathlib import Path
 import os
 import json
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 def get_audit_timestamp() -> str:
@@ -337,7 +339,7 @@ class SustainabilityReportFetcher:
         key_parts = [company_name.lower().replace(" ", "_")]
         if year:
             key_parts.append(str(year))
-        key_parts.append(datetime.now().strftime("%Y%m%d"))
+        key_parts.append(clock.now().strftime("%Y%m%d"))
 
         return "_".join(key_parts)
 
@@ -349,7 +351,7 @@ class SustainabilityReportFetcher:
 
         if cache_file.exists():
             # Check if cache is less than 24 hours old
-            age_hours = (datetime.now().timestamp() - cache_file.stat().st_mtime) / 3600
+            age_hours = (clock.now().timestamp() - cache_file.stat().st_mtime) / 3600
             if age_hours < 24:
                 try:
                     with open(cache_file, 'r') as f:

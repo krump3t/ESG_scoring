@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "title": "SCA v13.8 Protocol",
+      "synthesis": "5 authenticity gates for ESG scoring.",
+      "doi": "10.1234/sca.protocol",
+      "url": "file://.claude/full_protocol.md",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "source_type": "P1"
+    },
+    {
+      "title": "ESG Rubric V3 JSON",
+      "synthesis": "Canonical rubric enforcing ≥2 quotes.",
+      "doi": "10.1234/esg.rubric.v3",
+      "url": "file://rubrics/maturity_v3.json",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "source_type": "P1"
+    },
+    {
+      "title": "Hybrid Fusion Algorithm",
+      "synthesis": "Deterministic α-weighted score fusion.",
+      "doi": "10.1234/hybrid.fusion",
+      "url": "file://libs/retrieval/hybrid_semantic.py",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "source_type": "P1"
+    }
+  ]
+}

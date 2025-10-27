@@ -3,6 +3,8 @@ Fix compliance issues in tasks 003-007
 """
 import json
 from pathlib import Path
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 TASKS_DIR = Path(r"C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tasks")
 
@@ -265,7 +267,7 @@ Implementing an Ops/Freshness Agent that monitors Iceberg snapshot timestamps an
 def check_staleness(table: str, threshold_days: int = 730):
     \"\"\"Check for stale data using Iceberg snapshot metadata\"\"\"
     snapshots = iceberg.table(table).snapshots()
-    cutoff_ts = datetime.now() - timedelta(days=threshold_days)
+    cutoff_ts = clock.now() - timedelta(days=threshold_days)
 
     stale_orgs = []
     for snapshot in snapshots:

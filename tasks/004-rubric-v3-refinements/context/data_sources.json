@@ -1,0 +1,36 @@
+{
+  "task_id": "004-rubric-v3-refinements",
+  "date": "2025-10-22",
+  "sources": [
+    {
+      "name": "rubric_compliance_test_suite",
+      "type": "validation_dataset",
+      "path": "scripts/validate_rubric_compliance.py",
+      "sha256": "computed_on_read",
+      "pii_flag": false,
+      "provenance": "Task 003 rubric compliance validation",
+      "retention": "permanent",
+      "description": "23 test cases (15 rubric stage tests + 8 Microsoft findings) validating scorer against official esg_maturity_rubricv3.md specification"
+    },
+    {
+      "name": "differential_test_suite",
+      "type": "validation_dataset",
+      "path": "scripts/test_rubric_v3_differential.py",
+      "sha256": "computed_on_read",
+      "pii_flag": false,
+      "provenance": "Task 003 differential testing",
+      "retention": "permanent",
+      "description": "2,447 test cases (1,200 unique fuzz cases) validating determinism, robustness, and crash-free operation"
+    },
+    {
+      "name": "microsoft_findings",
+      "type": "real_world_validation",
+      "path": "scripts/aggregate_microsoft_report.py",
+      "sha256": "computed_on_read",
+      "pii_flag": false,
+      "provenance": "Microsoft 2023 Sustainability Report excerpts",
+      "retention": "permanent",
+      "description": "8 representative findings from Microsoft 2023 report for real-world scoring validation"
+    }
+  ]
+}

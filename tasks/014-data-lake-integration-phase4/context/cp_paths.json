@@ -1,0 +1,22 @@
+{
+  "task_id": "014-data-lake-integration-phase4",
+  "phase": "context",
+  "paths": [
+    "libs/data_lake/parquet_writer.py",
+    "libs/data_lake/duckdb_reader.py"
+  ],
+  "critical_path_files": [
+    {
+      "file": "libs/data_lake/parquet_writer.py",
+      "rationale": "Writes ESGMetrics to Parquet files with schema validation. Core data lake persistence layer using Phase 3 serialization methods.",
+      "complexity_target": "CCN ≤8",
+      "coverage_target": "≥95% line, ≥95% branch"
+    },
+    {
+      "file": "libs/data_lake/duckdb_reader.py",
+      "rationale": "SQL query engine for Parquet files. Enables analytical queries on stored metrics with zero-copy DuckDB integration.",
+      "complexity_target": "CCN ≤8",
+      "coverage_target": "≥95% line, ≥95% branch"
+    }
+  ]
+}

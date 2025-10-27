@@ -26,6 +26,8 @@ from agents.parser.evidence_extractor import EvidenceExtractor
 from agents.parser.matchers.ghg_matcher import GHGMatcher
 from agents.storage.bronze_writer import BronzeEvidenceWriter
 from agents.storage.silver_normalizer import SilverNormalizer
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 class IngestionStatus(Enum):
@@ -126,7 +128,7 @@ class QueryOrchestrator:
         Returns:
             IngestionJob with status and metadata
         """
-        start_time = time.time()
+        start_time = clock.time()
 
         # Check cache
         cache_result = self.cache_manager.check_cache(
@@ -144,7 +146,7 @@ class QueryOrchestrator:
                 status=IngestionStatus.CACHE_HIT,
                 cache_status=cache_result.status,
                 records_ingested=0,
-                processing_time_seconds=time.time() - start_time,
+                processing_time_seconds=clock.time() - start_time,
                 error_message=None
             )
 
@@ -172,7 +174,7 @@ class QueryOrchestrator:
 
             # Step 4: Write to bronze
             if all_evidence:
-                ingestion_id = f"orchestrator_{intent.company}_{intent.year}_{int(time.time())}"
+                ingestion_id = f"orchestrator_{intent.company}_{intent.year}_{int(clock.time())}"
                 self.bronze_writer.write_evidence_batch(
                     evidence_list=all_evidence,
                     ingestion_id=ingestion_id
@@ -181,7 +183,7 @@ class QueryOrchestrator:
                 # Step 5: Normalize to silver
                 self.silver_normalizer.normalize_bronze_to_silver()
 
-            processing_time = time.time() - start_time
+            processing_time = clock.time() - start_time
 
             return IngestionJob(
                 company=intent.company,
@@ -195,7 +197,7 @@ class QueryOrchestrator:
             )
 
         except Exception as e:
-            processing_time = time.time() - start_time
+            processing_time = clock.time() - start_time
             return IngestionJob(
                 company=intent.company,
                 year=intent.year,

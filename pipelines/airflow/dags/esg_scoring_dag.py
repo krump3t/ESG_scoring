@@ -16,6 +16,8 @@ from airflow.providers.http.sensors.http import HttpSensor
 from airflow.utils.task_group import TaskGroup
 from airflow.models import Variable
 from airflow.utils.dates import days_ago
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Default arguments for the DAG
 default_args = {
@@ -59,7 +61,7 @@ def check_services(**context):
         'watsonx': False,
         'astradb_vector': False,
         'astradb_graph': False,
-        'timestamp': datetime.now().isoformat()
+        'timestamp': clock.now().isoformat()
     }
 
     # Check watsonx

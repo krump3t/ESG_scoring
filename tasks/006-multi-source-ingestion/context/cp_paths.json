@@ -1,0 +1,58 @@
+{
+  "task_id": "006-multi-source-ingestion",
+  "date": "2025-10-22",
+  "critical_path": [
+    "agents/crawler/data_providers/base_provider.py",
+    "agents/crawler/data_providers/cdp_provider.py",
+    "agents/crawler/data_providers/sec_edgar_provider.py",
+    "agents/crawler/multi_source_crawler.py"
+  ],
+  "entry_points": [
+    "CDPClimateProvider.search_company",
+    "CDPClimateProvider.download_report",
+    "SECEdgarProvider.search_company",
+    "SECEdgarProvider.download_report",
+    "MultiSourceCrawler.search_company_reports",
+    "MultiSourceCrawler.download_best_report"
+  ],
+  "cp_requirements": {
+    "coverage": {
+      "line_min": 0.95,
+      "branch_min": 0.95
+    },
+    "type_safety": {
+      "mypy_strict": true,
+      "errors_allowed": 0
+    },
+    "complexity": {
+      "ccn_max": 10,
+      "cognitive_max": 15
+    },
+    "documentation": {
+      "interrogate_min": 0.95
+    },
+    "security": {
+      "detect_secrets": "clean",
+      "bandit": "no_findings"
+    },
+    "determinism": {
+      "reproducible": true,
+      "fixed_seeds": true
+    }
+  },
+  "test_requirements": {
+    "tdd": true,
+    "tests_before_implementation": true,
+    "property_tests_required": true,
+    "failure_path_tests_required": true,
+    "test_markers": ["@pytest.mark.cp"]
+  },
+  "dependencies": [
+    "requests>=2.31.0",
+    "urllib3>=2.0.0"
+  ],
+  "exclusions": [
+    "agents/crawler/sustainability_reports_crawler.py",
+    "agents/crawler/data_providers/__init__.py"
+  ]
+}

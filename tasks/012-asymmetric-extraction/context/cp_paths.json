@@ -1,0 +1,36 @@
+{
+  "task_id": "012-asymmetric-extraction",
+  "phase": "context",
+  "paths": [
+    "agents/extraction/extraction_router.py",
+    "agents/extraction/structured_extractor.py",
+    "agents/extraction/llm_extractor.py",
+    "libs/models/esg_metrics.py"
+  ],
+  "critical_path_files": [
+    {
+      "file": "agents/extraction/extraction_router.py",
+      "rationale": "Content-type-based routing is core orchestration logic. Routes to StructuredExtractor vs LLMExtractor based on SourceRef.content_type.",
+      "complexity_target": "CCN ≤5",
+      "coverage_target": "≥95% line, ≥95% branch"
+    },
+    {
+      "file": "agents/extraction/structured_extractor.py",
+      "rationale": "Pydantic parsing of JSON/XBRL achieves ≥98% extraction accuracy target. Critical for structured data path.",
+      "complexity_target": "CCN ≤8",
+      "coverage_target": "≥95% line, ≥95% branch"
+    },
+    {
+      "file": "agents/extraction/llm_extractor.py",
+      "rationale": "LLM-based extraction from PDF/HTML achieves ≥85% accuracy. Critical for unstructured data path with retry logic.",
+      "complexity_target": "CCN ≤10",
+      "coverage_target": "≥95% line, ≥95% branch"
+    },
+    {
+      "file": "libs/models/esg_metrics.py",
+      "rationale": "Pydantic-Parquet schema parity ensures type-safe data contracts. 100% schema compatibility required for data lake integration.",
+      "complexity_target": "CCN ≤5",
+      "coverage_target": "≥95% line, ≥95% branch"
+    }
+  ]
+}

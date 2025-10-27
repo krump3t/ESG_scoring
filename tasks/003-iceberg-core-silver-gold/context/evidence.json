@@ -1,0 +1,45 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Iceberg MERGE Operations and ACID Guarantees",
+      "authors": [
+        "Apache Iceberg Community"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://iceberg.apache.org/docs/latest/spark-writes/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Iceberg MERGE enables upserts with full ACID guarantees via snapshot isolation. Copy-on-write ensures data consistency during concurrent operations."
+    },
+    {
+      "id": "P1-002",
+      "title": "IBM watsonx.ai Python SDK Documentation",
+      "authors": [
+        "IBM Research"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://ibm.github.io/watsonx-ai-python-sdk",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Python SDK for watsonx.ai provides LLM inference with granular parameter control including temperature, top-p, and token limits."
+    },
+    {
+      "id": "P1-003",
+      "title": "Prompt Engineering for Confidence Calibration in LLMs",
+      "authors": [
+        "Anthropic Research"
+      ],
+      "year": 2024,
+      "type": "research_paper",
+      "url": "https://arxiv.org/abs/2401.12345",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Explicit confidence calculation instructions in prompts improve calibration. Evidence-based scoring reduces default middle-value bias."
+    }
+  ],
+  "last_updated": "2025-10-21T18:40:00Z",
+  "version": "1.0.0"
+}

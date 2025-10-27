@@ -1,0 +1,33 @@
+{
+  "task_id": "004-rubric-v3-refinements",
+  "date": "2025-10-22",
+  "sources": [
+    {
+      "id": "task003_validation",
+      "title": "Rubric Compliance Validation Report - Task 003",
+      "type": "internal_artifact",
+      "priority": "P1",
+      "url": "tasks/003-rubric-v3-implementation/qa/rubric_compliance_validation.txt",
+      "retrieval_date": "2025-10-22",
+      "synthesis": "Identified 2 violations (RD Stage 0, RMM implicit) and 4 warnings (GHG assurance x2, RD framework x2) in rubric alignment; 91.3% acceptable but 73.9% exact match suggests precision improvements needed"
+    },
+    {
+      "id": "rubric_specification",
+      "title": "ESG Maturity Rubric v3.0 Official Specification",
+      "type": "specification",
+      "priority": "P1",
+      "url": "rubrics/esg_maturity_rubricv3.md",
+      "retrieval_date": "2025-10-22",
+      "synthesis": "Defines 7 dimensions with 0-4 stage criteria; Stage 3 GHG = 'limited assurance', Stage 4 = 'reasonable assurance'; RD Stage 0 = 'no formal ESG reporting'; RMM Stage 2 = 'defined risk taxonomy; periodic assessments'"
+    },
+    {
+      "id": "task003_differential",
+      "title": "Differential Testing Results - Task 003",
+      "type": "internal_artifact",
+      "priority": "P2",
+      "url": "tasks/003-rubric-v3-implementation/qa/differential_rubric_v3_results.json",
+      "retrieval_date": "2025-10-22",
+      "synthesis": "Validated 100% determinism across 2,447 test cases (1,200 fuzz cases); 0 crashes; establishes baseline for post-refinement determinism verification"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  "scripts/**/*.py",
+  "agents/**/*.py",
+  "apps/**/*.py",
+  "libs/**/*.py"
+]

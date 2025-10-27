@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import sys, json, traceback, pathlib
+import sys, json, traceback, pathlib, random, os, hashlib
+
+# Ensure deterministic random for reproducible scoring
+random.seed(int(os.getenv("SEED", "42")))
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -28,19 +31,16 @@ def handle(method, params):
         return {"compiled": bool(ok), "output": str(out_json)}
 
     if method == "esg.score":
-        import random, json as _json, os
+        import json as _json
         req = ScoreRequest(**params)
         if RUBRIC_PATH.exists():
             rubric = _json.loads(open(RUBRIC_PATH).read())
             themes = list(rubric["themes"].keys()) or ["General"]
         else:
             themes = ["General"]
-        # Seed from environment or company+year for deterministic reproducibility
-        seed_override = os.getenv("SEED")
-        if seed_override:
-            random.seed(int(seed_override))
-        else:
-            random.seed(req.company + str(req.year))
+        # Module-level seed is already set at import; re-seed per request for per-request determinism
+        seed_val = int(hashlib.sha256((req.company + str(req.year)).encode()).hexdigest(), 16) % (2**32)
+        random.seed(seed_val)
         decisions = []
         for t in themes:
             stage = random.randint(1,3)

@@ -15,6 +15,8 @@ import os
 import json
 import os
 import re
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 def get_audit_timestamp() -> str:
@@ -423,7 +425,7 @@ class DataLineageTracker:
         self.lineage_dir.mkdir(parents=True, exist_ok=True)
 
         # Current session
-        self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.session_id = clock.now().strftime("%Y%m%d_%H%M%S")
         self.lineage_records: List[LineageRecord] = []
 
     def add_record(self, record: LineageRecord):

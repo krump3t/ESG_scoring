@@ -1,5 +1,7 @@
 import logging
 from datetime import datetime
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 """
 SASB (Sustainability Accounting Standards Board) Navigator Provider
@@ -156,7 +158,7 @@ class SASBNavigatorProvider(BaseDataProvider):
             report = CompanyReport(
                 company_name=company_name or industry_code,
                 company_id=industry_code,
-                year=year if year else datetime.now().year,
+                year=year if year else clock.now().year,
                 report_type="sasb_material_issues",
                 report_title=f"SASB Material ESG Issues for {company_name} ({industry_code})",
                 download_url=material_issues.get("source_url"),
@@ -171,7 +173,7 @@ class SASBNavigatorProvider(BaseDataProvider):
                     "disclosure_guidance": disclosure_guidance,
                 },
                 date_published=None,  # SASB standards periodically updated
-                date_retrieved=datetime.now().strftime("%Y-%m-%d"),
+                date_retrieved=clock.now().strftime("%Y-%m-%d"),
             )
 
             return [report]

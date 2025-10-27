@@ -2,50 +2,23 @@
   "agent": "SCA",
   "protocol_version": "13.8",
   "audit_type": "authenticity",
-  "timestamp": "2025-10-26T23:12:40.467805Z",
+  "timestamp": "2025-10-27T04:31:27.800149Z",
   "git_commit": "unknown",
   "root_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine",
-  "status": "blocked",
+  "status": "ok",
   "summary": {
-    "total_violations": 149,
-    "fatal": 9,
-    "warn": 140,
+    "total_violations": 77,
+    "fatal": 0,
+    "warn": 77,
     "detectors_run": 8
   },
   "violations": [
-    {
-      "file": "agents\\crawler\\data_providers\\base_provider.py",
-      "line": 109,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "elapsed = time.time() - self._last_request_time",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\base_provider.py",
-      "line": 112,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "self._last_request_time = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
     {
       "file": "agents\\crawler\\data_providers\\cdp_provider.py",
       "line": 24,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\cdp_provider.py",
-      "line": 110,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "year_val = result.get('year') or result.get('reporting_year', year or datetime.now().year)",
       "severity": "WARN",
       "exemption": null
     },
@@ -59,47 +32,11 @@
       "exemption": null
     },
     {
-      "file": "agents\\crawler\\data_providers\\gri_provider.py",
-      "line": 151,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "date_retrieved=datetime.now().strftime(\"%Y-%m-%d\"),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\gri_provider.py",
-      "line": 239,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "date_retrieved=datetime.now().strftime(\"%Y-%m-%d\"),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "agents\\crawler\\data_providers\\sasb_provider.py",
-      "line": 13,
+      "line": 15,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\sasb_provider.py",
-      "line": 159,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "year=year if year else datetime.now().year,",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\sasb_provider.py",
-      "line": 174,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "date_retrieved=datetime.now().strftime(\"%Y-%m-%d\"),",
       "severity": "WARN",
       "exemption": null
     },
@@ -122,65 +59,11 @@
       "exemption": null
     },
     {
-      "file": "agents\\crawler\\data_providers\\ticker_lookup.py",
-      "line": 133,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "year=year if year else datetime.now().year,",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\data_providers\\ticker_lookup.py",
-      "line": 142,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "date_retrieved=datetime.now().strftime(\"%Y-%m-%d\"),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "agents\\crawler\\sustainability_reports_crawler.py",
-      "line": 39,
+      "line": 41,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\sustainability_reports_crawler.py",
-      "line": 249,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "year = datetime.now().year",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\sustainability_reports_crawler.py",
-      "line": 356,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "year = datetime.now().year",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\crawler\\writers\\parquet_writer.py",
-      "line": 244,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "extraction_ts = datetime.now()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "agents\\query\\orchestrator.py",
-      "line": 175,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "ingestion_id = f\"orchestrator_{intent.company}_{intent.year}_{int(time.time())}\"",
       "severity": "WARN",
       "exemption": null
     },
@@ -194,53 +77,17 @@
       "exemption": null
     },
     {
-      "file": "apps\\evaluation\\response_quality.py",
-      "line": 27,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "return datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\evaluation\\response_quality.py",
-      "line": 132,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "response_id = hashlib.md5(f\"{query}{response}{datetime.now()}\".encode()).hexdigest()[:12]",
+      "file": "apps\\api\\main.py",
+      "line": 259,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except Exception:",
       "severity": "WARN",
       "exemption": null
     },
     {
       "file": "apps\\ingestion\\crawler.py",
-      "line": 27,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "return datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\crawler.py",
-      "line": 100,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "elapsed = time.time() - self.last_request_time",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\crawler.py",
-      "line": 104,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "self.last_request_time = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\crawler.py",
-      "line": 277,
+      "line": 279,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
@@ -258,37 +105,10 @@
     },
     {
       "file": "apps\\ingestion\\report_fetcher.py",
-      "line": 201,
+      "line": 203,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\report_fetcher.py",
-      "line": 340,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "key_parts.append(datetime.now().strftime(\"%Y%m%d\"))",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\report_fetcher.py",
-      "line": 352,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "age_hours = (datetime.now().timestamp() - cache_file.stat().st_mtime) / 3600",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\ingestion\\validator.py",
-      "line": 426,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "self.session_id = datetime.now().strftime(\"%Y%m%d_%H%M%S\")",
       "severity": "WARN",
       "exemption": null
     },
@@ -330,172 +150,10 @@
     },
     {
       "file": "apps\\mcp_server\\server.py",
-      "line": 27,
+      "line": 30,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "ok = compile_md_to_json(md, out_json)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\mcp_server\\server.py",
-      "line": 46,
-      "violation_type": "unseeded_random",
-      "description": "Unseeded random.randint call - breaks determinism",
-      "code_snippet": "stage = random.randint(1,3)",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline\\demo_flow.py",
-      "line": 361,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "\"timestamp\": time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline\\theme_adapter.py",
-      "line": 14,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "def now(): return int(time.time()*1000)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 121,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "log_file = log_dir / f\"pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 224,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_start = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 234,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_latency = time.time() - phase_start",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 260,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_start = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 270,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_latency = time.time() - phase_start",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 303,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_start = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 316,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_latency = time.time() - phase_start",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 343,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_start = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "apps\\pipeline_orchestrator.py",
-      "line": 353,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "phase_latency = time.time() - phase_start",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "diagnose_quality_issues.py",
-      "line": 344,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"diagnostic_timestamp\": datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "diagnose_quality_issues.py",
-      "line": 360,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "output_file = Path(\"data/diagnostics\") / f\"confidence_diagnostic_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "evaluate_real_reports.py",
-      "line": 363,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "output_file = Path(\"data/real_evaluations\") / f\"real_esg_scores_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "evaluate_real_reports.py",
-      "line": 368,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"evaluation_date\": datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "fetch_real_reports.py",
-      "line": 83,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"extraction_timestamp\": datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "fetch_real_reports.py",
-      "line": 173,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "output_file = Path(\"data/real_reports\") / f\"fetched_reports_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json\"",
       "severity": "WARN",
       "exemption": null
     },
@@ -509,137 +167,20 @@
       "exemption": null
     },
     {
-      "file": "libs\\embedding\\watsonx_embedder.py",
-      "line": 248,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "now = datetime.now()",
+      "file": "libs\\utils\\determinism.py",
+      "line": 89,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except ImportError:",
       "severity": "WARN",
       "exemption": null
     },
     {
-      "file": "libs\\llm\\watsonx_client.py",
-      "line": 477,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "age = time.time() - cache_file.stat().st_mtime",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\qa\\tee.py",
-      "line": 11,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "rec={\"ts_ms\":int(time.time()*1000),\"trace_id\":self.trace_id,",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_graph.py",
-      "line": 172,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "created_at=datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_graph.py",
-      "line": 173,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "updated_at=datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_graph.py",
-      "line": 228,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "created_at=datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_vector.py",
-      "line": 167,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"timestamp\": datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_vector.py",
-      "line": 222,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"timestamp\": datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\storage\\astradb_vector.py",
-      "line": 490,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "test_metadata = {\"test\": True, \"timestamp\": datetime.now().isoformat()}",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "libs\\utils\\trace.py",
-      "line": 5,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "rec = {\"ts\": int(time.time()), **event}",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "mcp_report_fetcher.py",
-      "line": 240,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"fetch_timestamp\": datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "mcp_report_fetcher.py",
-      "line": 312,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"year\": year or datetime.now().year,",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "mcp_report_fetcher.py",
-      "line": 338,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "age_hours = (datetime.now().timestamp() - cache_file.stat().st_mtime) / 3600",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "mcp_report_fetcher.py",
-      "line": 347,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"fetched_at\": datetime.now().isoformat(),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "pipelines\\airflow\\dags\\esg_scoring_dag.py",
-      "line": 62,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "'timestamp': datetime.now().isoformat()",
+      "file": "libs\\utils\\http_client.py",
+      "line": 83,
+      "violation_type": "network_import",
+      "description": "Network library requests in production code",
+      "code_snippet": "import requests",
       "severity": "WARN",
       "exemption": null
     },
@@ -662,128 +203,11 @@
       "exemption": null
     },
     {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 23,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "return datetime.now().isoformat()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 115,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "t0 = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 118,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "latency_ms = round((time.time() - t0) * 1000, 2)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 144,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "t0 = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 160,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "latency_ms = round((time.time() - t0) * 1000, 2)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 177,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "t0 = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 190,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "latency_ms = round((time.time() - t0) * 1000, 2)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 207,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "t0 = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 224,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "latency_ms = round((time.time() - t0) * 1000, 2)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 290,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "t0 = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\compare_esg_analysis.py",
-      "line": 292,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "latencies[\"generation_ms\"] = round((time.time() - t0) * 1000, 2)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
       "file": "scripts\\demo_mcp_server_e2e.py",
       "line": 13,
       "violation_type": "network_import",
       "description": "Network library requests in production code",
       "code_snippet": "import requests",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\fix_task_compliance.py",
-      "line": 268,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "cutoff_ts = datetime.now() - timedelta(days=threshold_days)",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\fix_task_compliance_ascii.py",
-      "line": 268,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "cutoff_ts = datetime.now() - timedelta(days=threshold_days)",
       "severity": "WARN",
       "exemption": null
     },
@@ -807,52 +231,7 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 179,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "\"\"\"Flag datetime.now() and time.time() without override mechanism\"\"\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 179,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "\"\"\"Flag datetime.now() and time.time() without override mechanism\"\"\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 182,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "(r\"datetime\\.now\\(\\)\", \"datetime.now()\"),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 183,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "(r\"time\\.time\\(\\)\", \"time.time()\"),",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 199,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "# Allow time.time() for performance metrics",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 217,
+      "line": 237,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "\"\"\"Flag to_json() where to_parquet() expected\"\"\"",
@@ -861,7 +240,7 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 228,
+      "line": 248,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "if \"to_json(\" in line and (\"artifacts\" in content or \"maturity\" in content):",
@@ -870,82 +249,10 @@
     },
     {
       "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 233,
+      "line": 253,
       "violation_type": "json_as_parquet",
       "description": "to_json() used for data artifact - should use to_parquet()",
       "code_snippet": "description=\"to_json() used for data artifact - should use to_parquet()\",",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 306,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "\"\"\"Flag eval() and exec() usage\"\"\"",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\qa\\authenticity_audit.py",
-      "line": 322,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "description=\"eval() or exec() usage - major security/determinism risk\",",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 47,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "logging.FileHandler(f'logs/scoring_{datetime.now().strftime(\"%Y%m%d_%H%M%S\")}.log')",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 195,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "report_file = output_dir / f\"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 200,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "md_file = output_dir / f\"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md\"",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 203,
-      "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
-      "code_snippet": "f.write(f\"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n\\n\")",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 297,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "total_start = time.time()",
-      "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "scripts\\run_scoring.py",
-      "line": 323,
-      "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
-      "code_snippet": "total_time = time.time() - total_start",
       "severity": "WARN",
       "exemption": null
     },
@@ -1025,8 +332,35 @@
       "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
       "line": 69,
       "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
+      "description": "clock.now() breaks determinism - needs override",
       "code_snippet": "self.start_time = datetime.now()",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
+      "line": 94,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "start_time = time.time()",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
+      "line": 114,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "response_time = time.time() - start_time",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\006-multi-source-ingestion\\qa\\phase1_integration_test.py",
+      "line": 132,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "response_time = time.time() - start_time",
       "severity": "WARN",
       "exemption": null
     },
@@ -1034,8 +368,62 @@
       "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
       "line": 137,
       "violation_type": "nondeterministic_time",
-      "description": "datetime.now() breaks determinism - needs override",
+      "description": "clock.now() breaks determinism - needs override",
       "code_snippet": "\"test_date\": datetime.now().isoformat(),",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
+      "line": 159,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "start_time = time.time()",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
+      "line": 171,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "elapsed_time = time.time() - start_time",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
+      "line": 221,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "elapsed_time = time.time() - start_time",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\authenticity\\test_clock_cp.py",
+      "line": 139,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except ValueError:",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\authenticity\\test_http_cp.py",
+      "line": 50,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except KeyError:",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\authenticity\\test_ingestion_authenticity_cp.py",
+      "line": 168,
+      "violation_type": "silent_exception",
+      "description": "Except block with pass - silently swallows errors",
+      "code_snippet": "except json.JSONDecodeError:",
       "severity": "WARN",
       "exemption": null
     },
@@ -1104,9 +492,18 @@
     },
     {
       "file": "tests\\infrastructure\\conftest.py",
+      "line": 29,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "self.start_time = time.time()",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\infrastructure\\conftest.py",
       "line": 58,
       "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
+      "description": "clock.time() breaks determinism - needs override",
       "code_snippet": "\"timestamp\": time.time(),",
       "severity": "WARN",
       "exemption": null
@@ -1115,8 +512,17 @@
       "file": "tests\\infrastructure\\conftest.py",
       "line": 80,
       "violation_type": "nondeterministic_time",
-      "description": "time.time() breaks determinism - needs override",
+      "description": "clock.time() breaks determinism - needs override",
       "code_snippet": "\"end_time\": time.time(),",
+      "severity": "WARN",
+      "exemption": null
+    },
+    {
+      "file": "tests\\infrastructure\\conftest.py",
+      "line": 81,
+      "violation_type": "nondeterministic_time",
+      "description": "clock.time() breaks determinism - needs override",
+      "code_snippet": "\"duration_seconds\": time.time() - self.start_time,",
       "severity": "WARN",
       "exemption": null
     },
@@ -1275,65 +681,11 @@
     },
     {
       "file": "tests\\test_authenticity_audit.py",
-      "line": 212,
-      "violation_type": "workspace_escape",
-      "description": "Potential workspace escape: relative path traversal",
-      "code_snippet": "test_file.write_text('open(\"../../../etc/passwd\")\\n')",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 222,
-      "violation_type": "workspace_escape",
-      "description": "Potential workspace escape: relative path traversal",
-      "code_snippet": "test_file.write_text('p = Path(\"../secret.txt\")\\n')",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
       "line": 240,
       "violation_type": "silent_exception",
       "description": "Except block with pass - silently swallows errors",
       "code_snippet": "except Exception:",
       "severity": "WARN",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 273,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "\"\"\"Should detect eval() usage\"\"\"",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 275,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "test_file.write_text('result = eval(user_input)\\n')",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 283,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "\"\"\"Should detect exec() usage\"\"\"",
-      "severity": "FATAL",
-      "exemption": null
-    },
-    {
-      "file": "tests\\test_authenticity_audit.py",
-      "line": 285,
-      "violation_type": "eval_exec",
-      "description": "eval() or exec() usage - major security/determinism risk",
-      "code_snippet": "test_file.write_text('exec(code_string)\\n')",
-      "severity": "FATAL",
       "exemption": null
     },
     {
@@ -1365,17 +717,17 @@
     {
       "name": "network_imports",
       "fatal_count": 0,
-      "warn_count": 33
+      "warn_count": 34
     },
     {
       "name": "unseeded_random",
-      "fatal_count": 1,
+      "fatal_count": 0,
       "warn_count": 0
     },
     {
       "name": "nondeterministic_time",
       "fatal_count": 0,
-      "warn_count": 81
+      "warn_count": 12
     },
     {
       "name": "json_as_parquet",
@@ -1384,17 +736,17 @@
     },
     {
       "name": "workspace_escape",
-      "fatal_count": 2,
+      "fatal_count": 0,
       "warn_count": 0
     },
     {
       "name": "silent_exceptions",
       "fatal_count": 0,
-      "warn_count": 10
+      "warn_count": 15
     },
     {
       "name": "eval_exec",
-      "fatal_count": 6,
+      "fatal_count": 0,
       "warn_count": 0
     },
     {

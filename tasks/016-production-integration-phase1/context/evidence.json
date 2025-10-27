@@ -1,0 +1,112 @@
+{
+  "task_id": "016-production-integration-phase1",
+  "phase": "1",
+  "evidence_type": "technical_documentation",
+  "sources": [
+    {
+      "source_id": "E001",
+      "type": "primary",
+      "title": "Docker Compose Specification v3.8",
+      "url": "https://docs.docker.com/compose/compose-file/compose-file-v3/",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "Docker Compose v3.8 defines service orchestration with health checks, resource limits, and network configuration. Used to validate 9-service architecture design with postgres, redis, minio, iceberg-rest, trino, airflow-webserver, airflow-scheduler, mcp-server, ngrok.",
+      "relevance_score": 0.95,
+      "key_findings": [
+        "Health check format: test, interval, timeout, retries, start_period",
+        "Resource limits: memory, cpus via deploy.resources.limits",
+        "Bridge network DNS: Services accessible via hostname within same network"
+      ]
+    },
+    {
+      "source_id": "E002",
+      "type": "primary",
+      "title": "IBM watsonx.ai Python SDK Documentation",
+      "url": "https://ibm.github.io/watsonx-ai-python-sdk/",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "Official Python SDK for IBM watsonx.ai foundation models (Granite LLM, Slate embeddings). Requires API key, project ID, and regional URL. Dependency: ibm-watsonx-ai>=0.2.0. Key classes: Credentials, ModelInference, Embeddings.",
+      "relevance_score": 0.98,
+      "key_findings": [
+        "Credentials object requires api_key, url, project_id",
+        "Embeddings.embed_documents() returns List[List[float]] (384-dim for Slate.125m)",
+        "Rate limits: 20 req/min for free tier; use caching"
+      ]
+    },
+    {
+      "source_id": "E003",
+      "type": "primary",
+      "title": "DataStax Astra DB Python Driver (cassandra-driver)",
+      "url": "https://docs.datastax.com/en/astra-serverless/docs/develop/drivers/python.html",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "Cassandra-driver (>=3.28.0) provides Python API for Astra DB with vector search support. Requires application token, database ID, and secure connect bundle. StorageAttachedIndex enables ANN vector search with cosine similarity.",
+      "relevance_score": 0.97,
+      "key_findings": [
+        "Cloud connection via secure_connect_bundle (downloaded from Astra console)",
+        "Vector type: VECTOR<FLOAT, 384> for Slate embeddings",
+        "ANN index: CREATE CUSTOM INDEX USING 'StorageAttachedIndex' WITH OPTIONS = {'similarity_function': 'cosine'}"
+      ]
+    },
+    {
+      "source_id": "E004",
+      "type": "secondary",
+      "title": "Apache Airflow 2.7.3 Docker Deployment Guide",
+      "url": "https://airflow.apache.org/docs/apache-airflow/2.7.3/howto/docker-compose/index.html",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "Official Airflow Docker Compose template for production-like deployments. LocalExecutor recommended for single-node; requires PostgreSQL metadata DB. Fernet key required for connection encryption.",
+      "relevance_score": 0.92,
+      "key_findings": [
+        "AIRFLOW__CORE__EXECUTOR=LocalExecutor for single-node (no Celery overhead)",
+        "AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://user:pass@host/db",
+        "Fernet key generation: python -c 'from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())'"
+      ]
+    },
+    {
+      "source_id": "E005",
+      "type": "secondary",
+      "title": "ngrok Docker Container Documentation",
+      "url": "https://hub.docker.com/r/ngrok/ngrok",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "Official ngrok Docker image for secure tunneling. Requires NGROK_AUTHTOKEN environment variable. Exposes port 4040 for API/dashboard access. Health check via /api/tunnels endpoint.",
+      "relevance_score": 0.90,
+      "key_findings": [
+        "Command: http <service>:<port> --log stdout",
+        "Public URL retrieval: curl http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url'",
+        "Tunnel metrics: conns.count, conns.rate, http.count tracked via API"
+      ]
+    },
+    {
+      "source_id": "E006",
+      "type": "tertiary",
+      "title": "DuckDB Python API Reference",
+      "url": "https://duckdb.org/docs/api/python/overview",
+      "retrieval_date": "2025-10-24",
+      "doi": null,
+      "synthesis": "DuckDB (>=0.9.2) provides embedded SQL analytics engine with Parquet native support. Zero-setup, file-based or in-memory. CREATE VIEW over Parquet files enables SQL queries without ETL.",
+      "relevance_score": 0.88,
+      "key_findings": [
+        "Connect: duckdb.connect('analytics.duckdb') or duckdb.connect(':memory:')",
+        "Parquet views: CREATE VIEW tbl AS SELECT * FROM read_parquet('data/*.parquet')",
+        "Arrow integration: .df() returns pandas DataFrame, .arrow() returns pyarrow Table"
+      ]
+    }
+  ],
+  "synthesis_summary": "Phase 1 infrastructure design validated against 6 primary/secondary sources. Docker Compose v3.8 enables 9-service orchestration with health checks. IBM watsonx.ai SDK (ibm-watsonx-ai>=0.2.0) and AstraDB driver (cassandra-driver>=3.28.0) provide production AI capabilities. Airflow 2.7.3 with LocalExecutor supports workflow orchestration. ngrok Docker container enables secure public MCP server access. DuckDB (>=0.9.2) provides local analytics engine for Parquet data.",
+  "coverage_assessment": {
+    "total_sources": 6,
+    "primary_sources": 3,
+    "secondary_sources": 2,
+    "tertiary_sources": 1,
+    "avg_relevance_score": 0.93,
+    "coverage_gaps": [
+      "Redis Docker configuration best practices (using standard redis:7-alpine image without custom config)",
+      "MinIO IAM policy configuration for Iceberg integration (using default minioadmin credentials)",
+      "Trino catalog configuration for Iceberg tables (using volume-mounted config files)"
+    ]
+  },
+  "prepared_by": "Scientific Coding Agent v13.8-MEA",
+  "created_date": "2025-10-24"
+}

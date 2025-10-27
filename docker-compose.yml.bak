@@ -1,0 +1,83 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: esg-scoring-api:latest
+    container_name: esg-scoring-api
+    ports:
+      - "8001:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONHASHSEED=0
+      - SEED=42
+      - PORT=8000
+      - LOG_LEVEL=info
+      # Phase 11: OpenTelemetry
+      - OTEL_SERVICE_NAME=esg-scoring-api
+      - OTEL_TRACES_EXPORTER=console
+      - OTEL_METRICS_EXPORTER=none
+      - OTEL_LOGS_EXPORTER=none
+    volumes:
+      # Mount artifacts for persistence
+      - ./artifacts:/app/artifacts
+      # Mount for development (comment out for production)
+      # - ./apps:/app/apps
+      # - ./libs:/app/libs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - esg-network
+
+  # Prometheus for metrics (optional, for Phase 11)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: esg-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infrastructure/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+    networks:
+      - esg-network
+    profiles:
+      - monitoring
+
+  # Grafana for dashboards (optional, for Phase 11)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: esg-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./infrastructure/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./infrastructure/grafana/datasources:/etc/grafana/provisioning/datasources
+    networks:
+      - esg-network
+    profiles:
+      - monitoring
+    depends_on:
+      - prometheus
+
+networks:
+  esg-network:
+    driver: bridge
+
+volumes:
+  prometheus-data:
+  grafana-data:

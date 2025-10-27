@@ -28,6 +28,8 @@ from pathlib import Path
 from typing import List, Dict, Optional, Set
 from urllib.parse import urljoin, urlparse
 from urllib.robotparser import RobotFileParser
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 try:
     from playwright.async_api import async_playwright, Page, Browser
@@ -246,7 +248,7 @@ class SustainabilityReportsCrawler:
 
         if year is None:
             logger.warning(f"Could not determine year for {pdf_url}, defaulting to current year")
-            year = datetime.now().year
+            year = clock.now().year
 
         # Check deduplication
         key = f"{company_name}_{year}_{report_type}"
@@ -353,7 +355,7 @@ class SustainabilityReportsCrawler:
 
         if year is None:
             logger.warning(f"Could not determine year for {pdf_url}, defaulting to current year")
-            year = datetime.now().year
+            year = clock.now().year
 
         # Check deduplication by company+year+type
         key = f"{company_name}_{year}_{report_type}"

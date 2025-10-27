@@ -1,0 +1,10 @@
+{
+  "critical_paths": [
+    "mcp_server/*.py",
+    "mcp_server/handlers/*.py"
+  ],
+  "coverage_requirements": {
+    "line": 0.95,
+    "branch": 0.95
+  }
+}

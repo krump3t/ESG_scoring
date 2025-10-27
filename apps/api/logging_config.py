@@ -16,6 +16,8 @@ import logging
 import time
 import uuid
 from datetime import datetime
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 # Configure JSON formatter
@@ -108,7 +110,7 @@ def create_logging_middleware() -> Callable[[Request, Callable], Any]:
         span_id = request.headers.get("X-Span-Id", "")
 
         # Record start time
-        start_time = time.time()
+        start_time = clock.time()
 
         # Log request
         logger.info(
@@ -129,7 +131,7 @@ def create_logging_middleware() -> Callable[[Request, Callable], Any]:
             response = await call_next(request)
 
             # Calculate duration
-            duration_ms = (time.time() - start_time) * 1000
+            duration_ms = (clock.time() - start_time) * 1000
 
             # Log response
             logger.info(
@@ -152,7 +154,7 @@ def create_logging_middleware() -> Callable[[Request, Callable], Any]:
 
         except Exception as exc:
             # Calculate duration
-            duration_ms = (time.time() - start_time) * 1000
+            duration_ms = (clock.time() - start_time) * 1000
 
             # Log error
             logger.error(

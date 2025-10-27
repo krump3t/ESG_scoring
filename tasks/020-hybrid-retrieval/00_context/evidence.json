@@ -1,0 +1,24 @@
+{
+  "parquet": [
+    "data/ingested/esg_documents.parquet",
+    "data/ingested/esg_embeddings.parquet",
+    "data/ingested/esg_docs_enriched.parquet"
+  ],
+  "manifests": [
+    "artifacts/lineage/duckdb_stats.json",
+    "artifacts/lineage/enriched_manifest.json",
+    "artifacts/lineage/embeddings_manifest.json",
+    "artifacts/lineage/astradb_upsert_manifest.json"
+  ],
+  "code_artifacts": [
+    "libs/analytics/duck.py",
+    "libs/analytics/prefilter.py",
+    "scripts/duckdb_checks.py",
+    "scripts/build_enriched_docs.py",
+    "scripts/compare_esg_analysis.py"
+  ],
+  "test_files": [
+    "tests/phase5b/test_duckdb_parity_and_enriched.py",
+    "tests/phase5b/test_hybrid_with_prefilter.py"
+  ]
+}

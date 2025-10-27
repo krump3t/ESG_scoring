@@ -22,6 +22,8 @@ from agents.parser.evidence_extractor import EvidenceExtractor
 from agents.parser.matchers.ghg_matcher import GHGMatcher
 from agents.storage.bronze_writer import BronzeEvidenceWriter
 from agents.storage.silver_normalizer import SilverNormalizer
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 @dataclass
@@ -109,7 +111,7 @@ class BatchProcessor:
         Returns:
             CompanyProcessingResult with processing statistics
         """
-        start_time = time.time()
+        start_time = clock.time()
 
         try:
             # Check if filing exists
@@ -119,7 +121,7 @@ class BatchProcessor:
                     year=year,
                     success=False,
                     evidence_count=0,
-                    processing_time_seconds=time.time() - start_time,
+                    processing_time_seconds=clock.time() - start_time,
                     error_message=f"Filing not found: {filing_path}"
                 )
 
@@ -153,7 +155,7 @@ class BatchProcessor:
             if normalize and all_evidence:
                 self.silver_normalizer.normalize_bronze_to_silver()
 
-            processing_time = time.time() - start_time
+            processing_time = clock.time() - start_time
 
             return CompanyProcessingResult(
                 ticker=ticker,
@@ -165,7 +167,7 @@ class BatchProcessor:
             )
 
         except Exception as e:
-            processing_time = time.time() - start_time
+            processing_time = clock.time() - start_time
             return CompanyProcessingResult(
                 ticker=ticker,
                 year=year,
@@ -190,7 +192,7 @@ class BatchProcessor:
         Returns:
             BatchProcessingResult with batch statistics
         """
-        start_time = time.time()
+        start_time = clock.time()
         batch_id = f"batch_{datetime.now(UTC).strftime('%Y%m%d_%H%M%S_%f')}"
 
         company_results: List[CompanyProcessingResult] = []
@@ -213,7 +215,7 @@ class BatchProcessor:
             self.silver_normalizer.normalize_bronze_to_silver()
 
         # Calculate summary statistics
-        processing_time = time.time() - start_time
+        processing_time = clock.time() - start_time
         successful = sum(1 for r in company_results if r.success)
         failed = len(company_results) - successful
 

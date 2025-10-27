@@ -1,0 +1,60 @@
+{
+  "task_id": "007-tier2-data-providers",
+  "critical_path_files": [
+    "agents/crawler/data_providers/gri_provider.py",
+    "agents/crawler/data_providers/sasb_provider.py",
+    "agents/crawler/data_providers/ticker_lookup.py",
+    "agents/crawler/multi_source_crawler.py"
+  ],
+  "test_files": [
+    "tests/crawler/test_gri_provider.py",
+    "tests/crawler/test_sasb_provider.py",
+    "tests/crawler/test_ticker_lookup.py",
+    "tests/crawler/test_multi_source_crawler.py"
+  ],
+  "glob_patterns": [
+    "agents/crawler/data_providers/gri_provider.py",
+    "agents/crawler/data_providers/sasb_provider.py",
+    "agents/crawler/data_providers/ticker_lookup.py"
+  ],
+  "entry_points": [
+    "agents/crawler/multi_source_crawler.py:MultiSourceCrawler.search_company"
+  ],
+  "modified_files": [
+    "agents/crawler/multi_source_crawler.py"
+  ],
+  "dependencies": [
+    "agents/crawler/data_providers/base_provider.py",
+    "agents/crawler/data_providers/sec_edgar_provider.py",
+    "shared/models.py"
+  ],
+  "integration_test": "tasks/007-tier2-data-providers/qa/phase2_integration_test.py",
+  "coverage_targets": {
+    "gri_provider.py": 95,
+    "sasb_provider.py": 95,
+    "ticker_lookup.py": 95,
+    "multi_source_crawler.py": 95
+  },
+  "complexity_targets": {
+    "cyclomatic_complexity": 10,
+    "cognitive_complexity": 15
+  },
+  "validation_gates": [
+    "context_gate",
+    "tdd_guard",
+    "coverage_gate",
+    "type_safety_gate",
+    "complexity_gate",
+    "integration_gate"
+  ],
+  "phase_dependencies": {
+    "phase_1": "Unit tests for individual providers",
+    "phase_2": "Integration test with 30-company test set"
+  },
+  "notes": [
+    "multi_source_crawler.py is MODIFIED (not new) - must maintain backward compatibility with Task 006",
+    "All new providers must inherit from BaseDataProvider",
+    "Tests must be written BEFORE implementation (TDD-first)",
+    "Each CP file requires: ≥1 @pytest.mark.cp test, ≥1 @given property test, ≥1 failure-path test"
+  ]
+}

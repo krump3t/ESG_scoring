@@ -1,0 +1,32 @@
+{
+  "task_id": "012-asymmetric-extraction",
+  "sources": [
+    {
+      "name": "SEC EDGAR Company Facts (JSON)",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json",
+      "format": "application/json",
+      "pii_flag": false,
+      "provenance": "U.S. Securities and Exchange Commission public API",
+      "retention": "Permanent (public data)",
+      "leakage_guards": ["Test set held out from development", "Fixed CIKs for test corpus"]
+    },
+    {
+      "name": "Sustainability Report PDFs (Test Corpus)",
+      "url": "file://test_data/sustainability_reports/*.pdf",
+      "format": "application/pdf",
+      "pii_flag": false,
+      "provenance": "Manually curated test corpus (10 reports with ground truth annotations)",
+      "retention": "Permanent (test data)",
+      "leakage_guards": ["Ground truth annotations stored separately", "No peeking during development"]
+    },
+    {
+      "name": "Cached watsonx.ai Responses",
+      "url": "file://test_data/watsonx_responses/*.json",
+      "format": "application/json",
+      "pii_flag": false,
+      "provenance": "IBM watsonx.ai granite-13b-chat-v2 responses (greedy decoding, fixed prompts)",
+      "retention": "Permanent (deterministic test data)",
+      "leakage_guards": ["Greedy decoding for determinism", "Cached to avoid non-deterministic failures", "No IBM Cloud credentials in test data"]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "sources": [
+    {
+      "id": "DS1",
+      "name": "Apple Environmental Progress Report 2024",
+      "url": "https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2024.pdf",
+      "content_type": "application/pdf",
+      "size_mb": "~8-10",
+      "pii_flag": false,
+      "provenance": "Apple Inc. official sustainability disclosure",
+      "retention": "permanent",
+      "sha256": "to_be_computed_after_download",
+      "usage": "Primary test data for LLM extraction validation"
+    },
+    {
+      "id": "DS2",
+      "name": "Apple Sustainability Ground Truth 2024",
+      "path": "test_data/ground_truth/apple_sustainability_2024_ground_truth.json",
+      "pii_flag": false,
+      "provenance": "Manual verification from Apple Environmental Progress Report 2024",
+      "retention": "permanent",
+      "sha256": "to_be_computed",
+      "usage": "Ground truth for validation (±10% tolerance)"
+    },
+    {
+      "id": "DS3",
+      "name": "watsonx.ai LLM Response Cache",
+      "path": "test_data/llm_cache/",
+      "pii_flag": false,
+      "provenance": "Cached responses from IBM watsonx.ai granite-13b-chat-v2",
+      "retention": "permanent",
+      "usage": "Deterministic testing without live API calls"
+    },
+    {
+      "id": "DS4",
+      "name": "IBM watsonx.ai API",
+      "url": "https://us-south.ml.cloud.ibm.com",
+      "credentials_source": ".env file (WATSONX_PROJECT_ID, WATSONX_API_KEY)",
+      "model": "ibm/granite-13b-chat-v2",
+      "pii_flag": false,
+      "provenance": "IBM Cloud watsonx.ai foundation models",
+      "retention": "API calls only (responses cached)",
+      "usage": "LLM extraction from PDF text"
+    }
+  ],
+  "leakage_guards": [
+    {
+      "guard": "response_caching",
+      "description": "All LLM responses cached with deterministic cache keys (cik_year) to enable reproducible testing"
+    },
+    {
+      "guard": "greedy_decoding",
+      "description": "temperature=0.0 and decoding_method=greedy ensures deterministic LLM outputs"
+    },
+    {
+      "guard": "ground_truth_isolation",
+      "description": "Ground truth created independently before LLM extraction to prevent contamination"
+    }
+  ]
+}

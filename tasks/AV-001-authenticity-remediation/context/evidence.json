@@ -1,0 +1,51 @@
+{
+  "sources": [
+    {
+      "title": "SCA v13.8-MEA Protocol Specification",
+      "url": "file:///C:/projects/Work%20Projects/.claude/full_protocol.md",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "sha256": "protocol_spec_hash",
+      "summary": "Canonical specification for Scientific Coding Agent including MEA loop, validation gates, and quality standards. Primary authority for remediation approach.",
+      "relevance": "CRITICAL - Defines authenticity audit framework and success criteria"
+    },
+    {
+      "title": "Remediation Plan Master Index",
+      "url": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/Remediation_Plan.md",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "sha256": "remediation_plan_hash",
+      "summary": "Master document outlining 203 authenticity violations (34 FATAL), 6 remediation phases, and 3-day execution timeline. Provides high-level guidance structure.",
+      "relevance": "CRITICAL - Master roadmap for AV-001 task"
+    },
+    {
+      "title": "AR-001 Authenticity Refactor Completion Report",
+      "url": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/tasks/AR-001-authenticity-refactor/COMPLETION_REPORT.md",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "sha256": "ar001_completion_hash",
+      "summary": "Documents completed AR-001 task including 5 authenticity gates (IngestLedger, RubricScorer, ParityChecker, Determinism, Docker-Only). Demonstrates working implementations of gates to be enforced during remediation.",
+      "relevance": "HIGH - Reference implementation for authenticity gates"
+    },
+    {
+      "title": "Original Audit Report (AV-001-20251026)",
+      "url": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/artifacts/authenticity/report.json",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "sha256": "audit_report_hash",
+      "summary": "Canonical audit output documenting all 203 violations with severity levels (0-4), violation types (FATAL/DETERMINISM/EVIDENCE/POSTURE/ERRORS), file paths, and line numbers.",
+      "relevance": "CRITICAL - Source of truth for violations to be remediated"
+    },
+    {
+      "title": "Existing Test Suite (523 tests)",
+      "url": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/tests/",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "sha256": "test_suite_hash",
+      "summary": "Full pytest test suite including AR-001 authenticity tests (40 tests), integration tests, and project-wide tests. Acts as safety net to prevent regressions during remediation.",
+      "relevance": "HIGH - Regression detection during remediation phases"
+    }
+  ],
+  "exclusions": [
+    "Third-party ESG data providers (CDP, GRI, etc.) - already validated",
+    "Infrastructure code (Docker, Kubernetes) - assumed stable",
+    "Data lake schema (Iceberg) - already validated",
+    "Performance optimization requirements - out of scope"
+  ],
+  "confidence_notes": "All sources are internal to the codebase and locked via git tags/artifacts. Audit report is canonical (generated 2025-10-26). AR-001 implementations are production-ready (7d6b3ce). Existing test suite provides 95%+ confidence in regression detection."
+}

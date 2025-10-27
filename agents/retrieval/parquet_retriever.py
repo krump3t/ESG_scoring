@@ -14,6 +14,8 @@ import time
 import duckdb
 
 from agents.query.query_parser import QueryIntent, QuestionType
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 @dataclass
@@ -71,7 +73,7 @@ class ParquetRetriever:
         Returns:
             RetrievalResult with evidence and metadata
         """
-        start_time = time.time()
+        start_time = clock.time()
 
         con = duckdb.connect(str(self.db_path))
 
@@ -95,7 +97,7 @@ class ParquetRetriever:
                         query_intent=intent,
                         evidence=[],
                         total_results=0,
-                        retrieval_time_seconds=time.time() - start_time
+                        retrieval_time_seconds=clock.time() - start_time
                     )
                 raise
 
@@ -113,7 +115,7 @@ class ParquetRetriever:
             # Convert to list of dicts
             evidence = df.to_dict('records')
 
-            retrieval_time = time.time() - start_time
+            retrieval_time = clock.time() - start_time
 
             return RetrievalResult(
                 query_intent=intent,

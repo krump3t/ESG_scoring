@@ -1,0 +1,11 @@
+{
+  "critical_paths": [
+    "agents/normalizer/*.py",
+    "agents/scoring/*.py",
+    "iceberg/tables/*.py"
+  ],
+  "coverage_requirements": {
+    "line": 0.95,
+    "branch": 0.95
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "005-extraction-pipeline-authenticity",
+  "date": "2025-10-22",
+  "critical_path": [
+    "agents/crawler/extractors/enhanced_pdf_extractor.py"
+  ],
+  "entry_points": [
+    "agents.crawler.extractors.enhanced_pdf_extractor.EnhancedPDFExtractor.extract",
+    "agents.crawler.extractors.enhanced_pdf_extractor.EnhancedPDFExtractor.semantic_segment",
+    "agents.crawler.extractors.enhanced_pdf_extractor.EnhancedPDFExtractor.extract_tables_as_findings",
+    "agents.crawler.extractors.enhanced_pdf_extractor.EnhancedPDFExtractor.extract_entities"
+  ],
+  "cp_rationale": "enhanced_pdf_extractor.py is the core extraction logic for embeddings/KG preparation. Authenticity violations here cascade to all downstream systems (embeddings, KG, scoring). Critical path because it determines data quality for entire pipeline.",
+  "cp_requirements": {
+    "coverage": {
+      "line": 0.95,
+      "branch": 0.95
+    },
+    "type_safety": {
+      "mypy_strict": 0
+    },
+    "complexity": {
+      "ccn_max": 10,
+      "cognitive_max": 15
+    },
+    "documentation": {
+      "interrogate_min": 0.95
+    },
+    "tdd": {
+      "tests_per_method": 1,
+      "hypothesis_properties": 1,
+      "failure_tests": 3
+    },
+    "authenticity": {
+      "coverage_min": 5.0,
+      "theme_diversity_min": 7,
+      "table_capture_pct": 1.0,
+      "manual_audit_overlap": 0.85,
+      "determinism": 1.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "critical_path": [
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/mcp_scoring.py",
+    "iceberg/tables/gold_schema.py",
+    "agents/normalizer/mcp_normalizer.py",
+    "iceberg/tables/silver_schema.py"
+  ],
+  "entry_points": [
+    "agents/scoring/rubric_v3_scorer.py:RubricV3Scorer.score_all_dimensions",
+    "agents/scoring/mcp_scoring.py:MCPScoringAgent.score_finding",
+    "iceberg/tables/gold_schema.py:GoldSchema.validate_score"
+  ],
+  "description": "Critical Path for Rubric v3.0 implementation - 7-dimensional ESG maturity scoring",
+  "last_updated": "2025-10-22"
+}

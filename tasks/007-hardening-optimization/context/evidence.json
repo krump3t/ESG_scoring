@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Apache Iceberg Table Maintenance and Optimization",
+      "authors": [
+        "Apache Iceberg Community"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://iceberg.apache.org/docs/latest/maintenance/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Iceberg compaction reduces small files and improves query performance. Expire snapshots reclaims storage. Bloom filters accelerate lookups."
+    },
+    {
+      "id": "P1-002",
+      "title": "Parquet Compression Benchmarks: ZSTD vs Snappy vs GZIP",
+      "authors": [
+        "Cloudera"
+      ],
+      "year": 2023,
+      "type": "technical_report",
+      "url": "https://blog.cloudera.com/parquet-compression-benchmark/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "ZSTD level 3-5 achieves best compression/speed tradeoff. 60-70% compression ratio with minimal CPU overhead."
+    },
+    {
+      "id": "P1-003",
+      "title": "Bloom Filters for Database Systems",
+      "authors": [
+        "Carnegie Mellon Database Group"
+      ],
+      "year": 2023,
+      "type": "research_paper",
+      "url": "https://db.cs.cmu.edu/papers/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Bloom filters reduce disk I/O for point lookups. 1% false positive rate is optimal for analytical workloads."
+    }
+  ]
+}

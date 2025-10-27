@@ -6,6 +6,8 @@ Can be used without Airflow for testing and development
 import sys
 import os
 from pathlib import Path
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -44,7 +46,7 @@ def setup_logging(verbose: bool = False):
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(),
-            logging.FileHandler(f'logs/scoring_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')
+            logging.FileHandler(f'logs/scoring_{clock.now().strftime("%Y%m%d_%H%M%S")}.log')
         ]
     )
     return logging.getLogger(__name__)
@@ -192,15 +194,15 @@ def generate_comparative_report(scores: List[CompanyScore], output_dir: Path):
             ]
 
     # Save report
-    report_file = output_dir / f"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    report_file = output_dir / f"comparative_report_{clock.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(report_file, 'w') as f:
         json.dump(report, f, indent=2)
 
     # Also create a markdown summary
-    md_file = output_dir / f"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+    md_file = output_dir / f"comparative_report_{clock.now().strftime('%Y%m%d_%H%M%S')}.md"
     with open(md_file, 'w') as f:
         f.write("# ESG Maturity Comparative Analysis\n\n")
-        f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        f.write(f"Generated: {clock.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
 
         f.write("## Overall Rankings\n\n")
         f.write("| Rank | Company | Stage | Confidence | Evidence |\n")
@@ -294,7 +296,7 @@ def main():
 
     # Score companies
     scores = []
-    total_start = time.time()
+    total_start = clock.time()
 
     for i, company in enumerate(args.companies):
         print(f"\n[{i+1}/{len(args.companies)}] Processing {company}...")
@@ -320,7 +322,7 @@ def main():
             # Create empty score
             scores.append(pipeline._create_empty_score(company, args.year))
 
-    total_time = time.time() - total_start
+    total_time = clock.time() - total_start
 
     # Generate comparative report if multiple companies
     if len(scores) > 1:

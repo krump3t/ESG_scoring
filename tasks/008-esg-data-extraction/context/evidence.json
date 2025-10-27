@@ -1,0 +1,82 @@
+[
+  {
+    "claim": "GRI Standards define structured ESG disclosure requirements including governance structure, emissions accounting methodology, and assurance practices for evidence extraction patterns.",
+    "source_type": "P1",
+    "url_or_doi": "https://www.globalreporting.org/standards/",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "GRI Standards 2021 provide mandatory disclosure frameworks: GRI 2-9 (governance structure), GRI 305-1/2/3 (Scope 1/2/3 emissions), GRI 2-5 (external assurance). GRI Content Index enables traceability to specific disclosures.",
+    "note_on_relevance": "GRI framework informs OSP theme (governance structure), GHG theme (emissions disclosure), and RD theme (reporting framework alignment) pattern matching"
+  },
+  {
+    "claim": "TCFD framework structures climate risk disclosure across Governance, Strategy, Risk Management, and Metrics & Targets, providing stage indicators for RMM theme.",
+    "source_type": "P1",
+    "url_or_doi": "https://www.fsb-tcfd.org/recommendations/",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "TCFD Recommendations require scenario analysis (1.5°C, 2°C pathways), physical/transition risk taxonomy, Scope 1/2/3 disclosure. TCFD alignment signals Stage 2+ maturity in Reporting & Disclosure theme. Widely adopted by SEC registrants.",
+    "note_on_relevance": "TCFD informs RMM theme (climate risk taxonomy, scenario analysis), TSP theme (climate targets), and RD theme (framework alignment) evidence patterns"
+  },
+  {
+    "claim": "ISSB S1/S2 establish baseline sustainability reporting standards with mandatory Scope 1/2 and encouraged Scope 3 disclosure, informing GHG and RD theme patterns.",
+    "source_type": "P1",
+    "url_or_doi": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s1-general-requirements/",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "ISSB S1 aligns with TCFD structure (Governance, Strategy, Risk, Metrics). S2 mandates Scope 1/2 emissions, encourages Scope 3. ISSB adoption signals Stage 2-3 maturity. Expected global regulatory adoption by 2025-2026.",
+    "note_on_relevance": "ISSB informs RD theme (framework alignment, ISSB adoption as Stage 2-3 indicator), GHG theme (Scope 1/2/3 disclosure requirements), and TSP theme (metrics and targets)"
+  },
+  {
+    "claim": "SBTi validates corporate climate targets against 1.5°C science, providing strong Stage 3-4 indicators for TSP theme.",
+    "source_type": "P1",
+    "url_or_doi": "https://sciencebasedtargets.org/net-zero",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "SBTi Corporate Net-Zero Standard requires near-term (5-10 year) and long-term (2050) targets covering Scope 1/2/3. SBTi 'committed' status indicates Stage 3, 'approved/validated' indicates Stage 4. Third-party validation confirms target ambition and methodology.",
+    "note_on_relevance": "SBTi status is primary TSP theme evidence: 'committed'=Stage 3, 'validated'=Stage 4. Also informs GHG theme (Scope 1/2/3 coverage requirements) and TSP target validation logic"
+  },
+  {
+    "claim": "GHG Protocol defines Scope 1/2/3 emissions accounting methodology, establishing classification framework for GHG theme evidence extraction.",
+    "source_type": "P1",
+    "url_or_doi": "https://ghgprotocol.org/corporate-standard",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "GHG Protocol Corporate Standard defines Scope 1 (direct), Scope 2 (purchased energy), Scope 3 (value chain, 15 categories). Establishes calculation, reporting, verification methodology. De facto standard for corporate emissions accounting. Requires base year and recalculation policy disclosure.",
+    "note_on_relevance": "GHG Protocol compliance indicates Stage 2-4 maturity in GHG theme. Informs pattern matching for Scope 1/2/3 emissions values, methodology references, base year identification, and assurance scope"
+  },
+  {
+    "claim": "Firms with high ESG maturity exhibit formalized governance structures, board-level oversight, and integrated KPI systems, informing OSP theme stage indicators.",
+    "source_type": "P2",
+    "url_or_doi": "10.1287/mnsc.2014.1984",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "Empirical study finds high-maturity firms characterized by C-suite ESG roles (CSO), cross-functional committees, external assurance. Board-level committees indicate Stage 3+ governance. Integrated KPI systems differentiate Stage 3-4 from Stage 1-2.",
+    "note_on_relevance": "Validates OSP theme stage indicators: C-suite roles=Stage 3-4, board committees=Stage 3+, integrated KPIs=Stage 3-4. Informs pattern matching for governance structure and role titles"
+  },
+  {
+    "claim": "External assurance of sustainability reports significantly improves disclosure quality, with limited vs. reasonable assurance differentiating Stage 3 vs. Stage 4 maturity.",
+    "source_type": "P2",
+    "url_or_doi": "https://www.hbs.edu/faculty/Pages/item.aspx?num=41454",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "Study finds external assurance improves data reliability. Limited assurance (moderate confidence) signals Stage 3. Reasonable assurance (equivalent to financial audit) signals Stage 4. Big 4 providers (Deloitte, EY, KPMG, PwC) indicate higher quality.",
+    "note_on_relevance": "Informs RD theme stage classification: limited assurance=Stage 3, reasonable assurance=Stage 4. Validates assurance level as key differentiator. Guides pattern matching for assurance provider names and assurance scope"
+  },
+  {
+    "claim": "SEC 10-K filings follow standardized structure with ESG disclosures typically in Item 1 (Business), Item 1A (Risk Factors), Item 7 (MD&A), informing filing parser logic.",
+    "source_type": "T",
+    "url_or_doi": "https://www.sec.gov/edgar",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "SEC 10-K structure: Item 1 (Business operations, ESG practices), Item 1A (Risk Factors, climate risks), Item 7 (MD&A, forward-looking targets). 20-F (foreign issuers) has similar structure. Dedicated ESG sections increasingly common.",
+    "note_on_relevance": "Guides filing parser section extraction strategy. Item 1A relevant for RMM theme (climate risks), Item 1 for OSP/DM/EI themes (operations), Item 7 for TSP/RMM (targets, scenario analysis)"
+  },
+  {
+    "claim": "BeautifulSoup4 provides robust HTML parsing for extracting structured text from SEC EDGAR filings despite inconsistent HTML structure.",
+    "source_type": "T",
+    "url_or_doi": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "BeautifulSoup handles malformed HTML gracefully (common in SEC filings). find_all() enables section extraction, get_text() preserves paragraph structure. Performance sufficient: parse 200-page filing in ~2-5 seconds.",
+    "note_on_relevance": "Validates choice of BeautifulSoup4 for filing parser (ADR-004). Confirms performance is adequate for batch processing (<45s per filing target). Informs error handling strategy for malformed HTML"
+  },
+  {
+    "claim": "Transformer models enable contextual text understanding for NLP, but regex pattern matching is 10-100× faster with sufficient precision for PoC.",
+    "source_type": "T",
+    "url_or_doi": "https://arxiv.org/abs/1810.04805",
+    "retrieval_date": "2025-10-22",
+    "synthesized_finding": "BERT and transformers provide contextual understanding for named entity recognition, semantic similarity. Higher precision than regex, but 10-100× computational cost. Out of scope for Task 008 v1, but candidate for Task 009 ML enhancements.",
+    "note_on_relevance": "Validates ADR-001 decision (regex for v1, ML for future). Documents trade-off: regex achieves 75-85% precision with 10-100× speed advantage. Informs future enhancement roadmap (Task 009)"
+  }
+]

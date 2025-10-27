@@ -25,6 +25,8 @@ import time
 from difflib import SequenceMatcher
 
 from agents.crawler.data_providers.base_provider import BaseDataProvider, CompanyReport
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 class TickerLookupProvider(BaseDataProvider):
@@ -130,7 +132,7 @@ class TickerLookupProvider(BaseDataProvider):
             report = CompanyReport(
                 company_name=company_name or ticker,
                 company_id=cik,
-                year=year if year else datetime.now().year,
+                year=year if year else clock.now().year,
                 report_type="ticker_cik_mapping",
                 report_title=f"Ticker-CIK Mapping: {ticker} → {cik}",
                 download_url=None,  # No downloadable report
@@ -139,7 +141,7 @@ class TickerLookupProvider(BaseDataProvider):
                 source="ticker_lookup",
                 source_metadata=metadata,
                 date_published=None,
-                date_retrieved=datetime.now().strftime("%Y-%m-%d"),
+                date_retrieved=clock.now().strftime("%Y-%m-%d"),
             )
 
             return [report]

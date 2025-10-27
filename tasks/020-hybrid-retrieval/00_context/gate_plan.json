@@ -1,0 +1,16 @@
+{
+  "gates": [
+    "workspace",
+    "context_gate",
+    "authenticity_data",
+    "parity_docs_embeddings",
+    "determinism",
+    "types_strict"
+  ],
+  "thresholds": {
+    "mypy_strict_errors": 0,
+    "parity_docs_embeddings": "27 == 27 with 0 orphans",
+    "test_pass_rate": 100,
+    "determinism_runs": 3
+  }
+}

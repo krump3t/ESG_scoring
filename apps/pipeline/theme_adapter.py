@@ -3,6 +3,8 @@ from pathlib import Path
 import json, os, hashlib, time
 from apps.scoring.rubric_v3_loader import get_rubric_v3
 from libs.qa.tee import Tee
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 SCHEMA=Path("rubrics/esg_rubric_schema_v3.json")
 INP_DEFAULT=Path("artifacts/demo/headlam_demo_response_theme.json")
@@ -11,7 +13,7 @@ LOG=Path("artifacts/sca_qax/run.log.jsonl")
 ALLOW_DEMO=os.getenv("ALLOW_DEMO_EVIDENCE","0")=="1"
 SEED=os.getenv("ESG_SEED","42")
 
-def now(): return int(time.time()*1000)
+def now(): return int(clock.time()*1000)
 def sha256hex(b: bytes)->str: return hashlib.sha256(b).hexdigest()
 def sha16(b: bytes)->str: return sha256hex(b)[:16]
 def jlog(step:str,status:str,msg:str,trace_id:str,extra:dict|None=None):

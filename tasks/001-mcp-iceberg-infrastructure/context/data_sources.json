@@ -1,0 +1,77 @@
+{
+  "sources": [
+    {
+      "name": "docker-compose.yml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 4096,
+      "sha256": "pending_creation",
+      "pii_flag": false,
+      "provenance": "generated",
+      "retention_days": -1,
+      "description": "Docker Compose orchestration for MinIO, Iceberg, Trino, MCP"
+    },
+    {
+      "name": ".env.template",
+      "type": "configuration",
+      "format": "env",
+      "size_bytes": 512,
+      "sha256": "pending_creation",
+      "pii_flag": true,
+      "provenance": "manual",
+      "retention_days": -1,
+      "description": "Environment variables template with credential placeholders"
+    },
+    {
+      "name": "minio-data",
+      "type": "storage",
+      "format": "binary",
+      "size_bytes": 0,
+      "sha256": "dynamic",
+      "pii_flag": false,
+      "provenance": "runtime",
+      "retention_days": 90,
+      "description": "MinIO object storage data directory"
+    },
+    {
+      "name": "iceberg-warehouse",
+      "type": "storage",
+      "format": "parquet",
+      "size_bytes": 0,
+      "sha256": "dynamic",
+      "pii_flag": false,
+      "provenance": "runtime",
+      "retention_days": 90,
+      "description": "Iceberg table data and metadata"
+    },
+    {
+      "name": "trino-catalog",
+      "type": "configuration",
+      "format": "properties",
+      "size_bytes": 256,
+      "sha256": "pending_creation",
+      "pii_flag": false,
+      "provenance": "generated",
+      "retention_days": -1,
+      "description": "Trino catalog configuration for Iceberg connector"
+    },
+    {
+      "name": "mcp-server-config",
+      "type": "configuration",
+      "format": "json",
+      "size_bytes": 2048,
+      "sha256": "pending_creation",
+      "pii_flag": false,
+      "provenance": "generated",
+      "retention_days": -1,
+      "description": "MCP server tool registration and endpoints"
+    }
+  ],
+  "validation_rules": {
+    "sha256_required": true,
+    "pii_marking_required": true,
+    "retention_policy_required": true
+  },
+  "last_updated": "2025-10-21T18:15:00Z",
+  "version": "1.0.0"
+}

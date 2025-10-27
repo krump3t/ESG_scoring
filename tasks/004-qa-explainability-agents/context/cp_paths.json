@@ -1,0 +1,6 @@
+{
+  "critical_paths": [
+    "agents/qa/*.py",
+    "agents/explainability/*.py"
+  ]
+}

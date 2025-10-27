@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "PyMuPDF Documentation: Text and Image Extraction",
+      "authors": ["Artifex Software"],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://pymupdf.readthedocs.io/en/latest/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "PyMuPDF provides fast PDF parsing with layout-aware text extraction, table detection, and image extraction. Supports rendering and manipulation of PDF content."
+    },
+    {
+      "id": "P1-002",
+      "title": "Apache Parquet Format Specification",
+      "authors": ["Apache Software Foundation"],
+      "year": 2024,
+      "type": "specification",
+      "url": "https://parquet.apache.org/docs/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Parquet provides columnar storage with compression and encoding. Optimized for analytical queries. Supports complex nested structures."
+    },
+    {
+      "id": "P1-003",
+      "title": "Web Scraping Best Practices and Ethics",
+      "authors": ["James Densmore"],
+      "year": 2023,
+      "type": "article",
+      "url": "https://towardsdatascience.com/ethics-in-web-scraping",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Respectful scraping requires delays, robots.txt compliance, user-agent identification. Rate limiting prevents server overload."
+    }
+  ],
+  "last_updated": "2025-10-21T18:20:00Z",
+  "version": "1.0.0"
+}

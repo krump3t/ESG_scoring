@@ -8,6 +8,8 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import List, Optional, Dict, Any
 from datetime import datetime
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 @dataclass
@@ -106,7 +108,7 @@ class BaseDataProvider(ABC):
     def _enforce_rate_limit(self) -> None:
         """Enforce rate limiting between requests"""
         import time
-        elapsed = time.time() - self._last_request_time
+        elapsed = clock.time() - self._last_request_time
         if elapsed < self.rate_limit:
             time.sleep(self.rate_limit - elapsed)
-        self._last_request_time = time.time()
+        self._last_request_time = clock.time()

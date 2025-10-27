@@ -1,0 +1,37 @@
+{
+  "critical_paths": [
+    "infrastructure/docker-compose.yml",
+    "infrastructure/mcp_server/base_server.py",
+    "infrastructure/iceberg/catalog_init.py",
+    "infrastructure/storage/minio_setup.py",
+    "infrastructure/config/environment.py",
+    "infrastructure/health/*.py",
+    "tests/test_infrastructure.py"
+  ],
+  "entry_points": [
+    {
+      "name": "main",
+      "path": "infrastructure/main.py",
+      "description": "Primary infrastructure initialization"
+    },
+    {
+      "name": "health_check",
+      "path": "infrastructure/health/check_all.py",
+      "description": "Comprehensive health check for all services"
+    }
+  ],
+  "exclusions": [
+    "*.log",
+    "*.tmp",
+    "__pycache__/**",
+    ".env"
+  ],
+  "coverage_requirements": {
+    "line": 0.95,
+    "branch": 0.95,
+    "complexity_max": 10,
+    "doc_coverage": 0.95
+  },
+  "last_updated": "2025-10-21T18:15:00Z",
+  "version": "1.0.0"
+}

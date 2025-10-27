@@ -1,0 +1,48 @@
+{
+  "task_id": "006-multi-source-ingestion",
+  "date": "2025-10-22",
+  "sources": [
+    {
+      "source_id": "cdp_climate_api",
+      "name": "CDP Climate Change API",
+      "type": "primary_data",
+      "url": "https://data.cdp.net/api/odata/v4",
+      "format": "json",
+      "authentication": "none",
+      "rate_limit": "10 req/sec",
+      "sha256": null,
+      "pii_flag": false,
+      "provenance": "CDP Open Data Portal - Public OData v4 API providing climate change responses from 13,000+ companies",
+      "retention": "indefinite",
+      "last_verified": "2025-10-22"
+    },
+    {
+      "source_id": "sec_edgar_api",
+      "name": "SEC EDGAR API",
+      "type": "primary_data",
+      "url": "https://data.sec.gov/submissions/",
+      "format": "json",
+      "authentication": "user_agent_required",
+      "rate_limit": "10 req/sec",
+      "sha256": null,
+      "pii_flag": false,
+      "provenance": "SEC EDGAR - Public API providing U.S. company filings including 10-K annual reports with ESG risk disclosures",
+      "retention": "indefinite",
+      "last_verified": "2025-10-22"
+    },
+    {
+      "source_id": "data_source_registry",
+      "name": "Data Source Registry Configuration",
+      "type": "metadata",
+      "url": "configs/data_source_registry.json",
+      "format": "json",
+      "authentication": "none",
+      "rate_limit": null,
+      "sha256": null,
+      "pii_flag": false,
+      "provenance": "Internal configuration file defining 7 verified data sources with fallback tiers, authentication requirements, and rate limits",
+      "retention": "indefinite",
+      "last_verified": "2025-10-22"
+    }
+  ]
+}

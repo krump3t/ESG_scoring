@@ -1,0 +1,66 @@
+{
+  "task_id": "012-asymmetric-extraction",
+  "phase": "context",
+  "sources": [
+    {
+      "source_id": "PYDANTIC_V2_DOCS_2024",
+      "title": "Pydantic V2 Data Validation",
+      "source_type": "P1",
+      "url": "https://docs.pydantic.dev/latest/",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Pydantic v2 validation, Field constraints, frozen models, JSON serialization. Enables type-safe ESGMetrics with runtime validation."
+    },
+    {
+      "source_id": "PYARROW_PARQUET_DOCS_2024",
+      "title": "PyArrow Parquet File Format",
+      "source_type": "P1",
+      "url": "https://arrow.apache.org/docs/python/parquet.html",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Parquet schema definition, nullable fields, type mapping. Critical for 1:1 Pydantic-Parquet parity verification."
+    },
+    {
+      "source_id": "PYMUPDF_DOCS_2024",
+      "title": "PyMuPDF (fitz) PDF Text Extraction",
+      "source_type": "P1",
+      "url": "https://pymupdf.readthedocs.io/en/latest/",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "PDF text extraction, page iteration, text blocks. Enables LLM extractor to process PDF sustainability reports."
+    },
+    {
+      "source_id": "WATSONX_AI_API_DOCS_2024",
+      "title": "IBM watsonx.ai Foundation Models API",
+      "source_type": "P1",
+      "url": "https://cloud.ibm.com/apidocs/watsonx-ai",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "watsonx.ai text generation API, model parameters (temperature, max_new_tokens), authentication via IAM. Supports granite, llama models for extraction."
+    },
+    {
+      "source_id": "PHASE2_V3_ROADMAP_2024",
+      "title": "V3 Enhancement Roadmap - Phase 3 Specification",
+      "source_type": "P1",
+      "url": "file://C:/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/tasks/011-multi-source-phase2/V3_ENHANCEMENT_ROADMAP.md",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "Phase 3 deliverables: content-type router, asymmetric extractors, Pydantic-Parquet parity. Builds on Phase 2 SourceRef.content_type field."
+    },
+    {
+      "source_id": "SCA_V13_8_TDD_GUARD_PROTOCOL_2024",
+      "title": "SCA v13.8 Protocol - TDD Guard and Coverage Requirements",
+      "source_type": "P1",
+      "url": "file://C:/projects/Work Projects/.claude/full_protocol.md",
+      "retrieval_date": "2025-10-24",
+      "synthesis": "TDD Guard: tests before code, @pytest.mark.cp, property and failure tests. Coverage ≥95% on CP files."
+    }
+  ],
+  "synthesis_summary": "Phase 3 implements asymmetric extraction paths using Pydantic (structured) and LLM (unstructured). PyArrow ensures Parquet schema parity. PyMuPDF extracts PDF text for LLM processing. IBM watsonx.ai API with low temperature provides deterministic extraction. SCA v13.8 enforces TDD-first development with ≥95% coverage.",
+  "evidence_quality": {
+    "primary_sources": 6,
+    "secondary_sources": 0,
+    "tertiary_sources": 0,
+    "total_sources": 6
+  },
+  "retrieval_metadata": {
+    "agent": "SCA v13.8-MEA",
+    "date": "2025-10-24",
+    "session_id": "phase3-context-gate"
+  }
+}

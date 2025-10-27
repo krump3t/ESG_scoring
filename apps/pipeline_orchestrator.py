@@ -27,6 +27,8 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 from dataclasses import dataclass, field
 from datetime import datetime
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 from agents.crawler.multi_source_crawler_v2 import MultiSourceCrawler
 from agents.extraction.extraction_router import ExtractionRouter
@@ -118,7 +120,7 @@ class PipelineOrchestrator:
         console_handler.setLevel(logging.INFO)
 
         # File handler
-        log_file = log_dir / f"pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+        log_file = log_dir / f"pipeline_{clock.now().strftime('%Y%m%d_%H%M%S')}.log"
         file_handler = logging.FileHandler(log_file)
         file_handler.setLevel(logging.DEBUG)
 
@@ -155,7 +157,7 @@ class PipelineOrchestrator:
         Raises:
             PipelineError: If critical error occurs (fail-fast)
         """
-        start_time = time.time()
+        start_time = clock.time()
 
         self.logger.info(f"Pipeline start: CIK={company_cik}, Year={fiscal_year}")
 
@@ -174,7 +176,7 @@ class PipelineOrchestrator:
             queried_metrics = self._phase4_query(company_name, parquet_file.name)
 
             # Calculate total latency
-            total_latency = time.time() - start_time
+            total_latency = clock.time() - start_time
 
             result = PipelineResult(
                 success=True,
@@ -196,7 +198,7 @@ class PipelineOrchestrator:
 
         except PipelineError as e:
             self.logger.error(f"Pipeline failed in {e.phase}: {e.message}")
-            total_latency = time.time() - start_time
+            total_latency = clock.time() - start_time
 
             return PipelineResult(
                 success=False,
@@ -221,7 +223,7 @@ class PipelineOrchestrator:
         Raises:
             PipelineError: If crawler fails
         """
-        phase_start = time.time()
+        phase_start = clock.time()
 
         try:
             self.logger.debug(f"Phase 2: Crawling CIK={company_cik}, FY={fiscal_year}")
@@ -231,7 +233,7 @@ class PipelineOrchestrator:
             if report is None or not report.get("content"):
                 raise PipelineError("Crawler returned empty report", "Phase 2")
 
-            phase_latency = time.time() - phase_start
+            phase_latency = clock.time() - phase_start
             self.logger.info(f"Phase 2 complete: crawled in {phase_latency:.2f}s")
 
             if not hasattr(self, "_latencies"):
@@ -257,7 +259,7 @@ class PipelineOrchestrator:
         Raises:
             PipelineError: If extraction fails
         """
-        phase_start = time.time()
+        phase_start = clock.time()
 
         try:
             self.logger.debug("Phase 3: Extracting metrics")
@@ -267,7 +269,7 @@ class PipelineOrchestrator:
             if not isinstance(metrics, ESGMetrics):
                 raise PipelineError("Extractor did not return ESGMetrics", "Phase 3")
 
-            phase_latency = time.time() - phase_start
+            phase_latency = clock.time() - phase_start
             self.logger.info(f"Phase 3 complete: extracted in {phase_latency:.2f}s")
 
             if not hasattr(self, "_latencies"):
@@ -300,7 +302,7 @@ class PipelineOrchestrator:
         Raises:
             PipelineError: If write fails
         """
-        phase_start = time.time()
+        phase_start = clock.time()
 
         try:
             filename = f"{metrics.company_name.lower().replace(' ', '_')}_{company_cik}_{fiscal_year}.parquet"
@@ -313,7 +315,7 @@ class PipelineOrchestrator:
             if not parquet_file.exists():
                 raise PipelineError(f"Parquet file not created: {filename}", "Phase 4 Write")
 
-            phase_latency = time.time() - phase_start
+            phase_latency = clock.time() - phase_start
             self.logger.info(f"Phase 4 Write complete: written in {phase_latency:.2f}s")
 
             if not hasattr(self, "_latencies"):
@@ -340,7 +342,7 @@ class PipelineOrchestrator:
         Raises:
             PipelineError: If query fails
         """
-        phase_start = time.time()
+        phase_start = clock.time()
 
         try:
             self.logger.debug(f"Phase 4 Query: Querying {company_name} from {filename}")
@@ -350,7 +352,7 @@ class PipelineOrchestrator:
             if metrics is None:
                 raise PipelineError(f"Query returned no results for {company_name}", "Phase 4 Query")
 
-            phase_latency = time.time() - phase_start
+            phase_latency = clock.time() - phase_start
             self.logger.info(f"Phase 4 Query complete: queried in {phase_latency:.2f}s")
 
             if not hasattr(self, "_latencies"):

@@ -26,6 +26,8 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime
 
 from .base_provider import BaseDataProvider, CompanyReport
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 logger = logging.getLogger(__name__)
 
@@ -107,7 +109,7 @@ class CDPClimateProvider(BaseDataProvider):
                 # OData v4 returns results in 'value' array
                 for result in data.get('value', []):
                     company_name_val = result.get('account_name', company_name)
-                    year_val = result.get('year') or result.get('reporting_year', year or datetime.now().year)
+                    year_val = result.get('year') or result.get('reporting_year', year or clock.now().year)
 
                     report = CompanyReport(
                         company_name=company_name_val,

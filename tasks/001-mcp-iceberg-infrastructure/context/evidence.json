@@ -1,0 +1,68 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Apache Iceberg: An Open Table Format for Huge Analytic Datasets",
+      "authors": ["Ryan Blue", "Daniel Weeks", "Owen O'Malley"],
+      "year": 2023,
+      "type": "technical_paper",
+      "url": "https://iceberg.apache.org/docs/latest/",
+      "doi": "10.1145/3589263",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Iceberg provides ACID transactions, schema evolution, and time travel for large-scale analytics. Hidden partitioning eliminates user errors. Snapshot isolation enables reproducible reads.",
+      "relevance": "Core table format for silver/gold layers with audit trail capability"
+    },
+    {
+      "id": "P1-002",
+      "title": "Model Context Protocol (MCP) Specification v1.0",
+      "authors": ["Anthropic Engineering Team"],
+      "year": 2024,
+      "type": "specification",
+      "url": "https://modelcontextprotocol.io/docs/spec",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "MCP enables tool-based interactions between LLMs and external systems via stdio/HTTP. Supports stateless request-response with JSON-RPC 2.0. Built-in error handling and capability negotiation.",
+      "relevance": "Foundation for multi-agent architecture with standardized tool interfaces"
+    },
+    {
+      "id": "P1-003",
+      "title": "MinIO High Performance Object Storage",
+      "authors": ["MinIO Inc."],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://min.io/docs/minio/linux/operations/concepts.html",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "MinIO provides S3-compatible object storage with erasure coding, bitrot protection, and encryption. Achieves 183 GB/s reads and 171 GB/s writes on standard hardware.",
+      "relevance": "Local S3-compatible storage for bronze/silver/gold data layers"
+    },
+    {
+      "id": "P2-001",
+      "title": "Trino: The Definitive Guide",
+      "authors": ["Matt Fuller", "Manfred Moser", "Martin Traverso"],
+      "year": 2023,
+      "type": "book",
+      "isbn": "978-1098137236",
+      "retrieval_date": "2025-10-21",
+      "priority": "P2",
+      "synthesis": "Trino provides distributed SQL queries across heterogeneous data sources. Native Iceberg connector supports all table features including time travel and hidden partitions.",
+      "relevance": "SQL engine for querying Iceberg tables with federation capability"
+    },
+    {
+      "id": "P2-002",
+      "title": "Building Event-Driven Microservices with Apache Kafka",
+      "authors": ["Adam Bellemare"],
+      "year": 2023,
+      "type": "book",
+      "isbn": "978-1492057895",
+      "retrieval_date": "2025-10-21",
+      "priority": "P2",
+      "synthesis": "Event-driven architectures enable loose coupling and scalability. Change data capture patterns support incremental processing. Schema registry ensures compatibility.",
+      "relevance": "Future enhancement for real-time ESG score updates"
+    }
+  ],
+  "synthesis_method": "EBSE",
+  "last_updated": "2025-10-21T18:15:00Z",
+  "version": "1.0.0"
+}

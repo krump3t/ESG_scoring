@@ -23,6 +23,8 @@ from dataclasses import dataclass, asdict
 
 import numpy as np
 from dotenv import load_dotenv
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Load credentials
 load_dotenv()
@@ -245,7 +247,7 @@ class WatsonXEmbedder:
         Raises:
             RuntimeError: If rate limit exceeded (no retry, caller handles)
         """
-        now = datetime.now()
+        now = clock.now()
 
         # Reset window every hour
         if (now - self.request_times[0]).total_seconds() > 3600 if self.request_times else False:

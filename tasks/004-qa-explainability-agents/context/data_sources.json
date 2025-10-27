@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "name": "qa_reports",
+      "type": "artifact",
+      "format": "json",
+      "sha256": "dynamic",
+      "pii_flag": false,
+      "provenance": "generated",
+      "retention_days": 30
+    }
+  ]
+}

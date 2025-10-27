@@ -13,6 +13,8 @@ import os
 from typing import List, Dict, Any, Optional, Callable
 from dataclasses import dataclass, asdict
 from datetime import datetime
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 
 def get_audit_timestamp() -> str:
@@ -20,7 +22,7 @@ def get_audit_timestamp() -> str:
     audit_time = os.getenv("AUDIT_TIME")
     if audit_time:
         return audit_time
-    return datetime.now().isoformat()
+    return clock.now().isoformat()
 
 
 # Import CP modules
@@ -112,10 +114,10 @@ def _run_synthesis_stage(user_query: str, companies: List[str]) -> tuple[List[Di
         RuntimeError: If synthesis produces no results
     """
     logger.info("Stage 1: Query Synthesis")
-    t0 = time.time()
+    t0 = clock.time()
     synthesizer = QuerySynthesizer()
     synthesis_results = synthesizer.synthesize(user_query, companies=companies)
-    latency_ms = round((time.time() - t0) * 1000, 2)
+    latency_ms = round((clock.time() - t0) * 1000, 2)
 
     if not synthesis_results:
         raise RuntimeError("Query synthesis produced no results")
@@ -141,7 +143,7 @@ def _run_retrieval_stage(companies: List[str], theme: str) -> tuple[List[Dict[st
         RuntimeError: If STRICT mode and Parquet not available
     """
     logger.info("Stage 2: Retrieval")
-    t0 = time.time()
+    t0 = clock.time()
 
     # Try real retrieval first; fall back to mock if Parquet unavailable (unless STRICT)
     try:
@@ -157,7 +159,7 @@ def _run_retrieval_stage(companies: List[str], theme: str) -> tuple[List[Dict[st
         logger.warning("Real Parquet not available; using mock retrieval")
         documents = _mock_retrieval(companies, theme)
 
-    latency_ms = round((time.time() - t0) * 1000, 2)
+    latency_ms = round((clock.time() - t0) * 1000, 2)
     return documents, latency_ms
 
 
@@ -179,7 +181,7 @@ def _run_ranking_stage(user_query: str, companies: List[str], documents: List[Di
         RuntimeError: If model initialization or inference fails
     """
     logger.info("Stage 3: Cross-Encoder Re-ranking (Real Sentence-BERT)")
-    t0 = time.time()
+    t0 = clock.time()
 
     # Initialize real Cross-Encoder with deterministic seed
     ranker = RealCrossEncoderRanker(
@@ -198,7 +200,7 @@ def _run_ranking_stage(user_query: str, companies: List[str], documents: List[Di
         else:
             ranked_docs_per_company.append([])
 
-    latency_ms = round((time.time() - t0) * 1000, 2)
+    latency_ms = round((clock.time() - t0) * 1000, 2)
     logger.info(f"Real Cross-Encoder ranking complete in {latency_ms}ms")
     return ranked_docs_per_company, latency_ms
 
@@ -216,7 +218,7 @@ def _run_aggregation_stage(companies: List[str], theme: str, ranked_docs_per_com
         Tuple of (confidence_results, latency_ms)
     """
     logger.info("Stage 4: Bayesian Confidence Aggregation")
-    t0 = time.time()
+    t0 = clock.time()
     confidence_results = {}
 
     for company, ranked_docs in zip(companies, ranked_docs_per_company):
@@ -233,7 +235,7 @@ def _run_aggregation_stage(companies: List[str], theme: str, ranked_docs_per_com
                 "interval_width": 0.5,
             }
 
-    latency_ms = round((time.time() - t0) * 1000, 2)
+    latency_ms = round((clock.time() - t0) * 1000, 2)
     return confidence_results, latency_ms
 
 
@@ -280,7 +282,7 @@ def generate_comparative_report(
     _validate_inputs(user_query, companies)
 
     logger.info(f"Generating comparative report for {len(companies)} companies")
-    start_time = time.time()
+    start_time = clock.time()
     latencies: Dict[str, float] = {}
 
     try:
@@ -302,12 +304,12 @@ def generate_comparative_report(
 
         # Stage 5: Report Generation
         logger.info("Stage 5: Report Generation")
-        t0 = time.time()
+        t0 = clock.time()
         report_results = _generate_report_results(companies, theme, confidence_results)
-        latencies["generation_ms"] = round((time.time() - t0) * 1000, 2)
+        latencies["generation_ms"] = round((clock.time() - t0) * 1000, 2)
 
         # Assemble final report
-        total_latency_ms = round((time.time() - start_time) * 1000, 2)
+        total_latency_ms = round((clock.time() - start_time) * 1000, 2)
 
         report = {
             "user_query": user_query,

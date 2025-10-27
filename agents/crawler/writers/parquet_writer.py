@@ -9,6 +9,8 @@ import pyarrow as pa  # type: ignore
 import pyarrow.parquet as pq  # type: ignore
 from io import BytesIO
 import uuid
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 logger = logging.getLogger(__name__)
 
@@ -241,7 +243,7 @@ class ParquetWriter:
         # Ensure extraction_timestamp is datetime
         extraction_ts = data.get('extraction_timestamp')
         if not isinstance(extraction_ts, datetime):
-            extraction_ts = datetime.now()
+            extraction_ts = clock.now()
 
         # Convert metadata to dict if needed
         metadata = data.get('metadata', {})

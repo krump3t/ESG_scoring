@@ -14,6 +14,8 @@ from pathlib import Path
 import hashlib
 from collections import defaultdict
 import re
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -24,7 +26,7 @@ def get_audit_timestamp() -> str:
     audit_time = os.getenv("AUDIT_TIME")
     if audit_time:
         return audit_time
-    return datetime.now().isoformat()
+    return clock.now().isoformat()
 
 
 @dataclass
@@ -129,7 +131,7 @@ class ResponseQualityEvaluator:
         Evaluate a single response
         """
         # Generate response ID
-        response_id = hashlib.md5(f"{query}{response}{datetime.now()}".encode()).hexdigest()[:12]
+        response_id = hashlib.md5(f"{query}{response}{clock.now()}".encode()).hexdigest()[:12]
 
         # Initialize metrics
         metrics = self._calculate_metrics(

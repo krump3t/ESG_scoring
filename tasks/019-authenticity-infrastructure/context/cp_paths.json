@@ -1,0 +1,47 @@
+{
+  "task_id": "019-authenticity-infrastructure",
+  "phase": "foundation",
+  "paths": [
+    "**/libs/utils/clock.py",
+    "**/libs/utils/determinism.py",
+    "**/libs/utils/http_client.py"
+  ],
+  "critical_path_files": [
+    {
+      "file": "libs/utils/clock.py",
+      "rationale": "Deterministic time abstraction enabling reproducible testing. Provides Clock class with fixed-time support via FIXED_TIME env var. Core infrastructure for remediating 81 nondeterministic_time violations.",
+      "complexity_target": "CCN ≤10",
+      "coverage_target": "≥95% line, ≥95% branch",
+      "loc_estimate": 150
+    },
+    {
+      "file": "libs/utils/determinism.py",
+      "rationale": "Seeded randomness utilities for deterministic pseudo-random number generation. Provides get_seeded_random() factory using SEED env var. Remediates FATAL unseeded_random violation and prevents future regressions.",
+      "complexity_target": "CCN ≤10",
+      "coverage_target": "≥95% line, ≥95% branch",
+      "loc_estimate": 80
+    },
+    {
+      "file": "libs/utils/http_client.py",
+      "rationale": "HTTP client abstraction (HTTPClient ABC + RealHTTPClient + MockHTTPClient) enabling zero-network testing. Remediates 33 network_import violations by providing fixture-based mocking layer.",
+      "complexity_target": "CCN ≤10",
+      "coverage_target": "≥95% line, ≥95% branch",
+      "loc_estimate": 200
+    },
+    {
+      "file": ".sca/exemptions.json",
+      "rationale": "Violation exemption registry documenting 11 approved exceptions (8 test-only FATAL: eval_exec + workspace_escape, 3 test WARN: to_json). Machine-readable format with expiry dates for governance.",
+      "complexity_target": "N/A (JSON config)",
+      "coverage_target": "N/A (config file)",
+      "loc_estimate": 50
+    }
+  ],
+  "entry_points": [
+    "libs/utils/clock.py:get_clock",
+    "libs/utils/clock.py:set_clock",
+    "libs/utils/determinism.py:get_seeded_random",
+    "libs/utils/http_client.py:HTTPClient",
+    "libs/utils/http_client.py:RealHTTPClient",
+    "libs/utils/http_client.py:MockHTTPClient"
+  ]
+}

@@ -1,0 +1,7 @@
+[
+  "**/libs/query/query_synthesizer.py",
+  "**/libs/ranking/real_cross_encoder.py",
+  "**/libs/cache/real_redis_cache.py",
+  "**/libs/scoring/bayesian_confidence.py",
+  "**/scripts/cp/compare_esg_analysis.py"
+]

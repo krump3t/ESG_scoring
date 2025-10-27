@@ -1,0 +1,86 @@
+{
+  "sources": [
+    {
+      "id": "P1-RUBRIC-V3",
+      "priority": 1,
+      "type": "specification",
+      "title": "ESG Maturity Scoring Rubric v3.0",
+      "location": "rubrics/esg_maturity_rubricv3.md",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "file://rubrics/esg_maturity_rubricv3.md",
+      "ebse_synthesis": "Defines 7-dimensional ESG maturity framework (TSP, OSP, DM, GHG, RD, EI, RMM) with 0-4 stage progression per dimension. Specifies evidence criteria for each stage and overall maturity calculation as average of 7 scores. Aligns with TCFD, ISSB, GRI, SASB frameworks."
+    },
+    {
+      "id": "P1-MSCI-ESG",
+      "priority": 1,
+      "type": "external_validation",
+      "title": "MSCI ESG Ratings Methodology",
+      "location": "https://www.msci.com/our-solutions/esg-investing/esg-ratings",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "https://www.msci.com/our-solutions/esg-investing/esg-ratings",
+      "ebse_synthesis": "MSCI rates companies AAA (leader) to CCC (laggard) based on ESG risk exposure and management. Microsoft rated AAA indicates leading ESG practices. Used as external validation benchmark for our 7-dimensional scoring to ensure alignment with industry-standard assessments."
+    },
+    {
+      "id": "P1-CDP-CLIMATE",
+      "priority": 1,
+      "type": "external_validation",
+      "title": "CDP Climate Change Questionnaire & Scoring Methodology",
+      "location": "https://www.cdp.net/en/climate",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "https://www.cdp.net/en/climate",
+      "ebse_synthesis": "CDP scores companies A (leadership) to D- (disclosure) on climate change transparency and action. Microsoft A- score validates strong performance on GHG, TSP, and RD dimensions. Scoring aligns with GHG Protocol and science-based targets framework used in our rubric."
+    },
+    {
+      "id": "P2-MICROSOFT-REPORT",
+      "priority": 2,
+      "type": "test_data",
+      "title": "Microsoft 2023 Environmental Sustainability Report",
+      "location": "data/processed/bronze/microsoft/2023/",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1lMjE",
+      "ebse_synthesis": "Microsoft's FY23 sustainability report details SBTi-validated targets, 13.9M tCO2e emissions (6.3% reduction), 19.8 GW renewable PPAs, water positive commitment, and TCFD-aligned disclosures. Used as primary test case for rubric v3.0 validation with expected high TSP, GHG, and RD scores."
+    },
+    {
+      "id": "P2-SHELL-REPORT",
+      "priority": 2,
+      "type": "test_data",
+      "title": "Shell Sustainability Report 2023",
+      "location": "data/processed/bronze/shell/2023/",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "https://reports.shell.com/sustainability-report/2023/",
+      "ebse_synthesis": "Shell 2023 report covers net-zero 2050 target, 50% carbon intensity reduction by 2050, 55M tonnes Scope 1/2 emissions (5% reduction), 4.1 GW renewable capacity, and TCFD/GRI/SASB alignment. Provides test case for energy transition sector scoring across all 7 dimensions."
+    },
+    {
+      "id": "P2-EXXONMOBIL-REPORT",
+      "priority": 2,
+      "type": "test_data",
+      "title": "ExxonMobil 2023 Sustainability Report",
+      "location": "data/processed/bronze/exxonmobil/2023/",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "https://corporate.exxonmobil.com/sustainability",
+      "ebse_synthesis": "ExxonMobil report details net-zero Scope 1/2 by 2050 commitment, 116M tonnes CO2e emissions, 50% flaring reduction, carbon capture leadership (9M tonnes), and TCFD/SASB disclosure. Test case for traditional oil/gas sector maturity assessment with focus on GHG and RMM dimensions."
+    },
+    {
+      "id": "P3-SCA-PROTOCOL",
+      "priority": 3,
+      "type": "methodology",
+      "title": "Scientific Coding Agent Protocol v13.8",
+      "location": "C:\\projects\\Work Projects\\.claude\\full_protocol.md",
+      "retrieval_date": "2025-10-22",
+      "doi": null,
+      "url": "file://C:\\projects\\Work Projects\\.claude\\full_protocol.md",
+      "ebse_synthesis": "SCA v13.8 mandates zero fabrication, authentic algorithms (no trivial substitutes), failure-path testing, placeholder intolerance, and traceability gates. Enforces workspace isolation, differential testing (>=1200 cases), and honest status reporting. Guides implementation quality standards for rubric v3.0."
+    }
+  ],
+  "synthesis_date": "2025-10-22",
+  "total_sources": 7,
+  "primary_sources": 3,
+  "secondary_sources": 3,
+  "tertiary_sources": 1
+}

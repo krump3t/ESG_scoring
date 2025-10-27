@@ -1,0 +1,7 @@
+[
+  "**/libs/llm/watsonx_client.py",
+  "**/libs/embedding/watsonx_embedder.py",
+  "**/libs/storage/astradb_vector.py",
+  "**/scripts/ingest_esg_documents.py",
+  "**/scripts/generate_esg_analysis.py"
+]

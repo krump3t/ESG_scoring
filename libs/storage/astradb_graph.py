@@ -13,6 +13,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 from uuid import uuid4
 import time
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Load environment variables
 load_dotenv()
@@ -169,8 +171,8 @@ class AstraDBGraphStore:
                 node_id=node_id,
                 node_type=node_type,
                 properties=properties,
-                created_at=datetime.now().isoformat(),
-                updated_at=datetime.now().isoformat()
+                created_at=clock.now().isoformat(),
+                updated_at=clock.now().isoformat()
             )
 
             document = {
@@ -225,7 +227,7 @@ class AstraDBGraphStore:
                 edge_type=edge_type,
                 properties=properties or {},
                 weight=weight,
-                created_at=datetime.now().isoformat()
+                created_at=clock.now().isoformat()
             )
 
             document = {

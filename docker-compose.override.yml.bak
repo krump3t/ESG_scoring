@@ -1,0 +1,32 @@
+
+services:
+  # Runner service for executing scripts and demos
+  runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: esg-runner:dev
+    container_name: esg-runner
+    command: tail -f /dev/null  # Keep container alive
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONHASHSEED=0
+      - SEED=42
+      - LOG_LEVEL=info
+    volumes:
+      # Mount source code for live editing
+      - ./apps:/app/apps
+      - ./libs:/app/libs
+      - ./scripts:/app/scripts
+      - ./tests:/app/tests
+      - ./rubrics:/app/rubrics
+      # Mount artifacts for persistence
+      - ./artifacts:/app/artifacts
+      # Mount context and reports
+      - ./context:/app/context
+      - ./reports:/app/reports
+    working_dir: /app
+    networks:
+      - esg-network
+    profiles:
+      - runner

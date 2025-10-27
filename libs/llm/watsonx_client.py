@@ -15,6 +15,8 @@ from pathlib import Path
 import time
 from functools import lru_cache
 from dotenv import load_dotenv
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Load environment variables
 load_dotenv()
@@ -474,7 +476,7 @@ Summary:"""
 
         if cache_file.exists():
             # Check TTL
-            age = time.time() - cache_file.stat().st_mtime
+            age = clock.time() - cache_file.stat().st_mtime
             if age < self.config.cache_ttl:
                 try:
                     return np.load(cache_file)

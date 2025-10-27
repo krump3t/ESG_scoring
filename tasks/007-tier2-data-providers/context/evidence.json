@@ -1,0 +1,124 @@
+{
+  "task_id": "007-tier2-data-providers",
+  "evidence_type": "primary_sources",
+  "retrieval_date": "2025-10-22",
+  "sources": [
+    {
+      "id": "P1",
+      "priority": 1,
+      "title": "GRI Sustainability Disclosure Database",
+      "type": "database",
+      "url": "https://database.globalreporting.org/",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "GRI hosts 13,000+ sustainability reports from organizations in 100+ countries. Reports follow GRI Standards (most widely used ESG reporting framework). Database searchable by company name, year, sector, and country. Provides report metadata and download links.",
+      "key_facts": [
+        "13,000+ organizations report using GRI Standards",
+        "100+ countries represented",
+        "Annual sustainability reports (PDF/HTML format)",
+        "Free public access to search and download"
+      ],
+      "relevance": "Primary Tier 2 data source for sustainability reports not in SEC EDGAR (international companies, non-public companies, voluntary ESG reporters)"
+    },
+    {
+      "id": "P2",
+      "priority": 1,
+      "title": "SASB Standards and Materiality Map",
+      "type": "framework",
+      "url": "https://www.sasb.org/standards/",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "SASB provides industry-specific standards for 77 industries across 11 sectors. Each industry has 3-8 material ESG issues. SASB Materiality Map identifies which issues matter most by industry. Many companies reference SASB in SEC 10-K filings and sustainability reports.",
+      "key_facts": [
+        "77 industries covered by SASB Standards",
+        "26 general ESG issue categories",
+        "Used in SEC filings and investor communications",
+        "SASB Navigator provides company-specific material issue guidance"
+      ],
+      "relevance": "Tier 2 source for identifying material ESG issues and linking to company disclosures. Complements SEC EDGAR by highlighting ESG-specific sections in 10-K filings."
+    },
+    {
+      "id": "P3",
+      "priority": 1,
+      "title": "Yahoo Finance Symbol Search API",
+      "type": "api",
+      "url": "https://query1.finance.yahoo.com/v1/finance/search",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "Yahoo Finance provides free, unauthenticated API for ticker symbol lookup. Returns company name, ticker, exchange, and asset type. No rate limits documented. Covers all publicly traded companies globally. Ticker can be used to retry SEC EDGAR search with more precision.",
+      "key_facts": [
+        "Free, no authentication required",
+        "No documented rate limits",
+        "Global coverage (US + international exchanges)",
+        "JSON response with ticker, company name, exchange"
+      ],
+      "relevance": "Tier 2 fallback for resolving company name ambiguities. Converts company name → ticker → CIK for SEC EDGAR retry."
+    },
+    {
+      "id": "S1",
+      "priority": 2,
+      "title": "AlphaVantage Symbol Search API",
+      "type": "api",
+      "url": "https://www.alphavantage.co/documentation/#symbolsearch",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "AlphaVantage provides free ticker lookup API with registration. Rate limit: 5 requests/minute (free tier). Returns best-matching symbols for search keywords. Covers US and international exchanges. Requires free API key from alphavantage.co.",
+      "key_facts": [
+        "Free tier: 5 requests/minute, 500 requests/day",
+        "Requires free API key (registration)",
+        "US + international exchange coverage",
+        "JSON response with ticker, name, region, match score"
+      ],
+      "relevance": "Fallback ticker lookup if Yahoo Finance fails or returns ambiguous results. Rate limit acceptable for batch processing."
+    },
+    {
+      "id": "S2",
+      "priority": 2,
+      "title": "SEC Company Tickers JSON",
+      "type": "dataset",
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "SEC provides official mapping of ticker symbols to CIK numbers. Updated daily. JSON format with 10,000+ public companies. Used in Task 006 for CIK lookup. Ticker field can be used to validate ticker→CIK mappings from Yahoo/AlphaVantage.",
+      "key_facts": [
+        "Official SEC dataset, updated daily",
+        "10,000+ US public companies",
+        "Maps ticker → CIK (Central Index Key)",
+        "JSON format, free public access"
+      ],
+      "relevance": "Ground truth for validating ticker→CIK mappings from Tier 2 ticker lookup providers. Ensures accuracy of company identification."
+    },
+    {
+      "id": "S3",
+      "priority": 2,
+      "title": "Task 006 Multi-Source Ingestion Results",
+      "type": "internal",
+      "url": "file://tasks/006-multi-source-ingestion/reports/TASK_COMPLETE.md",
+      "doi": null,
+      "retrieval_date": "2025-10-22",
+      "synthesis": "Task 006 achieved 83.3% data availability (5/6 companies) using SEC EDGAR alone. Identified need for Tier 2 providers to reach 90-95% target. CDP corporate data requires paid access (Open Data Portal = municipal only). Fuzzy name matching and 20-F support critical for success.",
+      "key_facts": [
+        "Baseline availability: 83.3% (SEC EDGAR only)",
+        "Target: 90-95% with Tier 2 providers",
+        "CDP limitation: Corporate data not in free API",
+        "JPMorgan Chase edge case: CIK found, 0 2023 filings"
+      ],
+      "relevance": "Establishes baseline for Task 007. Identifies gaps Tier 2 must fill (non-US companies, non-SEC filers, name ambiguity edge cases)."
+    }
+  ],
+  "synthesis_summary": "Task 007 will implement three Tier 2 providers to increase ESG data availability from 83.3% (SEC EDGAR only) to ≥90%. GRI Database provides global sustainability reports (13,000+ organizations). SASB Navigator identifies material ESG issues by industry. Yahoo Finance ticker lookup resolves company name ambiguities for SEC EDGAR retry. Combined, these sources address gaps in Tier 1: international companies (GRI), non-SEC filers (GRI), and name variations (ticker lookup).",
+  "assumptions": [
+    "GRI Database remains publicly accessible without paid subscription",
+    "SASB Standards Navigator provides company-specific disclosure links or guidance",
+    "Yahoo Finance API continues to operate without authentication",
+    "SEC company_tickers.json updated regularly (daily cadence maintained)",
+    "2023 sustainability reports published by October 2025 (current test date)"
+  ],
+  "references": [
+    "GRI Standards: https://www.globalreporting.org/standards/",
+    "SASB Conceptual Framework: https://www.sasb.org/standards/conceptual-framework/",
+    "Yahoo Finance API (unofficial): https://github.com/ranaroussi/yfinance",
+    "SEC EDGAR API: https://www.sec.gov/edgar/sec-api-documentation",
+    "Task 006 Completion Report: tasks/006-multi-source-ingestion/reports/TASK_COMPLETE.md"
+  ]
+}

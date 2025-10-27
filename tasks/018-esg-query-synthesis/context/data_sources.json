@@ -1,0 +1,53 @@
+{
+  "phase": 3,
+  "title": "Phase 3 Data Sources — ESG Query Synthesis",
+  "sources": [
+    {
+      "source_id": "phase2-apple",
+      "source_name": "Apple Inc. Environmental Report 2024",
+      "type": "ESG PDF",
+      "location": "data/esg_documents/apple_environmental_report_2024.pdf",
+      "size_mb": 15.8,
+      "pages": 47,
+      "sha256": "computed-during-phase-2",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "pii_details": "No PII (corporate ESG report, public)",
+      "retention_policy": "Indefinite (source of truth)",
+      "usage": "Multi-company comparison benchmark"
+    },
+    {
+      "source_id": "phase2-exxonmobil",
+      "source_name": "ExxonMobil 2024 Energy Report",
+      "type": "ESG PDF",
+      "location": "data/esg_documents/exxonmobil_energy_report_2024.pdf",
+      "size_mb": 8.4,
+      "pages": 52,
+      "sha256": "computed-during-phase-2",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "pii_details": "No PII (corporate ESG report, public)",
+      "retention_policy": "Indefinite (source of truth)",
+      "usage": "Multi-company comparison benchmark"
+    },
+    {
+      "source_id": "phase2-jpmorgan",
+      "source_name": "JPMorgan Chase ESG Report 2024",
+      "type": "ESG PDF",
+      "location": "data/esg_documents/jpmorgan_esg_report_2024.pdf",
+      "size_mb": 7.1,
+      "pages": 38,
+      "sha256": "computed-during-phase-2",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "pii_details": "No PII (corporate ESG report, public)",
+      "retention_policy": "Indefinite (source of truth)",
+      "usage": "Multi-company comparison benchmark"
+    }
+  ],
+  "total_size_mb": 31.3,
+  "total_pages": 137,
+  "integrity_method": "SHA256",
+  "validation_status": "completed",
+  "validation_notes": "All 3 Fortune 500 ESG PDFs carried forward from Phase 2 for multi-company comparison. No new data sources required at context gate."
+}

@@ -1,4 +1,6 @@
 import os
+from libs.utils.clock import get_clock
+clock = get_clock()
 """
 Complete ESG Scoring Pipeline
 Integrates all components for end-to-end scoring
@@ -139,7 +141,7 @@ class ESGScoringPipeline:
         """
         Score a single company's ESG maturity
         """
-        start_time = time.time()
+        start_time = clock.time()
         logger.info(f"Starting ESG scoring for {company} ({year or 'latest'})")
 
         # Step 1: Ingest data
@@ -165,7 +167,7 @@ class ESGScoringPipeline:
         overall_stage, overall_confidence = self._calculate_overall_score(theme_scores)
 
         # Step 5: Create final score
-        processing_time = time.time() - start_time
+        processing_time = clock.time() - start_time
 
         score = CompanyScore(
             company=company,

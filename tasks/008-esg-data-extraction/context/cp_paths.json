@@ -1,0 +1,105 @@
+{
+  "task_id": "008-esg-data-extraction",
+  "date": "2025-10-22",
+  "protocol": "SCA v13.8-MEA",
+  "description": "Critical path file patterns for ESG Maturity Evidence Extraction. These files implement core extraction logic and are subject to strict TDD, coverage, type safety, and complexity gates.",
+  "paths": [
+    "agents/parser/models.py",
+    "agents/parser/matchers/base_matcher.py",
+    "agents/parser/matchers/ghg_matcher.py",
+    "agents/scoring/rubric_models.py",
+    "agents/scoring/rubric_loader.py",
+    "agents/embedding/watsonx_embedder.py",
+    "agents/scoring/characteristic_matcher.py",
+    "agents/scoring/evidence_table_generator.py"
+  ],
+  "entry_points": [
+    {
+      "module": "agents.parser.matchers.ghg_matcher",
+      "function": "GHGMatcher.match",
+      "description": "Extracts GHG theme evidence from SEC filing text",
+      "signature": "match(text: str, page_offsets: dict[int, int]) -> List[Match]",
+      "returns": "List of Match objects for GHG evidence"
+    }
+  ],
+  "module_descriptions": {
+    "models.py": "Core data models: Evidence, Match, ExtractionResult dataclasses with validation and serialization",
+    "matchers/base_matcher.py": "Abstract base class for theme matchers, defines interface for pattern matching and evidence extraction",
+    "matchers/ghg_matcher.py": "GHG Accounting: Extracts Scope 1/2/3 emissions, methodology, assurance level, base year"
+  },
+  "test_requirements": {
+    "tdd_guard": "All CP files must have tests BEFORE implementation (test timestamps < implementation timestamps)",
+    "coverage": "≥95% line and branch coverage on all CP files",
+    "property_tests": "≥1 Hypothesis @given(...) property test per CP file",
+    "failure_tests": "≥1 explicit failure-path test (asserting exceptions) per CP file",
+    "cp_marker": "All CP tests marked with @pytest.mark.cp decorator"
+  },
+  "quality_gates": {
+    "type_safety": "mypy --strict on all CP files: 0 errors",
+    "complexity": "Lizard CCN ≤10, Cognitive Complexity ≤15",
+    "documentation": "interrogate ≥95% docstring coverage",
+    "security": "bandit: no findings; detect-secrets: clean",
+    "traceability": "qa/run_log.txt, artifacts/run_context.json, artifacts/run_manifest.json, artifacts/run_events.jsonl (fresh + valid)"
+  },
+  "non_critical_path": [
+    "agents/parser/batch_runner.py",
+    "agents/parser/cli.py",
+    "agents/parser/logging_config.py",
+    "agents/parser/utils.py",
+    "scripts/run_extraction.py",
+    "scripts/aggregate_evidence.py",
+    "scripts/validate_extraction.py",
+    "notebooks/evidence_analysis.ipynb",
+    "notebooks/validation_report.ipynb"
+  ],
+  "non_cp_rationale": "These files are utilities, CLI interfaces, logging, and notebooks for analysis/reporting. They do not implement core extraction algorithms and are not subject to the same strict gates. They should still have basic tests and pass linting, but coverage/complexity thresholds are relaxed.",
+  "dependencies": {
+    "runtime": [
+      "beautifulsoup4>=4.12.0",
+      "lxml>=4.9.0",
+      "regex>=2023.10.0",
+      "hashlib (stdlib)",
+      "multiprocessing (stdlib)",
+      "dataclasses (stdlib)",
+      "typing (stdlib)",
+      "json (stdlib)",
+      "pathlib (stdlib)"
+    ],
+    "test": [
+      "pytest>=7.4.0",
+      "pytest-cov>=4.1.0",
+      "pytest-xdist>=3.3.0",
+      "hypothesis>=6.82.0",
+      "mypy>=1.5.0",
+      "bandit>=1.7.5",
+      "detect-secrets>=1.4.0",
+      "lizard>=1.17.0",
+      "interrogate>=1.5.0"
+    ]
+  },
+  "data_inputs": {
+    "sec_filings": "tasks/007-tier2-data-providers/qa/downloads/*.html",
+    "filing_count": 25,
+    "filing_types": ["10-K", "20-F"],
+    "esg_maturity_rubric": "rubrics/esg_maturity_rubricv3.md"
+  },
+  "data_outputs": {
+    "evidence_json": "tasks/008-esg-data-extraction/data/evidence/{company}_{year}.json",
+    "aggregated_evidence": "tasks/008-esg-data-extraction/qa/all_evidence.json",
+    "extraction_report": "tasks/008-esg-data-extraction/qa/extraction_report.json",
+    "validation_results": "tasks/008-esg-data-extraction/qa/validation_results.json",
+    "run_log": "tasks/008-esg-data-extraction/qa/run_log.txt"
+  },
+  "success_criteria": {
+    "all_cp_tests_pass": "100% of CP tests pass",
+    "coverage_threshold": "≥95% line/branch coverage on CP files",
+    "mypy_clean": "0 mypy errors on CP files",
+    "complexity_threshold": "CCN ≤10, Cognitive ≤15 on all CP files",
+    "extraction_rate": "≥18/25 reports (72%) yield multi-theme evidence",
+    "theme_coverage": "≥6/7 themes per report (threshold ≥4/7)",
+    "extraction_accuracy": "≥85% precision on manual validation (threshold ≥75%)",
+    "processing_time_p95": "<45 seconds per report (threshold <90s)"
+  },
+  "version": "1.0",
+  "status": "Context phase complete, ready for implementation"
+}

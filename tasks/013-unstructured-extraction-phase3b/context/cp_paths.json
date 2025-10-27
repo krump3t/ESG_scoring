@@ -1,0 +1,23 @@
+{
+  "cp_files": [
+    "agents/extraction/llm_extractor.py",
+    "agents/extraction/pdf_text_extractor.py"
+  ],
+  "test_requirements": {
+    "agents/extraction/llm_extractor.py": {
+      "min_tests": 15,
+      "requires_cp_mark": true,
+      "requires_hypothesis": true,
+      "requires_failure_test": true
+    },
+    "agents/extraction/pdf_text_extractor.py": {
+      "min_tests": 10,
+      "requires_cp_mark": true,
+      "requires_hypothesis": true,
+      "requires_failure_test": true
+    }
+  },
+  "entry_points": [
+    "agents/extraction/llm_extractor.py::LLMExtractor.extract"
+  ]
+}

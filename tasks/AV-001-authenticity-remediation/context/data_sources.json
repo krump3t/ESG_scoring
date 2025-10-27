@@ -1,0 +1,95 @@
+{
+  "sources": [
+    {
+      "name": "Original Audit Report (AV-001-20251026)",
+      "type": "audit_output",
+      "format": "JSON",
+      "path": "artifacts/authenticity/report.json",
+      "records": 203,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "pii_flag": false,
+      "provenance": "SCA authenticity_audit.py (canonical tool)",
+      "retention": "permanent",
+      "description": "Canonical audit documenting all 203 violations across 5 severity levels (0=FATAL, 1=Determinism, 2=Evidence, 3=Posture, 4=Errors)"
+    },
+    {
+      "name": "Python Codebase",
+      "type": "source_code",
+      "format": "Python 3.10+",
+      "path": "scripts/, agents/, apps/, libs/",
+      "records": "~50K LOC",
+      "sha256": "codebase_baseline_hash",
+      "retrieval_date": "2025-10-26T00:00:00Z (git tag: audit-baseline-20251026)",
+      "pii_flag": false,
+      "provenance": "Git repository (HTTPS)",
+      "retention": "permanent",
+      "description": "Source code being remediated. Baseline snapshot locked via git tag for emergency rollback."
+    },
+    {
+      "name": "Existing Test Suite",
+      "type": "test_data",
+      "format": "pytest Python",
+      "path": "tests/",
+      "records": 523,
+      "sha256": "test_suite_hash",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "pii_flag": false,
+      "provenance": "Git repository",
+      "retention": "permanent",
+      "description": "523 existing tests serving as regression detection during remediation. All passing as of AR-001 completion."
+    },
+    {
+      "name": "AR-001 Reference Implementation",
+      "type": "reference_code",
+      "format": "Python 3.10+",
+      "path": "agents/crawler/ledger.py, agents/scoring/rubric_scorer.py, libs/retrieval/parity_checker.py, apps/api/main.py",
+      "records": 4,
+      "sha256": "ar001_modules_hash",
+      "retrieval_date": "2025-10-26T00:00:00Z (commit: 7d6b3ce)",
+      "pii_flag": false,
+      "provenance": "Completed AR-001 task",
+      "retention": "permanent",
+      "description": "Working implementations of 5 authenticity gates. Used as reference for enforcing gates during remediation."
+    },
+    {
+      "name": "Task Scaffolding Context",
+      "type": "project_context",
+      "format": "Markdown + JSON",
+      "path": "tasks/AV-001-authenticity-remediation/context/",
+      "records": 7,
+      "sha256": "context_files_hash",
+      "retrieval_date": "2025-10-26T00:00:00Z",
+      "pii_flag": false,
+      "provenance": "SCA scaffolding generation",
+      "retention": "permanent",
+      "description": "Context files defining remediation strategy: hypothesis.md, design.md, evidence.json, data_sources.json, adr.md, assumptions.md, cp_paths.json"
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Third-party Data Provider APIs",
+      "reason": "Already validated, not in remediation scope"
+    },
+    {
+      "name": "Infrastructure (Docker, Kubernetes)",
+      "reason": "Assumed stable, only code changes in scope"
+    },
+    {
+      "name": "Data Lake (Iceberg, DuckDB)",
+      "reason": "Schema validated in separate audit, not modified"
+    },
+    {
+      "name": "Production ESG Database",
+      "reason": "PII sensitive, using test fixtures and cached reports"
+    }
+  ],
+  "summary": {
+    "total_records": 203,
+    "pii_present": false,
+    "access_level": "developer",
+    "sensitivity": "medium (audit violations, not PII)",
+    "backup_location": "git tags: audit-baseline-20251026, audit-phase1-complete, etc.",
+    "retention_policy": "permanent (compliance artifact)"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Blue-Green Deployments and Database Migrations",
+      "authors": [
+        "Martin Fowler"
+      ],
+      "year": 2023,
+      "type": "article",
+      "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Blue-green deployments enable zero-downtime migrations. Parallel systems allow validation before cutover with instant rollback."
+    },
+    {
+      "id": "P1-002",
+      "title": "Data Migration Best Practices",
+      "authors": [
+        "Google Cloud"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://cloud.google.com/architecture/database-migration",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Successful migrations require dual-run validation, automated testing, and rollback plans. Gradual cutover reduces risk."
+    },
+    {
+      "id": "P1-003",
+      "title": "Apache Iceberg Snapshot Management",
+      "authors": [
+        "Apache Iceberg Community"
+      ],
+      "year": 2024,
+      "type": "documentation",
+      "url": "https://iceberg.apache.org/docs/latest/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Iceberg snapshots enable point-in-time recovery and rollback. Tagging critical snapshots supports migration safety."
+    }
+  ]
+}

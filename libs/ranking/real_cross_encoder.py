@@ -296,7 +296,8 @@ class RealCrossEncoderRanker:
         Returns:
             Normalized scores in [0, 1]
         """
-        return 1.0 / (1.0 + np.exp(-x))
+        result: np.ndarray = 1.0 / (1.0 + np.exp(-x))
+        return result
 
 
 def create_ranker(

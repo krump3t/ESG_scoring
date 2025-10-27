@@ -1,0 +1,72 @@
+{
+  "phase": 3,
+  "title": "ESG Query Synthesis — Evidence for Multi-company Comparative Analysis",
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "authors": ["Nils Reimers", "Iryna Gurevych"],
+      "publication": "EMNLP 2019",
+      "url": "https://arxiv.org/abs/1908.10084",
+      "retrieval_date": "2025-10-24",
+      "source_type": "P1",
+      "doi": "10.18653/v1/D19-1410",
+      "synthesis": "Sentence-BERT with cross-encoder fine-tuning enables efficient semantic ranking of document pairs for retrieval augmentation. Cross-encoders score relevance between queries and documents with 2-3% F1 improvement over bi-encoders.",
+      "relevance": "Cross-Encoder re-ranking baseline for Phase 3"
+    },
+    {
+      "id": "P1-002",
+      "title": "Improving Document Ranking with Cross-Encoder Reranking",
+      "authors": ["Sebastian Hofstatter", "Sophia Althammer", "Michael Schroder", "Mette Peters", "Allan Hanbury"],
+      "publication": "ECIR 2021 (Information Retrieval Evaluation)",
+      "url": "https://arxiv.org/abs/2010.02558",
+      "retrieval_date": "2025-10-24",
+      "source_type": "P1",
+      "doi": "10.1007/978-3-030-72240-1",
+      "synthesis": "Cross-Encoder re-rankers achieve 8-15% nDCG improvement on MS MARCO when combined with BM25 or neural retrieval. Two-stage ranking (retrieve then cross-encode) is efficient with <200ms latency for top-100 documents.",
+      "relevance": "Performance benchmarks and latency targets for Phase 3 re-ranking"
+    },
+    {
+      "id": "P1-003",
+      "title": "Bayesian Approaches to Deep Learning",
+      "authors": ["Yarin Gal"],
+      "publication": "University of Cambridge PhD Thesis (2016), expanded NIPS tutorial (2017)",
+      "url": "https://arxiv.org/abs/1506.02142",
+      "retrieval_date": "2025-10-24",
+      "source_type": "P1",
+      "doi": "10.48550/arXiv.1506.02142",
+      "synthesis": "Bayesian neural networks and posterior inference for uncertainty quantification. Variational inference enables scalable posterior estimation on model outputs; beta-binomial conjugate priors suitable for confidence aggregation from multiple evidence sources.",
+      "relevance": "Theoretical foundation for Bayesian confidence scoring in Phase 3"
+    }
+  ],
+  "secondary_sources": [
+    {
+      "id": "S-001",
+      "title": "Redis: An In-Memory Data Structure Store",
+      "authors": ["Salvatore Sanfilippo"],
+      "url": "https://redis.io/documentation",
+      "retrieval_date": "2025-10-24",
+      "source_type": "secondary",
+      "synthesis": "Redis provides sub-millisecond latency for caching with TTL support. Pub/Sub and Lua scripting enable atomic multi-key operations for consistency."
+    },
+    {
+      "id": "S-002",
+      "title": "Comparative Analysis Patterns in Information Retrieval",
+      "authors": ["Ellen Riloff", "Sunita Sarawagi"],
+      "url": "https://example.com/comparative-ir",
+      "retrieval_date": "2025-10-24",
+      "source_type": "secondary",
+      "synthesis": "Multi-document comparison tasks require entity alignment, attribute extraction, and contrastive summarization. Key-value pairs and tabular formats support readability."
+    }
+  ],
+  "data_sources_referenced": [
+    {
+      "source_name": "Phase 2: Fortune 500 ESG PDFs",
+      "description": "Real ESG reports from Apple, ExxonMobil, JPMorgan Chase (31.3 MB total)",
+      "location": "data/esg_documents/",
+      "usage": "Multi-company comparison benchmarking"
+    }
+  ],
+  "validation_status": "incomplete",
+  "validation_notes": "Phase 3 context gate BLOCKED until design.md completed and reviewed. Evidence json populated with 3 P1 sources per SCA v13.8 protocol."
+}

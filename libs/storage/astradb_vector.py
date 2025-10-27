@@ -15,6 +15,8 @@ import numpy as np
 from dotenv import load_dotenv
 import time
 from uuid import uuid4
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Load environment variables
 load_dotenv()
@@ -164,7 +166,7 @@ class AstraDBVectorStore:
                 "_id": chunk_id,
                 "$vector": embedding.tolist(),
                 "metadata": metadata,
-                "timestamp": datetime.now().isoformat()
+                "timestamp": clock.now().isoformat()
             }
 
             # Add metadata fields at top level for filtering
@@ -219,7 +221,7 @@ class AstraDBVectorStore:
                     "_id": chunk_id,
                     "$vector": embedding.tolist(),
                     "metadata": metadata,
-                    "timestamp": datetime.now().isoformat()
+                    "timestamp": clock.now().isoformat()
                 }
 
                 # Add filterable fields
@@ -487,7 +489,7 @@ class AstraDBVectorStore:
             # Test write/read
             test_id = f"test_{uuid4().hex[:8]}"
             test_embedding = np.random.randn(self.config.embedding_dimension)
-            test_metadata = {"test": True, "timestamp": datetime.now().isoformat()}
+            test_metadata = {"test": True, "timestamp": clock.now().isoformat()}
 
             # Try to write
             if self.upsert_chunk(test_id, test_embedding, test_metadata):

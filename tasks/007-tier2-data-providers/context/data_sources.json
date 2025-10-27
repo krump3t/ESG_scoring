@@ -1,0 +1,165 @@
+{
+  "task_id": "007-tier2-data-providers",
+  "date": "2025-10-22",
+  "data_sources": [
+    {
+      "source_id": "gri_database",
+      "name": "GRI Sustainability Disclosure Database",
+      "url": "https://database.globalreporting.org/",
+      "type": "api/web",
+      "access_method": "HTTP GET (search endpoint or HTML parsing)",
+      "authentication": "none_required",
+      "rate_limit": "unknown (assume 1 req/sec conservative)",
+      "data_format": "HTML/JSON (depends on API availability)",
+      "sha256": "N/A (dynamic web content)",
+      "pii_flag": false,
+      "contains_pii": "Company names only (public information)",
+      "provenance": "Global Reporting Initiative (GRI), Amsterdam, Netherlands",
+      "license": "Public access, reports remain property of disclosing organizations",
+      "retention_policy": "Cache for 90 days, refresh quarterly",
+      "update_frequency": "Reports added continuously as organizations publish",
+      "expected_fields": [
+        "company_name",
+        "report_year",
+        "report_title",
+        "report_url",
+        "gri_standards_version",
+        "country",
+        "sector"
+      ],
+      "data_quality": {
+        "completeness": "high (13,000+ reports)",
+        "accuracy": "high (self-reported by organizations, GRI-reviewed)",
+        "timeliness": "annual reports, 3-12 month lag from fiscal year end"
+      }
+    },
+    {
+      "source_id": "sasb_navigator",
+      "name": "SASB Standards Navigator and Materiality Map",
+      "url": "https://www.sasb.org/standards/",
+      "type": "api/web",
+      "access_method": "HTTP GET (standards download or navigator query)",
+      "authentication": "none_required",
+      "rate_limit": "unknown (assume 1 req/sec conservative)",
+      "data_format": "JSON/HTML",
+      "sha256": "N/A (dynamic content)",
+      "pii_flag": false,
+      "contains_pii": "None (industry-level data)",
+      "provenance": "Sustainability Accounting Standards Board (SASB), now part of IFRS Foundation",
+      "license": "Creative Commons Attribution-NoDerivatives 4.0",
+      "retention_policy": "Cache standards for 1 year, refresh annually",
+      "update_frequency": "Standards updated periodically (annual review cycle)",
+      "expected_fields": [
+        "industry",
+        "sector",
+        "material_issues",
+        "disclosure_topics",
+        "metrics",
+        "company_examples"
+      ],
+      "data_quality": {
+        "completeness": "comprehensive (77 industries)",
+        "accuracy": "very high (standards-based, peer-reviewed)",
+        "timeliness": "updated annually, stable framework"
+      }
+    },
+    {
+      "source_id": "yahoo_finance_ticker",
+      "name": "Yahoo Finance Symbol Search API",
+      "url": "https://query1.finance.yahoo.com/v1/finance/search",
+      "type": "api",
+      "access_method": "HTTP GET with query parameter ?q={company_name}",
+      "authentication": "none_required",
+      "rate_limit": "no documented limit (use 10 req/sec conservative)",
+      "data_format": "JSON",
+      "sha256": "N/A (dynamic data)",
+      "pii_flag": false,
+      "contains_pii": "None (public company information)",
+      "provenance": "Yahoo Finance, Sunnyvale, CA, USA",
+      "license": "Unofficial API, no published terms (use at own risk)",
+      "retention_policy": "Cache ticker lookups for 30 days",
+      "update_frequency": "Real-time (ticker changes are rare)",
+      "expected_fields": [
+        "symbol (ticker)",
+        "longname (company name)",
+        "exchDisp (exchange)",
+        "typeDisp (asset type)",
+        "score (match confidence)"
+      ],
+      "data_quality": {
+        "completeness": "very high (all public companies globally)",
+        "accuracy": "high (official exchange data)",
+        "timeliness": "real-time"
+      }
+    },
+    {
+      "source_id": "alphavantage_ticker",
+      "name": "AlphaVantage Symbol Search API",
+      "url": "https://www.alphavantage.co/query?function=SYMBOL_SEARCH",
+      "type": "api",
+      "access_method": "HTTP GET with API key and keywords parameter",
+      "authentication": "api_key_required (free tier available)",
+      "rate_limit": "5 req/min (free), 500 req/day",
+      "data_format": "JSON",
+      "sha256": "N/A (dynamic data)",
+      "pii_flag": false,
+      "contains_pii": "None (public company information)",
+      "provenance": "AlphaVantage Inc., Boston, MA, USA",
+      "license": "Free tier: non-commercial use, attribution required",
+      "retention_policy": "Cache ticker lookups for 30 days",
+      "update_frequency": "Daily",
+      "expected_fields": [
+        "1. symbol (ticker)",
+        "2. name (company name)",
+        "3. type (Equity/ETF)",
+        "4. region (US/UK/etc)",
+        "5. matchScore (0-1 confidence)"
+      ],
+      "data_quality": {
+        "completeness": "high (US + international)",
+        "accuracy": "high (official exchange data)",
+        "timeliness": "daily updates"
+      }
+    },
+    {
+      "source_id": "sec_company_tickers",
+      "name": "SEC Company Tickers JSON (Ground Truth)",
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "type": "dataset",
+      "access_method": "HTTP GET (full dataset download)",
+      "authentication": "none_required",
+      "rate_limit": "no limit (static file)",
+      "data_format": "JSON",
+      "sha256": "dynamic (updated daily)",
+      "pii_flag": false,
+      "contains_pii": "None (public company information)",
+      "provenance": "U.S. Securities and Exchange Commission (SEC), Washington, DC, USA",
+      "license": "Public domain (US Government work)",
+      "retention_policy": "Cache for 24 hours, refresh daily",
+      "update_frequency": "Daily",
+      "expected_fields": [
+        "cik_str (CIK number as string)",
+        "ticker (stock symbol)",
+        "title (official company name)"
+      ],
+      "data_quality": {
+        "completeness": "complete (all SEC-registered companies)",
+        "accuracy": "authoritative (official SEC data)",
+        "timeliness": "daily updates"
+      }
+    }
+  ],
+  "data_integrity_checks": [
+    "Validate ticker→CIK mappings against SEC official dataset",
+    "Check GRI report URLs return HTTP 200 before marking as available",
+    "Verify SASB industry classification matches company sector",
+    "Ensure report year matches search year (±1 year tolerance for fiscal year differences)",
+    "Validate company name similarity (Levenshtein distance <5 for fuzzy matches)"
+  ],
+  "privacy_compliance": {
+    "gdpr_applicable": false,
+    "reason": "All data sources contain public company information only, no personal data",
+    "ccpa_applicable": false,
+    "retention_justification": "Short-term caching (30-90 days) for performance optimization only"
+  }
+}

@@ -1,0 +1,1 @@
+"""Iceberg table schema definitions"""

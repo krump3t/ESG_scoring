@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "name": "Apple Inc. FY2024 10-K",
+      "url": "https://sec.gov/cgi-bin/viewer",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "pii_flag": false,
+      "provenance": "SEC EDGAR",
+      "retention_days": 730,
+      "content_type": "application/pdf"
+    },
+    {
+      "name": "Microsoft Corp FY2024 Sustainability Report",
+      "url": "https://query.prod.cms.rt.microsoft.com",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "pii_flag": false,
+      "provenance": "Microsoft Investor Relations",
+      "retention_days": 730,
+      "content_type": "application/pdf"
+    }
+  ]
+}

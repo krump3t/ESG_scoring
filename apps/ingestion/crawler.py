@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 import re
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -24,7 +26,7 @@ def get_audit_timestamp() -> str:
     audit_time = os.getenv("AUDIT_TIME")
     if audit_time:
         return audit_time
-    return datetime.now().isoformat()
+    return clock.now().isoformat()
 
 
 @dataclass
@@ -97,11 +99,11 @@ class SustainabilityReportsCrawler:
     def _rate_limit_wait(self):
         """Enforce rate limiting"""
         if self.last_request_time > 0:
-            elapsed = time.time() - self.last_request_time
+            elapsed = clock.time() - self.last_request_time
             min_interval = 60.0 / self.rate_limit
             if elapsed < min_interval:
                 time.sleep(min_interval - elapsed)
-        self.last_request_time = time.time()
+        self.last_request_time = clock.time()
 
     def _extract_year(self, text: str) -> Optional[int]:
         """Extract year from text"""

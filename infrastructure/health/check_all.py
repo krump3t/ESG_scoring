@@ -8,6 +8,8 @@ from minio import Minio
 from minio.error import S3Error
 import time
 import logging
+from libs.utils.clock import get_clock
+clock = get_clock()
 
 logger = logging.getLogger(__name__)
 
@@ -219,8 +221,8 @@ def wait_for_services(config: Dict, timeout: int = 60, interval: int = 5) -> boo
     """
     required_services = ['minio', 'iceberg_catalog', 'trino']
 
-    start_time = time.time()
-    while time.time() - start_time < timeout:
+    start_time = clock.time()
+    while clock.time() - start_time < timeout:
         results = check_all_services(config)
 
         # Check if all required services are healthy
@@ -230,7 +232,7 @@ def wait_for_services(config: Dict, timeout: int = 60, interval: int = 5) -> boo
             logger.info("All required services are healthy")
             return True
 
-        logger.info(f"Waiting for services... ({int(time.time() - start_time)}s elapsed)")
+        logger.info(f"Waiting for services... ({int(clock.time() - start_time)}s elapsed)")
         time.sleep(interval)
 
     logger.error(f"Timeout waiting for services after {timeout}s")

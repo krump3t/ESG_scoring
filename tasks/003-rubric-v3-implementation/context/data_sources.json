@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "source_id": "microsoft-2023-bronze",
+      "name": "Microsoft 2023 Sustainability Report (Bronze Layer)",
+      "type": "sustainability_report",
+      "format": "parquet",
+      "location": "s3://esg-lake/bronze/microsoft/2023/",
+      "sha256": "calculated_at_ingestion",
+      "pii_flag": false,
+      "provenance": {
+        "original_url": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1lMjE",
+        "ingestion_date": "2025-10-22",
+        "ingestion_method": "scripts/create_real_bronze_data.py",
+        "extraction_method": "text_excerpt",
+        "verification": "SHA256 hash recorded at ingestion"
+      },
+      "retention": {
+        "retention_period": "indefinite",
+        "reason": "test_validation_baseline",
+        "deletion_policy": "manual_review_required"
+      },
+      "usage": "Primary test case for rubric v3.0 validation. Expected high TSP (SBTi), GHG (Scope 1/2/3), and RD (TCFD) scores."
+    },
+    {
+      "source_id": "shell-2023-bronze",
+      "name": "Shell 2023 Sustainability Report (Bronze Layer)",
+      "type": "sustainability_report",
+      "format": "parquet",
+      "location": "s3://esg-lake/bronze/shell/2023/",
+      "sha256": "calculated_at_ingestion",
+      "pii_flag": false,
+      "provenance": {
+        "original_url": "https://reports.shell.com/sustainability-report/2023/",
+        "ingestion_date": "2025-10-22",
+        "ingestion_method": "scripts/create_real_bronze_data.py",
+        "extraction_method": "text_excerpt",
+        "verification": "SHA256 hash recorded at ingestion"
+      },
+      "retention": {
+        "retention_period": "indefinite",
+        "reason": "test_validation_baseline",
+        "deletion_policy": "manual_review_required"
+      },
+      "usage": "Energy transition sector test case. Expected moderate scores across all 7 dimensions with strong RD (TCFD/GRI/SASB)."
+    },
+    {
+      "source_id": "exxonmobil-2023-bronze",
+      "name": "ExxonMobil 2023 Sustainability Report (Bronze Layer)",
+      "type": "sustainability_report",
+      "format": "parquet",
+      "location": "s3://esg-lake/bronze/exxonmobil/2023/",
+      "sha256": "calculated_at_ingestion",
+      "pii_flag": false,
+      "provenance": {
+        "original_url": "https://corporate.exxonmobil.com/sustainability",
+        "ingestion_date": "2025-10-22",
+        "ingestion_method": "scripts/create_real_bronze_data.py",
+        "extraction_method": "text_excerpt",
+        "verification": "SHA256 hash recorded at ingestion"
+      },
+      "retention": {
+        "retention_period": "indefinite",
+        "reason": "test_validation_baseline",
+        "deletion_policy": "manual_review_required"
+      },
+      "usage": "Traditional oil/gas sector test case. Expected strong GHG (carbon capture) and RMM (climate risk) scores, moderate TSP."
+    }
+  ],
+  "data_governance": {
+    "pii_handling": "No PII present in sustainability reports",
+    "access_control": "Public sustainability reports, no access restrictions",
+    "audit_trail": "All ingestion events logged in artifacts/run_events.jsonl",
+    "compliance": "Fair use excerpts for testing purposes, full attribution provided"
+  },
+  "verification_policy": {
+    "sha256_verification": "Required at ingestion and before scoring",
+    "freshness_check": "Reports older than 24 months trigger warning",
+    "integrity_check": "Parquet schema validation on read",
+    "provenance_tracking": "Source URL and ingestion method tracked per record"
+  },
+  "last_updated": "2025-10-22"
+}

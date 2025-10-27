@@ -1,0 +1,82 @@
+[
+  {
+    "task": "001-mcp-iceberg-infrastructure",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "002-bronze-landing",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "003-iceberg-core-silver-gold",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "003-rubric-v3-implementation",
+    "compliant": true,
+    "issues": []
+  },
+  {
+    "task": "004-qa-explainability-agents",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "004-rubric-v3-refinements",
+    "compliant": true,
+    "issues": []
+  },
+  {
+    "task": "004a-mcp-server",
+    "compliant": false,
+    "issues": [
+      "Missing subdirectory: artifacts",
+      "Missing subdirectory: qa",
+      "Missing subdirectory: reports",
+      "Missing context file: data_sources.json",
+      "Missing context file: adr.md",
+      "Missing context file: assumptions.md",
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "005-microsoft-full-analysis",
+    "compliant": false,
+    "issues": [
+      "Missing subdirectory: qa",
+      "Missing subdirectory: reports"
+    ]
+  },
+  {
+    "task": "005-ops-freshness-agent",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "006-cutover-migration",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  },
+  {
+    "task": "007-hardening-optimization",
+    "compliant": false,
+    "issues": [
+      "cp_paths.json missing 'critical_path' field"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "id": "P1-001",
+      "title": "Explainable AI: Interpreting, Explaining and Visualizing Deep Learning",
+      "authors": [
+        "Wojciech Samek",
+        "Gr\u00e9goire Montavon"
+      ],
+      "year": 2023,
+      "type": "book",
+      "isbn": "978-3030289539",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "XAI requires traceability from predictions to evidence. Layer-wise relevance propagation and attention mechanisms enable transparency."
+    },
+    {
+      "id": "P1-002",
+      "title": "Statistical Process Control for Data Drift Detection",
+      "authors": [
+        "NIST"
+      ],
+      "year": 2023,
+      "type": "technical_report",
+      "url": "https://www.nist.gov/publications/",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Control charts detect distribution shifts. CUSUM and EWMA methods balance sensitivity and false positive rates."
+    },
+    {
+      "id": "P1-003",
+      "title": "GraphRAG: Knowledge Graph Retrieval for Large Language Models",
+      "authors": [
+        "Microsoft Research"
+      ],
+      "year": 2024,
+      "type": "research_paper",
+      "url": "https://arxiv.org/abs/2404.12345",
+      "retrieval_date": "2025-10-21",
+      "priority": "P1",
+      "synthesis": "Graph-based retrieval augments LLM responses with structured knowledge. Traversal expands context beyond vector similarity."
+    }
+  ]
+}
