@@ -256,8 +256,9 @@ class AstraDBVectorStore:
                                         upsert=True
                                     )
                                     success_count += 1
-                                except:
-                                    pass
+                                except Exception as e:
+                                    logger.warning(f"Failed to upsert document {doc.get('_id', 'unknown')}: {e}")
+                                    # Continue with next document
                     except DataAPIException as e:
                         # Handle duplicates by doing individual upserts
                         if "E11000" in str(e) or "duplicate" in str(e).lower():
@@ -269,8 +270,9 @@ class AstraDBVectorStore:
                                         upsert=True
                                     )
                                     success_count += 1
-                                except:
-                                    pass
+                                except Exception as e:
+                                    logger.warning(f"Failed to upsert document {doc.get('_id', 'unknown')}: {e}")
+                                    # Continue with next document
                         else:
                             logger.error(f"Batch insert failed: {e}")
 

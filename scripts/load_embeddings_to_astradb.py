@@ -169,8 +169,8 @@ class AstraDBLoader:
                     # Document exists, delete it first for clean upsert
                     collection.delete_one({"_id": doc_id})
                 except Exception:
-                    # Document doesn't exist, proceed with insert
-                    pass
+                    # Document doesn't exist (expected), proceed with insert
+                    pass  # @allow-silent:Expected DocumentNotFound for new documents
 
                 # Insert the document
                 result = collection.insert_one(doc)
