@@ -18,7 +18,7 @@ from ibm_watsonx_ai.foundation_models import ModelInference
 from agents.extraction.pdf_text_extractor import PDFTextExtractor
 from libs.models.esg_metrics import ESGMetrics
 from libs.contracts.extraction_contracts import (
-    ExtractionResult,
+    MetricsExtractionResult,
     ExtractionQuality,
     ExtractionError
 )
@@ -69,7 +69,7 @@ class LLMExtractor:
         self.pdf_extractor = PDFTextExtractor()
         self.errors: List[ExtractionError] = []
 
-    def extract(self, report: CompanyReport) -> ExtractionResult:
+    def extract(self, report: CompanyReport) -> MetricsExtractionResult:
         """Extract ESG metrics from PDF report using LLM.
 
         Workflow:
@@ -83,7 +83,7 @@ class LLMExtractor:
             report: CompanyReport with local_path to PDF
 
         Returns:
-            ExtractionResult with metrics, quality, and errors
+            MetricsExtractionResult with metrics, quality, and errors
 
         Raises:
             ValueError: If report.local_path is None
@@ -103,7 +103,7 @@ class LLMExtractor:
                 message=f"PDF text extraction failed: {e}",
                 severity="error"
             ))
-            return ExtractionResult(
+            return MetricsExtractionResult(
                 metrics=None,
                 quality=ExtractionQuality(0.0, 0.0, 0.0),
                 errors=self.errors
@@ -130,7 +130,7 @@ class LLMExtractor:
                 message=f"LLM API call failed: {e}",
                 severity="error"
             ))
-            return ExtractionResult(
+            return MetricsExtractionResult(
                 metrics=None,
                 quality=ExtractionQuality(0.0, 0.0, 0.0),
                 errors=self.errors
@@ -142,7 +142,7 @@ class LLMExtractor:
         # Step 5: Calculate quality
         quality = self._calculate_quality(metrics)
 
-        return ExtractionResult(
+        return MetricsExtractionResult(
             metrics=metrics,
             quality=quality,
             errors=self.errors

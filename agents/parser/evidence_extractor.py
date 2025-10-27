@@ -14,7 +14,7 @@ from datetime import datetime
 import hashlib
 
 from .html_parser import SECHTMLParser
-from .models import Evidence, Match, ExtractionResult
+from .models import Evidence, Match, EvidenceExtractionResult
 from .matchers.base_matcher import BaseMatcher
 from .matchers.ghg_matcher import GHGMatcher
 
@@ -57,7 +57,7 @@ class EvidenceExtractor:
         year: int,
         doc_id: str,
         filing_url: str = ""
-    ) -> ExtractionResult:
+    ) -> EvidenceExtractionResult:
         """
         Extract evidence from SEC filing HTML.
 
@@ -212,7 +212,7 @@ class EvidenceExtractor:
         org_id: str,
         year: int,
         doc_id: str
-    ) -> ExtractionResult:
+    ) -> EvidenceExtractionResult:
         """
         Convenience method to extract evidence from HTML file.
 
@@ -253,7 +253,7 @@ class BatchExtractor:
     def extract_batch(
         self,
         filings: List[Dict[str, str]]
-    ) -> List[ExtractionResult]:
+    ) -> List[EvidenceExtractionResult]:
         """
         Extract evidence from multiple filings.
 

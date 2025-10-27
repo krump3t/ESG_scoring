@@ -1,0 +1,614 @@
+2025-10-27 01:57:00,092 [INFO] __main__: 
+Testing MCP Server at: http://localhost:8002
+2025-10-27 01:57:00,092 [INFO] __main__: Ensure the MCP server is running before proceeding
+2025-10-27 01:57:00,092 [INFO] __main__: 
+Press Ctrl+C to cancel, or wait 3 seconds to start...
+
+2025-10-27 01:57:03,093 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,093 [INFO] __main__: SCA-COMPLIANT PROGRESSIVE TEST RUN: test-progressive-20251027-065700-8d09a560
+2025-10-27 01:57:03,093 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,093 [INFO] __main__: Base URL: http://localhost:8002
+2025-10-27 01:57:03,093 [INFO] __main__: Log File: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\qa\run_log.txt
+2025-10-27 01:57:03,093 [INFO] __main__: Events: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\run_events.jsonl
+2025-10-27 01:57:03,093 [INFO] __main__: Authenticity: No mocks, real MCP server, real data pipeline
+2025-10-27 01:57:03,093 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,093 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:03,093 [INFO] __main__: PROGRESSIVE QUERY TEST SUITE - MCP SERVER WITH REAL DATA
+2025-10-27 01:57:03,093 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,093 [INFO] __main__: Complexity Levels:
+2025-10-27 01:57:03,093 [INFO] __main__:   Level 1: Simple single-company queries
+2025-10-27 01:57:03,094 [INFO] __main__:   Level 2: Multi-theme queries
+2025-10-27 01:57:03,094 [INFO] __main__:   Level 3: Comparative analysis
+2025-10-27 01:57:03,094 [INFO] __main__:   Level 4: Multi-company comparisons
+2025-10-27 01:57:03,094 [INFO] __main__:   Level 5: Complex aggregations with explanations
+2025-10-27 01:57:03,094 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,094 [INFO] __main__: 
+[1/7] Running test...
+2025-10-27 01:57:03,094 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:03,094 [INFO] __main__: TEST START: L1.1 - Simple Climate Query (test_corporation) (ID: e2601e37b6a8efec)
+2025-10-27 01:57:03,094 [INFO] __main__: Complexity: 1/5
+2025-10-27 01:57:03,094 [INFO] __main__: Description: Query Climate maturity for test_corporation 2024 (existing data)
+2025-10-27 01:57:03,094 [INFO] __main__: Expected Crawl: False
+2025-10-27 01:57:03,094 [INFO] __main__: ================================================================================
+2025-10-27 01:57:03,094 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:03,094 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:03,094 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:03,094 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "test_corporation",
+    "year": 2024,
+    "theme": "Climate"
+  }
+}
+2025-10-27 01:57:03,094 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:05,472 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:05,472 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:05,472 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:04 GMT', 'server': 'uvicorn', 'content-length': '544', 'content-type': 'application/json'}
+2025-10-27 01:57:05,473 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"test_corporation","year":2024,"theme":"Climate","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:05.470511Z","run_id":"run-15c354780f42","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:05.470511Z","run_id":"run-15c354780f42","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:05,473 [INFO] __main__:   Elapsed Time: 2.378s
+2025-10-27 01:57:05,473 [INFO] __main__: Running custom validation function...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.378s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.378s'
+Arguments: ()
+2025-10-27 01:57:05,475 [INFO] __main__: Result Summary:
+2025-10-27 01:57:05,475 [INFO] __main__:   org_id: test_corporation
+2025-10-27 01:57:05,475 [INFO] __main__:   year: 2024
+2025-10-27 01:57:05,475 [INFO] __main__:   theme: Climate
+2025-10-27 01:57:05,475 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:05,475 [INFO] __main__:   maturity_label: None
+2025-10-27 01:57:06,476 [INFO] __main__: 
+[2/7] Running test...
+2025-10-27 01:57:06,476 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:06,476 [INFO] __main__: TEST START: L1.2 - Query Social Theme (ID: ea16c8928e379dfa)
+2025-10-27 01:57:06,476 [INFO] __main__: Complexity: 1/5
+2025-10-27 01:57:06,476 [INFO] __main__: Description: Query Social maturity for test_corporation 2024
+2025-10-27 01:57:06,476 [INFO] __main__: Expected Crawl: False
+2025-10-27 01:57:06,476 [INFO] __main__: ================================================================================
+2025-10-27 01:57:06,476 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:06,476 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:06,476 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:06,476 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "test_corporation",
+    "year": 2024,
+    "theme": "Social"
+  }
+}
+2025-10-27 01:57:06,476 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:08,548 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:08,548 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:08,548 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:08 GMT', 'server': 'uvicorn', 'content-length': '543', 'content-type': 'application/json'}
+2025-10-27 01:57:08,548 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"test_corporation","year":2024,"theme":"Social","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:08.547871Z","run_id":"run-60051fb16c87","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:08.547871Z","run_id":"run-60051fb16c87","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:08,548 [INFO] __main__:   Elapsed Time: 2.072s
+2025-10-27 01:57:08,548 [INFO] __main__: Running custom validation function...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.072s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.072s'
+Arguments: ()
+2025-10-27 01:57:08,549 [INFO] __main__: Result Summary:
+2025-10-27 01:57:08,549 [INFO] __main__:   org_id: test_corporation
+2025-10-27 01:57:08,549 [INFO] __main__:   year: 2024
+2025-10-27 01:57:08,549 [INFO] __main__:   theme: Social
+2025-10-27 01:57:08,549 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:08,549 [INFO] __main__:   confidence: 0.0
+2025-10-27 01:57:09,551 [INFO] __main__: 
+[3/7] Running test...
+2025-10-27 01:57:09,551 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:09,551 [INFO] __main__: TEST START: L1.3 - Query Governance Theme (ID: dc9b33783e959d70)
+2025-10-27 01:57:09,551 [INFO] __main__: Complexity: 1/5
+2025-10-27 01:57:09,551 [INFO] __main__: Description: Query Governance maturity for test_corporation 2024
+2025-10-27 01:57:09,551 [INFO] __main__: Expected Crawl: False
+2025-10-27 01:57:09,551 [INFO] __main__: ================================================================================
+2025-10-27 01:57:09,551 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:09,551 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:09,551 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:09,551 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "test_corporation",
+    "year": 2024,
+    "theme": "Governance"
+  }
+}
+2025-10-27 01:57:09,552 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:11,603 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:11,603 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:11,603 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:11 GMT', 'server': 'uvicorn', 'content-length': '547', 'content-type': 'application/json'}
+2025-10-27 01:57:11,603 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"test_corporation","year":2024,"theme":"Governance","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:11.602158Z","run_id":"run-6a804398e0a2","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:11.602158Z","run_id":"run-6a804398e0a2","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:11,603 [INFO] __main__:   Elapsed Time: 2.052s
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.052s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.052s'
+Arguments: ()
+2025-10-27 01:57:11,604 [INFO] __main__: Result Summary:
+2025-10-27 01:57:11,604 [INFO] __main__:   org_id: test_corporation
+2025-10-27 01:57:11,604 [INFO] __main__:   year: 2024
+2025-10-27 01:57:11,604 [INFO] __main__:   theme: Governance
+2025-10-27 01:57:11,605 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:11,605 [INFO] __main__:   confidence: 0.0
+2025-10-27 01:57:12,605 [INFO] __main__: 
+[4/7] Running test...
+2025-10-27 01:57:12,605 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:12,605 [INFO] __main__: TEST START: L2.1 - Climate Score Explanation (ID: 03b4e3698a356ea6)
+2025-10-27 01:57:12,605 [INFO] __main__: Complexity: 2/5
+2025-10-27 01:57:12,605 [INFO] __main__: Description: Get detailed explanation for Climate score
+2025-10-27 01:57:12,605 [INFO] __main__: Expected Crawl: False
+2025-10-27 01:57:12,605 [INFO] __main__: ================================================================================
+2025-10-27 01:57:12,605 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:12,605 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:12,605 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:12,605 [INFO] __main__:   Body: {
+  "tool": "esg.explain.score",
+  "params": {
+    "org_id": "test_corporation",
+    "year": 2024,
+    "theme": "Climate"
+  }
+}
+2025-10-27 01:57:12,605 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:14,697 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:14,697 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:14,697 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:13 GMT', 'server': 'uvicorn', 'content-length': '567', 'content-type': 'application/json'}
+2025-10-27 01:57:14,697 [INFO] __main__:   Body: {"success":false,"tool":"esg.explain.score","result":{"success":false,"org_id":"test_corporation","year":2024,"theme":"Climate","explanation":{"score_id":"none","maturity_level":0,"maturity_label":"None","reasoning":"No scores found for this organization/year/theme","evidence":[],"framework_mappings":{},"confidence_breakdown":{}},"metadata":{"timestamp":"2025-10-27T06:57:14.696859Z","run_id":"run-3bd8deb7667d","error":"No data available"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:14.696859Z","run_id":"run-3bd8deb7667d","error":"No data available"}}
+2025-10-27 01:57:14,697 [INFO] __main__:   Elapsed Time: 2.092s
+2025-10-27 01:57:14,697 [INFO] __main__: Running custom validation function...
+2025-10-27 01:57:14,697 [ERROR] __main__: TEST FAILED: Missing evidence in explanation
+2025-10-27 01:57:15,699 [INFO] __main__: 
+[5/7] Running test...
+2025-10-27 01:57:15,699 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:15,699 [INFO] __main__: TEST START: L3.1 - New Company Query (Microsoft) (ID: c931ae3b3e968f87)
+2025-10-27 01:57:15,699 [INFO] __main__: Complexity: 3/5
+2025-10-27 01:57:15,699 [INFO] __main__: Description: Query Microsoft 2023 - should trigger crawling if no data exists
+2025-10-27 01:57:15,699 [INFO] __main__: Expected Crawl: True
+2025-10-27 01:57:15,699 [INFO] __main__: ================================================================================
+2025-10-27 01:57:15,699 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:15,699 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:15,699 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:15,699 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "microsoft",
+    "year": 2023,
+    "theme": "Climate"
+  }
+}
+2025-10-27 01:57:15,699 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:17,763 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:17,763 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:17,763 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:17 GMT', 'server': 'uvicorn', 'content-length': '537', 'content-type': 'application/json'}
+2025-10-27 01:57:17,763 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"microsoft","year":2023,"theme":"Climate","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:17.762231Z","run_id":"run-aa7d78001e08","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:17.762231Z","run_id":"run-aa7d78001e08","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:17,763 [INFO] __main__:   Elapsed Time: 2.063s
+2025-10-27 01:57:17,763 [INFO] __main__: Running custom validation function...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.063s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.063s'
+Arguments: ()
+2025-10-27 01:57:17,764 [INFO] __main__: Result Summary:
+2025-10-27 01:57:17,764 [INFO] __main__:   org_id: microsoft
+2025-10-27 01:57:17,764 [INFO] __main__:   year: 2023
+2025-10-27 01:57:17,764 [INFO] __main__:   theme: Climate
+2025-10-27 01:57:17,764 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:17,764 [INFO] __main__:   confidence: 0.0
+2025-10-27 01:57:18,765 [INFO] __main__: 
+[6/7] Running test...
+2025-10-27 01:57:18,765 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:18,765 [INFO] __main__: TEST START: L3.2 - New Company Query (Shell) (ID: 00959643a94dabbd)
+2025-10-27 01:57:18,765 [INFO] __main__: Complexity: 3/5
+2025-10-27 01:57:18,765 [INFO] __main__: Description: Query Shell 2023 Climate maturity
+2025-10-27 01:57:18,765 [INFO] __main__: Expected Crawl: True
+2025-10-27 01:57:18,765 [INFO] __main__: ================================================================================
+2025-10-27 01:57:18,765 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:18,765 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:18,765 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:18,765 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "shell",
+    "year": 2023,
+    "theme": "Climate"
+  }
+}
+2025-10-27 01:57:18,765 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:20,814 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:20,814 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:20,814 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:20 GMT', 'server': 'uvicorn', 'content-length': '533', 'content-type': 'application/json'}
+2025-10-27 01:57:20,814 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"shell","year":2023,"theme":"Climate","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:20.813766Z","run_id":"run-caf1dd48927d","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:20.813766Z","run_id":"run-caf1dd48927d","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:20,815 [INFO] __main__:   Elapsed Time: 2.050s
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.050s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.050s'
+Arguments: ()
+2025-10-27 01:57:20,816 [INFO] __main__: Result Summary:
+2025-10-27 01:57:20,816 [INFO] __main__:   org_id: shell
+2025-10-27 01:57:20,816 [INFO] __main__:   year: 2023
+2025-10-27 01:57:20,816 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:21,817 [INFO] __main__: 
+[7/7] Running test...
+2025-10-27 01:57:21,817 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:21,817 [INFO] __main__: TEST START: L4.1 - Year-over-Year Comparison (ID: a3230c5cce6f0e9a)
+2025-10-27 01:57:21,817 [INFO] __main__: Complexity: 4/5
+2025-10-27 01:57:21,817 [INFO] __main__: Description: Compare test_corporation 2023 vs 2024 Climate
+2025-10-27 01:57:21,817 [INFO] __main__: Expected Crawl: True
+2025-10-27 01:57:21,818 [INFO] __main__: ================================================================================
+2025-10-27 01:57:21,818 [INFO] __main__: REQUEST (verbatim):
+2025-10-27 01:57:21,818 [INFO] __main__:   URL: POST http://localhost:8002/tools/call
+2025-10-27 01:57:21,818 [INFO] __main__:   Headers: {'Content-Type': 'application/json'}
+2025-10-27 01:57:21,818 [INFO] __main__:   Body: {
+  "tool": "esg.query.maturity",
+  "params": {
+    "org_id": "test_corporation",
+    "year": 2023,
+    "theme": "Climate"
+  }
+}
+2025-10-27 01:57:21,818 [INFO] __main__: Executing REAL HTTP request to MCP server...
+2025-10-27 01:57:23,869 [INFO] __main__: RESPONSE (verbatim):
+2025-10-27 01:57:23,869 [INFO] __main__:   Status Code: 200
+2025-10-27 01:57:23,869 [INFO] __main__:   Headers: {'date': 'Mon, 27 Oct 2025 06:57:23 GMT', 'server': 'uvicorn', 'content-length': '544', 'content-type': 'application/json'}
+2025-10-27 01:57:23,869 [INFO] __main__:   Body: {"success":true,"tool":"esg.query.maturity","result":{"success":true,"org_id":"test_corporation","year":2023,"theme":"Climate","maturity_level":0,"maturity_label":"None","confidence":0.0,"findings_count":0,"key_findings":[],"snapshot_id":null,"metadata":{"timestamp":"2025-10-27T06:57:23.869329Z","run_id":"run-cf42744093fb","message":"No scores found for this organization/year/theme"}},"errors":[],"metadata":{"timestamp":"2025-10-27T06:57:23.869329Z","run_id":"run-cf42744093fb","message":"No scores found for this organization/year/theme"}}
+2025-10-27 01:57:23,870 [INFO] __main__:   Elapsed Time: 2.052s
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.052s'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 302, in run_progressive_suite
+    result = self.run_test(test)
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 250, in run_test
+    logger.info(f"\u2713 TEST PASSED in {elapsed:.3f}s")
+Message: '\u2713 TEST PASSED in 2.052s'
+Arguments: ()
+2025-10-27 01:57:23,871 [INFO] __main__: Result Summary:
+2025-10-27 01:57:23,871 [INFO] __main__:   org_id: test_corporation
+2025-10-27 01:57:23,871 [INFO] __main__:   year: 2023
+2025-10-27 01:57:23,871 [INFO] __main__:   maturity_level: 0
+2025-10-27 01:57:23,871 [INFO] __main__:   confidence: 0.0
+2025-10-27 01:57:24,872 [INFO] __main__: 
+================================================================================
+2025-10-27 01:57:24,872 [INFO] __main__: GENERATING SCA ARTIFACTS
+2025-10-27 01:57:24,872 [INFO] __main__: ================================================================================
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 441, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {context_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_context.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 441, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {context_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_context.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 460, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {manifest_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_manifest.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 460, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {manifest_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_manifest.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 466, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {results_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\qa\\test_results.json'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 41: character maps to <undefined>
+Call stack:
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 466, in _generate_artifacts
+    logger.info(f"\u2713 Generated: {results_file}")
+Message: '\u2713 Generated: C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\qa\\test_results.json'
+Arguments: ()
+2025-10-27 01:57:24,881 [INFO] __main__: 
+All artifacts saved to:
+2025-10-27 01:57:24,881 [INFO] __main__:   - Log: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\qa\run_log.txt
+2025-10-27 01:57:24,881 [INFO] __main__:   - Events: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\run_events.jsonl
+2025-10-27 01:57:24,881 [INFO] __main__:   - Context: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\run_context.json
+2025-10-27 01:57:24,881 [INFO] __main__:   - Manifest: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\run_manifest.json
+2025-10-27 01:57:24,881 [INFO] __main__:   - Results: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\qa\test_results.json
+2025-10-27 01:57:24,881 [INFO] __main__:   - Summary: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\qa\test_summary.md
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 592, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 579, in main
+    tester.run_progressive_suite()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 309, in run_progressive_suite
+    self._generate_artifacts()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 469, in _generate_artifacts
+    self._generate_summary_markdown()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\test_progressive_queries_sca.py", line 491, in _generate_summary_markdown
+    f.write(f"- \u2705 No synthetic data or mocks\n")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 2: character maps to <undefined>

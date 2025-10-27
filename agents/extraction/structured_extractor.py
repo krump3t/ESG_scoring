@@ -16,7 +16,7 @@ from typing import Any, Dict, List, Optional
 from libs.contracts.extraction_contracts import (
     ExtractionError,
     ExtractionQuality,
-    ExtractionResult,
+    MetricsExtractionResult,
 )
 from libs.contracts.ingestion_contracts import CompanyReport
 from libs.models.esg_metrics import ESGMetrics
@@ -44,7 +44,7 @@ class StructuredExtractor:
         """Initialize StructuredExtractor."""
         self.errors: List[ExtractionError] = []
 
-    def extract(self, report: CompanyReport) -> ExtractionResult:
+    def extract(self, report: CompanyReport) -> MetricsExtractionResult:
         """Extract ESG metrics from structured company report.
 
         Args:
@@ -88,7 +88,7 @@ class StructuredExtractor:
         # Calculate quality
         quality = self._calculate_quality(metrics)
 
-        return ExtractionResult(metrics=metrics, quality=quality, errors=self.errors)
+        return MetricsExtractionResult(metrics=metrics, quality=quality, errors=self.errors)
 
     def _extract_metrics_from_sec_edgar(
         self, data: Dict[str, Any], report: CompanyReport
@@ -222,9 +222,9 @@ class StructuredExtractor:
             value_validity=value_validity,
         )
 
-    def _create_failed_result(self) -> ExtractionResult:
-        """Create ExtractionResult for failed extraction."""
-        return ExtractionResult(
+    def _create_failed_result(self) -> MetricsExtractionResult:
+        """Create MetricsExtractionResult for failed extraction."""
+        return MetricsExtractionResult(
             metrics=None,
             quality=ExtractionQuality(
                 field_completeness=0.0, type_correctness=0.0, value_validity=0.0

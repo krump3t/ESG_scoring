@@ -14,7 +14,7 @@ from agents.extraction.structured_extractor import StructuredExtractor
 from libs.contracts.extraction_contracts import (
     ExtractionError,
     ExtractionQuality,
-    ExtractionResult,
+    MetricsExtractionResult,
 )
 from libs.contracts.ingestion_contracts import CompanyReport
 
@@ -50,7 +50,7 @@ class ExtractionRouter:
         self.watsonx_client = watsonx_client
         # LLMExtractor will be added in future iteration
 
-    def extract(self, report: CompanyReport) -> ExtractionResult:
+    def extract(self, report: CompanyReport) -> MetricsExtractionResult:
         """Extract ESG metrics from company report.
 
         Routes to appropriate extractor based on report.source.content_type.
@@ -59,7 +59,7 @@ class ExtractionRouter:
             report: CompanyReport with source metadata and local file
 
         Returns:
-            ExtractionResult with metrics, quality, and errors
+            MetricsExtractionResult with metrics, quality, and errors
 
         Raises:
             ValueError: If content_type is unsupported
@@ -82,7 +82,7 @@ class ExtractionRouter:
 
     def _extract_unstructured_not_implemented(
         self, report: CompanyReport, content_type: str
-    ) -> ExtractionResult:
+    ) -> MetricsExtractionResult:
         """Placeholder for unstructured extraction (PDF/HTML).
 
         Will be implemented with IBM watsonx.ai in future iteration.
@@ -92,7 +92,7 @@ class ExtractionRouter:
             content_type: Content type (application/pdf, text/html)
 
         Returns:
-            ExtractionResult with error indicating not implemented
+            MetricsExtractionResult with error indicating not implemented
         """
         error = ExtractionError(
             field_name=None,
@@ -102,7 +102,7 @@ class ExtractionRouter:
             severity="error",
         )
 
-        return ExtractionResult(
+        return MetricsExtractionResult(
             metrics=None,
             quality=ExtractionQuality(
                 field_completeness=0.0, type_correctness=0.0, value_validity=0.0

@@ -1,0 +1,156 @@
+INFO:     Started server process [20908]
+INFO:     Waiting for application startup.
+INFO:mcp_server.server:Initializing MCP Server...
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.server:Initialized 2 agents
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60557 - "GET /health HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-15c354780f42] Maturity query: org=test_corporation, year=2024, theme=Climate
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=test_corporation, year=2024, theme=Climate
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for test_corporation/2024/Climate
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C7245111F3, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/test_corporation/2024/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C724BEA8A1, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-test_corporation-2024] No bronze data found for test_corporation/2024
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C724E4DFDE, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for test_corporation/2024/Climate
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64655 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-60051fb16c87] Maturity query: org=test_corporation, year=2024, theme=Social
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=test_corporation, year=2024, theme=Social
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for test_corporation/2024/Social
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C7DDD1DACD, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/test_corporation/2024/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C7DDF8FB5F, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-test_corporation-2024] No bronze data found for test_corporation/2024
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C7DE232754, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for test_corporation/2024/Social
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64660 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-6a804398e0a2] Maturity query: org=test_corporation, year=2024, theme=Governance
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=test_corporation, year=2024, theme=Governance
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for test_corporation/2024/Governance
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C89642DAC2, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/test_corporation/2024/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C896729097, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-test_corporation-2024] No bronze data found for test_corporation/2024
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C8968E717F, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for test_corporation/2024/Governance
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64663 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.explainability_handler:[run-3bd8deb7667d] Explain score: org=test_corporation, year=2024, theme=Climate
+INFO:mcp_server.handlers.explainability_handler:Querying REAL scores for explanation: org_id=test_corporation, year=2024, theme=Climate
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for test_corporation/2024/Climate
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C951271AE0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2024] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/test_corporation/2024/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C9515F7F9F, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-test_corporation-2024] No bronze data found for test_corporation/2024
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2024/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246C9519C1366, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for test_corporation/2024/Climate
+INFO:mcp_server.handlers.explainability_handler:Retrieved 0 REAL scores for explanation
+INFO:     127.0.0.1:64666 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-aa7d78001e08] Maturity query: org=microsoft, year=2023, theme=Climate
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=microsoft, year=2023, theme=Climate
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for microsoft/2023/Climate
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=microsoft/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CA0AB1C758, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-microsoft-2023] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-microsoft-2023] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/microsoft/2023/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CA0B1FF677, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-microsoft-2023] No bronze data found for microsoft/2023
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=microsoft/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CA0B3FAA40, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for microsoft/2023/Climate
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64669 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-caf1dd48927d] Maturity query: org=shell, year=2023, theme=Climate
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=shell, year=2023, theme=Climate
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for shell/2023/Climate
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=shell/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CAC3E244ED, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-shell-2023] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-shell-2023] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/shell/2023/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CAC41263B9, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-shell-2023] No bronze data found for shell/2023
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=shell/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CAC42A7ABF, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for shell/2023/Climate
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64672 - "POST /tools/call HTTP/1.1" 200 OK
+WARNING:mcp_server.server:No API key provided - using development mode
+INFO:mcp_server.handlers.query_handler:[run-cf42744093fb] Maturity query: org=test_corporation, year=2023, theme=Climate
+INFO:mcp_server.handlers.query_handler:Querying REAL gold layer: org_id=test_corporation, year=2023, theme=Climate
+INFO:mcp_server.data_access:Initialized DataAccessLayer for bucket: esg-lake
+INFO:agents.normalizer.mcp_normalizer:Initialized MCP Normalizer Agent with 4 tools
+INFO:agents.scoring.mcp_scoring:Initialized MCP Scoring Agent with 4 tools and Rubric v3.0 (7 dimensions)
+INFO:mcp_server.orchestrator:Initialized PipelineOrchestrator with real agents
+INFO:mcp_server.orchestrator:Checking gold data for test_corporation/2023/Climate
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CB7145CEEE, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Gold data missing - executing full pipeline
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2023] Starting pipeline execution
+INFO:mcp_server.orchestrator:[pipeline-test_corporation-2023] Step 1: Querying bronze layer...
+INFO:mcp_server.data_access:Querying bronze layer: bronze/test_corporation/2023/
+ERROR:mcp_server.data_access:Error querying bronze layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CB71878DEC, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+WARNING:mcp_server.orchestrator:[pipeline-test_corporation-2023] No bronze data found for test_corporation/2023
+INFO:mcp_server.data_access:Querying gold layer: gold/org_id=test_corporation/year=2023/
+ERROR:mcp_server.data_access:Error querying gold layer: S3 operation failed; code: NoSuchBucket, message: The specified bucket does not exist, resource: /esg-lake, request_id: 187246CB71A073B1, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: esg-lake
+INFO:mcp_server.orchestrator:Retrieved 0 scores for test_corporation/2023/Climate
+INFO:mcp_server.handlers.query_handler:Retrieved 0 REAL scores from gold layer
+INFO:     127.0.0.1:64675 - "POST /tools/call HTTP/1.1" 200 OK
