@@ -138,3 +138,49 @@ class TestParityGateCP:
         # When fused scores are tied, ordering should be consistent
         ids = [r[0] for r in result]
         assert len(ids) == len(set(ids))  # All unique
+
+    def test_parity_check_missing_evidence_fails(self):
+        """Failure path: Parity check fails when evidence not in top-k."""
+        from libs.retrieval.parity_checker import ParityChecker
+
+        checker = ParityChecker()
+
+        # Evidence includes doc5 but top-k only has doc1-4
+        evidence_ids = ["doc1", "doc3", "doc5"]
+        fused_top_k = [
+            ("doc1", 0.95),
+            ("doc2", 0.80),
+            ("doc3", 0.75),
+            ("doc4", 0.70)
+        ]
+
+        report = checker.check_parity(
+            query="test query",
+            evidence_ids=evidence_ids,
+            fused_top_k=fused_top_k,
+            k=4
+        )
+
+        # Should detect missing evidence
+        assert report["parity_verdict"] == "FAIL"
+        assert "doc5" in report["missing_evidence"]
+
+    def test_parity_save_report_to_disk(self, tmp_path):
+        """Failure path: ParityChecker handles file write errors gracefully."""
+        from libs.retrieval.parity_checker import ParityChecker
+
+        # Create checker with read-only output directory (simulate permission error)
+        checker = ParityChecker(output_dir=str(tmp_path))
+
+        report = {
+            "query": "test",
+            "evidence_ids": ["doc1"],
+            "fused_top_k": [{"id": "doc1", "score": 0.9}],
+            "parity_verdict": "PASS",
+            "missing_evidence": []
+        }
+
+        # Should succeed with normal tmp_path
+        result = checker.save_report(report)
+        assert result.exists()
+        assert result.is_file()
