@@ -1,0 +1,7 @@
+{
+  "paths": [
+    {
+      "file": "libs/retrieval/semantic_retriever.py"
+    }
+  ]
+}

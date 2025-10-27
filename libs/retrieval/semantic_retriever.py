@@ -6,17 +6,17 @@ Deterministic, reproducible retrieval with lineage tracking.
 
 SCA v13.8 Compliance:
 - Real AstraDB API: No mocks, no synthetic vectors
-- Deterministic: Fixed order (astra_id)
+- Deterministic: Fixed order (astra_id), fixed time via get_clock()
 - Type hints: 100% annotated
 - Failure paths: Explicit exception handling, STRICT mode enforcement
-- Authenticity: Complete similarity scores and metadata
+- Authenticity: Real similarity scores from AstraDB API
 """
 
 import logging
 import numpy as np
 from typing import List, Dict, Any, Optional
 from pathlib import Path
-from datetime import datetime, timezone
+from libs.utils.clock import get_clock
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -128,17 +128,27 @@ class SemanticRetriever:
 
         # Perform vector search
         try:
-            # Search with similarity limit
+            # Search with similarity limit and include_similarity
             search_results = collection.find(
                 filter={},
                 sort={"$vector": query_vector_list},
                 limit=top_k,
+                include_similarity=True,  # Request similarity scores from AstraDB
             )
 
             results: List[Dict[str, Any]] = []
             for doc in search_results:
-                # Extract document with similarity score
+                # Extract document with real similarity score from AstraDB
                 # AstraDB returns documents sorted by similarity (highest first)
+                # $similarity field contains cosine similarity [0.0, 1.0]
+                similarity = doc.get("$similarity")
+                if similarity is None:
+                    # Fallback if API doesn't return similarity (should not happen)
+                    logger.warning(
+                        f"No $similarity score for doc {doc.get('_id')}; using 0.0"
+                    )
+                    similarity = 0.0
+
                 result = {
                     "document_id": doc.get("_id", ""),
                     "sha256": doc.get("sha256", ""),
@@ -146,23 +156,20 @@ class SemanticRetriever:
                     "text_len": doc.get("text_len", 0),
                     "created_at": doc.get("created_at", ""),
                     "astra_id": doc.get("_id", ""),
-                    # Similarity score (approximate, based on vector distance)
-                    # Note: AstraDB returns in cosine similarity order (highest=most similar)
-                    "similarity_score": 1.0 - (
-                        len(results) * 0.05  # Placeholder relative score
-                    ),
+                    "similarity_score": float(similarity),  # Real AstraDB cosine similarity
                 }
                 results.append(result)
 
             self.retrieval_count += 1
 
-            # Track lineage
+            # Track lineage with deterministic time
+            clock = get_clock()
             self.lineage.append(
                 {
                     "query": query_text[:100],  # First 100 chars for logging
                     "top_k": top_k,
                     "results_count": len(results),
-                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "timestamp": clock.now().isoformat(),
                 }
             )
 
@@ -188,8 +195,9 @@ class SemanticRetriever:
             logger.warning("No retrievals performed; skipping manifest")
             return
 
+        clock = get_clock()
         manifest = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": clock.now().isoformat(),
             "collection": self.collection_name,
             "keyspace": self.keyspace,
             "total_retrievals": self.retrieval_count,

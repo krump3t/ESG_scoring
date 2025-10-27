@@ -12,6 +12,7 @@ pandas==2.2.2
 tenacity==8.2.3
 python-dotenv==1.0.1
 prometheus-client==0.20.0
+requests==2.31.0
 
 # Phase 11: Observability
 opentelemetry-api==1.21.0

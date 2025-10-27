@@ -1,0 +1,26 @@
+[
+  {
+    "claim": "Codex audit identified 5 P0-P1 critical violations in CP files blocking authenticity compliance",
+    "source_type": "P1",
+    "url_or_doi": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/CODEX_VALIDATION_REPORT.md",
+    "retrieval_date": "2025-10-27",
+    "synthesized_finding": "Codex comprehensive audit validated 77 violations total; 5 are P0-P1 critical (CP stub code, placeholder scoring, non-deterministic time, missing requests dependency, protocol mismatch). P0 scorer.py stub returns hardcoded stage/confidence without @allow-const annotation, blocking authenticity_ast gate.",
+    "note_on_relevance": "CRITICAL - Identifies blocking violations not covered by AV-001; provides exact file/line references for remediation."
+  },
+  {
+    "claim": "SCA v13.8 protocol requires authentic computation in CP with no placeholders unless explicitly annotated",
+    "source_type": "P1",
+    "url_or_doi": "file:///C:/projects/Work%20Projects/.claude/full_protocol.md",
+    "retrieval_date": "2025-10-27",
+    "synthesized_finding": "Protocol §6 Validators & Hard Gates specifies authenticity_ast and placeholders_cp validators block on TODO/FIXME/hardcoded literals in CP. Zero tolerance for placeholders per §0.1. Allowed exceptions require # @allow-const:<reason> comment plus test demonstrating varied-input behavior.",
+    "note_on_relevance": "CRITICAL - Defines compliance requirements; establishes that current CP violations block validation gates."
+  },
+  {
+    "claim": "Determinism requires fixed time via get_audit_time() infrastructure proven in AR-001 task",
+    "source_type": "P1",
+    "url_or_doi": "file:///C:/projects/Work%20Projects/ibm-projects/ESG%20Evaluation/prospecting-engine/tasks/AR-001-authenticity-refactor/COMPLETION_REPORT.md",
+    "retrieval_date": "2025-10-27",
+    "synthesized_finding": "AR-001 implemented Clock abstraction (libs/utils/clock.py, libs/utils/determinism.py) with get_audit_time() function for deterministic time. Proven via 3-run verification producing byte-identical outputs. Direct datetime.now() calls violate determinism requirement.",
+    "note_on_relevance": "HIGH - Provides working implementation pattern; demonstrates that determinism infrastructure exists and works."
+  }
+]
