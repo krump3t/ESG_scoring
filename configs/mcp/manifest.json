@@ -1,0 +1,44 @@
+{
+  "name": "esg-maturity-mcp",
+  "version": "0.1.0",
+  "description": "MCP stdio JSON-RPC server for ESG Maturity scaffold",
+  "methods": [
+    {
+      "name": "esg.health",
+      "params": {}
+    },
+    {
+      "name": "esg.compile_rubric",
+      "params": {}
+    },
+    {
+      "name": "esg.score",
+      "params": {
+        "company": "string",
+        "year": "int (optional)",
+        "report_url": "string (optional)"
+      }
+    },
+    {
+      "name": "esg.ensure_ingested",
+      "params": {
+        "company": "string",
+        "year": "int"
+      }
+    },
+    {
+      "name": "esg.embed_index",
+      "params": {
+        "chunks": "array<object>"
+      }
+    },
+    {
+      "name": "esg.retrieve",
+      "params": {
+        "company": "string",
+        "year": "int",
+        "query": "string"
+      }
+    }
+  ]
+}

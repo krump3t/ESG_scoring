@@ -1,0 +1,242 @@
+{
+  "registry_version": "1.0.0",
+  "last_updated": "2025-10-22",
+  "description": "Verified public data sources for ESG/sustainability reports with API access",
+  "data_sources": [
+    {
+      "source_id": "cdp_climate_change",
+      "name": "CDP Climate Change Responses",
+      "type": "api",
+      "priority": 1,
+      "description": "CDP (formerly Carbon Disclosure Project) - 13,000+ companies, standardized climate responses",
+      "api_endpoint": "https://data.cdp.net/api/odata/v4",
+      "base_url": "https://data.cdp.net",
+      "authentication": {
+        "type": "none",
+        "notes": "Public Open Data Portal - no API key required"
+      },
+      "coverage": {
+        "companies": "13000+",
+        "geographies": "global",
+        "industries": "all",
+        "years": "2010-present"
+      },
+      "data_format": "JSON (OData v4)",
+      "rate_limits": {
+        "requests_per_second": 10,
+        "requests_per_day": 10000
+      },
+      "documentation": "https://data.cdp.net/browse",
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Best for quantitative climate metrics, standardized responses"
+    },
+    {
+      "source_id": "sec_edgar",
+      "name": "SEC EDGAR - 10-K Risk Factors",
+      "type": "api",
+      "priority": 2,
+      "description": "U.S. Securities and Exchange Commission - All public U.S. companies",
+      "api_endpoint": "https://data.sec.gov/submissions",
+      "base_url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "authentication": {
+        "type": "user_agent_required",
+        "notes": "Must include User-Agent header with contact email per SEC policy"
+      },
+      "coverage": {
+        "companies": "10000+",
+        "geographies": "USA",
+        "industries": "all",
+        "years": "1994-present"
+      },
+      "data_format": "HTML/XML (SGML)",
+      "rate_limits": {
+        "requests_per_second": 10,
+        "requests_per_day": "unlimited",
+        "notes": "SEC requires: Max 10 requests per second, User-Agent with contact info"
+      },
+      "documentation": "https://www.sec.gov/edgar/sec-api-documentation",
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Item 1A Risk Factors often contains climate/ESG risks. Legally binding disclosure."
+    },
+    {
+      "source_id": "gri_database",
+      "name": "GRI Sustainability Disclosure Database",
+      "type": "web_search",
+      "priority": 3,
+      "description": "Global Reporting Initiative - 60,000+ reports from 15,000+ organizations",
+      "api_endpoint": null,
+      "base_url": "https://database.globalreporting.org",
+      "authentication": {
+        "type": "none",
+        "notes": "Public database, web interface only (no API)"
+      },
+      "coverage": {
+        "companies": "15000+",
+        "geographies": "global",
+        "industries": "all",
+        "years": "2000-present"
+      },
+      "data_format": "Web interface (requires scraping)",
+      "rate_limits": {
+        "requests_per_second": 1,
+        "notes": "Use respectful crawling, obey robots.txt"
+      },
+      "documentation": "https://database.globalreporting.org/search",
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Comprehensive but requires web scraping. Links to original reports."
+    },
+    {
+      "source_id": "csrhub",
+      "name": "CSRHub ESG Ratings",
+      "type": "api",
+      "priority": 4,
+      "description": "CSRHub - ESG ratings for 20,000+ companies",
+      "api_endpoint": "https://api.csrhub.com/api/v2",
+      "base_url": "https://www.csrhub.com",
+      "authentication": {
+        "type": "api_key",
+        "notes": "Free tier available (limited), paid for full access"
+      },
+      "coverage": {
+        "companies": "20000+",
+        "geographies": "global",
+        "industries": "all",
+        "years": "2008-present"
+      },
+      "data_format": "JSON (REST API)",
+      "rate_limits": {
+        "free_tier": "100 requests/day",
+        "paid_tier": "10000 requests/day"
+      },
+      "documentation": "https://www.csrhub.com/content/csrhub-api-documentation/",
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Aggregated ESG ratings, not original reports. Useful for validation."
+    },
+    {
+      "source_id": "company_ir_direct",
+      "name": "Direct Company Investor Relations",
+      "type": "direct_urls",
+      "priority": 5,
+      "description": "Direct downloads from company IR/sustainability pages",
+      "api_endpoint": null,
+      "base_url": "varies",
+      "authentication": {
+        "type": "none",
+        "notes": "Public corporate websites"
+      },
+      "coverage": {
+        "companies": "unlimited",
+        "geographies": "global",
+        "industries": "all",
+        "years": "varies"
+      },
+      "data_format": "PDF (various)",
+      "rate_limits": {
+        "requests_per_second": 1,
+        "notes": "Respect robots.txt, use rate limiting per domain"
+      },
+      "documentation": null,
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Most direct and comprehensive, but requires manual URL discovery or search"
+    },
+    {
+      "source_id": "sustainabilityreports_com",
+      "name": "SustainabilityReports.com",
+      "type": "web_search",
+      "priority": 6,
+      "description": "Aggregator - 50,000+ sustainability reports",
+      "api_endpoint": null,
+      "base_url": "https://www.sustainabilityreports.com",
+      "authentication": {
+        "type": "none",
+        "notes": "Public website, no API"
+      },
+      "coverage": {
+        "companies": "10000+",
+        "geographies": "global",
+        "industries": "all",
+        "years": "2000-present"
+      },
+      "data_format": "Web interface (requires scraping)",
+      "rate_limits": {
+        "requests_per_second": 1,
+        "notes": "Check robots.txt, use respectful crawling"
+      },
+      "documentation": null,
+      "verified": false,
+      "last_verified": null,
+      "notes": "Useful aggregator but requires web scraping. No API confirmed."
+    },
+    {
+      "source_id": "world_bank_tcfd",
+      "name": "World Bank TCFD Knowledge Hub",
+      "type": "web_search",
+      "priority": 7,
+      "description": "TCFD-aligned climate risk disclosures",
+      "api_endpoint": null,
+      "base_url": "https://www.tcfdhub.org",
+      "authentication": {
+        "type": "none"
+      },
+      "coverage": {
+        "companies": "1000+",
+        "geographies": "global",
+        "industries": "focus on financial services",
+        "years": "2017-present"
+      },
+      "data_format": "Web interface",
+      "rate_limits": {
+        "requests_per_second": 1
+      },
+      "documentation": "https://www.tcfdhub.org/about/",
+      "verified": true,
+      "last_verified": "2025-10-22",
+      "notes": "Specialized for TCFD-compliant disclosures"
+    }
+  ],
+  "fallback_strategy": {
+    "description": "Multi-tier fallback approach for reliable data acquisition",
+    "tiers": [
+      {
+        "tier": 1,
+        "sources": ["cdp_climate_change", "sec_edgar"],
+        "description": "Primary: Public APIs with high reliability and standardized data"
+      },
+      {
+        "tier": 2,
+        "sources": ["gri_database", "csrhub"],
+        "description": "Secondary: Comprehensive databases (may require scraping or API key)"
+      },
+      {
+        "tier": 3,
+        "sources": ["company_ir_direct"],
+        "description": "Tertiary: Direct company sources (requires manual URL discovery)"
+      },
+      {
+        "tier": 4,
+        "sources": ["sustainabilityreports_com", "world_bank_tcfd"],
+        "description": "Fallback: Aggregators and specialized hubs"
+      }
+    ]
+  },
+  "recommended_workflow": {
+    "step_1": "Search CDP Open Data for company climate response (quantitative)",
+    "step_2": "If U.S. company: Extract SEC 10-K Item 1A Risk Factors for qualitative ESG risks",
+    "step_3": "Search GRI Database for full sustainability report link",
+    "step_4": "If not found: Use company IR direct URL (requires manual lookup)",
+    "step_5": "Validate against CSRHub ratings if available"
+  },
+  "data_quality_criteria": {
+    "preferred_formats": ["PDF", "JSON", "XML"],
+    "minimum_file_size_kb": 500,
+    "maximum_file_size_mb": 50,
+    "required_metadata": ["company_name", "year", "report_type", "source_url"],
+    "sha256_verification": true,
+    "pii_screening": true
+  }
+}

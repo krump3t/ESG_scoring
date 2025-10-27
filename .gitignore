@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.production
+.env.template
+
+# Data
+artifacts/
+data/
+data_lake/
+*.parquet
+*.arrow
+
+# IDE
+.vscode/
+.idea/
+
+# Build & Cache
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+coverage.xml
+pytest_output.txt
+test_output.txt
+nul
+
+# Logs & Reports
+qa/
+logs/
+reports/
+validation_attempt_*.log
+esg_scoring_results_log.md
+esg_scoring_table.csv
+final_esg_evaluation_report.md
+
+# Generated Documentation
+PHASE*_SUMMARY.md
+COMPLETION_SUMMARY.md
+COMPREHENSIVE_PROTOCOL_VIOLATIONS.md
+CRITICAL_RUBRIC_GAP.md
+DOCKER_DEPLOYMENT.md
+JSON_AUDIT_MIGRATION.md
+MERGE_*.md
+AUTHENTICITY_REMEDIATION_PLAN.md
+REAL_DATA_VALIDATION.md
+REPRODUCIBILITY.md
+RUBRIC_V3_IMPLEMENTATION_COMPLETE.md
+SCA_COMPLIANCE_REVIEW.md
+SCA_FULL_AUDIT.md
+SESSION_SUMMARY*.md
+STAGING_DEPLOYMENT_GUIDE.md
+TEST_RESULTS_SUMMARY.md
+Migration_MCP.md
+Opus_Full_Implementation_Plan.md
+full_protocol.md
+data_ingestion_plan.md
+DEMO_RUNBOOK.md
+NEXT_PHASE_RECOMMENDATION.md
+MERGE_RECOMMENDATION.md
+
+# SCA & Local Config
+.claude/
+.sca_config.json
+.sca/
+.benchmarks/
+
+# Demo & Test Scripts
+demo_*.py
+test_*.py
+diagnose_*.py
+evaluate_*.py
+fetch_*.py
+generate_*.py
+run_*.py
+run_*.ps1
+
+# Fixtures & Test Data
+test_data/
+fixtures/
+validation_report.json
+test_results.json
+test_results.txt

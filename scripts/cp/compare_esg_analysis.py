@@ -25,8 +25,8 @@ def get_audit_timestamp() -> str:
 
 # Import CP modules
 from libs.query.query_synthesizer import QuerySynthesizer
-from libs.ranking.cross_encoder_ranker import CrossEncoderRanker
-from libs.cache.redis_cache import RedisCache
+from libs.ranking.real_cross_encoder import RealCrossEncoderRanker  # Phase 4a: Real Sentence-BERT
+from libs.cache.real_redis_cache import RealRedisCache  # Phase 4b: Real Redis backend
 from libs.scoring.bayesian_confidence import compute_posterior_confidence
 from libs.retrieval.parquet_retriever import ParquetRetriever
 
@@ -163,7 +163,9 @@ def _run_retrieval_stage(companies: List[str], theme: str) -> tuple[List[Dict[st
 
 def _run_ranking_stage(user_query: str, companies: List[str], documents: List[Dict[str, Any]]) -> tuple[List[List[tuple[str, float]]], float]:
     """
-    Run cross-encoder re-ranking stage.
+    Run cross-encoder re-ranking stage with real Sentence-BERT model.
+
+    Phase 4a: Uses real cross-encoder/ms-marco-MiniLM-L-6-v2 for neural ranking.
 
     Args:
         user_query: User query string
@@ -172,22 +174,32 @@ def _run_ranking_stage(user_query: str, companies: List[str], documents: List[Di
 
     Returns:
         Tuple of (ranked_docs_per_company, latency_ms)
+
+    Raises:
+        RuntimeError: If model initialization or inference fails
     """
-    logger.info("Stage 3: Cross-Encoder Re-ranking")
+    logger.info("Stage 3: Cross-Encoder Re-ranking (Real Sentence-BERT)")
     t0 = time.time()
-    ranker = CrossEncoderRanker()
+
+    # Initialize real Cross-Encoder with deterministic seed
+    ranker = RealCrossEncoderRanker(
+        model_name="cross-encoder/ms-marco-MiniLM-L-6-v2",
+        seed=SEED
+    )
     ranked_docs_per_company = []
 
     for company in companies:
         company_docs = [d for d in documents if d.get("company") == company]
         if company_docs:
             doc_texts = [d["text"] for d in company_docs]
+            # Use real model inference
             ranked = ranker.rerank(user_query, doc_texts, top_k=5)
             ranked_docs_per_company.append(ranked)
         else:
             ranked_docs_per_company.append([])
 
     latency_ms = round((time.time() - t0) * 1000, 2)
+    logger.info(f"Real Cross-Encoder ranking complete in {latency_ms}ms")
     return ranked_docs_per_company, latency_ms
 
 
@@ -228,23 +240,26 @@ def _run_aggregation_stage(companies: List[str], theme: str, ranked_docs_per_com
 def generate_comparative_report(
     user_query: str,
     companies: List[str],
-    cache: Optional[RedisCache] = None,
+    cache: Optional[RealRedisCache] = None,
     year: int = 2024,
 ) -> Dict[str, Any]:
     """
     Generate comparative ESG analysis report via 5-stage orchestrated pipeline.
 
-    Pipeline stages:
+    Pipeline stages (Phase 5 - Real Components):
     1. Query Synthesis: Extract entities and themes
-    2. Retrieval: Fetch relevant documents (mocked for now)
-    3. Cross-Encoder Re-ranking: Score document relevance
+    2. Retrieval: Fetch relevant documents (real Parquet or mock)
+    3. Cross-Encoder Re-ranking: Real Sentence-BERT neural ranking (Phase 4a)
     4. Bayesian Confidence: Aggregate scores into posteriors
     5. Report Generation: Format results
+
+    Phase 4a: Real cross-encoder/ms-marco-MiniLM-L-6-v2 for ranking
+    Phase 4b: Real Redis backend for caching (optional)
 
     Args:
         user_query: Multi-company comparison query (e.g., "Compare climate policies: Apple vs ExxonMobil")
         companies: List of company ticker symbols (e.g., ["AAPL", "XOM"])
-        cache: Optional RedisCache for caching results
+        cache: Optional RealRedisCache for caching results (Phase 4b)
         year: Year for analysis (default: 2024)
 
     Returns:
@@ -252,14 +267,14 @@ def generate_comparative_report(
         - user_query: Original query
         - companies: List of compared companies
         - theme: Identified ESG theme
-        - results: List of ComparisonResult (one per dimension)
+        - table: List of ComparisonResult dicts (one per dimension)
         - latency_ms: Total execution time
-        - latencies: Per-stage breakdown
+        - latencies: Per-stage breakdown {synthesis_ms, retrieval_ms, ranking_ms, aggregation_ms, generation_ms}
         - timestamp: ISO timestamp
 
     Raises:
         ValueError: If user_query empty, companies empty/invalid, or <2 companies
-        RuntimeError: If any pipeline stage fails
+        RuntimeError: If any pipeline stage fails (model loading, Redis, etc.)
     """
     # Validate inputs
     _validate_inputs(user_query, companies)

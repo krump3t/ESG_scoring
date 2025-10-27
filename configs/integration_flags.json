@@ -1,0 +1,6 @@
+{
+  "semantic_enabled": false,
+  "watsonx_enabled": false,
+  "astradb_enabled": false,
+  "_comment": "All integrations disabled for deterministic test mode. Set semantic_enabled=true to enable α-fusion pipeline."
+}

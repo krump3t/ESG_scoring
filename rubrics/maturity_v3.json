@@ -1,0 +1,407 @@
+{
+  "description": "Seven-theme ESG maturity rubric (0–4) aligned with ESG Doc; designed for MCP + Iceberg scoring agent.",
+  "name": "ESG Maturity Scoring Rubric",
+  "output_contract": {
+    "evidence_record": {
+      "doc_id": "string",
+      "evidence_id": "string",
+      "extract_30w": "string",
+      "hash_sha256": "string",
+      "org_id": "string",
+      "page_no": "int",
+      "snapshot_id": "string",
+      "span_end": "int",
+      "span_start": "int",
+      "theme_code": "string",
+      "year": "int"
+    },
+    "score_record": {
+      "confidence": "float (0.0-1.0)",
+      "doc_manifest_uri": "string",
+      "evidence_ids": "array<string>",
+      "frameworks": "array<string>",
+      "org_id": "string",
+      "snapshot_id": "string",
+      "stage": "int (0-4)",
+      "theme_code": "string",
+      "year": "int"
+    }
+  },
+  "scale": {
+    "max": 4,
+    "min": 0,
+    "step": 1
+  },
+  "scoring_rules": {
+    "confidence_guidance": [
+      {
+        "label": "weak",
+        "range": [
+          0.2,
+          0.4
+        ]
+      },
+      {
+        "label": "adequate",
+        "range": [
+          0.5,
+          0.7
+        ]
+      },
+      {
+        "label": "strong",
+        "range": [
+          0.8,
+          1.0
+        ]
+      }
+    ],
+    "evidence_min_per_stage_claim": 2,
+    "framework_signals": {
+      "CSRD_ESRS": {
+        "rd_3_4_support": true
+      },
+      "GHG_Protocol": {
+        "ghg_min_stage": 3,
+        "reasonable_assurance_sets_stage": 4
+      },
+      "ISSB_TCFD": {
+        "assured_and_tagged_sets_stage": 4,
+        "rd_min_stage": 2
+      },
+      "SBTi": {
+        "approved_sets_stage": 4,
+        "tsp_min_stage": 3
+      }
+    },
+    "freshness_months_penalty": {
+      "confidence_delta": -0.1,
+      "months": 24
+    },
+    "negative_overrides": [
+      {
+        "cap_stage": 2,
+        "condition": "auditor_findings_contradict_claims == true"
+      },
+      {
+        "cap_stage": 1,
+        "condition": "assurance_failed == true"
+      }
+    ]
+  },
+  "themes": [
+    {
+      "code": "TSP",
+      "intent": "Evaluate ambition, structure, and credibility of targets.",
+      "name": "Target Setting & Planning",
+      "stages": {
+        "0": {
+          "descriptor": "No targets or vague qualitative commitments.",
+          "evidence_examples": [
+            "Generic CSR statements"
+          ],
+          "label": "No targets"
+        },
+        "1": {
+          "descriptor": "Short‑term qualitative or partial quantitative targets.",
+          "evidence_examples": [
+            "Reduction claims without clear scope/baseline"
+          ],
+          "label": "Short‑term qualitative or partial quantitative targets"
+        },
+        "2": {
+          "descriptor": "Time‑bound quantitative targets with disclosed baseline year, scope coverage, and KPIs.",
+          "evidence_examples": [
+            "Target table",
+            "baseline definition"
+          ],
+          "label": "Time‑bound quantitative targets with disclosed baseline year, scope coverage, and KPIs"
+        },
+        "3": {
+          "descriptor": "Science‑based methodology or SBTi submission; scenario modeling present but not financially linked; supplier engagement.",
+          "evidence_examples": [
+            "SBTi pending",
+            "scenarios",
+            "supplier data efforts"
+          ],
+          "label": "Science‑based methodology or SBTi submission; scenario modeling present but not financially linked; supplier engagement"
+        },
+        "4": {
+          "descriptor": "Validated science‑based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+          "evidence_examples": [
+            "SBTi approval",
+            "financial modeling",
+            "executive oversight"
+          ],
+          "label": "Validated science‑based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy"
+        }
+      }
+    },
+    {
+      "code": "OSP",
+      "intent": "Evaluate ESG integration within operations and governance.",
+      "name": "Operational Structure & Processes",
+      "stages": {
+        "0": {
+          "descriptor": "No ESG governance or process.",
+          "evidence_examples": [],
+          "label": "No ESG governance or process"
+        },
+        "1": {
+          "descriptor": "Ad‑hoc initiatives; isolated ownership.",
+          "evidence_examples": [
+            "Named owner or department references"
+          ],
+          "label": "Ad‑hoc initiatives; isolated ownership"
+        },
+        "2": {
+          "descriptor": "Formalized processes, roles, and documented policies.",
+          "evidence_examples": [
+            "Process maps",
+            "KPI templates"
+          ],
+          "label": "Formalized"
+        },
+        "3": {
+          "descriptor": "Cross‑functional collaboration with clear KPIs, accountability, and oversight.",
+          "evidence_examples": [
+            "ESG steering committee minutes",
+            "quarterly KPI reviews"
+          ],
+          "label": "Cross‑functional collaboration with clear KPIs, accountability, and oversight"
+        },
+        "4": {
+          "descriptor": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls.",
+          "evidence_examples": [
+            "Audit report",
+            "control register"
+          ],
+          "label": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls"
+        }
+      }
+    },
+    {
+      "code": "DM",
+      "intent": "Assess data quality, automation, and system architecture.",
+      "name": "Data Maturity",
+      "stages": {
+        "0": {
+          "descriptor": "Manual, inconsistent data entry; no governance.",
+          "evidence_examples": [
+            "Spreadsheet exports"
+          ],
+          "label": "Manual"
+        },
+        "1": {
+          "descriptor": "Structured but manual data collection; limited validation.",
+          "evidence_examples": [
+            "Collection forms",
+            "basic validation notes"
+          ],
+          "label": "Structured but manual data collection; limited validation"
+        },
+        "2": {
+          "descriptor": "Partially automated collection; standardized formats; QA protocols.",
+          "evidence_examples": [
+            "ETL diagrams",
+            "validation logs"
+          ],
+          "label": "Partially automated"
+        },
+        "3": {
+          "descriptor": "Centralized database with integration across functions; periodic audits; supplier data exchange.",
+          "evidence_examples": [
+            "Unified platform documentation",
+            "supplier data workflows"
+          ],
+          "label": "Centralized database with integration across functions; periodic audits; supplier data exchange"
+        },
+        "4": {
+          "descriptor": "Automated pipelines with real‑time validation, lineage tracking, and integrated reporting systems (e.g., Iceberg, Parquet architecture).",
+          "evidence_examples": [
+            "System architecture",
+            "API/ETL logs"
+          ],
+          "label": "Automated pipelines with real‑time validation, lineage tracking, and integrated reporting systems (e"
+        }
+      }
+    },
+    {
+      "code": "GHG",
+      "intent": "Evaluate completeness, accuracy, and assurance of emissions data.",
+      "name": "GHG Accounting",
+      "stages": {
+        "0": {
+          "descriptor": "No emissions accounting.",
+          "evidence_examples": [],
+          "label": "No emissions accounting"
+        },
+        "1": {
+          "descriptor": "Partial Scope 1/2 estimates without methodology.",
+          "evidence_examples": [
+            "Estimate table"
+          ],
+          "label": "Partial Scope 1/2 estimates without methodology"
+        },
+        "2": {
+          "descriptor": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy.",
+          "evidence_examples": [
+            "Methodology note",
+            "base year documentation"
+          ],
+          "label": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy"
+        },
+        "3": {
+          "descriptor": "Comprehensive Scope 1/2/3 with data improvement plans, supplier engagement, and limited assurance.",
+          "evidence_examples": [
+            "Supplier engagement report",
+            "assurance letter (limited)"
+          ],
+          "label": "Comprehensive"
+        },
+        "4": {
+          "descriptor": "Full third‑party reasonable assurance; GHG Protocol compliance; uncertainty analysis; auditor verification.",
+          "evidence_examples": [
+            "Verifier statement",
+            "audit summary"
+          ],
+          "label": "Reasonable assurance"
+        }
+      }
+    },
+    {
+      "code": "RD",
+      "intent": "Measure transparency, alignment, and timeliness of ESG reporting.",
+      "name": "Reporting & Disclosure",
+      "stages": {
+        "0": {
+          "descriptor": "No formal ESG reporting.",
+          "evidence_examples": [
+            "Brochure text"
+          ],
+          "label": "No formal ESG reporting"
+        },
+        "1": {
+          "descriptor": "CSR/GRI index partial coverage; narrative only.",
+          "evidence_examples": [
+            "GRI mapping"
+          ],
+          "label": "CSR/GRI index partial coverage; narrative only"
+        },
+        "2": {
+          "descriptor": "ISSB/TCFD‑aligned narrative; annual updates.",
+          "evidence_examples": [
+            "TCFD section"
+          ],
+          "label": "ISSB/TCFD‑aligned narrative; annual updates"
+        },
+        "3": {
+          "descriptor": "Cross‑framework KPI alignment; dual materiality; investor reporting consistency.",
+          "evidence_examples": [
+            "CSRD/ESRS mapping",
+            "KPI dashboards"
+          ],
+          "label": "Cross‑framework KPI alignment; dual materiality; investor reporting consistency"
+        },
+        "4": {
+          "descriptor": "External assurance; digital tagging (XBRL/ESRS); integrated financial filing; near‑real‑time reporting.",
+          "evidence_examples": [
+            "Assurance letter",
+            "tagging export"
+          ],
+          "label": "External assurance; digital tagging (XBRL/ESRS); integrated financial filing; near‑real‑time reporting"
+        }
+      }
+    },
+    {
+      "code": "EI",
+      "intent": "Evaluate monitoring, optimization, and forecasting of energy and resource use.",
+      "name": "Energy Intelligence",
+      "stages": {
+        "0": {
+          "descriptor": "No tracking beyond invoices.",
+          "evidence_examples": [
+            "Utility bills"
+          ],
+          "label": "No tracking beyond invoices"
+        },
+        "1": {
+          "descriptor": "Basic metering and periodic reviews.",
+          "evidence_examples": [
+            "Meter inventory"
+          ],
+          "label": "Basic metering and periodic reviews"
+        },
+        "2": {
+          "descriptor": "Systematic KPIs and improvement projects tracked.",
+          "evidence_examples": [
+            "KPI dashboard",
+            "project list"
+          ],
+          "label": "Systematic KPIs and improvement projects tracked"
+        },
+        "3": {
+          "descriptor": "Automated monitoring and analytics; predictive maintenance; integration with ESG data.",
+          "evidence_examples": [
+            "EMS screenshots",
+            "alerts"
+          ],
+          "label": "Automated monitoring and analytics; predictive maintenance; integration with ESG data"
+        },
+        "4": {
+          "descriptor": "AI/ML forecasting; optimization across assets; cost‑benefit analysis tied to decarbonization strategy.",
+          "evidence_examples": [
+            "Forecast graphs",
+            "optimization logs"
+          ],
+          "label": "AI/ML forecasting; optimization across assets; cost‑benefit analysis tied to decarbonization strategy"
+        }
+      }
+    },
+    {
+      "code": "RMM",
+      "intent": "Evaluate climate/ESG risk identification and mitigation integration.",
+      "name": "Risk Management & Mitigation",
+      "stages": {
+        "0": {
+          "descriptor": "No risk framework or ESG integration.",
+          "evidence_examples": [],
+          "label": "No risk framework or ESG integration"
+        },
+        "1": {
+          "descriptor": "Qualitative risk statements without quantification.",
+          "evidence_examples": [
+            "Narrative"
+          ],
+          "label": "Qualitative risk statements without quantification"
+        },
+        "2": {
+          "descriptor": "Defined risk taxonomy; periodic assessments; basic mitigation plans.",
+          "evidence_examples": [
+            "Risk matrix",
+            "mitigation summary"
+          ],
+          "label": "Defined risk taxonomy; periodic assessments; basic mitigation plans"
+        },
+        "3": {
+          "descriptor": "Quantified risk assessments (transition/physical); scenario testing; integrated into planning.",
+          "evidence_examples": [
+            "Scenario analysis",
+            "governance charter"
+          ],
+          "label": "Integrated"
+        },
+        "4": {
+          "descriptor": "Enterprise risk integrated with financial modeling; insured/uninsured analysis; public disclosure per ISSB/CSRD.",
+          "evidence_examples": [
+            "Annual report section",
+            "disclosure summary"
+          ],
+          "label": "Enterprise risk integrated with financial modeling; insured/uninsured analysis; public disclosure per ISSB/CSRD"
+        }
+      }
+    }
+  ],
+  "updated_utc": "2025-10-22T03:21:40Z",
+  "version": "3.0"
+}

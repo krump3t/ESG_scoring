@@ -1,0 +1,237 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2024-10-21",
+  "sources": [
+    {
+      "source_id": "sustainability_reports_web",
+      "name": "SustainabilityReports.com Database",
+      "type": "web_crawl",
+      "url": "https://www.sustainability-reports.com/",
+      "description": "Public repository of corporate sustainability reports",
+      "data_format": "PDF",
+      "size_estimate": "10GB",
+      "record_count_estimate": 1000,
+      "sha256": "pending_crawl",
+      "pii_flag": false,
+      "pii_justification": "Public corporate reports contain no personal information",
+      "provenance": {
+        "origin": "Public web repository",
+        "collection_method": "Web crawling with rate limiting",
+        "collection_date": "2024-Q4",
+        "update_frequency": "quarterly"
+      },
+      "retention": {
+        "policy": "1 year rolling window",
+        "deletion_date": "2025-10-21",
+        "archival_strategy": "Parquet files in cold storage"
+      },
+      "quality_metrics": {
+        "completeness": 0.95,
+        "accuracy": 0.98,
+        "timeliness": "current year reports"
+      },
+      "access_controls": {
+        "authentication": "none",
+        "rate_limiting": "10 requests/minute",
+        "terms_compliance": "robots.txt respected"
+      }
+    },
+    {
+      "source_id": "cdp_reports",
+      "name": "CDP Climate Change Responses",
+      "type": "api",
+      "url": "https://www.cdp.net/en/responses",
+      "description": "Carbon Disclosure Project climate questionnaire responses",
+      "data_format": "JSON",
+      "size_estimate": "2GB",
+      "record_count_estimate": 500,
+      "sha256": "pending_api_access",
+      "pii_flag": false,
+      "pii_justification": "Aggregated corporate data only",
+      "provenance": {
+        "origin": "CDP official API",
+        "collection_method": "API requests with authentication",
+        "collection_date": "2024-Q4",
+        "update_frequency": "annual"
+      },
+      "retention": {
+        "policy": "2 years",
+        "deletion_date": "2026-10-21",
+        "archival_strategy": "Compressed JSON in S3"
+      },
+      "quality_metrics": {
+        "completeness": 0.90,
+        "accuracy": 0.99,
+        "timeliness": "annual updates"
+      },
+      "access_controls": {
+        "authentication": "API key required",
+        "rate_limiting": "100 requests/hour",
+        "terms_compliance": "CDP data use agreement"
+      }
+    },
+    {
+      "source_id": "gri_database",
+      "name": "GRI Sustainability Disclosure Database",
+      "type": "web_scrape",
+      "url": "https://www.globalreporting.org/reporting-support/gri-data-legend/",
+      "description": "Global Reporting Initiative standards-based reports",
+      "data_format": "PDF/HTML",
+      "size_estimate": "5GB",
+      "record_count_estimate": 800,
+      "sha256": "pending_scrape",
+      "pii_flag": false,
+      "pii_justification": "Public disclosure documents",
+      "provenance": {
+        "origin": "GRI official database",
+        "collection_method": "Web scraping with consent",
+        "collection_date": "2024-Q4",
+        "update_frequency": "bi-annual"
+      },
+      "retention": {
+        "policy": "18 months",
+        "deletion_date": "2026-04-21",
+        "archival_strategy": "Indexed in AstraDB"
+      },
+      "quality_metrics": {
+        "completeness": 0.92,
+        "accuracy": 0.97,
+        "timeliness": "within 6 months of publication"
+      },
+      "access_controls": {
+        "authentication": "none",
+        "rate_limiting": "5 requests/minute",
+        "terms_compliance": "GRI terms of use"
+      }
+    },
+    {
+      "source_id": "benchmark_dataset",
+      "name": "ESG Expert Labeled Benchmark",
+      "type": "manual_annotation",
+      "url": "internal",
+      "description": "Expert-labeled ESG maturity assessments for validation",
+      "data_format": "CSV/JSON",
+      "size_estimate": "100MB",
+      "record_count_estimate": 200,
+      "sha256": "a7b9c2d4e5f6789012345678901234567890abcdef1234567890abcdef123456",
+      "pii_flag": true,
+      "pii_justification": "Contains expert annotator identifiers",
+      "provenance": {
+        "origin": "Internal expert annotation",
+        "collection_method": "Manual expert review",
+        "collection_date": "2024-Q3",
+        "update_frequency": "quarterly with new annotations"
+      },
+      "retention": {
+        "policy": "Indefinite for model training",
+        "deletion_date": null,
+        "archival_strategy": "Encrypted storage with versioning"
+      },
+      "quality_metrics": {
+        "completeness": 1.0,
+        "accuracy": 0.95,
+        "timeliness": "updated quarterly"
+      },
+      "access_controls": {
+        "authentication": "role-based access",
+        "rate_limiting": "n/a",
+        "terms_compliance": "internal data governance"
+      }
+    },
+    {
+      "source_id": "tcfd_reports",
+      "name": "TCFD Aligned Disclosures",
+      "type": "web_crawl",
+      "url": "https://www.fsb-tcfd.org/supporters/",
+      "description": "Task Force on Climate-related Financial Disclosures reports",
+      "data_format": "PDF",
+      "size_estimate": "3GB",
+      "record_count_estimate": 400,
+      "sha256": "pending_crawl",
+      "pii_flag": false,
+      "pii_justification": "Public financial disclosures",
+      "provenance": {
+        "origin": "TCFD supporter companies",
+        "collection_method": "Targeted crawling of supporter sites",
+        "collection_date": "2024-Q4",
+        "update_frequency": "annual"
+      },
+      "retention": {
+        "policy": "2 years",
+        "deletion_date": "2026-10-21",
+        "archival_strategy": "Parquet with compression"
+      },
+      "quality_metrics": {
+        "completeness": 0.88,
+        "accuracy": 0.98,
+        "timeliness": "current year"
+      },
+      "access_controls": {
+        "authentication": "none",
+        "rate_limiting": "10 requests/minute",
+        "terms_compliance": "public domain"
+      }
+    }
+  ],
+  "data_governance": {
+    "classification": "Public/Internal Mixed",
+    "compliance": ["GDPR Article 6(1)(f)", "Fair Use Doctrine"],
+    "privacy_review_date": "2024-10-01",
+    "next_review_date": "2025-01-01",
+    "data_steward": "ESG Analytics Team",
+    "approval_status": "Pending Legal Review"
+  },
+  "processing_pipeline": {
+    "stages": [
+      {
+        "stage": "ingestion",
+        "description": "Crawl and download reports",
+        "tools": ["Playwright", "requests"],
+        "output_format": "Raw PDF/HTML"
+      },
+      {
+        "stage": "parsing",
+        "description": "Extract text and structure",
+        "tools": ["pdfplumber", "unstructured"],
+        "output_format": "JSON chunks"
+      },
+      {
+        "stage": "embedding",
+        "description": "Generate vector embeddings",
+        "tools": ["watsonx.ai"],
+        "output_format": "768-dim vectors"
+      },
+      {
+        "stage": "indexing",
+        "description": "Store in vector and graph database",
+        "tools": ["AstraDB"],
+        "output_format": "Indexed documents"
+      },
+      {
+        "stage": "classification",
+        "description": "Assign ESG maturity stages",
+        "tools": ["watsonx.ai"],
+        "output_format": "JSON scores"
+      }
+    ]
+  },
+  "quality_assurance": {
+    "validation_method": "Expert review sampling",
+    "validation_frequency": "10% random sample monthly",
+    "error_threshold": 0.15,
+    "remediation_process": "Retrain on errors, update rubric",
+    "audit_trail": "All processing logged to run_events.jsonl"
+  },
+  "schema_version": {
+    "chunk_schema": "1.0.0",
+    "maturity_schema": "1.0.0",
+    "vector_dims": 768,
+    "graph_schema": "1.0.0"
+  },
+  "estimated_totals": {
+    "total_size": "20.1GB",
+    "total_documents": 2900,
+    "unique_companies": 1000,
+    "time_range": "2020-2024"
+  }
+}

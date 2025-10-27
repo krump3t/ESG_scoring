@@ -295,7 +295,7 @@ def main() -> int:
             from apps.api.metrics import esg_demo_index_size
             esg_demo_index_size.labels(backend=args.backend).set(snapshot['total_docs'])
         except ImportError as e:
-    logger.warning(f"Import failed: {e}")  # Metrics not available in test environment
+            logger.warning(f"Import failed: {e}")  # Metrics not available in test environment
 
         return 0
 

@@ -1,0 +1,84 @@
+{
+  "phase": "phase_1_diverse_sample",
+  "description": "Initial diverse sample of 6 companies across industries for extraction validation",
+  "target_count": 6,
+  "selection_criteria": {
+    "industry_diversity": true,
+    "maturity_range": "Stage 2-4",
+    "framework_diversity": ["GRI", "TCFD", "SASB", "CDP", "ISO 14001"]
+  },
+  "targets": [
+    {
+      "company_name": "Apple",
+      "industry": "Technology",
+      "year": 2023,
+      "report_type": "sustainability",
+      "maturity_estimate": 4,
+      "frameworks": ["GRI", "TCFD", "CDP", "ISO 14001"],
+      "url": "https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2023.pdf",
+      "notes": "Already downloaded for validation - ESG leader, comprehensive disclosure"
+    },
+    {
+      "company_name": "Unilever",
+      "industry": "Consumer Goods",
+      "year": 2023,
+      "report_type": "sustainability",
+      "maturity_estimate": 4,
+      "frameworks": ["GRI", "SASB"],
+      "url": "https://www.unilever.com/files/92ui5egz/production/c1bb7ebd9b3776bbf5cc529ca11929f70932f4e5.pdf",
+      "notes": "Strong water/materials focus, different industry from tech"
+    },
+    {
+      "company_name": "ExxonMobil",
+      "industry": "Energy",
+      "year": 2023,
+      "report_type": "sustainability",
+      "maturity_estimate": 3,
+      "frameworks": ["TCFD", "SASB"],
+      "url": "https://corporate.exxonmobil.com/-/media/Global/Files/advancing-climate-solutions-progress-report/2023/2023-Advancing-Climate-Solutions-Progress-Report.pdf",
+      "notes": "High-emission baseline, critical for Stage 2-3 validation"
+    },
+    {
+      "company_name": "Walmart",
+      "industry": "Retail",
+      "year": 2023,
+      "report_type": "esg",
+      "maturity_estimate": 3,
+      "frameworks": ["CDP", "SASB"],
+      "url": "https://corporate.walmart.com/content/dam/corporate/documents/esgreport/2023/walmart-2023-esg-report.pdf",
+      "notes": "Scope 3 complexity, supply chain focus"
+    },
+    {
+      "company_name": "JPMorgan Chase",
+      "industry": "Financial Services",
+      "year": 2023,
+      "report_type": "esg",
+      "maturity_estimate": 3,
+      "frameworks": ["TCFD", "GRI"],
+      "url": "https://impact.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/documents/jpmc-esg-report-2023.pdf",
+      "notes": "Financed emissions focus, governance strong"
+    },
+    {
+      "company_name": "Tesla",
+      "industry": "Automotive/Energy",
+      "year": 2022,
+      "report_type": "impact",
+      "maturity_estimate": 2,
+      "frameworks": ["SASB"],
+      "url": "https://www.tesla.com/ns_videos/2022-tesla-impact-report.pdf",
+      "notes": "High innovation, inconsistent disclosure - good Stage 2 example"
+    }
+  ],
+  "fallback_search_terms": [
+    "{company} sustainability report {year}",
+    "{company} ESG report {year}",
+    "{company} environmental report {year}",
+    "{company} impact report {year}"
+  ],
+  "validation_requirements": {
+    "min_file_size_mb": 0.5,
+    "max_file_size_mb": 50,
+    "required_pdf_version": "1.4+",
+    "sha256_verification": true
+  }
+}

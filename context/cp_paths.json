@@ -1,0 +1,9 @@
+{
+  "cp_paths": [
+    "apps/api",
+    "apps/scoring",
+    "libs",
+    "pipelines/airflow/dags",
+    "sca_infrastructure"
+  ]
+}

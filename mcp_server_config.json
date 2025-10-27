@@ -1,0 +1,127 @@
+{
+  "name": "esg-report-fetcher",
+  "version": "1.0.0",
+  "description": "MCP server for intelligent sustainability report fetching based on data quality",
+  "author": "ESG Evaluation System",
+  "server": {
+    "command": "python",
+    "args": ["-m", "mcp_report_fetcher"],
+    "env": {
+      "PYTHONPATH": "${workspaceFolder}/prospecting-engine",
+      "MCP_MODE": "production"
+    }
+  },
+  "tools": [
+    {
+      "name": "check_data_quality",
+      "description": "Check the quality of existing ESG data for a company",
+      "parameters": {
+        "company": {
+          "type": "string",
+          "description": "Company name",
+          "required": true
+        },
+        "dimension": {
+          "type": "string",
+          "description": "ESG dimension (climate, social, governance, overall)",
+          "default": "overall"
+        }
+      }
+    },
+    {
+      "name": "fetch_report_if_needed",
+      "description": "Intelligently fetch reports based on quality assessment",
+      "parameters": {
+        "company": {
+          "type": "string",
+          "description": "Company name",
+          "required": true
+        },
+        "dimension": {
+          "type": "string",
+          "description": "ESG dimension to improve",
+          "default": "overall"
+        },
+        "force_fetch": {
+          "type": "boolean",
+          "description": "Force fetching even if quality is adequate",
+          "default": false
+        }
+      }
+    },
+    {
+      "name": "fetch_specific_report",
+      "description": "Fetch a specific type of report for a company",
+      "parameters": {
+        "company": {
+          "type": "string",
+          "description": "Company name",
+          "required": true
+        },
+        "report_type": {
+          "type": "string",
+          "description": "Type of report (sustainability, climate, tcfd, social, governance)",
+          "default": "sustainability"
+        },
+        "year": {
+          "type": "integer",
+          "description": "Specific year (null for latest)",
+          "default": null
+        }
+      }
+    },
+    {
+      "name": "batch_quality_check",
+      "description": "Check quality for multiple companies and identify which need updates",
+      "parameters": {
+        "companies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of company names",
+          "required": true
+        }
+      }
+    }
+  ],
+  "triggers": {
+    "quality_threshold": {
+      "description": "Automatically fetch reports when quality falls below threshold",
+      "conditions": {
+        "extraction_quality": "< 0.6",
+        "classification_confidence": "< 0.7",
+        "embedding_coverage": "< 0.5",
+        "overall_quality": "< 0.65"
+      },
+      "action": "fetch_report_if_needed"
+    }
+  },
+  "configuration": {
+    "quality_threshold": 0.7,
+    "cache_duration_hours": 24,
+    "max_concurrent_fetches": 3,
+    "retry_attempts": 2,
+    "sources": {
+      "primary": [
+        "company_website",
+        "investor_relations"
+      ],
+      "secondary": [
+        "sustainabilityreports.com",
+        "cdp.net",
+        "globalreporting.org"
+      ]
+    }
+  },
+  "integration": {
+    "watsonx": {
+      "enabled": true,
+      "purpose": "Quality assessment and content extraction"
+    },
+    "astradb": {
+      "enabled": true,
+      "purpose": "Store fetched reports and quality metrics"
+    }
+  }
+}

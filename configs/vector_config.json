@@ -1,0 +1,7 @@
+{
+  "embedding_dim": 128,
+  "seed": 42,
+  "alpha": 0.6,
+  "knn_k": 25,
+  "_comment": "Deterministic vector retrieval config. α=0.6 means 60% lexical + 40% semantic fusion."
+}

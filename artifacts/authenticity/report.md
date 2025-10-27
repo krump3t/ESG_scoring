@@ -1,15 +1,15 @@
 # ESG Authenticity Audit Report
 
 **Protocol**: SCA v13.8-MEA
-**Timestamp**: 2025-10-26T20:24:45.688306Z
+**Timestamp**: 2025-10-26T23:12:40.467805Z
 **Git Commit**: unknown
 **Status**: BLOCKED
 
 ## Summary
 
-- **Total Violations**: 203
-- **FATAL**: 34
-- **WARN**: 169
+- **Total Violations**: 149
+- **FATAL**: 9
+- **WARN**: 140
 - **Detectors Run**: 8
 
 ## Violations by Type
@@ -44,11 +44,7 @@
 
 ### Json As Parquet (16)
 
-- **agents\scoring\rubric_loader.py:299** [WARN]
-  - to_json() used for data artifact - should use to_parquet()
-  - `rubric.to_json(cache_path)`
-
-- **agents\scoring\rubric_models.py:182** [WARN]
+- **agents\scoring\rubric_models.py:183** [WARN]
   - to_json() used for data artifact - should use to_parquet()
   - `def to_json(self, output_path: Path) -> None:`
 
@@ -108,6 +104,10 @@
   - to_json() used for data artifact - should use to_parquet()
   - `test_file.write_text('response = df.to_json(orient="records")\n')`
 
+- **tests\test_phase_5_7_remediation.py:40** [WARN]
+  - to_json() used for data artifact - should use to_parquet()
+  - `"""Test pattern: replace to_json() with to_parquet()"""`
+
 
 ### Network Import (33)
 
@@ -119,7 +119,7 @@
   - Network library requests in production code
   - `import requests`
 
-- **agents\crawler\data_providers\sasb_provider.py:10** [WARN]
+- **agents\crawler\data_providers\sasb_provider.py:13** [WARN]
   - Network library requests in production code
   - `import requests`
 
@@ -135,7 +135,7 @@
   - Network library requests in production code
   - `import requests`
 
-- **apps\ingestion\crawler.py:267** [WARN]
+- **apps\ingestion\crawler.py:277** [WARN]
   - Network library requests in production code
   - `import requests`
 
@@ -143,7 +143,7 @@
   - Network library requests in production code
   - `import requests`
 
-- **apps\ingestion\report_fetcher.py:189** [WARN]
+- **apps\ingestion\report_fetcher.py:201** [WARN]
   - Network library requests in production code
   - `import requests`
 
@@ -244,7 +244,7 @@
   - `test_file.write_text("import requests\n")`
 
 
-### Nondeterministic Time (102)
+### Nondeterministic Time (81)
 
 - **agents\crawler\data_providers\base_provider.py:109** [WARN]
   - time.time() breaks determinism - needs override
@@ -266,11 +266,11 @@
   - datetime.now() breaks determinism - needs override
   - `date_retrieved=datetime.now().strftime("%Y-%m-%d"),`
 
-- **agents\crawler\data_providers\sasb_provider.py:156** [WARN]
+- **agents\crawler\data_providers\sasb_provider.py:159** [WARN]
   - datetime.now() breaks determinism - needs override
   - `year=year if year else datetime.now().year,`
 
-- **agents\crawler\data_providers\sasb_provider.py:171** [WARN]
+- **agents\crawler\data_providers\sasb_provider.py:174** [WARN]
   - datetime.now() breaks determinism - needs override
   - `date_retrieved=datetime.now().strftime("%Y-%m-%d"),`
 
@@ -298,89 +298,37 @@
   - time.time() breaks determinism - needs override
   - `ingestion_id = f"orchestrator_{intent.company}_{intent.year}_{int(time.time())}"`
 
-- **apps\evaluation\response_quality.py:123** [WARN]
+- **apps\evaluation\response_quality.py:27** [WARN]
+  - datetime.now() breaks determinism - needs override
+  - `return datetime.now().isoformat()`
+
+- **apps\evaluation\response_quality.py:132** [WARN]
   - datetime.now() breaks determinism - needs override
   - `response_id = hashlib.md5(f"{query}{response}{datetime.now()}".encode()).hexdigest()[:12]`
 
-- **apps\evaluation\response_quality.py:143** [WARN]
+- **apps\ingestion\crawler.py:27** [WARN]
   - datetime.now() breaks determinism - needs override
-  - `timestamp=datetime.now(),`
+  - `return datetime.now().isoformat()`
 
-- **apps\evaluation\response_quality.py:739** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")`
-
-- **apps\evaluation\response_quality.py:743** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `'timestamp': datetime.now().isoformat(),`
-
-- **apps\ingestion\crawler.py:35** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `self.crawled_at = datetime.now().isoformat()`
-
-- **apps\ingestion\crawler.py:91** [WARN]
+- **apps\ingestion\crawler.py:100** [WARN]
   - time.time() breaks determinism - needs override
   - `elapsed = time.time() - self.last_request_time`
 
-- **apps\ingestion\crawler.py:95** [WARN]
+- **apps\ingestion\crawler.py:104** [WARN]
   - time.time() breaks determinism - needs override
   - `self.last_request_time = time.time()`
 
-- **apps\ingestion\crawler.py:154** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `age = datetime.now() - datetime.fromtimestamp(cache_file.stat().st_mtime)`
-
-- **apps\ingestion\crawler.py:224** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `year = datetime.now().year`
-
-- **apps\ingestion\crawler.py:294** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `year = self._extract_year(text) or datetime.now().year`
-
-- **apps\ingestion\report_fetcher.py:273** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"extracted": datetime.now().isoformat()`
-
-- **apps\ingestion\report_fetcher.py:307** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `data["fetched_at"] = datetime.now().isoformat()`
-
-- **apps\ingestion\report_fetcher.py:318** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"fetched_at": datetime.now().isoformat()`
-
-- **apps\ingestion\report_fetcher.py:328** [WARN]
+- **apps\ingestion\report_fetcher.py:340** [WARN]
   - datetime.now() breaks determinism - needs override
   - `key_parts.append(datetime.now().strftime("%Y%m%d"))`
 
-- **apps\ingestion\report_fetcher.py:340** [WARN]
+- **apps\ingestion\report_fetcher.py:352** [WARN]
   - datetime.now() breaks determinism - needs override
   - `age_hours = (datetime.now().timestamp() - cache_file.stat().st_mtime) / 3600`
 
-- **apps\ingestion\validator.py:294** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `validation_timestamp=datetime.now().isoformat(),`
-
-- **apps\ingestion\validator.py:374** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"timestamp": datetime.now().isoformat(),`
-
-- **apps\ingestion\validator.py:413** [WARN]
+- **apps\ingestion\validator.py:426** [WARN]
   - datetime.now() breaks determinism - needs override
   - `self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")`
-
-- **apps\ingestion\validator.py:478** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"timestamp": datetime.now().isoformat()`
-
-- **apps\ingestion\validator.py:499** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `crawl_timestamp = datetime.now().isoformat()`
-
-- **apps\ingestion\validator.py:501** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `parse_timestamp = datetime.now().isoformat()`
 
 - **apps\pipeline\demo_flow.py:361** [WARN]
   - time.time() breaks determinism - needs override
@@ -425,38 +373,6 @@
 - **apps\pipeline_orchestrator.py:353** [WARN]
   - time.time() breaks determinism - needs override
   - `phase_latency = time.time() - phase_start`
-
-- **apps\scoring\pipeline.py:138** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `return self._create_empty_score(company, year or datetime.now().year)`
-
-- **apps\scoring\pipeline.py:161** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `year=year or datetime.now().year,`
-
-- **apps\scoring\pipeline.py:167** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `timestamp=datetime.now().isoformat(),`
-
-- **apps\scoring\pipeline.py:486** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `current_year = datetime.now().year`
-
-- **apps\scoring\pipeline.py:548** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `timestamp=datetime.now().isoformat(),`
-
-- **apps\scoring\pipeline.py:616** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `scores.append(self._create_empty_score(company, year or datetime.now().year))`
-
-- **apps\scoring\pipeline.py:626** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"timestamp": datetime.now().isoformat(),`
-
-- **apps\scoring\pipeline.py:661** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `report_file = self.config.reports_dir / f"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"`
 
 - **diagnose_quality_issues.py:344** [WARN]
   - datetime.now() breaks determinism - needs override
@@ -542,43 +458,47 @@
   - datetime.now() breaks determinism - needs override
   - `'timestamp': datetime.now().isoformat()`
 
-- **scripts\compare_esg_analysis.py:105** [WARN]
+- **scripts\compare_esg_analysis.py:23** [WARN]
+  - datetime.now() breaks determinism - needs override
+  - `return datetime.now().isoformat()`
+
+- **scripts\compare_esg_analysis.py:115** [WARN]
   - time.time() breaks determinism - needs override
   - `t0 = time.time()`
 
-- **scripts\compare_esg_analysis.py:108** [WARN]
+- **scripts\compare_esg_analysis.py:118** [WARN]
   - time.time() breaks determinism - needs override
   - `latency_ms = round((time.time() - t0) * 1000, 2)`
 
-- **scripts\compare_esg_analysis.py:134** [WARN]
+- **scripts\compare_esg_analysis.py:144** [WARN]
   - time.time() breaks determinism - needs override
   - `t0 = time.time()`
 
-- **scripts\compare_esg_analysis.py:150** [WARN]
+- **scripts\compare_esg_analysis.py:160** [WARN]
   - time.time() breaks determinism - needs override
   - `latency_ms = round((time.time() - t0) * 1000, 2)`
 
-- **scripts\compare_esg_analysis.py:167** [WARN]
+- **scripts\compare_esg_analysis.py:177** [WARN]
   - time.time() breaks determinism - needs override
   - `t0 = time.time()`
 
-- **scripts\compare_esg_analysis.py:180** [WARN]
+- **scripts\compare_esg_analysis.py:190** [WARN]
   - time.time() breaks determinism - needs override
   - `latency_ms = round((time.time() - t0) * 1000, 2)`
 
-- **scripts\compare_esg_analysis.py:197** [WARN]
+- **scripts\compare_esg_analysis.py:207** [WARN]
   - time.time() breaks determinism - needs override
   - `t0 = time.time()`
 
-- **scripts\compare_esg_analysis.py:214** [WARN]
+- **scripts\compare_esg_analysis.py:224** [WARN]
   - time.time() breaks determinism - needs override
   - `latency_ms = round((time.time() - t0) * 1000, 2)`
 
-- **scripts\compare_esg_analysis.py:280** [WARN]
+- **scripts\compare_esg_analysis.py:290** [WARN]
   - time.time() breaks determinism - needs override
   - `t0 = time.time()`
 
-- **scripts\compare_esg_analysis.py:282** [WARN]
+- **scripts\compare_esg_analysis.py:292** [WARN]
   - time.time() breaks determinism - needs override
   - `latencies["generation_ms"] = round((time.time() - t0) * 1000, 2)`
 
@@ -610,31 +530,27 @@
   - time.time() breaks determinism - needs override
   - `# Allow time.time() for performance metrics`
 
-- **scripts\run_scoring.py:37** [WARN]
+- **scripts\run_scoring.py:47** [WARN]
   - datetime.now() breaks determinism - needs override
   - `logging.FileHandler(f'logs/scoring_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')`
 
-- **scripts\run_scoring.py:135** [WARN]
-  - datetime.now() breaks determinism - needs override
-  - `"generated_at": datetime.now().isoformat(),`
-
-- **scripts\run_scoring.py:185** [WARN]
+- **scripts\run_scoring.py:195** [WARN]
   - datetime.now() breaks determinism - needs override
   - `report_file = output_dir / f"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"`
 
-- **scripts\run_scoring.py:190** [WARN]
+- **scripts\run_scoring.py:200** [WARN]
   - datetime.now() breaks determinism - needs override
   - `md_file = output_dir / f"comparative_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"`
 
-- **scripts\run_scoring.py:193** [WARN]
+- **scripts\run_scoring.py:203** [WARN]
   - datetime.now() breaks determinism - needs override
   - `f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")`
 
-- **scripts\run_scoring.py:287** [WARN]
+- **scripts\run_scoring.py:297** [WARN]
   - time.time() breaks determinism - needs override
   - `total_start = time.time()`
 
-- **scripts\run_scoring.py:313** [WARN]
+- **scripts\run_scoring.py:323** [WARN]
   - time.time() breaks determinism - needs override
   - `total_time = time.time() - total_start`
 
@@ -655,27 +571,7 @@
   - `"end_time": time.time(),`
 
 
-### Silent Exception (18)
-
-- **agents\crawler\data_providers\__init__.py:15** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except ImportError:`
-
-- **agents\crawler\data_providers\__init__.py:21** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except ImportError:`
-
-- **agents\crawler\data_providers\sasb_provider.py:109** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except Exception:`
-
-- **agents\storage\duckdb_manager.py:63** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except Exception:`
-
-- **agents\storage\duckdb_manager.py:70** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except Exception:`
+### Silent Exception (10)
 
 - **apps\integration_validator.py:110** [WARN]
   - Except block with pass - silently swallows errors
@@ -692,18 +588,6 @@
 - **apps\integration_validator.py:327** [WARN]
   - Except block with pass - silently swallows errors
   - `except Exception as e:`
-
-- **scripts\embed_and_index.py:290** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except ImportError:`
-
-- **scripts\ingest_company.py:105** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except ImportError:`
-
-- **scripts\ingest_company.py:143** [WARN]
-  - Except block with pass - silently swallows errors
-  - `except ImportError:`
 
 - **scripts\load_embeddings_to_astradb.py:171** [WARN]
   - Except block with pass - silently swallows errors
@@ -730,111 +614,11 @@
   - `except Exception:`
 
 
-### Unseeded Random (26)
+### Unseeded Random (1)
 
-- **apps\mcp_server\server.py:41** [FATAL]
+- **apps\mcp_server\server.py:46** [FATAL]
   - Unseeded random.randint call - breaks determinism
   - `stage = random.randint(1,3)`
-
-- **scripts\test_differential_scoring.py:351** [FATAL]
-  - Unseeded random.randint call - breaks determinism
-  - `num_strategies = random.randint(1, 3)`
-
-- **scripts\test_differential_scoring.py:353** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `strategy = random.choice(strategies)`
-
-- **scripts\test_rubric_v3_differential.py:420** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `percent=random.choice(percents),`
-
-- **scripts\test_rubric_v3_differential.py:421** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `year=random.choice(years),`
-
-- **scripts\test_rubric_v3_differential.py:422** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `method=random.choice(methods),`
-
-- **scripts\test_rubric_v3_differential.py:423** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `gas_type=random.choice(gas_types),`
-
-- **scripts\test_rubric_v3_differential.py:424** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `verifier=random.choice(verifiers),`
-
-- **scripts\test_rubric_v3_differential.py:425** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `framework=random.choice(frameworks),`
-
-- **scripts\test_rubric_v3_differential.py:426** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `system=random.choice(systems),`
-
-- **scripts\test_rubric_v3_differential.py:427** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `frequency=random.choice(frequencies),`
-
-- **scripts\test_rubric_v3_differential.py:428** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `scenario=random.choice(scenarios),`
-
-- **scripts\test_rubric_v3_differential.py:429** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `risk=random.choice(risks)`
-
-- **scripts\test_rubric_v3_differential.py:453** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `text = random.choice(prefixes) + text`
-
-- **scripts\test_rubric_v3_differential.py:457** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `text = text + random.choice(suffixes)`
-
-- **tests\test_authenticity_audit.py:87** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `"""Should detect random.choice() without seed"""`
-
-- **tests\test_authenticity_audit.py:89** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `test_file.write_text("x = random.choice([1, 2, 3])\n")`
-
-- **tests\test_authenticity_audit.py:98** [FATAL]
-  - Unseeded random.randint call - breaks determinism
-  - `"""Should detect random.randint()"""`
-
-- **tests\test_authenticity_audit.py:100** [FATAL]
-  - Unseeded random.randint call - breaks determinism
-  - `test_file.write_text("x = random.randint(1, 10)\n")`
-
-- **tests\test_authenticity_audit.py:108** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `"""Should detect numpy.random.choice()"""`
-
-- **tests\test_authenticity_audit.py:108** [FATAL]
-  - Unseeded numpy.random.choice call - breaks determinism
-  - `"""Should detect numpy.random.choice()"""`
-
-- **tests\test_authenticity_audit.py:110** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `test_file.write_text("x = numpy.random.choice(arr)\n")`
-
-- **tests\test_authenticity_audit.py:110** [FATAL]
-  - Unseeded numpy.random.choice call - breaks determinism
-  - `test_file.write_text("x = numpy.random.choice(arr)\n")`
-
-- **tests\test_authenticity_audit.py:118** [FATAL]
-  - Unseeded numpy.random.shuffle call - breaks determinism
-  - `"""Should detect numpy.random.shuffle()"""`
-
-- **tests\test_authenticity_audit.py:120** [FATAL]
-  - Unseeded numpy.random.shuffle call - breaks determinism
-  - `test_file.write_text("numpy.random.shuffle(arr)\n")`
-
-- **tests\test_authenticity_audit.py:130** [FATAL]
-  - Unseeded random.choice call - breaks determinism
-  - `test_file.write_text("# x = random.choice([1, 2, 3])\n")`
 
 
 ### Workspace Escape (2)

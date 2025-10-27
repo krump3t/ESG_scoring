@@ -1,0 +1,36 @@
+# Development Dockerfile with full dependencies for runner service
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    ca-certificates \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy dev requirements (no Airflow to avoid FastAPI conflict)
+COPY requirements-dev.txt .
+
+# Install all dependencies
+RUN pip install --no-cache-dir --upgrade pip wheel setuptools && \
+    pip install --no-cache-dir -r requirements-dev.txt
+
+# Copy application code (will be overridden by volumes in docker-compose)
+COPY agents/ /app/agents/
+COPY apps/ /app/apps/
+COPY libs/ /app/libs/
+COPY scripts/ /app/scripts/
+COPY rubrics/ /app/rubrics/
+COPY pytest.ini /app/
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONHASHSEED=0 \
+    SEED=42
+
+# Keep container alive
+CMD ["tail", "-f", "/dev/null"]
