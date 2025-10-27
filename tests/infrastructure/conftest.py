@@ -9,13 +9,13 @@ Implements SCA v13.8 MEA traceability requirements:
 """
 
 import json
-import time
 from pathlib import Path
 from typing import Dict, Any, List
 import subprocess
 import sys
 
 import pytest
+from libs.utils.clock import get_clock
 
 
 # ============================================================================
@@ -26,7 +26,8 @@ class TestContext:
     """Capture test execution context for MEA compliance."""
 
     def __init__(self):
-        self.start_time = time.time()
+        clock = get_clock()
+        self.start_time = clock.time()
         self.run_id = f"phase1-{int(self.start_time)}"
         self.task_dir = Path(__file__).parent.parent.parent
         self.qa_dir = self.task_dir / "qa"
@@ -54,8 +55,9 @@ class TestContext:
 
     def record_event(self, event_type: str, data: Dict[str, Any]):
         """Record detailed execution event to run_events.jsonl."""
+        clock = get_clock()
         event = {
-            "timestamp": time.time(),
+            "timestamp": clock.time(),
             "type": event_type,
             "data": data
         }
@@ -73,12 +75,14 @@ class TestContext:
 
     def save_manifest(self):
         """Save run_manifest.json with all files touched."""
+        clock = get_clock()
+        end_time = clock.time()
         manifest = {
             "run_id": self.run_id,
             "task_dir": str(self.task_dir),
             "start_time": self.start_time,
-            "end_time": time.time(),
-            "duration_seconds": time.time() - self.start_time,
+            "end_time": end_time,
+            "duration_seconds": end_time - self.start_time,
             "files_touched": self.files_touched,
             "test_files": [
                 "tests/infrastructure/test_docker_services.py",
