@@ -1,30 +1,6 @@
-{
-  "globs": [
-    "**/agents/crawler/ledger.py",
-    "**/agents/scoring/rubric_scorer.py",
-    "**/libs/retrieval/parity_checker.py",
-    "**/apps/api/main.py"
-  ],
-  "entry_points": [
-    {
-      "module": "agents.crawler.ledger",
-      "class": "IngestLedger",
-      "methods": ["add_crawl", "get_all", "get_by_url"]
-    },
-    {
-      "module": "agents.scoring.rubric_scorer",
-      "class": "RubricScorer",
-      "methods": ["score"]
-    },
-    {
-      "module": "libs.retrieval.parity_checker",
-      "class": "ParityChecker",
-      "methods": ["check_parity", "save_report", "batch_check"]
-    },
-    {
-      "module": "apps.api.main",
-      "function": "get_trace",
-      "description": "GET /trace endpoint for traceability audit"
-    }
-  ]
-}
+[
+  "**/agents/crawler/ledger.py",
+  "**/agents/scoring/rubric_scorer.py",
+  "**/libs/retrieval/parity_checker.py",
+  "**/apps/api/main.py"
+]

@@ -5,9 +5,9 @@
         "AUTO": "2"
     },
     "current_task": {
-        "task_id": "018",
-        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\018-esg-query-synthesis",
-        "task_slug": "esg-query-synthesis"
+        "task_id": "AR-001",
+        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\AR-001-authenticity-refactor",
+        "task_slug": "authenticity-refactor"
     },
     "task_sequence": [
         "001-mcp-iceberg-infrastructure",
