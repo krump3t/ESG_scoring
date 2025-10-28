@@ -1,0 +1,11 @@
+{
+  "paths": [
+    "apps/pipeline/score_flow.py",
+    "agents/scoring/evidence_aggregator.py",
+    "agents/scoring/parity_validator.py"
+  ],
+  "entry_points": [
+    "apps.pipeline.score_flow:run_demo"
+  ],
+  "description": "Critical Path files for DEMO-001 E2E demo. score_flow.py orchestrates the pipeline, evidence_aggregator.py selects evidence with provenance, parity_validator.py enforces evidence ⊆ top-k constraint."
+}

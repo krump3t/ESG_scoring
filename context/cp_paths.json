@@ -1,9 +1,3 @@
 {
-  "cp_paths": [
-    "apps/api",
-    "apps/scoring",
-    "libs",
-    "pipelines/airflow/dags",
-    "sca_infrastructure"
-  ]
+  "paths": [ "agents/**/*.py","apps/**/*.py","libs/**/*.py","src/**/*.py" ]
 }

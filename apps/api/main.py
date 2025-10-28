@@ -11,15 +11,19 @@ Compliance:
 - No placeholders: Real pipeline integration
 """
 
-from typing import List, Dict, Any, Optional
+from typing import Any, Dict, List, Optional
+
+import json
+import logging
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
-import hashlib
-import json
-from pathlib import Path
-import time
+
 from libs.utils.clock import get_clock
+
 clock = get_clock()
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="ESG Scoring API",
@@ -29,10 +33,12 @@ app = FastAPI(
 
 # Wire in Prometheus metrics router
 from apps.api import metrics
+
 app.include_router(metrics.router)
 
 # Wire in health check router
 from apps.api import health
+
 app.include_router(health.create_router())
 
 # Global: companies manifest (loaded on startup)
@@ -67,6 +73,7 @@ def get_company_record(company: str, year: int) -> Optional[Dict[str, Any]]:
 
 class ScoreRequest(BaseModel):
     """Request schema for /score endpoint."""
+
     company: str = Field(..., description="Company name to score", min_length=1)
     year: Optional[int] = Field(None, description="Reporting year (optional)", ge=2000, le=2100)
     query: str = Field(..., description="ESG query/theme to assess", min_length=1)
@@ -74,8 +81,9 @@ class ScoreRequest(BaseModel):
 
 class Evidence(BaseModel):
     """Evidence citation for scoring."""
-    quote: str = Field(..., description="Text quote from source document")
-    page: Optional[int] = Field(None, description="Page number in source document")
+    doc_id: str = Field(..., description="Document identifier for provenance")
+    quote: str = Field(..., description="Text quote (≤30 words)")
+    sha256: str = Field(..., description="SHA256 hash of the evidence snippet")
 
 
 class DimensionScore(BaseModel):
@@ -83,7 +91,14 @@ class DimensionScore(BaseModel):
     theme: str = Field(..., description="Dimension name (TSP, OSP, DM, GHG, RD, EI, RMM)")
     stage: int = Field(..., description="Maturity stage (0-4)", ge=0, le=4)
     confidence: float = Field(..., description="Confidence score (0.0-1.0)", ge=0.0, le=1.0)
+    stage_descriptor: str = Field(..., description="Human-readable stage descriptor")
     evidence: List[Evidence] = Field(default_factory=list, description="Supporting evidence")
+
+
+class ParityResult(BaseModel):
+    """Parity validation output."""
+    parity_ok: bool = Field(..., description="True when evidence ⊆ fused top-k and ≥2 citations")
+    evidence_ids: List[str] = Field(default_factory=list, description="Doc IDs contributing evidence")
 
 
 class ScoreResponse(BaseModel):
@@ -94,6 +109,7 @@ class ScoreResponse(BaseModel):
     model_version: str = "v1.0"
     rubric_version: str = "3.0"
     trace_id: str = Field(..., description="SHA256 hash for request traceability")
+    parity: ParityResult
 
 
 @app.post("/score", response_model=ScoreResponse, tags=["Scoring"], status_code=200)
@@ -137,20 +153,29 @@ async def score_esg(
         company_rec = get_company_record(request.company, year)
 
         if not company_rec:
-            esg_api_requests_total.labels(route="/score", method="POST", status="404").inc()
-            raise HTTPException(
-                status_code=404,
-                detail=f"Company '{request.company}' with year {year} not found in manifest"
-            )
+            from apps.pipeline import demo_flow
+
+            try:
+                demo_flow.lookup_manifest(request.company, year)
+                company_rec = {"company": request.company, "year": year}
+            except FileNotFoundError:
+                esg_api_requests_total.labels(route="/score", method="POST", status="404").inc()
+                raise HTTPException(
+                    status_code=404,
+                    detail=f"Company '{request.company}' with year {year} not found in manifest"
+                )
 
         # Call demo_flow pipeline
         from apps.pipeline.demo_flow import run_score
 
+        semantic_enabled = bool(semantic)
+        fusion_alpha = alpha if semantic_enabled else 1.0
         result = run_score(
             company=request.company,
             year=year,
             query=request.query,
-            alpha=alpha,
+            semantic=semantic_enabled,
+            alpha=fusion_alpha,
             k=k,
             seed=42  # Fixed for determinism
         )
@@ -161,21 +186,28 @@ async def score_esg(
         esg_score_latency_seconds.observe(latency)
 
         # Convert demo_flow response to API schema
-        scores = []
+        scores: List[DimensionScore] = []
         for score_item in result.get("scores", []):
-            evidence_list = []
-            for ev in score_item.get("evidence", []):
-                evidence_list.append(Evidence(
-                    quote=ev.get("text", ""),
-                    page=None
-                ))
+            evidence_objects = [
+                Evidence(
+                    doc_id=ev.get("doc_id", ""),
+                    quote=ev.get("quote", ""),
+                    sha256=ev.get("sha256", "")
+                )
+                for ev in score_item.get("evidence", [])
+            ]
 
-            scores.append(DimensionScore(
-                theme=score_item.get("pillar", "Environmental"),
-                stage=score_item.get("score", 0),
-                confidence=0.75,  # Default confidence
-                evidence=evidence_list
-            ))
+            scores.append(
+                DimensionScore(
+                    theme=score_item.get("theme", "ESG"),
+                    stage=int(score_item.get("stage", 0)),
+                    confidence=float(score_item.get("confidence", 0.0)),
+                    stage_descriptor=score_item.get("stage_descriptor", ""),
+                    evidence=evidence_objects,
+                )
+            )
+
+        scores.sort(key=lambda item: item.theme)
 
         esg_api_requests_total.labels(route="/score", method="POST", status="200").inc()
 
@@ -185,7 +217,11 @@ async def score_esg(
             scores=scores,
             model_version=result.get("model_version", "v1.0"),
             rubric_version=result.get("rubric_version", "3.0"),
-            trace_id=result.get("trace_id", "unknown")
+            trace_id=result.get("trace_id", "unknown"),
+            parity=ParityResult(
+                parity_ok=bool(result.get("parity", {}).get("parity_ok", False)),
+                evidence_ids=list(result.get("parity", {}).get("evidence_ids", [])),
+            ),
         )
 
     except HTTPException:

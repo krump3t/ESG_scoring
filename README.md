@@ -1,5 +1,9 @@
 # ESG Evaluation & Prospecting Engine
 
+[![CI Validation](https://github.com/krump3t/ESG_scoring/actions/workflows/sca-validation.yml/badge.svg)](https://github.com/krump3t/ESG_scoring/actions/workflows/sca-validation.yml) [![Coverage](https://img.shields.io/badge/coverage-htmlcov-blue)](#ci-gates)
+
+> **Authority Reference:** This `./README.md` is the canonical project brief for SCA v13.8 tasks (replaces any `/mnt/data/README.md` reference).
+
 **Status**: Production-Ready with Authentic Data Pipeline ✅
 **Protocol**: SCA v13.8-MEA (Scientific Coding Agent with Mandatory Execution Algorithm)
 **Last Updated**: 2025-10-26
@@ -52,6 +56,47 @@ curl -X POST 'http://127.0.0.1:8000/score'   -H 'Content-Type: application/json'
 Metrics:
 - Prometheus endpoint at: `GET /metrics`
 
+## Docker-only Quickstart
+
+```bash
+make docker-build
+make docker-smoke
+docker-compose up
+```
+
+Run the smoke target before long-lived containers; it enforces the deterministic CP defaults (`LIVE_EMBEDDINGS=false`, `ALLOW_NETWORK=false`) and should only be relaxed for the opt-in integration flow.
+
+## WSL2 + Docker Desktop Doctor
+
+Live targets are now gated by a hard preflight; run it before any Docker build, smoke, or live commands.
+
+### One-Command Preflight
+
+```bash
+make doctor && make live-preflight
+```
+
+The `live-preflight` target re-runs both doctor scripts, merges their JSON payloads, and fails closed when Docker Desktop or WSL prerequisites are missing. It is wired after `doctor` for `docker-build`, `docker-smoke`, and `live`, so builds do not proceed until the merged status is `"ok"`.
+
+Actionable messages emitted by the preflight:
+
+- `sudo groupadd docker || true && sudo usermod -aG docker $USER ; restart WSL session`
+- `Start Docker Desktop, then rerun: make doctor`
+- `Enable distro in Docker Desktop → Settings → Resources → WSL Integration`
+- `Move repo under a path without spaces or quote volume mounts`
+- `Install Compose v2 / enable Compose integration`
+
+After addressing issues, rerun:
+
+```bash
+make doctor && make live-preflight
+make docker-build
+make docker-smoke
+export SEC_USER_AGENT="IBM-ESG/ScoringApp/0.1 (Contact: your-email@example.com; Purpose: EDGAR 10-K fetch for ESG demo)" \
+       ALLOW_NETWORK=true LIVE_EMBEDDINGS=true WX_API_KEY=... WX_PROJECT=... WX_MODEL_ID=...
+docker compose -f docker-compose.live.yml up -d --build
+```
+
 ---
 
 ## 2) Project Scaffolding & Architecture
@@ -59,169 +104,176 @@ Metrics:
 ### Project Structure (Current Implementation)
 
 ```
+
 prospecting-engine/
-│
-├── agents/                                    # Core agent modules (production)
-│   ├── batch/                                # Batch processing workflows
-│   ├── crawler/                              # Multi-source data ingestion
-│   │   ├── data_providers/                   # ✅ Provider abstraction layer
-│   │   │   ├── base_provider.py             # Common interface for all providers
-│   │   │   ├── cdp_provider.py              # CDP Climate Change API
-│   │   │   ├── sec_edgar_provider.py        # SEC EDGAR 10-K/10-Q extraction
-│   │   │   ├── gri_provider.py              # GRI Database scraper
-│   │   │   ├── sasb_provider.py             # SASB Standards provider
-│   │   │   └── ticker_lookup.py             # Company ticker resolution
-│   │   ├── extractors/                       # ✅ PDF/HTML extraction
-│   │   │   └── enhanced_pdf_extractor.py    # Semantic PDF parser (5.43 findings/page)
-│   │   ├── writers/                          # ✅ Data writers
-│   │   │   └── parquet_writer.py            # Bronze layer Parquet writer
-│   │   ├── multi_source_crawler.py          # ✅ Multi-provider orchestrator
-│   │   └── sustainability_reports_crawler.py # Legacy direct URL crawler
-│   │
-│   ├── extraction/                           # ✅ Asymmetric extraction paths
-│   │   ├── structured_extractor.py          # SEC EDGAR JSON parser (96.7% coverage)
-│   │   ├── extraction_router.py             # Content-type routing (100% coverage)
-│   │   └── (llm_extractor.py)               # 📅 Planned: LLM-based PDF extraction
-│   │
-│   ├── embedding/                            # Embedding generation
-│   ├── normalizer/                           # Silver layer normalization
-│   ├── parser/                               # Document parsing utilities
-│   ├── query/                                # Query synthesis agents
-│   │   └── orchestrator.py                  # Query orchestration logic
-│   │
-│   ├── retrieval/                            # Retrieval agents (hybrid)
-│   ├── scoring/                              # ESG maturity scoring
-│   │   ├── characteristic_matcher.py        # Evidence-theme matching
-│   │   ├── rubric_v3_scorer.py             # Rubric v3.0 implementation (95.7% spec)
-│   │   ├── rubric_loader.py                # Rubric loading utilities
-│   │   └── evidence_table_generator.py     # Evidence aggregation
-│   │
-│   └── storage/                              # ✅ Data lake storage layer
-│       ├── bronze_writer.py                 # Immutable append-only storage
-│       ├── silver_normalizer.py             # Deduplication + freshness penalties
-│       └── duckdb_manager.py                # SQL query layer
-│
-├── apps/                                      # Application layer
-│   ├── api/                                  # FastAPI REST endpoints
-│   │   ├── main.py                          # API entrypoint
-│   │   ├── logging_config.py               # Structured logging
-│   │   ├── metrics.py                       # Prometheus metrics
-│   │   └── telemetry.py                     # Observability hooks
-│   │
-│   ├── evaluation/                           # Response quality evaluation
-│   ├── index/                                # Indexing services
-│   ├── ingestion/                            # Document ingestion workflows
-│   ├── pipeline/                             # End-to-end pipeline orchestration
-│   ├── rubric/                               # Rubric integration
-│   └── scoring/                              # Scoring services
-│
-├── libs/                                      # Shared libraries
-│   ├── analytics/                            # Analytics utilities
-│   ├── cache/                                # Redis/in-memory caching
-│   ├── config/                               # Configuration management
-│   ├── contracts/                            # ✅ Data contracts (Pydantic models)
-│   │   └── extraction_contracts.py          # ExtractionResult, ExtractionQuality
-│   │
-│   ├── embedding/                            # ✅ Embedding services
-│   │   └── watsonx_embedder.py             # IBM watsonx.ai Slate embedder
-│   │
-│   ├── llm/                                  # LLM clients
-│   │   └── watsonx_client.py               # IBM watsonx.ai Granite LLM
-│   │
-│   ├── models/                               # ✅ Domain models
-│   │   └── esg_metrics.py                  # ESGMetrics Pydantic model
-│   │
-│   ├── qa/                                   # Quality assurance tools
-│   │   └── tee.py                           # Event logging for traceability
-│   │
-│   ├── query/                                # Query utilities
-│   ├── ranking/                              # Ranking algorithms
-│   ├── retrieval/                            # ✅ Retrieval implementations
-│   │   ├── parquet_retriever.py            # Lexical Parquet retrieval
-│   │   └── semantic_retriever.py           # Vector similarity search (AstraDB)
-│   │
-│   ├── storage/                              # ✅ Storage abstractions
-│   │   ├── astradb_vector.py               # AstraDB vector store client
-│   │   ├── astradb_graph.py                # AstraDB graph store client
-│   │   └── (local_vector.py)               # Local FAISS fallback
-│   │
-│   └── utils/                                # Utility functions
-│       ├── trace.py                         # Distributed tracing
-│       └── (io helpers, crypto, etc.)
-│
-├── configs/                                   # Configuration files
-│   ├── data_source_registry.json            # ✅ 7 verified data sources
-│   ├── crawl_targets_phase1.json            # Priority company targets
-│   └── env/.env.template                    # Environment template
-│
-├── data/                                      # ✅ Data lake (Hive partitioning)
-│   ├── bronze/                               # Raw ingestion (append-only)
-│   │   └── org_id={org}/year={year}/theme={theme}/
-│   ├── silver/                               # Normalized (deduplicated)
-│   │   └── org_id={org}/year={year}/theme={theme}/
-│   ├── gold/                                 # 📅 Planned: Aggregated metrics
-│   ├── ingested/                             # ✅ Parquet corpus
-│   │   ├── esg_documents.parquet           # 27 LSE ESG documents
-│   │   └── esg_embeddings.parquet          # 768-dim vectors
-│   └── esg_evidence.duckdb                  # ✅ DuckDB query layer
-│
-├── rubrics/                                   # ESG scoring rubrics
-│   ├── maturity_v3.json                     # ✅ Canonical rubric (7 themes × 5 stages)
-│   ├── esg_rubric_schema_v3.json           # JSON schema definition
-│   ├── compile_rubric.py                    # MD → JSON compiler
-│   └── archive/                             # Historical rubric versions
-│
-├── scripts/                                   # Operational scripts
-│   ├── compute_embeddings.py               # ✅ Batch embedding generation
-│   ├── load_embeddings_to_astradb.py       # ✅ AstraDB vector upsert
-│   ├── ingest_esg_corpus.py                # ✅ Multi-format ingestion
-│   ├── embed_and_index.py                  # Deterministic indexing
-│   ├── compare_esg_analysis.py             # RAG pipeline comparison
-│   ├── qa/                                  # Quality assurance scripts
-│   │   └── authenticity_audit.py           # ✅ Authenticity violation detector
-│   └── (30+ other operational scripts)
-│
-├── tasks/                                     # SCA v13.8 task management
-│   ├── 012-asymmetric-extraction/           # ✅ Phase 3 (complete)
-│   ├── 014-data-lake-integration-phase4/    # ✅ Phase 4 (complete)
-│   ├── 015-pipeline-integration-phase5/     # ✅ Phase 5 (complete)
-│   ├── 018-esg-query-synthesis/             # 🔄 Current task
-│   ├── 019-authenticity-infrastructure/     # 📅 Next phase
-│   └── (30+ completed and planned tasks)
-│
-├── tests/                                     # Test suite (53+ tests passing)
-│   ├── agents/                               # Agent unit tests
-│   ├── authenticity/                         # ✅ 19 authenticity tests
-│   ├── extraction/                           # ✅ 42 extraction tests (100% passing)
-│   ├── integration/                          # E2E integration tests
-│   ├── phase3/                               # Phase 3 validation tests
-│   ├── phase5/                               # ✅ 12 semantic retrieval tests
-│   ├── storage/                              # ✅ 53 storage tests
-│   └── conftest.py                          # Pytest configuration
-│
-├── artifacts/                                 # ✅ Execution artifacts
-│   ├── authenticity/                         # Authenticity audit reports
-│   │   ├── report.json                      # 149 violations (9 fatal, 140 warn)
-│   │   └── BASELINE_SNAPSHOT.json
-│   ├── lineage/                              # ✅ SHA256 lineage tracking
-│   │   ├── embeddings_manifest.json         # 27 embeddings manifest
-│   │   └── astradb_upsert_manifest.json     # AstraDB upsert log
-│   ├── state.json                            # Task execution state
-│   └── memory_sync.json                     # Agent memory snapshot
-│
-├── infrastructure/                            # Infrastructure as code
-├── mcp_server/                               # MCP JSON-RPC server
-├── pipelines/airflow/                        # Airflow DAGs (optional)
-├── sca_infrastructure/                       # SCA protocol runner
-│   └── runner.py                            # Output-Contract JSON emitter
-│
-├── requirements.txt                          # ✅ Pinned dependencies
-├── requirements-runtime.txt                  # Runtime-only deps
-├── requirements-dev.txt                      # Development dependencies
-├── pytest.ini                                # Pytest configuration
-├── REPRODUCIBILITY.md                        # ✅ Reproducibility guide
-└── README.md                                 # This file
+├── agents/  # Core agent modules (production)
+│   ├── batch/  # Batch processing workflows
+│   ├── crawler/  # Multi-source data ingestion
+│   │   ├── data_providers/  # Provider abstraction layer
+│   │   │   ├── base_provider.py  # Common interface for all providers
+│   │   │   ├── cdp_provider.py  # CDP Climate Change API
+│   │   │   ├── sec_edgar_provider.py  # SEC EDGAR 10-K/10-Q extraction
+│   │   │   ├── sec_edgar_provider_legacy.py  # Legacy SEC flow (kept for audits)
+│   │   │   ├── gri_provider.py  # GRI Database scraper
+│   │   │   ├── sasb_provider.py  # SASB Standards provider
+│   │   │   └── ticker_lookup.py  # Company ticker resolution
+│   │   ├── extractors/  # PDF/HTML extraction utilities
+│   │   │   ├── enhanced_pdf_extractor.py  # Semantic PDF parser (5.43 findings/page)
+│   │   │   └── pdf_extractor.py  # Lightweight PDF fallback
+│   │   ├── writers/  # Data writers (Parquet, etc.)
+│   │   │   └── parquet_writer.py  # Bronze layer Parquet writer
+│   │   ├── multi_source_crawler.py  # Multi-provider orchestrator
+│   │   ├── multi_source_crawler_v2.py  # Iterative orchestrator improvements
+│   │   ├── mcp_crawler.py  # MCP-native crawler workflows
+│   │   ├── ledger.py  # Ingestion ledger + metadata capture
+│   │   └── sustainability_reports_crawler.py  # Legacy direct URL crawler
+│   ├── extraction/  # Asymmetric extraction paths
+│   │   ├── structured_extractor.py  # SEC EDGAR JSON parser (96.7% coverage)
+│   │   ├── pdf_text_extractor.py  # Deterministic PDF text extraction
+│   │   ├── llm_extractor.py  # watsonx LLM extractor for PDFs
+│   │   └── extraction_router.py  # Content-type routing (100% coverage)
+│   ├── embedding/  # Embedding generation helpers
+│   │   └── watsonx_embedder.py  # IBM watsonx.ai Slate embedder
+│   ├── normalizer/
+│   ├── parser/
+│   ├── query/  # Query synthesis agents
+│   │   ├── orchestrator.py  # Query orchestration logic
+│   │   ├── cache_manager.py  # Deterministic query caching
+│   │   └── query_parser.py  # Structured query parsing
+│   ├── retrieval/  # Retrieval agents (hybrid)
+│   │   └── parquet_retriever.py  # Lexical Parquet retrieval
+│   ├── scoring/  # ESG maturity scoring
+│   │   ├── characteristic_matcher.py  # Evidence-theme matching
+│   │   ├── rubric_v3_scorer.py  # Rubric v3.0 implementation (95.7% spec)
+│   │   ├── rubric_loader.py  # Rubric loading utilities
+│   │   ├── rubric_scorer.py  # Composite rubric scoring interfaces
+│   │   ├── rubric_models.py  # Pydantic models for rubric schema
+│   │   ├── evidence_table_generator.py  # Evidence aggregation
+│   │   └── mcp_scoring.py  # MCP-scoped scoring adapters
+│   └── storage/  # Data lake storage layer
+│       ├── bronze_writer.py  # Immutable append-only storage
+│       ├── silver_normalizer.py  # Deduplication + freshness penalties
+│       └── duckdb_manager.py  # SQL query layer
+├── apps/  # Application layer
+│   ├── api/  # FastAPI REST endpoints
+│   │   ├── main.py  # API entrypoint
+│   │   ├── logging_config.py  # Structured logging
+│   │   ├── metrics.py  # Prometheus metrics
+│   │   └── telemetry.py  # Observability hooks
+│   ├── evaluation/
+│   ├── index/
+│   ├── ingestion/
+│   ├── pipeline/                             # Deterministic demo pipeline + parity artifacts
+│   ├── pipeline_orchestrator.py  # CLI pipeline entrypoint
+│   ├── rubric/
+│   ├── scoring/                              # Watsonx shims (currently guarded)
+│   ├── integration_validator.py  # Runtime validation utilities
+│   ├── mcp_server/  # MCP service integration surfaces
+│   │   └── server.py
+│   └── utils/  # Provenance helpers (sha256, word trimming)
+│       └── provenance.py
+├── artifacts/  # Execution artifacts + audit logs
+├── configs/  # Configuration files
+│   ├── data_source_registry.json  # 7 verified data sources
+│   ├── crawl_targets_phase1.json  # Priority company targets
+│   ├── integration_flags.json  # Feature toggle surface
+│   ├── vector_config.json  # Embedding/vector search tunables
+│   ├── env/  # Environment templates
+│   │   └── .env.template  # Base env template
+│   └── mcp/
+│       └── manifest.json
+├── context/  # ADRs, design notes, and task context
+│   ├── adr.md
+│   ├── design.md
+│   ├── assumptions.md
+│   ├── cp_paths.json
+│   ├── data_sources.json
+│   ├── evidence.json
+│   └── hypothesis.md
+├── dashboards/  # Reserved for BI dashboards (currently empty)
+├── data/  # Data lake (Hive partitioning)
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/  # Aggregated metrics (live parquet outputs)
+│   │   └── org_id=MSFT/
+│   │       └── year=2023/
+│   │           └── theme=GHG/
+│   │               └── scores-20251027_072137.parquet
+│   ├── ingested/  # Parquet corpora (documents + embeddings)
+│   ├── evidence.duckdb  # DuckDB query layer snapshot
+│   ├── cache/
+│   ├── confidence_tests/
+│   ├── crawler_cache/
+│   ├── diagnostics/
+│   ├── pdf_cache/
+│   ├── raw/
+│   ├── raw_sample/
+│   ├── real_evaluations/
+│   ├── schema/
+│   └── validation_cache/
+├── data_lake/  # Archived parquet snapshots
+├── docs/  # Human-readable implementation notes
+├── fixtures/  # Integration fixtures
+├── iceberg/  # Iceberg table definitions
+├── infrastructure/  # Infrastructure as code
+├── integrations/  # External integration adapters (stubs)
+├── libs/  # Shared libraries
+│   ├── analytics/
+│   ├── cache/
+│   ├── config/
+│   ├── contracts/
+│   ├── data/
+│   ├── data_lake/
+│   ├── embedding/
+│   ├── llm/
+│   ├── models/
+│   ├── qa/
+│   ├── query/
+│   ├── ranking/
+│   ├── retrieval/
+│   ├── scoring/
+│   ├── storage/  # AstraDB clients
+│   └── utils/  # Tracing, IO, crypto helpers
+├── logs/  # Runtime logs (scoring + pipelines)
+├── mcp_server/  # MCP JSON-RPC server implementation
+├── pipelines/  # Workflow orchestration (Airflow, etc.)
+│   └── airflow/
+│       └── dags/
+│           ├── esg_pipeline.py  # Core ESG ingestion DAG
+│           └── esg_scoring_dag.py  # Scheduled ESG scoring DAG
+├── qa/  # QA reports, coverage, and validation logs
+├── reports/  # Generated summaries & evaluation reports
+├── rubrics/  # ESG scoring rubrics (v1–v3, compiler)
+│   ├── ESG Doc.docx
+│   ├── README.md
+│   ├── RUBRIC_V3_MIGRATION.md
+│   ├── archive/
+│   ├── compile_rubric.py
+│   ├── esg_maturity_rubricv3.md
+│   ├── esg_rubric_schema_v3.json
+│   ├── esg_rubric_v1.md
+│   └── maturity_v3.json
+├── sca_infrastructure/  # SCA protocol runner (JSON contract emitter)
+│   └── runner.py
+├── scripts/  # Operational & validation scripts
+├── tasks/  # SCA v13.8 task manifests (phase history)
+├── tests/  # Comprehensive test suite (unit + integration)
+├── AUTHENTICITY_*.md, PHASE*_SUMMARY.md, MERGE_*.md  # Compliance + phase documentation (root-level files)
+├── requirements.txt
+├── requirements-runtime.txt
+├── requirements-dev.txt
+├── pytest.ini
+├── REPRODUCIBILITY.md  # Reproducibility guide
+└── README.md
 ```
+Run `python3 scripts/generate_structure_snapshot.py` to regenerate the curated tree.
+
+#### Maintaining the Structure Snapshot
+
+- Run `python3 scripts/generate_structure_snapshot.py > /tmp/structure.txt` to emit the current tree. The script enforces our curated ordering and will fail if expected paths disappear.
+- Replace the README block above with the new output (between the triple backticks) whenever directories/files change.
+- If you introduce a new directory that should appear in the snapshot, update `ORDER_OVERRIDE`/`COMMENT_MAP` (and optionally `STOP_RECURSION`) inside `scripts/generate_structure_snapshot.py` so the structure renders in the intended position with the right annotations.
+- After updating the README, rerun the script once more to confirm it emits the same text you pasted, then include the script update and README change in the same commit.
 
 ### Key Design Principles
 
@@ -232,6 +284,7 @@ prospecting-engine/
 5. **Type Safety**: Pydantic models, mypy --strict compliance, 100% type hints on CP files
 6. **TDD Compliance**: Tests written BEFORE implementation, ≥95% coverage on critical path
 7. **Observability**: Prometheus metrics, structured logging, distributed tracing
+8. **Evidence Parity**: `/score` responses include doc_id + SHA256 provenance and parity artifacts (top-k vs evidence) are written on every run
 
 ---
 
@@ -545,7 +598,7 @@ artifacts/        # run outputs (parquet, manifests, events)
 - **CP tests**: `tests/test_smoke_cp.py`, `tests/test_rubric_contract.py`, `tests/test_enhanced_extraction_cp.py`
 - **Metrics**: Prometheus `/metrics` endpoint (request counts, latency)
 
-> **Note**: External services (AstraDB, watsonx) are **stubbed** for offline development. Core extraction, scoring, and multi-source ingestion are production-ready.
+> **Note**: External services (AstraDB, watsonx) require real adapters. `apps/scoring/wx_client.py` intentionally raises `NotImplementedError`/`AssertionError` until authenticated integrations are wired. Demo scoring runs fully offline using deterministic embeddings and parity-checked evidence.
 
 ---
 
@@ -1220,3 +1273,99 @@ Send newline-delimited JSON-RPC to stdin, e.g.
 - `esg.retrieve`
 
 **Manifest:** `configs/mcp/manifest.json`
+
+## Real Components Setup (Optional)
+
+The deterministic CP runs offline. To exercise live embeddings and SEC ingestion for
+integration testing:
+
+```bash
+# Real components (guarded)
+export LIVE_EMBEDDINGS=true ALLOW_NETWORK=true WX_API_KEY=... WX_PROJECT=... WX_MODEL_ID=... SEC_USER_AGENT="youremail@example.com"
+pip install -r requirements.txt
+pytest -m "integration and requires_api" -q
+```
+
+To avoid exporting secrets manually, copy `configs/.env.template` to `configs/.env`
+and populate the credentials, then run `export $(grep -v '^#' configs/.env | xargs)`.
+
+Required environment variables when LIVE_EMBEDDINGS/ALLOW_NETWORK are true:
+
+- `WX_API_KEY`, `WX_PROJECT`, `WX_MODEL_ID`
+- `SEC_USER_AGENT` (must include contact email per SEC policy)
+- Optional overrides: `DATA_ROOT`, `SEC_TEST_COMPANY`, `SEC_TEST_YEAR`
+
+## CI Gates
+
+Use the Makefile targets to reproduce the fail-closed continuous-production gates locally:
+
+```bash
+make setup
+make cp
+make coverage
+make types
+make ccn
+make docs
+```
+
+The `make coverage` target enforces ≥95% coverage and generates both XML and HTML artifacts under `htmlcov/`.
+
+Deterministic CP runs with `LIVE_EMBEDDINGS=false` and `ALLOW_NETWORK=false`; enable them only when running the opt-in integration flow.
+
+## Running Integration
+
+Integration tests are opt-in and require live IBM watsonx connectivity. Provide `WX_API_KEY`, `WX_PROJECT`, `WX_MODEL_ID`, and `SEC_USER_AGENT`, then enable the networked path:
+
+```bash
+LIVE_EMBEDDINGS=true ALLOW_NETWORK=true make integ
+```
+
+This matches the opt-in CI job and keeps the default command path deterministic and offline.
+
+## WSL2 + Docker Desktop Doctor
+
+Run the doctor to verify Docker prerequisites when using WSL2:
+
+```bash
+make doctor
+```
+
+Interpretation:
+- `needs_group_fix=true`: run `sudo groupadd docker || true` and `sudo usermod -aG docker $USER`, then close **all** WSL terminals and start a new session (or run `exec su - $USER`).
+- `docker_desktop_running=false` or `wsl_integration=likely_disabled`: start Docker Desktop and enable **Settings → Resources → WSL Integration** for your distro.
+- `path_has_spaces=true`: clone the repo under `~/projects` or quote the full path when using Docker volume mounts.
+
+After remediation, re-test:
+
+```bash
+make docker-build
+make docker-smoke
+export SEC_USER_AGENT="IBM-ESG/ScoringApp/0.1 (Contact: you@example.com; Purpose: EDGAR 10-K fetch for ESG maturity demo)"
+export ALLOW_NETWORK=true LIVE_EMBEDDINGS=true WX_API_KEY=... WX_PROJECT=... WX_MODEL_ID=...
+docker compose up --build -d
+python scripts/edgar_validate.py --company "Apple Inc." --year 2024
+python tasks/DEMO-001-multi-source-e2e/scripts/run_demo_live.py --company "Apple Inc." --year 2024 --query "climate strategy" --alpha 0.6 --k 10
+```
+
+## SEC EDGAR Setup & Validation
+
+SEC ingestion remains disabled by default. To exercise the real 10-K pipeline:
+
+1. Export your SEC-compliant user agent (update the email before running):
+   ```bash
+   export SEC_USER_AGENT="IBM-ESG/ScoringApp/0.1 (Contact: phi.phu.tran.business@gmail.com; Purpose: EDGAR 10-K fetch for ESG maturity demo)"
+   ```
+2. Temporarily allow network access for integration checks:
+   ```bash
+   export ALLOW_NETWORK=true
+   ```
+3. Validate connectivity and caching:
+   ```bash
+   python scripts/edgar_validate.py
+   ```
+4. Run the network-guarded suite:
+   ```bash
+   pytest -m "integration and requires_api" -q
+   ```
+
+Reset `ALLOW_NETWORK=false` when finished to keep CP runs deterministic.

@@ -1,502 +1,285 @@
-"""SEC EDGAR Data Provider - Enhanced with Retry Logic and Rate Limiting
+"""Guarded SEC EDGAR provider with polite caching behaviour."""
 
-**SCA v13.8 Enhanced Features**:
-- Production-grade rate limiting (10 req/sec compliance via `ratelimit`)
-- Exponential backoff retry logic (via `tenacity`)
-- Comprehensive error handling with custom exceptions
-- SHA256 content deduplication
-- Structured logging and observability
+from __future__ import annotations
 
-Access to U.S. Securities and Exchange Commission EDGAR database:
-- All public U.S. companies (10,000+)
-- 10-K Annual Reports (Item 1A: Risk Factors often contain climate/ESG risks)
-- DEF 14A Proxy Statements (Governance and ESG disclosures)
-- Legally binding disclosures
-
-API Endpoint: https://data.sec.gov/submissions/
-Rate Limit: Max 10 requests/second per SEC policy (enforced)
-Authentication: User-Agent with contact email REQUIRED
-
-Author: Scientific Coding Agent v13.8-MEA
-Date: 2025-10-23
-"""
-
-import logging
-import requests  # @allow-network:Crawler agent requires external API access to SEC EDGAR database
-import re
 import hashlib
 import json
-from typing import List, Optional, Dict, Any
+import logging
+import re
+import time
 from datetime import datetime
 from pathlib import Path
-from bs4 import BeautifulSoup
+from typing import Dict, Optional, Tuple
 
-# Rate limiting and retry imports
-from ratelimit import limits, sleep_and_retry
-from tenacity import (
-    retry,
-    stop_after_attempt,
-    wait_exponential,
-    retry_if_exception_type,
-    before_sleep_log
-)
+import requests  # @allow-network: integration tests may call the SEC API
 
-from .base_provider import BaseDataProvider, CompanyReport
-from .exceptions import (
-    DocumentNotFoundError,
-    RateLimitExceededError,
-    InvalidCIKError,
-    MaxRetriesExceededError,
-    InvalidResponseError,
-    RequestTimeoutError
-)
+from libs.utils import env
 
 logger = logging.getLogger(__name__)
 
+SEC_SUBMISSIONS_URL = "https://data.sec.gov/submissions/CIK{cik}.json"
+SEC_TICKER_URL = "https://www.sec.gov/files/company_tickers.json"
+SEC_ARCHIVES_URL = "https://www.sec.gov/Archives/edgar/data/{cik}/{accession}/{document}"
+SEC_INDEX_URL = "https://www.sec.gov/Archives/edgar/data/{cik}/{accession}/index.json"
 
-class SECEdgarProvider(BaseDataProvider):
-    """SEC EDGAR data provider with production-grade reliability features.
+REQUEST_TIMEOUT_SECONDS = 30
+MAX_RETRIES = 3
+BACKOFF_BASE_SECONDS = 0.5
+REQUEST_COOLDOWN_SECONDS = 0.2
 
-    **Enhanced Features (SCA v13.8)**:
-    - Rate limiting: 10 requests/second (SEC compliance)
-    - Retry logic: Exponential backoff for transient failures
-    - Error handling: Custom exceptions for different failure modes
-    - Deduplication: SHA256 content hashing
-    - Observability: Structured logging and event streaming
+DATA_ROOT = Path(env.get("DATA_ROOT", "artifacts"))
+SEC_CACHE_ROOT = DATA_ROOT / "ingestion" / "sec"
+SEC_CACHE_ROOT.mkdir(parents=True, exist_ok=True)
 
-    Extracts Item 1A (Risk Factors) which often contain ESG/climate disclosures.
-    """
+_last_request_ts: float = 0.0
+_ticker_cache: Optional[list[Dict[str, object]]] = None
 
-    # Class-level constants
-    RATE_LIMIT_CALLS = 10  # SEC EDGAR limit: 10 requests per second
-    RATE_LIMIT_PERIOD = 1  # seconds
-    MAX_RETRY_ATTEMPTS = 3
-    REQUEST_TIMEOUT = 30  # seconds
 
-    def __init__(
-        self,
-        contact_email: Optional[str] = None,
-        user_agent: Optional[str] = None
-    ):
-        """Initialize SEC EDGAR provider with rate limiting and retry logic.
+class SECIntegrationError(RuntimeError):
+    """Raised when SEC integration fails in live mode."""
 
-        Args:
-            contact_email: Contact email for User-Agent (required by SEC)
-            user_agent: Full User-Agent string (overrides contact_email)
 
-        Raises:
-            ValueError: If neither contact_email nor user_agent provided
-        """
-        super().__init__(source_id="sec_edgar", rate_limit=0.11)
+def fetch_10k(company: str, year: int, *, allow_network: Optional[bool] = None) -> Path:
+    """Download and cache a 10-K filing PDF for ``company`` and ``year``."""
 
-        self.base_url = "https://www.sec.gov"
-        self.api_base = "https://data.sec.gov"
+    network_allowed = env.bool_flag("ALLOW_NETWORK") if allow_network is None else allow_network
+    if not network_allowed:
+        raise PermissionError("ALLOW_NETWORK=false. Enable to fetch SEC filings.")
 
-        # Construct User-Agent
-        if user_agent:
-            self.user_agent = user_agent
-        elif contact_email:
-            self.user_agent = f"ESG-Crawler/2.0 (Research; {contact_email})"
-        else:
-            # Default for testing
-            self.user_agent = "ESG-Crawler/2.0 (Research; contact@example.com)"
-            logger.warning("No contact email provided. Using default User-Agent.")
+    user_agent = env.get("SEC_USER_AGENT", "").strip()
+    if not user_agent:
+        raise RuntimeError("SEC_USER_AGENT is required to access the SEC API.")
 
-        if '@' not in self.user_agent:
-            logger.warning("SEC requires User-Agent with contact email.")
+    identifiers = _resolve_company(company.strip(), user_agent=user_agent)
+    company_slug = _sanitize_company(company)
+    company_dir = SEC_CACHE_ROOT / company_slug / str(year)
+    company_dir.mkdir(parents=True, exist_ok=True)
 
-        logger.info(f"Initialized SEC EDGAR provider with rate limit: {self.RATE_LIMIT_CALLS} req/sec")
+    pdf_path = company_dir / "10-K.pdf"
+    ledger_path = company_dir / "ledger.json"
 
-    # ========================================================================
-    # RATE LIMITING
-    # ========================================================================
+    if _is_cached(pdf_path, ledger_path):
+        return pdf_path
 
-    @sleep_and_retry
-    @limits(calls=RATE_LIMIT_CALLS, period=RATE_LIMIT_PERIOD)
-    def _make_request(self, url: str, headers: Optional[Dict] = None) -> requests.Response:
-        """Make HTTP request with rate limiting.
+    if pdf_path.exists():
+        pdf_path.unlink()
+    if ledger_path.exists():
+        ledger_path.unlink()
 
-        **SCA v13.8**: Real rate limiting (not mocked), enforces 10 req/sec.
-
-        Args:
-            url: Request URL
-            headers: Optional HTTP headers
-
-        Returns:
-            requests.Response object
-
-        Raises:
-            RequestTimeoutError: If request exceeds timeout
-        """
-        logger.debug(f"Making rate-limited request to {url}")
-
-        if headers is None:
-            headers = self._get_headers()
-
-        try:
-            response = requests.get(url, headers=headers, timeout=self.REQUEST_TIMEOUT)
-            return response
-        except requests.Timeout as e:
-            raise RequestTimeoutError(f"Request timed out after {self.REQUEST_TIMEOUT}s: {url}") from e
-
-    def _get_headers(self) -> Dict[str, str]:
-        """Get HTTP headers with User-Agent.
-
-        **SCA v13.8**: Required by SEC EDGAR API.
-
-        Returns:
-            Dict with User-Agent header
-        """
-        return {"User-Agent": self.user_agent}
-
-    # ========================================================================
-    # RETRY LOGIC
-    # ========================================================================
-
-    @retry(
-        retry=retry_if_exception_type((requests.HTTPError, RateLimitExceededError)),
-        stop=stop_after_attempt(MAX_RETRY_ATTEMPTS),
-        wait=wait_exponential(multiplier=1, min=2, max=10),
-        before_sleep=before_sleep_log(logger, logging.WARNING),
-        reraise=True
+    filing = _find_filing(identifiers["cik"], year, user_agent=user_agent)
+    accession_compact = filing["accessionNumber"].replace("-", "")
+    document_name = _select_document(
+        identifiers["cik"],
+        accession_compact,
+        filing["primaryDocument"],
+        user_agent=user_agent,
     )
-    def _fetch_with_retry(self, url: str) -> requests.Response:
-        """Fetch URL with exponential backoff retry logic.
+    document_url = SEC_ARCHIVES_URL.format(
+        cik=int(identifiers["cik"]),
+        accession=accession_compact,
+        document=document_name,
+    )
 
-        **SCA v13.8**: Real exponential backoff (not trivial stub).
+    logger.info(
+        "Downloading SEC 10-K company=%s year=%s accession=%s document=%s",
+        company,
+        year,
+        filing["accessionNumber"],
+        document_name,
+    )
 
-        Retry schedule:
-        - Attempt 1: Immediate
-        - Attempt 2: Wait 2 seconds
-        - Attempt 3: Wait 4 seconds
-        - Fail after 3 attempts
+    pdf_bytes, status_code = _http_get(document_url, user_agent=user_agent)
+    sha256 = hashlib.sha256(pdf_bytes).hexdigest()
 
-        Args:
-            url: Request URL
+    temp_pdf = pdf_path.with_suffix(".tmp")
+    temp_pdf.write_bytes(pdf_bytes)
+    temp_pdf.replace(pdf_path)
 
-        Returns:
-            requests.Response object
+    ledger = {
+        "company": company,
+        "company_slug": company_slug,
+        "ticker": identifiers.get("ticker"),
+        "cik": identifiers["cik"],
+        "year": year,
+        "document": document_name,
+        "accession_number": filing["accessionNumber"],
+        "request": {
+            "url": document_url,
+            "status": status_code,
+            "user_agent": user_agent,
+            "fetched_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        },
+        "sha256": sha256,
+    }
+    temp_ledger = ledger_path.with_suffix(".tmp")
+    temp_ledger.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
+    temp_ledger.replace(ledger_path)
 
-        Raises:
-            MaxRetriesExceededError: If all retries exhausted
-            DocumentNotFoundError: If 404 (not retried)
-            RateLimitExceededError: If 503 persists (retried)
-        """
+    return pdf_path
+
+
+def _resolve_company(company: str, *, user_agent: str) -> Dict[str, str]:
+    """Return {'cik': str, 'ticker': str | None} for the provided company."""
+
+    stripped = company.strip()
+    if stripped.isdigit():
+        return {"cik": stripped.zfill(10), "ticker": ""}
+
+    mapping = _load_ticker_map(user_agent=user_agent)
+    company_key = _normalize_key(company)
+
+    # First try direct ticker match
+    for entry in mapping:
+        ticker = str(entry.get("ticker", "")).upper()
+        if ticker and _normalize_key(ticker) == company_key:
+            cik_str = str(entry.get("cik_str", "")).zfill(10)
+            return {"cik": cik_str, "ticker": ticker}
+
+    # Fallback: match by company title
+    for entry in mapping:
+        title = str(entry.get("title", ""))
+        if title and _normalize_key(title) == company_key:
+            cik_str = str(entry.get("cik_str", "")).zfill(10)
+            ticker = str(entry.get("ticker", "")).upper()
+            return {"cik": cik_str, "ticker": ticker}
+
+    raise SECIntegrationError(f"Unable to resolve company '{company}' to a CIK.")
+
+
+def _load_ticker_map(*, user_agent: str) -> list[Dict[str, object]]:
+    global _ticker_cache
+    if _ticker_cache is not None:
+        return _ticker_cache
+
+    cache_path = SEC_CACHE_ROOT / "company_tickers.json"
+    if cache_path.exists():
+        mapping_bytes = cache_path.read_bytes()
+    else:
+        logger.info("Fetching SEC ticker map…")
+        mapping_bytes, _ = _http_get(SEC_TICKER_URL, user_agent=user_agent)
+        cache_path.write_bytes(mapping_bytes)
+
+    data = json.loads(mapping_bytes.decode("utf-8"))
+    # The SEC file is an array of objects; convert dict-of-dicts if needed.
+    if isinstance(data, dict):
+        values = list(data.values())
+    else:
+        values = list(data)
+
+    _ticker_cache = values
+    return values
+
+
+def _find_filing(cik: str, year: int, *, user_agent: str) -> Dict[str, str]:
+    submissions_bytes, _ = _http_get(SEC_SUBMISSIONS_URL.format(cik=cik), user_agent=user_agent)
+    submissions = json.loads(submissions_bytes.decode("utf-8"))
+    filings = submissions.get("filings", {}).get("recent", {})
+
+    for idx, form in enumerate(filings.get("form", [])):
+        if form != "10-K":
+            continue
+        filing_year = filings.get("fy", [""])[idx]
+        if str(filing_year).isdigit() and int(filing_year) == int(year):
+            return {
+                "accessionNumber": filings["accessionNumber"][idx],
+                "primaryDocument": filings["primaryDocument"][idx],
+            }
+
+    raise SECIntegrationError(f"No 10-K found for CIK {cik} in {year}.")
+
+
+def _select_document(cik: str, accession: str, primary_document: str, *, user_agent: str) -> str:
+    """Prefer a PDF document if present in the filing directory."""
+
+    index_url = SEC_INDEX_URL.format(cik=int(cik), accession=accession)
+    try:
+        index_bytes, _ = _http_get(index_url, user_agent=user_agent)
+        index_data = json.loads(index_bytes.decode("utf-8"))
+    except SECIntegrationError:
+        logger.debug("Filing index unavailable, using primary document %s", primary_document)
+        return primary_document
+
+    directory_items = index_data.get("directory", {}).get("item", [])
+    for item in directory_items:
+        name = str(item.get("name", ""))
+        if name.lower().endswith(".pdf") and "10-k" in name.lower():
+            return name
+
+    logger.debug("No PDF found in index, using primary document %s", primary_document)
+    return primary_document
+
+
+def _http_get(url: str, *, user_agent: str) -> Tuple[bytes, int]:
+    headers = {"User-Agent": user_agent}
+    for attempt in range(MAX_RETRIES):
+        _respect_min_delay()
         try:
-            response = self._make_request(url)
+            response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT_SECONDS)
+        except requests.RequestException as exc:
+            logger.warning("SEC request error (%s/%s): %s", attempt + 1, MAX_RETRIES, exc)
+            _backoff(attempt)
+            continue
 
-            # Handle HTTP errors
-            if response.status_code == 404:
-                raise DocumentNotFoundError(f"Filing not found: {url}")
-            elif response.status_code == 503:
-                raise RateLimitExceededError(f"SEC EDGAR rate limit exceeded: {url}")
-            elif response.status_code >= 500:
-                response.raise_for_status()  # Triggers retry
-
-            response.raise_for_status()
-            return response
-
-        except requests.HTTPError as e:
-            if e.response.status_code == 404:
-                # Don't retry 404s
-                raise DocumentNotFoundError(f"Filing not found: {url}") from e
-            elif e.response.status_code == 503:
-                # Retry 503s
-                raise RateLimitExceededError(f"SEC EDGAR rate limit exceeded: {url}") from e
-            else:
-                raise
-
-    # ========================================================================
-    # VALIDATION
-    # ========================================================================
-
-    def _validate_cik(self, cik: str) -> None:
-        """Validate CIK format.
-
-        **SCA v13.8**: Fail fast on invalid input.
-
-        Valid CIK: 10-digit zero-padded string (e.g., "0000320193")
-
-        Args:
-            cik: Central Index Key
-
-        Raises:
-            InvalidCIKError: If CIK format is invalid
-        """
-        if not cik:
-            raise InvalidCIKError("CIK cannot be None or empty")
-
-        if not isinstance(cik, str):
-            raise InvalidCIKError(f"CIK must be string, got {type(cik)}")
-
-        if not re.match(r'^\d{10}$', cik):
-            raise InvalidCIKError(
-                f"Invalid CIK format: '{cik}'. Must be 10-digit zero-padded string (e.g., '0000320193')"
+        if response.status_code in {403, 429}:
+            logger.warning(
+                "SEC returned status %s for %s (attempt %s/%s)",
+                response.status_code,
+                url,
+                attempt + 1,
+                MAX_RETRIES,
             )
+            _backoff(attempt)
+            continue
 
-    def _validate_fiscal_year(self, fiscal_year: int) -> None:
-        """Validate fiscal year is in reasonable range.
+        if response.status_code >= 400:
+            raise SECIntegrationError(f"SEC request failed: {url} status={response.status_code}")
 
-        Args:
-            fiscal_year: Fiscal year
+        return response.content, response.status_code
 
-        Raises:
-            ValueError: If year is invalid
-        """
-        if not isinstance(fiscal_year, int):
-            raise ValueError(f"Fiscal year must be integer, got {type(fiscal_year)}")
-
-        if not (2000 <= fiscal_year <= 2030):
-            raise ValueError(f"Fiscal year {fiscal_year} outside valid range (2000-2030)")
-
-    # ========================================================================
-    # HTML PROCESSING
-    # ========================================================================
-
-    def _extract_text_from_html(self, html: str) -> str:
-        """Extract clean text from SEC filing HTML.
-
-        **SCA v13.8**: Real BeautifulSoup parsing (not regex).
-
-        Args:
-            html: HTML content
-
-        Returns:
-            Extracted text with whitespace normalized
-        """
-        soup = BeautifulSoup(html, 'lxml')
-
-        # Remove script and style tags
-        for element in soup(['script', 'style']):
-            element.decompose()
-
-        # Extract text
-        text = soup.get_text()
-
-        # Normalize whitespace
-        text = re.sub(r'\s+', ' ', text)
-        text = re.sub(r'\n\s*\n', '\n\n', text)
-
-        return text.strip()
-
-    def _extract_metadata(self, html: str, cik: str) -> Dict[str, Any]:
-        """Extract metadata from SEC filing HTML.
-
-        Args:
-            html: HTML content
-            cik: Company CIK
-
-        Returns:
-            Dict with metadata (company_name, filing_date, etc.)
-        """
-        soup = BeautifulSoup(html, 'lxml')
-
-        metadata = {"cik": cik}
-
-        # Extract company name from title
-        title_tag = soup.find('title')
-        if title_tag:
-            metadata["company_name"] = title_tag.text.strip()
-        else:
-            metadata["company_name"] = ""
-
-        # Extract filing date (best effort)
-        metadata["filing_date"] = None
-        for row in soup.find_all('tr'):
-            row_text = row.get_text()
-            if 'FILED AS OF DATE' in row_text or 'Filing Date' in row_text:
-                cells = row.find_all('td')
-                if len(cells) >= 2:
-                    metadata["filing_date"] = cells[-1].text.strip()
-                    break
-
-        return metadata
-
-    def _compute_content_hash(self, text: str) -> str:
-        """Compute SHA256 hash of text for deduplication.
-
-        **SCA v13.8**: Real SHA256 (not mock), deterministic.
-
-        Args:
-            text: Text content
-
-        Returns:
-            64-character hex SHA256 hash
-        """
-        return hashlib.sha256(text.encode('utf-8')).hexdigest()
-
-    # ========================================================================
-    # PUBLIC API
-    # ========================================================================
-
-    def fetch_10k(self, cik: str, fiscal_year: int) -> Dict[str, Any]:
-        """Fetch 10-K annual report from SEC EDGAR.
-
-        **SCA v13.8**: Complete implementation with retry, rate limiting, and error handling.
-
-        Args:
-            cik: 10-digit zero-padded CIK (e.g., "0000320193")
-            fiscal_year: Fiscal year (e.g., 2023)
-
-        Returns:
-            Dict with filing data:
-                - cik: Company CIK
-                - company_name: Company name
-                - filing_type: "10-K"
-                - fiscal_year: Fiscal year
-                - raw_html: Original HTML
-                - raw_text: Extracted text
-                - content_sha256: SHA256 hash
-                - source_url: SEC EDGAR URL
-                - metadata: Additional fields
-
-        Raises:
-            InvalidCIKError: If CIK format invalid
-            DocumentNotFoundError: If filing not found (404)
-            MaxRetriesExceededError: If retries exhausted
-        """
-        # Validate inputs
-        self._validate_cik(cik)
-        self._validate_fiscal_year(fiscal_year)
-
-        # Fetch filing metadata
-        filing_metadata = self._fetch_filing_metadata(cik, "10-K", fiscal_year)
-
-        if not filing_metadata:
-            raise DocumentNotFoundError(f"No 10-K filing found for CIK {cik} FY{fiscal_year}")
-
-        # Construct document URL
-        accession = filing_metadata["accessionNumber"].replace('-', '')
-        primary_doc = filing_metadata["primaryDocument"]
-        doc_url = f"{self.base_url}/Archives/edgar/data/{cik}/{accession}/{primary_doc}"
-
-        # Fetch document HTML
-        try:
-            response = self._fetch_with_retry(doc_url)
-            html_content = response.text
-        except MaxRetriesExceededError:
-            raise
-        except Exception as e:
-            raise InvalidResponseError(f"Failed to fetch document: {e}") from e
-
-        # Extract text and metadata
-        text_content = self._extract_text_from_html(html_content)
-        metadata = self._extract_metadata(html_content, cik)
-        content_hash = self._compute_content_hash(text_content)
-
-        return {
-            "cik": cik,
-            "company_name": metadata.get("company_name", ""),
-            "filing_type": "10-K",
-            "fiscal_year": fiscal_year,
-            "raw_html": html_content,
-            "raw_text": text_content,
-            "content_sha256": content_hash,
-            "source_url": doc_url,
-            "filing_date": filing_metadata.get("filingDate"),
-            "metadata": metadata
-        }
-
-    def _fetch_filing_metadata(self, cik: str, filing_type: str, fiscal_year: int) -> Optional[Dict]:
-        """Fetch filing metadata from SEC EDGAR API.
-
-        Args:
-            cik: Company CIK
-            filing_type: Filing type (e.g., "10-K", "DEF 14A")
-            fiscal_year: Fiscal year
-
-        Returns:
-            Dict with filing metadata or None if not found
-
-        Raises:
-            MaxRetriesExceededError: If retries exhausted
-            InvalidResponseError: If response is malformed
-        """
-        url = f"{self.api_base}/submissions/CIK{cik}.json"
-
-        try:
-            response = self._fetch_with_retry(url)
-            data = response.json()
-        except json.JSONDecodeError as e:
-            raise InvalidResponseError(f"Invalid JSON response from SEC EDGAR: {e}") from e
-        except DocumentNotFoundError:
-            return None
-
-        # Extract filings
-        filings = data.get('filings', {}).get('recent', {})
-        forms = filings.get('form', [])
-        filing_dates = filings.get('filingDate', [])
-        accession_numbers = filings.get('accessionNumber', [])
-        primary_documents = filings.get('primaryDocument', [])
-
-        # Find matching filing
-        for i, form in enumerate(forms):
-            if form == filing_type:
-                filing_date = filing_dates[i]
-                filing_year = int(filing_date[:4])
-
-                if filing_year == fiscal_year:
-                    return {
-                        "form": form,
-                        "filingDate": filing_date,
-                        "accessionNumber": accession_numbers[i],
-                        "primaryDocument": primary_documents[i]
-                    }
-
-        return None
-
-    # ========================================================================
-    # ABSTRACT METHOD IMPLEMENTATIONS (Minimal stubs for base class compatibility)
-    # ========================================================================
-
-    def search_company(
-        self,
-        company_name: Optional[str] = None,
-        company_id: Optional[str] = None,
-        year: Optional[int] = None
-    ) -> List[CompanyReport]:
-        """Search for company reports (stub - use fetch_10k for Phase 1).
-
-        **Phase 1 Note**: This method is a stub for BaseDataProvider compatibility.
-        Use fetch_10k(cik, fiscal_year) for enhanced functionality.
-
-        Raises:
-            NotImplementedError: Use fetch_10k() instead
-        """
-        raise NotImplementedError(
-            "Use fetch_10k(cik, fiscal_year) for Phase 1 enhanced implementation. "
-            "This method preserved for BaseDataProvider compatibility only."
-        )
-
-    def download_report(self, report: CompanyReport, output_path: str) -> bool:
-        """Download report (stub - use fetch_10k for Phase 1).
-
-        **Phase 1 Note**: This method is a stub for BaseDataProvider compatibility.
-        Use fetch_10k(cik, fiscal_year) for enhanced functionality.
-
-        Raises:
-            NotImplementedError: Use fetch_10k() instead
-        """
-        raise NotImplementedError(
-            "Use fetch_10k(cik, fiscal_year) for Phase 1 enhanced implementation. "
-            "This method preserved for BaseDataProvider compatibility only."
-        )
-
-    def list_available_companies(self, limit: int = 100) -> List[Dict[str, str]]:
-        """List companies (stub - use fetch_10k for Phase 1).
-
-        **Phase 1 Note**: This method is a stub for BaseDataProvider compatibility.
-        Use fetch_10k(cik, fiscal_year) for enhanced functionality.
-
-        Raises:
-            NotImplementedError: Use fetch_10k() instead
-        """
-        raise NotImplementedError(
-            "Use fetch_10k(cik, fiscal_year) for Phase 1 enhanced implementation. "
-            "This method preserved for BaseDataProvider compatibility only."
-        )
+    raise SECIntegrationError(f"Failed to download {url} after {MAX_RETRIES} attempts.")
 
 
+def _is_cached(pdf_path: Path, ledger_path: Path) -> bool:
+    if not pdf_path.exists() or not ledger_path.exists():
+        return False
 
-# Import legacy implementation for backward compatibility
-from .sec_edgar_provider_legacy import SECEdgarProviderLegacy
+    try:
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        logger.warning("Corrupt SEC ledger at %s; re-fetching.", ledger_path)
+        return False
+
+    recorded_sha = ledger.get("sha256")
+    if not recorded_sha:
+        logger.warning("Ledger missing sha256 at %s; re-fetching.", ledger_path)
+        return False
+
+    current_sha = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+    if current_sha != recorded_sha:
+        logger.warning("SEC cache hash mismatch for %s; refreshing.", pdf_path)
+        return False
+
+    return True
+
+
+def _respect_min_delay() -> None:
+    global _last_request_ts
+    now = time.monotonic()
+    elapsed = now - _last_request_ts
+    if elapsed < REQUEST_COOLDOWN_SECONDS:
+        time.sleep(REQUEST_COOLDOWN_SECONDS - elapsed)
+    _last_request_ts = time.monotonic()
+
+
+def _backoff(attempt: int) -> None:
+    delay = BACKOFF_BASE_SECONDS * (2**attempt)
+    time.sleep(delay)
+
+
+def _sanitize_company(company: str) -> str:
+    sanitized = re.sub(r"[^a-z0-9]+", "-", company.lower())
+    return sanitized.strip("-") or "company"
+
+
+def _normalize_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", value.lower())

@@ -1,0 +1,28 @@
+{
+  "org_id": "Apple Inc",
+  "year": 2023,
+  "rubric": "rubrics/maturity_v3.json",
+  "bronze_parquet": {
+    "path": "data/bronze/org_id=MSFT/year=2023/theme=GHG/part-20251027_070908-demo-b-20251027-070904.parquet",
+    "sha256": "91502a71fda3b1b92fc322544d2a720d141fb61964acadc8b351e1bb35feb9a3",
+    "note": "Deterministic demo bronze slice reused by regression tests (loaded read-only inside Docker)."
+  },
+  "sources": [
+    {
+      "path": "data/pdf_cache/Apple_2023_sustainability.pdf",
+      "sha256": "da75397bede881a2a58628328ea068d53b5c44f805f117a82d8f1f63be2b339d",
+      "description": "Authentic sustainability PDF cached for offline processing."
+    },
+    {
+      "path": "data/crawler_cache/sec_edgar_apple_2023_10k.json",
+      "sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "description": "SEC EDGAR Item 1A risk factors cache."
+    },
+    {
+      "path": "data/crawler_cache/cdp_apple_2023_climate.json",
+      "sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "description": "CDP climate disclosure cache."
+    }
+  ],
+  "evidence_context": "tasks/DEMO-001-multi-source-e2e/context/evidence.json"
+}

@@ -1,0 +1,4 @@
+embeddings:
+  live: false
+ingestion:
+  allow_network: false

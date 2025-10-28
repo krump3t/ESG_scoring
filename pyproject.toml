@@ -1,0 +1,13 @@
+[tool.interrogate]
+paths = ["apps", "agents", "libs"]
+fail-under = 95
+ignore-module = true
+exclude = ["tests", "docs", "artifacts", "scripts"]
+ignore-nested-functions = false
+ignore-private = false
+ignore-semiprivate = false
+
+[tool.lizard]
+max_ccn = 10
+languages = ["python"]
+source_paths = ["apps", "agents", "libs"]

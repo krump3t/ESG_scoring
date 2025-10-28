@@ -1,0 +1,30 @@
+[
+  {
+    "theme": "TSP",
+    "query": "sustainability strategy, governance oversight and net-zero targets timeline"
+  },
+  {
+    "theme": "OSP",
+    "query": "operational initiatives for waste reduction, recycling schemes and logistics improvements"
+  },
+  {
+    "theme": "DM",
+    "query": "data management and reporting controls, audit/assurance and KPI governance"
+  },
+  {
+    "theme": "GHG",
+    "query": "scope 1 and 2 reductions, scope 3 categories and overall net-zero pathway"
+  },
+  {
+    "theme": "RD",
+    "query": "risk management, transition and physical risks, TCFD scenarios and EPR assumptions"
+  },
+  {
+    "theme": "EI",
+    "query": "environmental impacts including waste diversion, circularity and resource efficiency"
+  },
+  {
+    "theme": "RMM",
+    "query": "responsible materials and market stewardship, supplier engagement and take-back programs"
+  }
+]

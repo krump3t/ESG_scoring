@@ -1,0 +1,131 @@
+name: SCA Validation Gates
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  cp_gates:
+    name: Continuous Production Gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHONHASHSEED: "0"
+      SEED: "42"
+      LIVE_EMBEDDINGS: "false"
+      ALLOW_NETWORK: "false"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            pip-
+
+      - name: Bootstrap environment
+        run: bash scripts/ci_setup.sh
+
+      - name: Run CP test suite
+        run: pytest -m cp -q --junitxml=junit.xml
+
+      - name: Run coverage suite
+        run: |
+          coverage run -m pytest
+          coverage report --fail-under=95
+          coverage xml
+          coverage html
+
+      - name: Type check
+        run: mypy --strict apps/ agents/ libs/
+
+      - name: Cyclomatic complexity gate
+        run: lizard -C 10 apps/ agents/ libs/
+
+      - name: Documentation coverage gate
+        run: interrogate -v -f 95 apps/ agents/ libs/
+
+      - name: Upload QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cp-gates-artifacts
+          path: |
+            coverage.xml
+            htmlcov/**
+            qa/htmlcov/**
+            qa/coverage.xml
+            junit.xml
+          if-no-files-found: ignore
+
+  docker_smoke:
+    name: Docker Smoke Validation
+    needs: cp_gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONHASHSEED: "0"
+      SEED: "42"
+      LIVE_EMBEDDINGS: "false"
+      ALLOW_NETWORK: "false"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image (cached)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          tags: esg-scoring:ci
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run docker smoke tests
+        run: bash scripts/docker_smoke.sh
+
+  integration_opt_in:
+    name: Integration Opt-In
+    needs:
+      - cp_gates
+      - docker_smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    if: ${{ secrets.WX_API_KEY != '' && secrets.WX_PROJECT != '' && secrets.WX_MODEL_ID != '' && secrets.SEC_USER_AGENT != '' }}
+    env:
+      LIVE_EMBEDDINGS: "true"
+      ALLOW_NETWORK: "true"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Bootstrap environment
+        run: bash scripts/ci_setup.sh
+
+      - name: Run integration tests
+        run: pytest -m "integration and requires_api" -q

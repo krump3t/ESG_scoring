@@ -1,0 +1,95 @@
+{
+  "sources": [
+    {
+      "name": "Apple 2023 Sustainability Report",
+      "type": "pdf_document",
+      "format": "PDF",
+      "path": "data/pdf_cache/Apple_2023_sustainability.pdf",
+      "records": "126 pages",
+      "sha256": "da75397bede881a2a58628328ea068d53b5c44f805f117a82d8f1f63be2b339d",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "provenance": "Apple Inc. public sustainability reporting",
+      "retention": "permanent",
+      "description": "Primary input for E2E demo. Contains GHG inventory, renewable energy targets, supplier engagement, governance disclosures."
+    },
+    {
+      "name": "SEC EDGAR Apple FY2023 Item 1A",
+      "type": "structured_json",
+      "format": "JSON",
+      "path": "data/crawler_cache/sec_edgar_apple_2023_10k.json",
+      "records": "Item 1A risk factors",
+      "sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "provenance": "SEC EDGAR public API (cached)",
+      "retention": "permanent",
+      "description": "Structured climate, risk, and governance disclosures from the FY2023 10-K filing."
+    },
+    {
+      "name": "CDP Climate Change 2023 (Apple)",
+      "type": "structured_json",
+      "format": "JSON",
+      "path": "data/crawler_cache/cdp_apple_2023_climate.json",
+      "records": "Governance, targets, GHG inventory",
+      "sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "retrieval_date": "2025-10-24",
+      "pii_flag": false,
+      "provenance": "CDP Open Data Portal (cached)",
+      "retention": "permanent",
+      "description": "Board oversight, management roles, transition plan, emissions inventory, and renewable energy commitments."
+    },
+    {
+      "name": "Rubric v3.0 Maturity Specification",
+      "type": "rubric_definition",
+      "format": "JSON",
+      "path": "rubrics/maturity_v3.json",
+      "records": 7,
+      "sha256": "computed_at_runtime",
+      "retrieval_date": "2025-10-27",
+      "pii_flag": false,
+      "provenance": "SCA protocol canonical rubric",
+      "retention": "permanent",
+      "description": "Single source of truth for 7-theme maturity scoring (TSP, OSP, DM, GHG, RD, EI, RMM)"
+    },
+    {
+      "name": "Data Source Registry",
+      "type": "configuration",
+      "format": "JSON",
+      "path": "configs/data_source_registry.json",
+      "records": 8,
+      "sha256": "computed_at_runtime",
+      "retrieval_date": "2025-10-27",
+      "pii_flag": false,
+      "provenance": "Multi-source crawler configuration",
+      "retention": "permanent",
+      "description": "Registry of Tier-1/2/3/4 data sources (CDP, SEC EDGAR, GRI, CSRHub, direct URLs)"
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Live CDP API",
+      "reason": "Network-free demo per CP requirements; use cached data"
+    },
+    {
+      "name": "Live SEC EDGAR API",
+      "reason": "Network-free demo per CP requirements; use cached data or synthetic"
+    },
+    {
+      "name": "Production ESG Database",
+      "reason": "PII sensitive; demo uses public reports only"
+    },
+    {
+      "name": "Vector Embeddings",
+      "reason": "Optional for demo; can use sparse retrieval only"
+    }
+  ],
+  "summary": {
+    "total_records": "1 PDF + 2 structured caches",
+    "pii_present": false,
+    "access_level": "public",
+    "sensitivity": "low (public sustainability reports)",
+    "backup_location": "data/pdf_cache/ and data/crawler_cache/",
+    "retention_policy": "permanent (demo artifacts)"
+  }
+}

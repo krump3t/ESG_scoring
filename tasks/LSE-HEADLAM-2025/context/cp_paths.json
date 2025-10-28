@@ -1,0 +1,14 @@
+{
+  "paths": [
+    "apps/pipeline/demo_flow.py",
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/parity_validator.py",
+    "agents/scoring/evidence_aggregator.py",
+    "libs/retrieval/hybrid_semantic.py",
+    "libs/ranking/lexical.py"
+  ],
+  "entry_points": [
+    "apps.pipeline.demo_flow:run_score"
+  ],
+  "description": "Critical path modules leveraged by the Headlam 2025 pipeline."
+}

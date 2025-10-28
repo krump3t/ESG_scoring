@@ -45,8 +45,8 @@ def fuse_lex_sem(
     if not (0.0 <= alpha <= 1.0):
         raise ValueError(f"alpha must be in [0, 1], got {alpha}")
 
-    # Collect all doc_ids from both score dicts
-    all_ids = set(lex_scores.keys()) | set(sem_scores.keys())
+    # Collect all doc_ids from both score dicts (sorted for deterministic traversal)
+    all_ids = sorted(set(lex_scores.keys()) | set(sem_scores.keys()))
 
     # Compute fused scores
     fused: List[Tuple[str, float]] = []

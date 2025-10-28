@@ -748,27 +748,17 @@ class RubricScorer:
 ```
 
 #### RubricLoader (rubric_loader.py)
-**Purpose**: Load rubric from markdown/JSON
+**Purpose**: Load rubric metadata from compiled JSON (`rubrics/maturity_v3.json`)
 
 ```python
 class RubricLoader:
-    def __init__(self)
-    
-    def load_from_markdown(self, rubric_path: Path) -> MaturityRubric
-    
-    def load_from_cache(self, cache_path: Path) -> MaturityRubric
-    
-    def cache_rubric(
-        self,
-        rubric: MaturityRubric,
-        cache_path: Path
-    ) -> None
-    
-    def _parse_theme_name(self, line: str) -> Optional[str]
-    
-    def _parse_stage_number(self, line: str) -> Optional[int]
-    
-    def _extract_keywords(self, description: str) -> List[str]
+    def __init__(self, compiled_path: Path | None = None)
+
+    def load(self) -> MaturityRubric                     # default entrypoint
+
+    def load_from_compiled_json(self, path: Path) -> MaturityRubric
+
+    def _extract_keywords(self, text: str) -> List[str]  # derives matching vocab
 ```
 
 #### CharacteristicMatcher (characteristic_matcher.py)
@@ -922,6 +912,18 @@ async def liveness_probe() -> Dict[str, bool]
 @app.get("/metrics")
 async def prometheus_metrics() -> str
 ```
+
+**Key behaviour**
+- `/score` delegates to `apps.pipeline.demo_flow.run_score`, which runs a deterministic offline pipeline (BM25 + seeded embeddings) and writes parity artifacts under `artifacts/demo/` and `artifacts/pipeline_validation/`.
+- Evidence payloads exposed by the API contain `doc_id`, `quote`, and `sha256` so downstream services can validate provenance.
+
+### Location: `apps/pipeline/demo_flow.py`
+**Purpose**: Offline scoring flow used by the API and CLI demos.
+
+- Loads bronze parquet for the requested company/year and filters to matching documents.
+- Computes lexical BM25 scores plus deterministic embeddings (hash/seeded) for cosine similarity, then calls `libs.retrieval.hybrid_semantic.fuse_lex_sem`.
+- Generates ≥2 evidence snippets per query (`doc_id`, `quote`, `sha256`) and records parity in `artifacts/pipeline_validation/demo_topk_vs_evidence.json`.
+- Persists supporting artifacts: `artifacts/demo/{chunks,evidence,maturity,score.jsonl}` and `artifacts/run_manifest.json`.
 
 #### Health Router (health.py)
 ```python
@@ -1723,6 +1725,9 @@ All docs and examples should use canonical names from Day 1 (P1).
   - Classes: CustomJsonFormatter, ScoreRequest, Evidence, DimensionScore, ScoreResponse, TraceRequest, QuoteRecord, TraceResponse
 - apps/scoring
   - Classes: PipelineConfig, CompanyScore, ESGScoringPipeline, StageDescriptor, ThemeRubric, RubricV3Loader, ScoringResult
+  - Note: `apps/scoring/wx_client.py` now raises `NotImplementedError`/`AssertionError` to prevent placeholder embeddings or fabricated findings; wire real watsonx adapters before use.
+- apps/utils
+  - Modules: provenance (sha256_text, trim_to_words)
 - apps/index
   - Classes: GraphStore, NodeType, EdgeType, Node, Edge, HybridRetriever, VectorStore
 - apps/ingestion
@@ -1735,6 +1740,7 @@ All docs and examples should use canonical names from Day 1 (P1).
   - Classes: RetrievalResult, HybridRetriever, ParquetRetriever, SemanticRetriever, VectorIndex, ParityChecker
   - Embeddings: DeterministicEmbedder, WatsonxEmbedder
   - Vector backends: AstraDBStore
+  - Functions: `fuse_lex_sem` (deterministic α-fusion with sorted doc IDs)
 - libs/ranking
   - Classes: CrossEncoderRanker, RankedDocument, CrossEncoderRanker (real), TFIDFScorer, BM25Scorer, RealCrossEncoderRanker
 - libs/storage

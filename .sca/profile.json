@@ -5,9 +5,9 @@
         "AUTO": "2"
     },
     "current_task": {
-        "task_id": "AV-001",
-        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\AV-001-authenticity-remediation",
-        "task_slug": "authenticity-remediation",
+        "task_id": "DEMO-001",
+        "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\DEMO-001-multi-source-e2e",
+        "task_slug": "multi-source-e2e",
         "work_root": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine"
     },
     "task_sequence": [
