@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bronze→Silver Transformer - Phase D Implementation
+Bronze-to-Silver Transformer - Phase D Implementation
 
 Consolidates theme-partitioned bronze parquet files into a single silver parquet per org/year.
 Implements full SCA v13.8 determinism and authenticity requirements.
@@ -197,7 +197,7 @@ def transform_bronze_to_silver(
     overwrite: bool = False,
 ) -> int:
     """
-    Main transformation function: bronze → silver.
+    Main transformation function: bronze to silver.
 
     Args:
         org_id: Specific org to process, or None for all
@@ -260,7 +260,7 @@ def transform_bronze_to_silver(
 def main():
     """CLI entrypoint."""
     parser = argparse.ArgumentParser(
-        description="Bronze→Silver transformer for ESG evidence data"
+        description="Bronze-to-Silver transformer for ESG evidence data"
     )
     parser.add_argument("--org_id", type=str, help="Organization ID (e.g., MSFT)")
     parser.add_argument("--year", type=int, help="Year (e.g., 2023)")
