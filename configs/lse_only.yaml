@@ -1,0 +1,28 @@
+companies:
+- name: Headlam Group PLC
+  ticker: HEAD.L
+  org_id: LSE_HEAD
+  region: UK
+  year: 2025
+  doc_id: LSE_HEAD_2025
+  provider: local
+  pdf_path: data/raw/LSE_HEAD_2025.pdf
+  local_path: data/raw/LSE_HEAD_2025.pdf
+  source_url: file://data/raw/LSE_HEAD_2025.pdf
+  sha256: 6a1dd9269c1cbba08802f0fa2d1d732d041dacd36113a6a02e36a563de85f8e5
+watsonx:
+  embed_model: ibm/slate-125m-english-rtrvr
+  json_gen_model: meta-llama/llama-3-8b-instruct
+  edit_model: meta-llama/llama-3-70b-instruct
+  temperature: 0.0
+  top_k: 1
+  cache_dir: artifacts/wx_cache
+retrieval:
+  hybrid_alpha: 0.6
+  top_k: 20
+  min_chunk_tokens: 50
+  max_chunk_tokens: 500
+evidence_gates:
+  min_quotes_per_theme: 2
+  min_distinct_pages: 2
+  require_parity: true
