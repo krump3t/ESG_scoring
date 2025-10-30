@@ -220,12 +220,16 @@ def _load_data_records(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     layer = manifest_record.get("layer", "auto")
 
-    # Guard: Block bronze tier in offline replay mode
+    # Guard: Block bronze tier in offline replay mode UNLESS it's a PDF file (deterministic)
     if WX_OFFLINE_REPLAY and (layer == "bronze" or RETRIEVAL_TIER == "bronze"):
-        raise RuntimeError(
-            "Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). "
-            "Offline mode requires deterministic silver layer data."
-        )
+        bronze_path = Path(manifest_record.get("bronze", ""))
+        is_pdf_file = bronze_path.is_file() and bronze_path.suffix.lower() == ".pdf"
+
+        if not is_pdf_file:
+            raise RuntimeError(
+                "Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). "
+                "Offline mode requires deterministic silver layer data."
+            )
 
     # Determine which tier(s) to try
     if layer == "silver" or RETRIEVAL_TIER == "silver":
@@ -258,17 +262,45 @@ def _load_silver_records(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]
 
 
 def _load_bronze_records_partitioned(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Load from theme-partitioned bronze directory."""
+    """Load from theme-partitioned bronze directory OR extract from PDF."""
     bronze_path_str = manifest_record.get("bronze")
     if not bronze_path_str:
         raise FileNotFoundError("No bronze path in manifest")
 
-    bronze_dir = Path(bronze_path_str)
-    if not bronze_dir.exists():
-        raise FileNotFoundError(f"Bronze directory not found: {bronze_dir}")
+    bronze_path = Path(bronze_path_str)
+    if not bronze_path.exists():
+        raise FileNotFoundError(f"Bronze path not found: {bronze_path}")
+
+    # Phase E: Check if bronze points to a PDF file (not a directory)
+    if bronze_path.is_file() and bronze_path.suffix.lower() == ".pdf":
+        # Extract directly from PDF with page tracking
+        from agents.extraction.pdf_text_extractor import PDFTextExtractor
+
+        extractor = PDFTextExtractor()
+        chunks = extractor.extract_with_page_metadata(str(bronze_path), min_chunk_chars=100)
+
+        if not chunks:
+            raise RuntimeError(f"No chunks extracted from PDF: {bronze_path}")
+
+        # Convert to records with doc_id
+        doc_id = manifest_record.get("doc_id", bronze_path.stem)
+        records = []
+        for chunk in chunks:
+            record = chunk.copy()
+            record["doc_id"] = doc_id
+            # Map page_num to page_no for consistency with existing evidence schema
+            record["page_no"] = chunk["page_num"]
+            records.append(record)
+
+        records.sort(key=lambda row: (row.get("page_num", 0), row.get("char_start", 0)))
+        return records
+
+    # Original: Load from theme-partitioned directory
+    if not bronze_path.is_dir():
+        raise FileNotFoundError(f"Bronze path is neither PDF nor directory: {bronze_path}")
 
     # Load all theme partitions
-    pattern = str(bronze_dir / "theme=*" / "*.parquet")
+    pattern = str(bronze_path / "theme=*" / "*.parquet")
     files = glob.glob(pattern)
 
     if not files:
@@ -299,17 +331,37 @@ def _load_bronze_records(bronze_path: Path) -> List[Dict[str, Any]]:
 
 
 def _build_bronze_from_live(company: str, year: int, bronze_path: Path) -> List[Dict[str, Any]]:
+    """
+    Build bronze records from live data source (SEC EDGAR or local PDF).
+
+    Phase E Enhancement: Uses page-aware extraction to preserve page numbers
+    for evidence provenance validation.
+    """
     from agents.crawler.data_providers.sec_edgar_provider import fetch_10k
-    from agents.crawler.extractors.pdf_extractor import extract_text
+    from agents.extraction.pdf_text_extractor import PDFTextExtractor
 
     pdf_path = fetch_10k(company, year)
-    chunks = extract_text(pdf_path)
+
+    # Phase E: Use page-aware extraction
+    extractor = PDFTextExtractor()
+    chunks = extractor.extract_with_page_metadata(str(pdf_path), min_chunk_chars=100)
+
     if not chunks:
         raise RuntimeError(f"No chunks extracted from SEC filing for {company} {year}.")
 
+    # Convert to DataFrame with page numbers preserved
     df = pd.DataFrame(chunks)
+
+    # Ensure required columns exist
+    if "doc_id" not in df.columns:
+        df["doc_id"] = f"{company.replace(' ', '_').lower()}_{year}"
+
     df["doc_id"] = df["doc_id"].astype(str)
     df["text"] = df["text"].fillna("").astype(str)
+
+    # Ensure page_num is preserved (critical for evidence gates)
+    if "page_num" not in df.columns:
+        raise RuntimeError("Page tracking failed: 'page_num' not in extracted chunks")
 
     bronze_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(bronze_path, index=False)
@@ -346,7 +398,8 @@ def _build_evidence_entries(
     # First pass: Collect evidence from ALL documents, tracking pages
     for doc in documents:
         doc_id = str(doc.get("doc_id", ""))
-        page = doc.get("page", 0)
+        # Phase E: Support both 'page_no' (from PDF extraction) and 'page' (from legacy records)
+        page = doc.get("page_no") or doc.get("page_num") or doc.get("page", 0)
         snippets = _generate_snippets(str(doc.get("text", "")))
 
         for index, snippet in enumerate(snippets):
@@ -426,8 +479,14 @@ def _aggregate_dimension_scores(
     documents: Sequence[Mapping[str, Any]],
     evidence_entries: Sequence[Mapping[str, Any]],
 ) -> List[Dict[str, Any]]:
+    # Phase E: Include page_no in evidence payload for audit validation
     evidence_payload = [
-        {"doc_id": entry["doc_id"], "quote": entry["quote"], "sha256": entry["sha256"]}
+        {
+            "doc_id": entry["doc_id"],
+            "quote": entry["quote"],
+            "sha256": entry["sha256"],
+            "page_no": entry.get("page", 0),  # Phase E: page tracking
+        }
         for entry in evidence_entries
     ]
 

@@ -323,11 +323,11 @@ def evidence_audit(doc_id: str) -> Dict[str, Any]:
             theme_code = score.get("theme", "UNKNOWN")
             evidence_list = score.get("evidence", [])
 
-            # Extract unique pages
+            # Extract unique pages (Phase E: support both 'page_no' and 'page')
             pages = set()
             for ev in evidence_list:
-                page = ev.get("page")
-                if page:
+                page = ev.get("page_no") or ev.get("page")
+                if page and page != 0:  # Exclude default 0 pages
                     pages.add(str(page))
 
             theme_coverage[theme_code] = {
