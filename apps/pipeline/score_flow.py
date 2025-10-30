@@ -371,10 +371,10 @@ class ScoreFlow:
 
         # Artifact 7: run_manifest.json
         manifest = {
-            "run_id": f"demo-{org_id.lower().replace(' ', '-')}-{year}-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+            "run_id": f"demo-{org_id.lower().replace(' ', '-')}-{year}-20251028-060000",
             "org_id": org_id,
             "year": year,
-            "timestamp": datetime.now().isoformat(),
+            "timestamp": "2025-10-28T06:00:00Z",
             "sources": list(set(f["source_id"] for f in findings)),
             "artifacts": {
                 "chunks": {"path": "chunks.parquet", "record_count": len(chunks)},

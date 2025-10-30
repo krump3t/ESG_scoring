@@ -1,1 +1,1 @@
-# Retrieval tests package
+"""Tests for retrieval module."""

@@ -9,3 +9,8 @@ pandas
 pyarrow
 lizard
 interrogate
+rank-bm25
+ibm-watsonx-ai
+PyMuPDF>=1.23.0
+duckdb>=0.9.0
+pyyaml>=6.0

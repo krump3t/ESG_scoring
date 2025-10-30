@@ -1,6 +1,12 @@
 {
-  "semantic_enabled": false,
-  "watsonx_enabled": false,
+  "semantic_enabled": true,
+  "watsonx_enabled": true,
   "astradb_enabled": false,
-  "_comment": "All integrations disabled for deterministic test mode. Set semantic_enabled=true to enable α-fusion pipeline."
+  "wx_embeddings": true,
+  "wx_locator": true,
+  "wx_edit": true,
+  "wx_rerank": false,
+  "_comment": "watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.",
+  "alpha": 0.6,
+  "k": 50
 }

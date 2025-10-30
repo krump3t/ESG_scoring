@@ -1,0 +1,55 @@
+companies:
+- name: Microsoft Corporation
+  ticker: MSFT
+  org_id: MSFT
+  region: US
+  year: 2023
+  doc_id: msft_2023
+  provider: local
+  local_path: data/silver/org_id=MSFT  # Already processed
+- name: Apple Inc.
+  ticker: AAPL
+  org_id: AAPL
+  region: US
+  year: 2023
+  doc_id: AAPL_2023
+  provider: local
+  pdf_path: data/pdf_cache/Apple_2023_sustainability.pdf
+  local_path: data/pdf_cache/Apple_2023_sustainability.pdf
+  source_url: file://data/pdf_cache/Apple_2023_sustainability.pdf
+- name: ExxonMobil Corporation
+  ticker: XOM
+  org_id: XOM
+  region: US
+  year: 2023
+  doc_id: XOM_2023
+  provider: local
+  pdf_path: data/pdf_cache/ExxonMobil_2023_sustainability.pdf
+  local_path: data/pdf_cache/ExxonMobil_2023_sustainability.pdf
+  source_url: file://data/pdf_cache/ExxonMobil_2023_sustainability.pdf
+- name: JPMorgan Chase & Co.
+  ticker: JPM
+  org_id: JPM
+  region: US
+  year: 2023
+  doc_id: JPM_2023
+  provider: local
+  pdf_path: data/pdf_cache/JPMorgan_Chase_2023_esg.pdf
+  local_path: data/pdf_cache/JPMorgan_Chase_2023_esg.pdf
+  source_url: file://data/pdf_cache/JPMorgan_Chase_2023_esg.pdf
+watsonx:
+  embed_model: ibm/slate-125m-english-rtrvr
+  json_gen_model: meta-llama/llama-3-8b-instruct
+  edit_model: meta-llama/llama-3-70b-instruct
+  temperature: 0.0
+  top_k: 1
+  cache_dir: artifacts/wx_cache
+retrieval:
+  hybrid_alpha: 0.6
+  top_k: 20
+  min_chunk_tokens: 50
+  max_chunk_tokens: 500
+evidence_gates:
+  min_quotes_per_theme: 2
+  min_distinct_pages: 2
+  require_parity: true

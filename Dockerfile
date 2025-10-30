@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl build-esse
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \n    pip install --no-cache-dir -r requirements.txt && \n    pip install --no-cache-dir rank-bm25==0.2.2 ibm-watsonx-ai
 
 COPY . /app
 

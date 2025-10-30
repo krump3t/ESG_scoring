@@ -19,11 +19,34 @@ import logging
 from pathlib import Path
 from typing import List, Optional, Dict, Any
 
-from .data_providers import CDPClimateProvider, SECEdgarProvider
-from .data_providers.base_provider import CompanyReport
-from .data_providers.ticker_lookup import TickerLookupProvider
-
 logger = logging.getLogger(__name__)
+
+from .data_providers.base_provider import CompanyReport
+
+# Optional provider imports (may fail if dependencies not installed)
+try:
+    from .data_providers.cdp_provider import CDPClimateProvider
+except ImportError as e:
+    logger.warning(f"CDPClimateProvider import failed: {e}")
+    CDPClimateProvider = None
+
+try:
+    from .data_providers.gri_provider import GRIDatabaseProvider
+except ImportError as e:
+    logger.warning(f"GRIDatabaseProvider import failed: {e}")
+    GRIDatabaseProvider = None
+
+try:
+    from .data_providers.sasb_provider import SASBNavigatorProvider
+except ImportError as e:
+    logger.warning(f"SASBNavigatorProvider import failed: {e}")
+    SASBNavigatorProvider = None
+
+try:
+    from .data_providers.ticker_lookup import TickerLookupProvider
+except ImportError as e:
+    logger.warning(f"TickerLookupProvider import failed: {e}")
+    TickerLookupProvider = None
 
 
 class MultiSourceCrawler:
@@ -57,17 +80,38 @@ class MultiSourceCrawler:
 
         # Initialize providers
         # Tier 1: High-reliability public APIs
-        self.providers = {
-            'cdp': CDPClimateProvider(),
-            'sec_edgar': SECEdgarProvider(),
-        }
+        self.providers = {}
+
+        if CDPClimateProvider:
+            try:
+                self.providers['cdp'] = CDPClimateProvider()
+                logger.info("Initialized CDPClimateProvider")
+            except Exception as e:
+                logger.warning(f"CDPClimateProvider init failed: {e}")
+
+        if GRIDatabaseProvider:
+            try:
+                self.providers['gri'] = GRIDatabaseProvider()
+                logger.info("Initialized GRIDatabaseProvider")
+            except Exception as e:
+                logger.warning(f"GRIDatabaseProvider init failed: {e}")
+
+        if SASBNavigatorProvider:
+            try:
+                self.providers['sasb'] = SASBNavigatorProvider()
+                logger.info("Initialized SASBNavigatorProvider")
+            except Exception as e:
+                logger.warning(f"SASBNavigatorProvider init failed: {e}")
 
         # Tier 2: Ticker Lookup for name disambiguation (Task 007)
-        self.providers.update({
-            'ticker_lookup': TickerLookupProvider(),
-        })
+        if TickerLookupProvider:
+            try:
+                self.providers['ticker_lookup'] = TickerLookupProvider()
+                logger.info("Initialized TickerLookupProvider")
+            except Exception as e:
+                logger.warning(f"TickerLookupProvider init failed: {e}")
 
-        logger.info(f"MultiSourceCrawler initialized with {len(self.providers)} providers (2 Tier 1 + 1 Tier 2)")
+        logger.info(f"MultiSourceCrawler initialized with {len(self.providers)} providers")
 
     def search_company_reports(
         self,
@@ -93,11 +137,22 @@ class MultiSourceCrawler:
         """
         all_reports = {}
 
-        # Tier 1: High-reliability public APIs
-        tier1_providers = ['sec_edgar', 'cdp'] if us_company else ['cdp', 'sec_edgar']
+        # Tier 1: Try all available providers
+        tier1_providers = list(self.providers.keys())
+        if 'ticker_lookup' in tier1_providers:
+            tier1_providers.remove('ticker_lookup')  # Don't try ticker lookup as primary source
+
+        # Reorder: CDP and GRI first, then others
+        prioritized = []
+        for pref in ['cdp', 'gri', 'sasb']:
+            if pref in tier1_providers:
+                prioritized.append(pref)
+                tier1_providers.remove(pref)
+        prioritized.extend(tier1_providers)
+
         tier1_success = False
 
-        for provider_id in tier1_providers:
+        for provider_id in prioritized:
             if provider_id not in self.providers:
                 continue
 
@@ -119,40 +174,29 @@ class MultiSourceCrawler:
                     logger.info(f"Tier 1 - {provider_id}: Found {len(reports)} reports for {company_name}")
 
             except Exception as e:
-                logger.error(f"Tier 1 - {provider_id} search failed: {e}")
+                logger.debug(f"Tier 1 - {provider_id} search failed: {e}")
 
         # Early exit if Tier 1 succeeded (optimization)
         if tier1_success:
             logger.info(f"Tier 1 succeeded for {company_name}, skipping Tier 2")
             return all_reports
 
-        # Tier 2: Ticker lookup for name disambiguation + SEC retry
-        logger.info(f"Tier 1 failed for {company_name}, trying Tier 2 (Ticker Lookup)")
+        # Tier 2: Ticker lookup for name disambiguation
+        logger.info(f"Tier 1 found no reports for {company_name}, trying Tier 2 (Ticker Lookup)")
 
-        # Try ticker lookup → SEC retry for edge cases (e.g., name variations)
-        if 'ticker_lookup' in self.providers and 'sec_edgar' in self.providers:
+        # Try ticker lookup for edge cases (e.g., name variations)
+        if 'ticker_lookup' in self.providers:
             try:
                 ticker_results = self.providers['ticker_lookup'].search_company(
                     company_name=company_name,
                     year=year
                 )
 
-                if ticker_results and ticker_results[0].company_id:
-                    # Ticker lookup found CIK, retry SEC EDGAR
-                    cik = ticker_results[0].company_id
-                    logger.info(f"Ticker lookup resolved CIK: {cik}, retrying SEC EDGAR")
-
-                    sec_retry = self.providers['sec_edgar'].search_company(
-                        company_id=cik,
-                        year=year
-                    )
-
-                    if sec_retry:
-                        all_reports['sec_edgar'] = sec_retry
-                        logger.info(f"Tier 2 - SEC EDGAR retry: Found {len(sec_retry)} reports")
+                if ticker_results:
+                    logger.info(f"Ticker lookup found {len(ticker_results)} potential matches")
 
             except Exception as e:
-                logger.error(f"Tier 2 - Ticker lookup + SEC retry failed: {e}")
+                logger.debug(f"Tier 2 - Ticker lookup failed: {e}")
 
         return all_reports
 
