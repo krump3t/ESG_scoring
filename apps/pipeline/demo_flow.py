@@ -68,7 +68,8 @@ def run_score(
             "parity": {"parity_ok": False, "evidence_ids": []},
         }
 
-    texts = [record["text"] for record in bronze_records]
+    # Phase E: Support both 'text' (PDF extraction) and 'extract_30w' (pre-processed bronze/silver)
+    texts = [record.get("text") or record.get("extract_30w", "") for record in bronze_records]
     bm25 = BM25Scorer(k1=1.2, b=0.75).fit(texts)
     lex_scores_raw = bm25.score(query, texts)
     lex_scores = {
@@ -95,8 +96,11 @@ def run_score(
 
         embedder = DeterministicEmbedder(dim=128, seed=seed)
         query_vec = embedder.embed(query)
+        # Phase E: Support both 'text' (PDF extraction) and 'extract_30w' (pre-processed)
         semantic_scores = {
-            record["doc_id"]: _cosine_similarity(query_vec, embedder.embed(record["text"]))
+            record["doc_id"]: _cosine_similarity(
+                query_vec, embedder.embed(record.get("text") or record.get("extract_30w", ""))
+            )
             for record in bronze_records
         }
 
@@ -400,7 +404,9 @@ def _build_evidence_entries(
         doc_id = str(doc.get("doc_id", ""))
         # Phase E: Support both 'page_no' (from PDF extraction) and 'page' (from legacy records)
         page = doc.get("page_no") or doc.get("page_num") or doc.get("page", 0)
-        snippets = _generate_snippets(str(doc.get("text", "")))
+        # Phase E: Support both 'text' (PDF extraction) and 'extract_30w' (pre-processed)
+        text_content = str(doc.get("text") or doc.get("extract_30w", ""))
+        snippets = _generate_snippets(text_content)
 
         for index, snippet in enumerate(snippets):
             quote = trim_to_words(snippet, 30)
@@ -492,8 +498,10 @@ def _aggregate_dimension_scores(
 
     document_scores: List[Mapping[str, DimensionScore]] = []
     for doc in documents:
+        # Phase E: Support both 'text' (PDF extraction) and 'extract_30w' (pre-processed)
+        text_content = str(doc.get("text") or doc.get("extract_30w", ""))
         finding = {
-            "finding_text": str(doc.get("text", "")),
+            "finding_text": text_content,
             "framework": str(doc.get("framework", "")),
         }
         document_scores.append(scorer.score_all_dimensions(finding))

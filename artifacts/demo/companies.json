@@ -46,8 +46,9 @@
     "doc_id": "LSE_HEAD_2025",
     "bronze": "data/raw/LSE_HEAD_2025.pdf",
     "pdf_path": "data/raw/LSE_HEAD_2025.pdf",
-    "layer": "bronze",
+    "layer": "auto",
     "source": "local_pdf",
-    "sha256": "6a1dd9269c1cbba08802f0fa2d1d732d041dacd36113a6a02e36a563de85f8e5"
+    "sha256": "6a1dd9269c1cbba08802f0fa2d1d732d041dacd36113a6a02e36a563de85f8e5",
+    "note": "PDF file - will use bronze tier (deterministic, no network)"
   }
 ]
