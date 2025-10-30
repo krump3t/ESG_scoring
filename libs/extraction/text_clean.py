@@ -177,3 +177,48 @@ def get_text_quality_score(text: str) -> float:
         quality *= 0.5
 
     return min(1.0, quality)
+
+
+# Aliases for Task 026 compatibility
+def is_binary_like(text: str) -> bool:
+    """Alias for is_binaryish (Task 026 naming convention).
+
+    Returns True for None or empty text (treated as binary/invalid).
+    """
+    if text is None or text == "":
+        return True
+    return is_binaryish(text)
+
+
+def quality_score(text: str) -> float:
+    """Alias for get_text_quality_score (Task 026 naming convention)."""
+    return get_text_quality_score(text)
+
+
+def extract_clean_quote(text: str, max_length: int = 500) -> Tuple[str, float]:
+    """Extract and clean a quote from text with quality assessment.
+
+    Args:
+        text: Source text
+        max_length: Maximum quote length
+
+    Returns:
+        (cleaned_quote, quality_score)
+
+    Example:
+        >>> extract_clean_quote("  Too   many    spaces  ", 100)
+        ('Too many spaces', 1.0)
+    """
+    # Score BEFORE cleaning (to detect binary in original)
+    original_score = quality_score(text)
+
+    cleaned = clean_text(text)
+
+    # Use lower of original and cleaned score (penalize binary input)
+    final_score = min(original_score, quality_score(cleaned))
+
+    # Truncate if needed
+    if len(cleaned) > max_length:
+        cleaned = cleaned[:max_length] + "..."
+
+    return cleaned, final_score

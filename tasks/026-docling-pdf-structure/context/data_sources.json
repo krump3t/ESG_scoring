@@ -1,0 +1,106 @@
+{
+  "sources": [
+    {
+      "source_id": "LSE_HEAD_2025",
+      "path": "data/raw/LSE_HEAD_2025.pdf",
+      "sha256": "6a1dd9269c1cbba08802f0fa2d1d732d041dacd36113a6a02e36a563de85f8e5",
+      "size_bytes": 1992294,
+      "size_human": "1.9M",
+      "pii_flag": false,
+      "provenance": "Headlam Group plc Annual Report and Accounts 2025 - Published via London Stock Exchange",
+      "retention": "permanent",
+      "usage": "Primary test document for Docling extraction validation. Contains financial tables, ESG disclosures, and structured sections suitable for testing table extraction and layout preservation.",
+      "characteristics": {
+        "pages": 127,
+        "tables": "15+",
+        "scanned_pages": 0,
+        "multi_column": true,
+        "headers_footers": true
+      }
+    },
+    {
+      "source_id": "AAPL_2023",
+      "path": "data/raw/AAPL_2023.pdf",
+      "sha256": "<to be computed if file exists>",
+      "size_bytes": null,
+      "size_human": null,
+      "pii_flag": false,
+      "provenance": "Apple Inc. Form 10-K Annual Report 2023 - SEC Filing",
+      "retention": "permanent",
+      "usage": "Secondary validation document for testing financial table extraction (balance sheets, income statements, cash flow). Complex multi-level table structures.",
+      "characteristics": {
+        "pages": "~100",
+        "tables": "20+",
+        "scanned_pages": 0,
+        "multi_column": false,
+        "headers_footers": true
+      }
+    },
+    {
+      "source_id": "JPM_2023",
+      "path": "data/raw/JPM_2023.pdf",
+      "sha256": "<to be computed if file exists>",
+      "size_bytes": null,
+      "size_human": null,
+      "pii_flag": false,
+      "provenance": "JPMorgan Chase & Co. Form 10-K Annual Report 2023 - SEC Filing",
+      "retention": "permanent",
+      "usage": "Tertiary validation document for testing risk disclosure tables and regulatory reporting formats.",
+      "characteristics": {
+        "pages": "~250",
+        "tables": "30+",
+        "scanned_pages": 0,
+        "multi_column": false,
+        "headers_footers": true
+      }
+    },
+    {
+      "source_id": "XOM_2023",
+      "path": "data/raw/XOM_2023.pdf",
+      "sha256": "<to be computed if file exists>",
+      "size_bytes": null,
+      "size_human": null,
+      "pii_flag": false,
+      "provenance": "Exxon Mobil Corporation Form 10-K Annual Report 2023 - SEC Filing",
+      "retention": "permanent",
+      "usage": "Validation document for ESG metrics tables (GHG emissions, energy consumption, environmental data).",
+      "characteristics": {
+        "pages": "~90",
+        "tables": "10+",
+        "scanned_pages": 0,
+        "multi_column": false,
+        "headers_footers": true
+      }
+    },
+    {
+      "source_id": "sample_test",
+      "path": "tests/fixtures/sample_report.pdf",
+      "sha256": "<to be created - synthetic test fixture>",
+      "size_bytes": null,
+      "size_human": "<50KB",
+      "pii_flag": false,
+      "provenance": "Synthetic ESG report created for unit testing purposes. Contains minimal representative content.",
+      "retention": "permanent",
+      "usage": "Unit test fixture for rapid determinism validation. Small file size for fast test execution. Contains 1-2 tables and basic document structure.",
+      "characteristics": {
+        "pages": "5-10",
+        "tables": "2-3",
+        "scanned_pages": 0,
+        "multi_column": false,
+        "headers_footers": false
+      }
+    }
+  ],
+  "validation_notes": {
+    "sha256_computation": "Computed via `sha256sum <file>` on Windows Git Bash or `Get-FileHash <file> -Algorithm SHA256` on PowerShell",
+    "file_accessibility": "All files in data/raw/ must be accessible for CP tests. Missing files will cause test skips with pytest.skip()",
+    "fixture_creation": "tests/fixtures/sample_report.pdf must be created before Phase 1 implementation"
+  },
+  "data_lake_tier": "bronze",
+  "update_frequency": "static (annual reports do not change post-publication)",
+  "compliance": {
+    "gdpr": "no_pii",
+    "retention_policy": "permanent (public corporate disclosures)",
+    "access_control": "repository-level (no additional restrictions)"
+  }
+}

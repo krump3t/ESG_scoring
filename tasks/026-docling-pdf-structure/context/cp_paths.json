@@ -1,0 +1,84 @@
+{
+  "paths": [
+    "libs/extraction/parser_backend.py",
+    "libs/extraction/backend_default.py",
+    "libs/extraction/backend_docling.py",
+    "libs/retrieval/silver_locator.py",
+    "libs/extraction/text_clean.py",
+    "scripts/pdf_to_silver.py",
+    "scripts/alignment_audit.py"
+  ],
+  "entry_points": [
+    "scripts/pdf_to_silver.py::main",
+    "scripts/alignment_audit.py::main"
+  ],
+  "test_files": [
+    "tests/cp/test_docling_determinism.py",
+    "tests/cp/test_cp_gates.py"
+  ],
+  "metadata": {
+    "total_cp_files": 7,
+    "estimated_loc": 940,
+    "coverage_target": 0.95,
+    "complexity_max_ccn": 10,
+    "complexity_max_cognitive": 15
+  },
+  "dependencies": {
+    "runtime": [
+      "docling==0.12.0",
+      "pymupdf==1.24.10",
+      "pillow>=10.0.0",
+      "torch>=2.0.0",
+      "transformers>=4.30.0",
+      "pandas>=2.0.0",
+      "pyarrow>=12.0.0"
+    ],
+    "development": [
+      "pytest>=7.0.0",
+      "pytest-cov>=4.0.0",
+      "hypothesis>=6.0.0",
+      "mypy>=1.0.0"
+    ]
+  },
+  "validation_gates": {
+    "tdd_guard": "Tests must be created BEFORE implementation (file mtime check)",
+    "coverage": "≥95% line & branch coverage on all CP files",
+    "type_safety": "mypy --strict passes with 0 errors",
+    "complexity": "lizard CCN ≤10, cognitive ≤15",
+    "documentation": "interrogate ≥95% docstring coverage",
+    "security": "bandit clean, detect-secrets clean",
+    "failure_tests": "≥1 failure-path test per CP file",
+    "property_tests": "≥1 @given(...) Hypothesis test per CP file"
+  },
+  "phase_mapping": {
+    "phase_1": [
+      "libs/extraction/parser_backend.py",
+      "libs/extraction/backend_default.py"
+    ],
+    "phase_2": [
+      "libs/extraction/backend_docling.py"
+    ],
+    "phase_3": [
+      "libs/retrieval/silver_locator.py",
+      "libs/extraction/text_clean.py"
+    ],
+    "phase_4": [
+      "scripts/pdf_to_silver.py",
+      "scripts/alignment_audit.py"
+    ],
+    "phase_5": [
+      "tests/cp/test_docling_determinism.py",
+      ".github/workflows/ci-cp-gates.yml",
+      "Dockerfile"
+    ]
+  },
+  "exclusions": {
+    "not_cp": [
+      "scripts/generate_nl_report.py",
+      "scripts/auto_patch.py",
+      "libs/extraction/__init__.py",
+      "libs/retrieval/__init__.py"
+    ],
+    "rationale": "Non-CP files are utilities, generators, or package init files that don't contain critical path logic requiring ≥95% coverage"
+  }
+}
