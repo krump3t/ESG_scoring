@@ -176,6 +176,7 @@ def run_score(
         "parity": {
             "parity_ok": parity_ok,
             "evidence_ids": [entry["doc_id"] for entry in evidence_entries],
+            "fused_topk_ids": fused_topk_ids,  # Phase F: Include for parity validation
         },
     }
 

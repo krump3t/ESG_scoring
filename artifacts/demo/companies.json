@@ -7,7 +7,9 @@
     "bronze": "data/bronze/org_id=MSFT/year=2023",
     "silver": "data/silver/org_id=MSFT/year=2023/MSFT_2023_chunks.parquet",
     "layer": "auto",
-    "source": "pre-processed"
+    "source": "pre-processed",
+    "skip": true,
+    "skip_reason": "Phase F: Stub data with all page_no=1 fails enhanced evidence gates (3+ pages, span 3-5). Awaiting authentic PDF for proper page tracking. SCA v13.8-MEA authenticity policy prohibits mock/fabricated data."
   },
   {
     "company": "Apple Inc.",

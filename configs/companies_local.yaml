@@ -7,6 +7,8 @@ companies:
   doc_id: msft_2023
   provider: local
   local_path: data/silver/org_id=MSFT  # Already processed
+  skip: true
+  skip_reason: "Phase F: Stub data with all page_no=1 fails enhanced evidence gates (3+ pages, span 3-5). Awaiting authentic PDF."
 - name: Apple Inc.
   ticker: AAPL
   org_id: AAPL

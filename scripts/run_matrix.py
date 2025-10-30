@@ -628,6 +628,30 @@ def main():
         doc_id = row.get("doc_id") or f"{company_name.lower().replace(' ','_')}_{year}"
         query = row.get("query", "ESG climate strategy and GHG emissions targets")
 
+        # Phase F.2: Skip quarantined documents
+        if row.get("skip"):
+            skip_reason = row.get("skip_reason", "Quarantined (no reason given)")
+            print(f"Skipping: {doc_id} - {skip_reason}")
+            # Create skip contract for transparency
+            skip_contract = {
+                "doc_id": doc_id,
+                "agent": "SCA",
+                "version": "13.8-MEA-PhaseF",
+                "status": "skipped",
+                "skip_reason": skip_reason,
+                "gates": {
+                    "determinism": "SKIPPED",
+                    "parity": "SKIPPED",
+                    "evidence": "SKIPPED",
+                    "authenticity": "SKIPPED",
+                    "traceability": "SKIPPED",
+                },
+            }
+            write_json(Path(f"artifacts/matrix/{doc_id}/output_contract.json"), skip_contract)
+            contracts.append(skip_contract)
+            print(f"  [SKIPPED] {doc_id}\n")
+            continue
+
         print(f"Scoring: {doc_id} ({company_name}, {year})")
 
         # 1. Determinism check (3× runs)
@@ -660,23 +684,31 @@ def main():
 
         contracts.append(contract)
 
-        # Update matrix status if any gate fails
-        if contract["status"] != "ok":
+        # Update matrix status if any gate fails (excluding skipped docs)
+        if contract["status"] not in ["ok", "skipped"]:
             matrix_status = "revise"
 
         print(f"  [OK] Complete (status: {contract['status']})\n")
 
+    # Phase F: Filter for gate analysis (exclude skipped)
+    active_contracts = [c for c in contracts if c.get("status") != "skipped"]
+    skipped_contracts = [c for c in contracts if c.get("status") == "skipped"]
+
     # Matrix-level contract
     matrix_contract = {
         "agent": "SCA",
-        "version": "13.8-MEA",
+        "version": "13.8-MEA-PhaseF",
         "status": matrix_status,
-        "documents": len(contracts),
+        "documents": {
+            "total": len(contracts),
+            "active": len(active_contracts),
+            "skipped": len(skipped_contracts),
+        },
         "determinism_pass": all(
-            c["gates"]["determinism"] == "PASS" for c in contracts
-        ),
+            c["gates"]["determinism"] == "PASS" for c in active_contracts
+        ) if active_contracts else True,
         "document_contracts": contracts,
-        "timestamp": "2025-10-28T06:00:00Z",
+        "timestamp": "2025-10-30T00:00:00Z",
     }
     write_json(Path("artifacts/matrix/matrix_contract.json"), matrix_contract)
 
