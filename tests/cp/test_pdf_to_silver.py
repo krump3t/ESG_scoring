@@ -5,12 +5,14 @@ SCA v13.8-MEA Compliance:
 - CP Markers: All tests marked with @pytest.mark.cp
 - Failure Paths: Tests for missing PDF, invalid args
 - Integration tests: End-to-end conversion
+- Property Tests: Hypothesis @given tests
 """
 import pytest
 import os
 import tempfile
 from pathlib import Path
 import pandas as pd
+from hypothesis import given, strategies as st
 
 
 @pytest.mark.cp
@@ -267,3 +269,28 @@ def test_main_auto_detect_pdf(tmp_path, monkeypatch):
 
     finally:
         os.chdir(original_cwd)
+
+
+@pytest.mark.cp
+@given(
+    doc_id=st.text(min_size=1, max_size=50, alphabet=st.characters(whitelist_categories=('Lu', 'Ll', 'Nd'), whitelist_characters='_')),
+    org_id=st.text(min_size=1, max_size=50, alphabet=st.characters(whitelist_categories=('Lu', 'Ll', 'Nd'), whitelist_characters='_')),
+    year=st.integers(min_value=2000, max_value=2100)
+)
+def test_sha256_file_property_deterministic(doc_id, org_id, year):
+    """CP Property Test: sha256_file produces deterministic hashes."""
+    from scripts.pdf_to_silver import sha256_file
+
+    # Create a test file with known content (no fixture, use temp context manager)
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        test_file = Path(tmp_dir) / "test.txt"
+        test_content = f"{doc_id}_{org_id}_{year}"
+        test_file.write_text(test_content)
+
+        # Hash should be deterministic
+        hash1 = sha256_file(str(test_file))
+        hash2 = sha256_file(str(test_file))
+
+        assert hash1 == hash2
+        assert len(hash1) == 64
+        assert all(c in '0123456789abcdef' for c in hash1)

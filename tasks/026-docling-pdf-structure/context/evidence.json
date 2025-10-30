@@ -6,6 +6,7 @@
       "url": "https://github.com/DS4SD/docling",
       "doi": null,
       "retrieval_date": "2025-10-30",
+      "priority": "P1",
       "synthesis": "Open-source document parsing library with vision-based layout analysis, table extraction to markdown, and OCR capabilities. Supports deterministic offline mode via model caching and CPU-only execution. Version 0.12.0 tested for ESG report processing with proven structure preservation."
     },
     {
@@ -14,6 +15,7 @@
       "url": "https://pymupdf.readthedocs.io/en/latest/recipes-text.html",
       "doi": null,
       "retrieval_date": "2025-10-30",
+      "priority": "P1",
       "synthesis": "Baseline PDF text extraction library using MuPDF engine. Supports fast page-level text extraction via get_text() method. Limited to text-only output with no structure preservation or table parsing. Version 1.24.10 provides stable API compatible with Docling integration."
     },
     {
@@ -22,6 +24,7 @@
       "url": "file://C:/projects/Work Projects/.claude/full_protocol.md",
       "doi": null,
       "retrieval_date": "2025-10-30",
+      "priority": "P1",
       "synthesis": "Defines determinism requirements (fixed seeds, pinned dependencies), CP gate specifications (TDD, ≥95% coverage, failure tests), and authenticity validation rules (no mocks, real computation, honest status reporting). Mandates Mandatory Execution Algorithm for autonomous write-validate-fix cycles."
     },
     {
@@ -30,6 +33,7 @@
       "url": "file://C:/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/determinism_proof/phase_e_to_f_closeout.md",
       "doi": null,
       "retrieval_date": "2025-10-30",
+      "priority": "P2",
       "synthesis": "Documents successful page-aware PDF extraction implementation with provenance tracking. Achieved triple deterministic validation (3/3 runs identical) across 5 companies. Established evidence gates requiring ≥2-3 distinct pages per theme. Provides baseline for Docling integration comparison and parity validation."
     },
     {
@@ -38,6 +42,7 @@
       "url": "https://huggingface.co/docs/transformers/training#reproducibility",
       "doi": null,
       "retrieval_date": "2025-10-30",
+      "priority": "P2",
       "synthesis": "Provides guidance on achieving reproducible results with transformer models via torch.manual_seed(), torch.use_deterministic_algorithms(), and CUDA configuration. Critical for ensuring Docling's vision models produce deterministic outputs across runs. Recommends CPU-only mode for guaranteed reproducibility."
     }
   ],

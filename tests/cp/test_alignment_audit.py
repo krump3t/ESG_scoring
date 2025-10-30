@@ -5,6 +5,7 @@ SCA v13.8-MEA Compliance:
 - CP Markers: All tests marked with @pytest.mark.cp
 - Failure Paths: Tests for missing files, alignment mismatches
 - Integration tests: End-to-end quote validation
+- Property Tests: Hypothesis @given tests
 """
 import pytest
 import os
@@ -12,6 +13,7 @@ import tempfile
 from pathlib import Path
 import pandas as pd
 import json
+from hypothesis import given, strategies as st
 
 
 @pytest.mark.cp
@@ -346,3 +348,18 @@ def test_alignment_audit_respects_backend_env(tmp_path, monkeypatch):
 
     finally:
         os.chdir(original_cwd)
+
+
+@pytest.mark.cp
+@given(
+    quote=st.text(min_size=1, max_size=100),
+    text=st.text(min_size=0, max_size=500)
+)
+def test_compute_alignment_score_property_bounded(quote, text):
+    """CP Property Test: alignment scores are always in [0.0, 1.0] range."""
+    from scripts.alignment_audit import compute_alignment_score
+    
+    score = compute_alignment_score(quote, text)
+    
+    assert 0.0 <= score <= 1.0
+    assert isinstance(score, float)
