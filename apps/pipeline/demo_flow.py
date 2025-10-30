@@ -12,6 +12,7 @@ import pandas as pd
 
 from agents.scoring.rubric_v3_scorer import DimensionScore, RubricV3Scorer
 from apps.utils.provenance import sha256_text, trim_to_words
+from libs.analytics import evidence_config  # Phase F
 from libs.utils.clock import get_clock
 from libs.utils.env import bool_flag, get
 from libs.utils.determinism_guard import enforce as enforce_determinism
@@ -250,7 +251,11 @@ def _load_data_records(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def _load_silver_records(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Load from consolidated silver parquet file."""
+    """
+    Load from consolidated silver parquet file.
+
+    Phase F Enhancement: Adds total_pages metadata to records for evidence validation.
+    """
     silver_path_str = manifest_record.get("silver")
     if not silver_path_str:
         raise FileNotFoundError("No silver path in manifest")
@@ -260,13 +265,37 @@ def _load_silver_records(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]
         raise FileNotFoundError(f"Silver file not found: {silver_path}")
 
     df = pd.read_parquet(silver_path)
+
+    # Phase F: Compute total_pages from max page number
+    if "page_no" in df.columns:
+        max_page = df["page_no"].max()
+        if pd.notna(max_page) and max_page > 0:
+            total_pages = int(max_page)
+        else:
+            total_pages = 1  # Default if no valid page numbers
+    elif "page_num" in df.columns:
+        max_page = df["page_num"].max()
+        if pd.notna(max_page) and max_page > 0:
+            total_pages = int(max_page)
+        else:
+            total_pages = 1
+    else:
+        total_pages = 1  # Fallback if no page tracking
+
+    # Add total_pages to all records
+    df["total_pages"] = total_pages
+
     records = df.to_dict(orient="records")
     records.sort(key=lambda row: row.get("doc_id", ""))
     return records
 
 
 def _load_bronze_records_partitioned(manifest_record: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Load from theme-partitioned bronze directory OR extract from PDF."""
+    """
+    Load from theme-partitioned bronze directory OR extract from PDF.
+
+    Phase F Enhancement: Adds total_pages metadata to records for evidence validation.
+    """
     bronze_path_str = manifest_record.get("bronze")
     if not bronze_path_str:
         raise FileNotFoundError("No bronze path in manifest")
@@ -286,6 +315,9 @@ def _load_bronze_records_partitioned(manifest_record: Dict[str, Any]) -> List[Di
         if not chunks:
             raise RuntimeError(f"No chunks extracted from PDF: {bronze_path}")
 
+        # Phase F: Get total page count from PDF
+        total_pages = extractor.get_page_count(str(bronze_path))
+
         # Convert to records with doc_id
         doc_id = manifest_record.get("doc_id", bronze_path.stem)
         records = []
@@ -294,6 +326,8 @@ def _load_bronze_records_partitioned(manifest_record: Dict[str, Any]) -> List[Di
             record["doc_id"] = doc_id
             # Map page_num to page_no for consistency with existing evidence schema
             record["page_no"] = chunk["page_num"]
+            # Phase F: Add total_pages metadata
+            record["total_pages"] = total_pages
             records.append(record)
 
         records.sort(key=lambda row: (row.get("page_num", 0), row.get("char_start", 0)))
@@ -319,6 +353,25 @@ def _load_bronze_records_partitioned(manifest_record: Dict[str, Any]) -> List[Di
     consolidated = pd.concat(dfs, ignore_index=True)
     if "evidence_id" in consolidated.columns:
         consolidated = consolidated.sort_values("evidence_id").reset_index(drop=True)
+
+    # Phase F: Compute total_pages from max page number
+    if "page_no" in consolidated.columns:
+        max_page = consolidated["page_no"].max()
+        if pd.notna(max_page) and max_page > 0:
+            total_pages = int(max_page)
+        else:
+            total_pages = 1  # Default if no valid page numbers
+    elif "page_num" in consolidated.columns:
+        max_page = consolidated["page_num"].max()
+        if pd.notna(max_page) and max_page > 0:
+            total_pages = int(max_page)
+        else:
+            total_pages = 1
+    else:
+        total_pages = 1  # Fallback if no page tracking
+
+    # Add total_pages to all records
+    consolidated["total_pages"] = total_pages
 
     records = consolidated.to_dict(orient="records")
     return records
@@ -388,16 +441,26 @@ def _build_evidence_entries(
     documents: Sequence[Mapping[str, Any]],
 ) -> List[Dict[str, Any]]:
     """
-    Build evidence entries with distinct page enforcement.
+    Build evidence entries with Phase F enhanced distinct page enforcement.
 
-    Gate requirement: ≥2 distinct pages per theme
+    Phase F Gate Requirements:
+    - ≥3 distinct pages per theme (up from 2)
+    - Page span ≥ get_min_span_for_doc(total_pages)
+    - ≤5 evidence items per page (prevent concentration)
+
     Strategy:
     1. Collect evidence from all documents (not just first)
     2. Track unique pages seen
-    3. Prefer evidence from distinct pages
+    3. Apply per-page capping to prevent concentration
+    4. Prefer evidence from distinct pages with good span
     """
     evidence: List[Dict[str, Any]] = []
     pages_seen = set()
+
+    # Get total_pages from first document (all should have same value)
+    total_pages = 1
+    if documents:
+        total_pages = documents[0].get("total_pages", 1)
 
     # First pass: Collect evidence from ALL documents, tracking pages
     for doc in documents:
@@ -427,18 +490,32 @@ def _build_evidence_entries(
             )
             pages_seen.add(page)
 
-        # Stop after collecting enough evidence from ≥2 distinct pages
-        if len(evidence) >= 4 and len(pages_seen) >= 2:
-            break
+        # Phase F: Stop after collecting enough evidence meeting enhanced gates
+        min_distinct = evidence_config.EVIDENCE_PAGE_MIN_DISTINCT
+        min_span = evidence_config.get_min_span_for_doc(total_pages)
 
-    # If we don't have enough distinct pages, add fallback
-    if documents and len(pages_seen) < 2:
-        # Try to find a document with a different page than already seen
+        if len(evidence) >= 8:  # Collect more evidence to ensure quality after capping
+            # Check if we have enough diversity
+            pages_list = [e["page"] for e in evidence]
+            validation = evidence_config.evidence_ok(pages_list, total_pages)
+            if validation["passed"]:
+                break
+
+    # Phase F: Apply per-page capping to prevent concentration
+    evidence = evidence_config.cap_per_page(evidence, max_per_page=evidence_config.EVIDENCE_PER_PAGE_CAP)
+
+    # If we don't have enough distinct pages after capping, add fallback
+    pages_list = [e["page"] for e in evidence]
+    validation = evidence_config.evidence_ok(pages_list, total_pages)
+
+    if documents and not validation["passed"] and len(pages_seen) < evidence_config.EVIDENCE_PAGE_MIN_DISTINCT:
+        # Try to find documents with different pages than already seen
         for doc in documents:
-            page = doc.get("page", 0)
+            page = doc.get("page_no") or doc.get("page_num") or doc.get("page", 0)
             if page not in pages_seen:
                 doc_id = str(doc.get("doc_id", ""))
-                fallback_quote = trim_to_words(str(doc.get("text", "")), 30)
+                text = doc.get("text") or doc.get("extract_30w", "")
+                fallback_quote = trim_to_words(str(text), 30)
                 evidence.append(
                     {
                         "evidence_id": f"{doc_id}::fallback",
@@ -451,10 +528,15 @@ def _build_evidence_entries(
                     }
                 )
                 pages_seen.add(page)
-                break
+
+                # Re-check if we've met the gates
+                pages_list = [e["page"] for e in evidence]
+                validation = evidence_config.evidence_ok(pages_list, total_pages)
+                if validation["passed"]:
+                    break
 
     evidence.sort(key=lambda item: item["evidence_id"])
-    return evidence[: max(4, len(evidence))]
+    return evidence[: max(8, len(evidence))]  # Return up to 8 evidence items
 
 
 def _generate_snippets(text: str, max_segments: int = 4) -> List[str]:
@@ -480,6 +562,39 @@ def _generate_snippets(text: str, max_segments: int = 4) -> List[str]:
     return segments
 
 
+def _normalize_rd_candidate(candidate: Mapping[str, Any]) -> Dict[str, Any]:
+    """
+    Phase F: Normalize RD (Risk & Disclosure) candidate for enhanced diagnostics.
+
+    Returns:
+        Dict with:
+        - chunk_id: str - Document chunk identifier
+        - page: int - Page number (normalized to int, default 0)
+        - excerpt: str - Text excerpt (240 chars max with ellipsis)
+    """
+    # Normalize page to int
+    page_raw = candidate.get("page") or candidate.get("page_no") or candidate.get("page_num") or 0
+    try:
+        page = int(page_raw)
+    except (ValueError, TypeError):
+        page = 0
+
+    # Extract text content
+    text = candidate.get("text") or candidate.get("extract_30w") or ""
+
+    # Create excerpt (240 chars max)
+    excerpt = (text[:240] + "…") if len(text) > 240 else text
+
+    # Get chunk ID
+    chunk_id = candidate.get("chunk_id") or candidate.get("id") or candidate.get("doc_id") or ""
+
+    return {
+        "chunk_id": str(chunk_id),
+        "page": page,
+        "excerpt": excerpt
+    }
+
+
 def _aggregate_dimension_scores(
     scorer: RubricV3Scorer,
     documents: Sequence[Mapping[str, Any]],
@@ -497,6 +612,9 @@ def _aggregate_dimension_scores(
     ]
 
     document_scores: List[Mapping[str, DimensionScore]] = []
+    # Phase F: Track RD candidates for enhanced diagnostics
+    rd_candidates_diag: List[Dict[str, Any]] = []
+
     for doc in documents:
         # Phase E: Support both 'text' (PDF extraction) and 'extract_30w' (pre-processed)
         text_content = str(doc.get("text") or doc.get("extract_30w", ""))
@@ -504,7 +622,12 @@ def _aggregate_dimension_scores(
             "finding_text": text_content,
             "framework": str(doc.get("framework", "")),
         }
-        document_scores.append(scorer.score_all_dimensions(finding))
+        scores = scorer.score_all_dimensions(finding)
+        document_scores.append(scores)
+
+        # Phase F: Capture RD candidate diagnostics
+        if "RD" in scores:
+            rd_candidates_diag.append(_normalize_rd_candidate(doc))
 
     aggregated: List[Dict[str, Any]] = []
     for code in scorer.rubric.theme_order:
@@ -523,15 +646,22 @@ def _aggregate_dimension_scores(
                 stage_descriptor=fallback_descriptor,
             )
 
-        aggregated.append(
-            {
-                "theme": code,
-                "stage": best.score,
-                "confidence": best.confidence,
-                "stage_descriptor": best.stage_descriptor,
-                "evidence": evidence_payload,
+        theme_result = {
+            "theme": code,
+            "stage": best.score,
+            "confidence": best.confidence,
+            "stage_descriptor": best.stage_descriptor,
+            "evidence": evidence_payload,
+        }
+
+        # Phase F: Add RD diagnostics for Risk & Disclosure theme
+        if code == "RD" and rd_candidates_diag:
+            theme_result["rd_diagnostics"] = {
+                "candidate_count": len(rd_candidates_diag),
+                "candidates": rd_candidates_diag[:10]  # Limit to first 10 for brevity
             }
-        )
+
+        aggregated.append(theme_result)
 
     aggregated.sort(key=lambda item: item["theme"])
     return aggregated

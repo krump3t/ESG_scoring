@@ -29,6 +29,9 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Dict, Any
 
+# Phase F: Evidence and parity utilities
+from libs.analytics import evidence_config, parity_util
+
 # Component 2: Semantic Retrieval
 try:
     from libs.retrieval.semantic_wx import SemanticRetriever
@@ -232,7 +235,11 @@ def determinism_3x(doc_id: str, company: str, year: int, query: str = "ESG clima
 
 def parity_check(doc_id: str) -> Dict[str, Any]:
     """
-    Validate parity: evidence_ids ⊆ fused_topk.
+    Phase F: Validate parity with enhanced nonempty guard.
+
+    Checks:
+    1. evidence_ids ⊆ fused_topk (subset requirement)
+    2. fused_topk non-empty OR no evidence exists (nonempty guard)
 
     Extracts parity data from scoring_response.json (run_1).
     """
@@ -242,10 +249,12 @@ def parity_check(doc_id: str) -> Dict[str, Any]:
     if not scoring_path.exists():
         return {
             "doc_id": doc_id,
-            "constraint": "evidence_ids subset_of fused_topk",
+            "constraint": "evidence_ids subset_of fused_topk AND (fused_topk non-empty OR no evidence)",
             "evidence_ids": [],
             "fused_topk_ids": [],
             "subset_ok": False,
+            "fused_nonempty_or_no_evidence": True,  # Phase F: Vacuous truth (no evidence)
+            "passed": False,
             "themes_covered": 0,
             "notes": "[scoring_response.json not found]",
             "status": "blocked",
@@ -265,23 +274,36 @@ def parity_check(doc_id: str) -> Dict[str, Any]:
                     evidence_ids.add(ev["doc_id"])
                 elif "chunk_id" in ev:
                     evidence_ids.add(ev["chunk_id"])
+                elif "evidence_id" in ev:
+                    evidence_ids.add(ev["evidence_id"])
+
+        # Phase F: Use parity_util for enhanced validation
+        parity_result = parity_util.parity_result(
+            evidence_ids=sorted(list(evidence_ids)),
+            fused_topk_ids=parity.get("fused_topk_ids", [])
+        )
 
         return {
             "doc_id": doc_id,
-            "constraint": "evidence_ids subset_of fused_topk",
-            "evidence_ids": sorted(list(evidence_ids)),
+            "constraint": "evidence_ids subset_of fused_topk AND (fused_topk non-empty OR no evidence)",
+            "evidence_ids": parity_result["missing_ids"] if not parity_result["subset_ok"] else sorted(list(evidence_ids)),
             "fused_topk_ids": parity.get("fused_topk_ids", []),
-            "subset_ok": parity.get("validated", True),
+            "subset_ok": parity_result["subset_ok"],
+            "fused_nonempty_or_no_evidence": parity_result["fused_nonempty_or_no_evidence"],
+            "passed": parity_result["passed"],  # Phase F: Both gates must pass
+            "coverage": parity_result["coverage"],
             "themes_covered": len(scoring_data.get("scores", [])),
-            "notes": parity.get("notes", ""),
+            "notes": parity.get("notes", "") if parity_result["passed"] else f"Parity gates failed: subset={parity_result['subset_ok']}, nonempty_guard={parity_result['fused_nonempty_or_no_evidence']}",
         }
 
     except Exception as e:
         return {
             "doc_id": doc_id,
-            "constraint": "evidence_ids subset_of fused_topk",
+            "constraint": "evidence_ids subset_of fused_topk AND (fused_topk non-empty OR no evidence)",
             "error": str(e),
             "subset_ok": False,
+            "fused_nonempty_or_no_evidence": False,
+            "passed": False,
             "themes_covered": 0,
             "status": "error",
         }
@@ -289,9 +311,14 @@ def parity_check(doc_id: str) -> Dict[str, Any]:
 
 def evidence_audit(doc_id: str) -> Dict[str, Any]:
     """
-    Audit evidence per theme.
+    Phase F: Audit evidence per theme with enhanced gates.
 
-    Extracts evidence from scoring_response.json and counts pages per theme.
+    Enhanced Requirements:
+    - ≥3 distinct pages per theme (up from 2)
+    - Page span ≥ get_min_span_for_doc(total_pages)
+    - ≤5 evidence items per page
+
+    Extracts evidence from scoring_response.json and validates per theme.
     """
     # Load scoring response from run_1
     scoring_path = Path(f"artifacts/matrix/{doc_id}/baseline/run_1/scoring_response.json")
@@ -317,44 +344,91 @@ def evidence_audit(doc_id: str) -> Dict[str, Any]:
         with open(scoring_path, "r", encoding="utf-8") as f:
             scoring_data = json.load(f)
 
+        # Phase F: Extract total_pages from first evidence item (all should have same value)
+        total_pages = 1  # Default
+        for score in scoring_data.get("scores", []):
+            evidence_list = score.get("evidence", [])
+            if evidence_list and "total_pages" in evidence_list[0]:
+                total_pages = evidence_list[0]["total_pages"]
+                break
+
+        # If not in evidence, try to infer from max page number
+        if total_pages == 1:
+            all_pages = []
+            for score in scoring_data.get("scores", []):
+                for ev in score.get("evidence", []):
+                    page = ev.get("page_no") or ev.get("page")
+                    if page and page != 0:
+                        try:
+                            all_pages.append(int(page))
+                        except (ValueError, TypeError):
+                            pass
+            if all_pages:
+                total_pages = max(all_pages)
+
         theme_coverage = {}
 
         for score in scoring_data.get("scores", []):
             theme_code = score.get("theme", "UNKNOWN")
             evidence_list = score.get("evidence", [])
 
-            # Extract unique pages (Phase E: support both 'page_no' and 'page')
-            pages = set()
+            # Extract pages (Phase E: support both 'page_no' and 'page')
+            pages = []
             for ev in evidence_list:
                 page = ev.get("page_no") or ev.get("page")
                 if page and page != 0:  # Exclude default 0 pages
-                    pages.add(str(page))
+                    pages.append(page)
+
+            # Phase F: Use evidence_config for validation
+            validation = evidence_config.evidence_ok(pages, total_pages)
 
             theme_coverage[theme_code] = {
                 "evidence_count": len(evidence_list),
-                "pages": sorted(list(pages)),
-                "unique_pages": len(pages),
-                "passed": len(pages) >= 2,  # Gate: ≥2 distinct pages
+                "pages": sorted([str(p) for p in validation["unique_pages"]]),
+                "unique_pages": validation["distinct_pages"],
+                "page_span": validation["page_span"],
+                "min_span_required": validation["min_span_required"],
+                "passed": validation["passed"],
+                "gate_details": validation["gates"],  # Phase F: Show individual gate results
             }
 
         # Fill in missing themes
         for theme in themes:
             if theme not in theme_coverage:
+                min_span = evidence_config.get_min_span_for_doc(total_pages)
                 theme_coverage[theme] = {
                     "evidence_count": 0,
                     "pages": [],
                     "unique_pages": 0,
+                    "page_span": 0,
+                    "min_span_required": min_span,
                     "passed": False,
+                    "gate_details": {"min_distinct": False, "min_span": False},
                 }
 
         # Overall pass status
         all_passed = all(theme_coverage[t]["passed"] for t in themes)
 
+        # Phase F: Enhanced notes with specific failure reasons
+        if not all_passed:
+            failed_themes = [t for t in themes if not theme_coverage[t]["passed"]]
+            notes_parts = []
+            for t in failed_themes[:3]:  # Show first 3 failures
+                tc = theme_coverage[t]
+                if not tc["gate_details"]["min_distinct"]:
+                    notes_parts.append(f"{t}: {tc['unique_pages']}/{evidence_config.EVIDENCE_PAGE_MIN_DISTINCT} pages")
+                elif not tc["gate_details"]["min_span"]:
+                    notes_parts.append(f"{t}: span {tc['page_span']}/{tc['min_span_required']}")
+            notes = "; ".join(notes_parts)
+        else:
+            notes = ""
+
         return {
             "doc_id": doc_id,
+            "total_pages": total_pages,  # Phase F: Include for context
             "themes": theme_coverage,
             "all_themes_passed": all_passed,
-            "notes": "" if all_passed else "Some themes have <2 distinct pages",
+            "notes": notes,
         }
 
     except Exception as e:
@@ -458,27 +532,35 @@ def rd_sources(doc_id: str) -> Dict[str, Any]:
 
 def output_contract(doc_id: str, det_pass: bool, parity_result: Dict, evidence_result: Dict) -> Dict[str, Any]:
     """
-    Generate per-document output contract with gate validation.
+    Phase F: Generate per-document output contract with enhanced gate validation.
 
     Args:
         doc_id: Document identifier
         det_pass: True if determinism check passed
-        parity_result: Parity validation result
-        evidence_result: Evidence audit result
+        parity_result: Parity validation result (with Phase F nonempty guard)
+        evidence_result: Evidence audit result (with Phase F enhanced thresholds)
 
     Returns:
         Output contract dict
     """
-    parity_pass = parity_result.get("subset_ok", False)
+    # Phase F: Use "passed" field which validates both subset AND nonempty guard
+    parity_pass = parity_result.get("passed", False)
     evidence_pass = evidence_result.get("all_themes_passed", False)
 
     # Overall status: "ok" if all gates pass, "revise" if any fail
     status = "ok" if (det_pass and parity_pass and evidence_pass) else "revise"
 
+    # Phase F: Enhanced gate details with new requirements
+    total_pages = evidence_result.get("total_pages", 1)
+    min_span = evidence_config.get_min_span_for_doc(total_pages)
+    evidence_detail = f"All themes ≥{evidence_config.EVIDENCE_PAGE_MIN_DISTINCT} pages, span≥{min_span}" if evidence_pass else evidence_result.get("notes", "")
+
+    parity_detail = "evidence_ids ⊆ fused_topk AND (fused_topk non-empty OR no evidence)" if parity_pass else parity_result.get("notes", "")
+
     return {
         "doc_id": doc_id,
         "agent": "SCA",
-        "version": "13.8-MEA",
+        "version": "13.8-MEA-PhaseF",  # Phase F version
         "status": status,
         "gates": {
             "determinism": "PASS" if det_pass else "FAIL",
@@ -489,8 +571,14 @@ def output_contract(doc_id: str, det_pass: bool, parity_result: Dict, evidence_r
         },
         "gate_details": {
             "determinism": "All 3 hashes identical" if det_pass else "Hash mismatch detected",
-            "parity": "evidence_ids ⊆ fused_topk" if parity_pass else parity_result.get("notes", ""),
-            "evidence": "All themes ≥2 pages" if evidence_pass else evidence_result.get("notes", ""),
+            "parity": parity_detail,
+            "evidence": evidence_detail,
+        },
+        "evidence_config": {  # Phase F: Document the configuration used
+            "min_distinct_pages": evidence_config.EVIDENCE_PAGE_MIN_DISTINCT,
+            "min_span_for_doc": min_span,
+            "total_pages": total_pages,
+            "doc_length_threshold": evidence_config.DOC_LENGTH_THRESHOLD,
         },
         "artifacts": {
             "determinism_report": f"artifacts/matrix/{doc_id}/baseline/determinism_report.json",
