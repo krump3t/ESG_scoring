@@ -1,0 +1,87 @@
+
+======================================================================
+REPLAY PHASE: Querying AAPL_2023 (offline, cache-only)
+======================================================================
+
+Integration flags: {'semantic_enabled': True, 'watsonx_enabled': True, 'astradb_enabled': False, 'wx_embeddings': True, 'wx_locator': True, 'wx_edit': True, 'wx_rerank': False, '_comment': 'watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.', 'alpha': 0.6, 'k': 50}
+Query: ESG climate strategy and GHG emissions targets
+Top-K: 50, Alpha: 0.6
+
+Querying AAPL_2023...
+  Loaded 12431 chunks, 12431 vectors for AAPL_2023
+
+Top-10 Results:
+  Rank  1: AAPL_2023_p3233_c12121         (score=0.8979)
+            BM25=1.0000, Semantic=0.7447
+            Text: null](56295_apple epr_2023_aw6-v12.6.indd:assessment and management:111703172)[1...
+
+  Rank  2: AAPL_2023_p712_c2669           (score=0.7040)
+            BM25=0.7205, Semantic=0.6791
+            Text: <xmpmm:derivedfrom
+    stref:instanceid="xmp.iid:721ad348a22b11ecacedb50a03222fc...
+
+  Rank  3: AAPL_2023_p521_c1951           (score=0.7028)
+            BM25=0.7174, Semantic=0.6808
+            Text: -04:00"/>
+     <rdf:li
+      stevt:action="saved"
+      stevt:changed="/"
+      ...
+
+  Rank  4: AAPL_2023_p298_c1114           (score=0.7026)
+            BM25=0.7087, Semantic=0.6933
+            Text: mpcore:ciurlwork="http://www.markmahaney.com/"/>
+   <dc:creator>
+    <rdf:seq>
+ ...
+
+  Rank  5: AAPL_2023_p377_c1412           (score=0.6882)
+            BM25=0.7124, Semantic=0.6519
+            Text: photoshop:legacyiptcdigest="e657f60fb49cbfc4b952497309ad974e"
+   photoshop:state...
+
+  Rank  6: AAPL_2023_p193_c720            (score=0.6879)
+            BM25=0.6862, Semantic=0.6904
+            Text: tation consumer magazine, consumer newspaper, trade magazine, industrial, point ...
+
+  Rank  7: AAPL_2023_p145_c543            (score=0.6851)
+            BM25=0.7024, Semantic=0.6592
+            Text: subjectcode>
+   <dc:creator>
+    <rdf:seq>
+     <rdf:li>brooks kraft</rdf:li>
+  ...
+
+  Rank  8: AAPL_2023_p521_c1952           (score=0.6806)
+            BM25=0.6734, Semantic=0.6914
+            Text: 82-9183&#xa;&#xa;&#xa;talent: unlimited use for all promotional, marketing and a...
+
+  Rank  9: AAPL_2023_p146_c544            (score=0.6786)
+            BM25=0.6815, Semantic=0.6744
+            Text: scole@apple.com.photo: unlimited time, exclusively, worldwide (even as to you), ...
+
+  Rank 10: AAPL_2023_p377_c1413           (score=0.6774)
+            BM25=0.6654, Semantic=0.6955
+            Text: e use including channel third party advertising, excluding apple print, outdoor,...
+
+
+======================================================================
+Parity Validation (evidence_ids subset of topk)
+======================================================================
+
+{
+  "doc_id": "AAPL_2023",
+  "constraint": "evidence_ids \u2286 fused_topk",
+  "validated": true,
+  "subset_ok": true,
+  "topk_count": 50,
+  "evidence_count": 5,
+  "missing_count": 0,
+  "missing_ids": [],
+  "notes": ""
+}
+
+======================================================================
+REPLAY PHASE COMPLETE
+======================================================================
+

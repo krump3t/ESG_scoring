@@ -1,0 +1,44 @@
+{
+  "protocol": "SCA v13.8-MEA Matrix Determinism Proof",
+  "generated_at": "2025-10-28T22:00:00Z",
+  "agent": "Claude Code / Sonnet 4.5",
+  "status": "PASS",
+  "test_config": {
+    "document": "msft_2023",
+    "runs": 3,
+    "phase": "REPLAY (offline)",
+    "seed": 42,
+    "pythonhashseed": 0,
+    "offline_replay": true,
+    "query": "ESG climate strategy and GHG emissions targets",
+    "alpha": 0.6,
+    "k": 50
+  },
+  "results": {
+    "run_1": {
+      "log_file": "artifacts/matrix_determinism/run_1/replay_log.txt",
+      "sha256": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca"
+    },
+    "run_2": {
+      "log_file": "artifacts/matrix_determinism/run_2/replay_log.txt",
+      "sha256": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca"
+    },
+    "run_3": {
+      "log_file": "artifacts/matrix_determinism/run_3/replay_log.txt",
+      "sha256": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca"
+    }
+  },
+  "validation": {
+    "hash_consistency": "100%",
+    "all_hashes_match": true,
+    "canonical_hash": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca",
+    "determinism_gate": "PASS"
+  },
+  "attestation": {
+    "cache_mode": "offline_replay",
+    "network_calls": 0,
+    "cache_hits": "100%",
+    "watsonx_model": "ibm/slate-125m-english-rtrvr",
+    "vector_dimensions": 768
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "company": "Headlam Group PLC",
+  "determinism_seed": 42,
+  "doc_id": "LSE_HEAD_2025",
+  "hashes": [
+    "836f158758a0a7608ef7eebdc558dde95c068da6a9e63c33696457ff374cde68",
+    "836f158758a0a7608ef7eebdc558dde95c068da6a9e63c33696457ff374cde68",
+    "836f158758a0a7608ef7eebdc558dde95c068da6a9e63c33696457ff374cde68"
+  ],
+  "identical": true,
+  "pythonhashseed": 0,
+  "runs": 3,
+  "year": 2025
+}

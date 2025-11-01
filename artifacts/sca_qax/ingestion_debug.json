@@ -1,0 +1,116 @@
+{
+  "pdf": "artifacts/raw/LSE_HEAD_2025.pdf",
+  "sha256": "6a1dd9269c1cbba08802f0fa2d1d732d041dacd36113a6a02e36a563de85f8e5",
+  "page_count": 27,
+  "per_page_stats": [
+    {
+      "page": 1,
+      "chars": 77
+    },
+    {
+      "page": 2,
+      "chars": 1981
+    },
+    {
+      "page": 3,
+      "chars": 3513
+    },
+    {
+      "page": 4,
+      "chars": 3263
+    },
+    {
+      "page": 5,
+      "chars": 1502
+    },
+    {
+      "page": 6,
+      "chars": 2588
+    },
+    {
+      "page": 7,
+      "chars": 3011
+    },
+    {
+      "page": 8,
+      "chars": 3704
+    },
+    {
+      "page": 9,
+      "chars": 3609
+    },
+    {
+      "page": 10,
+      "chars": 5676
+    },
+    {
+      "page": 11,
+      "chars": 2926
+    },
+    {
+      "page": 12,
+      "chars": 5407
+    },
+    {
+      "page": 13,
+      "chars": 2476
+    },
+    {
+      "page": 14,
+      "chars": 1865
+    },
+    {
+      "page": 15,
+      "chars": 2851
+    },
+    {
+      "page": 16,
+      "chars": 5636
+    },
+    {
+      "page": 17,
+      "chars": 1155
+    },
+    {
+      "page": 18,
+      "chars": 3656
+    },
+    {
+      "page": 19,
+      "chars": 2897
+    },
+    {
+      "page": 20,
+      "chars": 4192
+    },
+    {
+      "page": 21,
+      "chars": 1591
+    },
+    {
+      "page": 22,
+      "chars": 3235
+    },
+    {
+      "page": 23,
+      "chars": 2792
+    },
+    {
+      "page": 24,
+      "chars": 1629
+    },
+    {
+      "page": 25,
+      "chars": 1399
+    },
+    {
+      "page": 26,
+      "chars": 2489
+    },
+    {
+      "page": 27,
+      "chars": 167
+    }
+  ],
+  "scan_suspect": false
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "20251028-003303-9cb14d49",
+  "session_id": "prospecting-engine-00027290-d975-4cbb-9cd8-206efe0198ff",
+  "timestamp": "2025-10-28T00:33:03.764569Z",
+  "artifacts": [
+    {
+      "name": "pytest",
+      "path": "qa\\pytest.txt",
+      "size_bytes": 3830,
+      "modified": "2025-10-27T12:23:51.321343Z"
+    },
+    {
+      "name": "run_log",
+      "path": "qa\\run_log.txt",
+      "size_bytes": 3857,
+      "modified": "2025-10-27T12:23:51.321343Z"
+    },
+    {
+      "name": "cp_list",
+      "path": "qa\\cp_list.txt",
+      "size_bytes": 321,
+      "modified": "2025-10-27T12:23:26.852873Z"
+    }
+  ]
+}

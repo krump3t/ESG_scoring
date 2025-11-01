@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_e2e_cold_start.py", line 504, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_e2e_cold_start.py", line 500, in main
+    runner.run_all()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_e2e_cold_start.py", line 463, in run_all
+    self.phase6_replay_3x()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_e2e_cold_start.py", line 406, in phase6_replay_3x
+    returncode, stdout, stderr = self._run_command(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_e2e_cold_start.py", line 68, in _run_command
+    raise subprocess.CalledProcessError(process.returncode, cmd, stdout, stderr)
+subprocess.CalledProcessError: Command '['C:\\projects\\Work Projects\\north-sea-drilling-optimization\\.venv\\Scripts\\python.exe', 'scripts/run_matrix.py', '--config', 'configs\\companies_local.yaml']' returned non-zero exit status 2.

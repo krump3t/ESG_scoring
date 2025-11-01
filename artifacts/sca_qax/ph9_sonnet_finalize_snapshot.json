@@ -1,0 +1,31 @@
+{
+  "task_id": "PH9-SONNET-FINALIZE",
+  "phase": "9",
+  "timestamp": "2025-10-25T04:48:48.981644",
+  "status": "partial_pass",
+  "coverage": {
+    "apps_api_main_py": 100.0,
+    "apps_pipeline_demo_flow_py": 85.3,
+    "target": 95.0
+  },
+  "determinism": {
+    "runs": 3,
+    "identical": true,
+    "digest_prefix": "a552954f5e5174a6"
+  },
+  "parity": {
+    "status": "pass",
+    "parity_ok": true
+  },
+  "tests": {
+    "total_passed": 127,
+    "total_failed": 4,
+    "new_tests": 9
+  },
+  "artifacts": [
+    "artifacts/sca_qax/coverage.xml",
+    "artifacts/sca_qax/determinism_report.json",
+    "artifacts/api/openapi.json",
+    "artifacts/pipeline_validation/demo_topk_vs_evidence.json"
+  ]
+}

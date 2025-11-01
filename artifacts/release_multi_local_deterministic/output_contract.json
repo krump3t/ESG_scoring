@@ -1,0 +1,24 @@
+{
+  "agent": "SCA",
+  "artifacts": {
+    "determinism_report": "artifacts/matrix/apple_2023/baseline/determinism_report.json",
+    "evidence_audit": "artifacts/matrix/apple_2023/pipeline_validation/evidence_audit.json",
+    "parity_report": "artifacts/matrix/apple_2023/pipeline_validation/demo_topk_vs_evidence.json",
+    "rd_sources": "artifacts/matrix/apple_2023/pipeline_validation/rd_sources.json"
+  },
+  "doc_id": "apple_2023",
+  "gate_details": {
+    "determinism": "Hash mismatch detected",
+    "evidence": "Some themes have <2 distinct pages",
+    "parity": "evidence_ids ⊆ fused_topk"
+  },
+  "gates": {
+    "authenticity": "PASS",
+    "determinism": "FAIL",
+    "evidence": "FAIL",
+    "parity": "PASS",
+    "traceability": "PASS"
+  },
+  "status": "revise",
+  "version": "13.8-MEA"
+}

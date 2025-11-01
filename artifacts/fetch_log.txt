@@ -1,0 +1,24 @@
+
+======================================================================
+FETCH PHASE: Building embeddings for all
+======================================================================
+
+Integration flags: {'semantic_enabled': True, 'watsonx_enabled': True, 'astradb_enabled': False, 'wx_embeddings': True, 'wx_locator': True, 'wx_edit': True, 'wx_rerank': False, '_comment': 'watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.', 'alpha': 0.6, 'k': 50}
+
+Building embeddings for all...
+
+======================================================================
+ERROR: Invalid doc_id format: all. Expected: org_id_year
+======================================================================
+
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\semantic_fetch_replay.py", line 228, in main
+    result = fetch_phase(args.doc_id, silver_root=args.silver_root)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\semantic_fetch_replay.py", line 90, in fetch_phase
+    build_result = retriever.build_chunk_embeddings(doc_id, silver_root=silver_root)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\retrieval\semantic_wx.py", line 134, in build_chunk_embeddings
+    raise ValueError(f"Invalid doc_id format: {doc_id}. Expected: org_id_year")
+ValueError: Invalid doc_id format: all. Expected: org_id_year
+

@@ -1,0 +1,9 @@
+{
+  "phase": "context",
+  "status": "ok",
+  "task_id": "010-hybrid-ingestion-phase1",
+  "ts": 1761277789.6673944,
+  "AUTO": 2,
+  "SAFE_MODE": "on",
+  "DRY_RUN": "off"
+}

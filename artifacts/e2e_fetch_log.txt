@@ -1,0 +1,30 @@
+=== Live Ingestion Orchestrator ===
+Config: configs\companies_live.yaml
+Companies: 3
+
+[1/3] Microsoft Corporation
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 104, in run
+    result = self._process_company(company)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 148, in _process_company
+    pdf_path, manifest = self._download_or_locate_pdf(company, doc_dir / "raw")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 195, in _download_or_locate_pdf
+    raise RuntimeError(
+RuntimeError: Provider 'None' not implemented yet. Use provider='local' for now.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 289, in <module>
+    main()
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 283, in main
+    summary = orchestrator.run(doc_id_filter=args.doc_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\ingest_live_matrix.py", line 115, in run
+    print(f"  \u2717 Error: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 2: character maps to <undefined>

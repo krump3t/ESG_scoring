@@ -1,0 +1,19 @@
+{
+  "PH10": {
+    "evidence_gate": ">=2/theme + pdf_sha256 + char_span",
+    "parity_present": "coverage >= 1.0",
+    "determinism_contract": "identical=true, n=3",
+    "no_stubs": "enforced"
+  },
+  "PH11": {
+    "retrieval_disclosure": "mode, method=hybrid(bm25+tfidf), params",
+    "parity_present": "subset check passes",
+    "no_stubs": "enforced"
+  },
+  "PH12": {
+    "langgraph_topology": ">=7 nodes / >=6 edges",
+    "retrieval_disclosure": "present",
+    "determinism_contract": "identical=true",
+    "no_stubs": "enforced"
+  }
+}

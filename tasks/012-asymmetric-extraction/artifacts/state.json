@@ -1,0 +1,25 @@
+{
+  "phase": "3",
+  "status": "ok",
+  "task_id": "012-asymmetric-extraction",
+  "ts": 1761316846.8596215,
+  "AUTO": 2,
+  "SAFE_MODE": "on",
+  "DRY_RUN": "off",
+  "coverage": {
+    "line": 0.967,
+    "branch": 0.910
+  },
+  "tests": {
+    "total": 42,
+    "passed": 42,
+    "failed": 0
+  },
+  "authentic_data": {
+    "source": "SEC EDGAR API",
+    "company": "Apple Inc. (CIK 0000320193)",
+    "file_size_mb": 3.5,
+    "metrics_extracted": 6,
+    "validation": "ground_truth_verified"
+  }
+}

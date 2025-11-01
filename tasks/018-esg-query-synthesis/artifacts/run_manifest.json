@@ -1,0 +1,61 @@
+{
+  "run_id": "20251027-005403-a38da86f",
+  "session_id": "prospecting-engine-f8b5eb29-a70e-40dc-83da-ee16876e61e7",
+  "timestamp": "2025-10-27T00:58:38.613905Z",
+  "artifacts": [
+    {
+      "name": "coverage",
+      "path": "qa\\coverage.xml",
+      "size_bytes": 13149,
+      "modified": "2025-10-26T19:55:29.139852Z"
+    },
+    {
+      "name": "pytest",
+      "path": "qa\\pytest.txt",
+      "size_bytes": 6479,
+      "modified": "2025-10-26T19:54:49.872646Z"
+    },
+    {
+      "name": "mypy",
+      "path": "qa\\mypy.txt",
+      "size_bytes": 22612,
+      "modified": "2025-10-26T19:57:32.286872Z"
+    },
+    {
+      "name": "lizard",
+      "path": "qa\\lizard_report.txt",
+      "size_bytes": 918,
+      "modified": "2025-10-26T19:57:32.547746Z"
+    },
+    {
+      "name": "interrogate",
+      "path": "qa\\interrogate.txt",
+      "size_bytes": 4641,
+      "modified": "2025-10-26T19:57:34.083408Z"
+    },
+    {
+      "name": "secrets",
+      "path": "qa\\secrets.json",
+      "size_bytes": 2,
+      "modified": "2025-10-26T19:57:34.477067Z"
+    },
+    {
+      "name": "pip_audit",
+      "path": "qa\\pip_audit.txt",
+      "size_bytes": 700,
+      "modified": "2025-10-26T19:58:38.592587Z"
+    },
+    {
+      "name": "run_log",
+      "path": "qa\\run_log.txt",
+      "size_bytes": 689807,
+      "modified": "2025-10-26T19:58:38.592587Z"
+    },
+    {
+      "name": "cp_list",
+      "path": "qa\\cp_list.txt",
+      "size_bytes": 537,
+      "modified": "2025-10-26T19:54:04.263645Z"
+    }
+  ]
+}

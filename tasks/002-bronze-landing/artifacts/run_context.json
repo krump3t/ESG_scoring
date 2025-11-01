@@ -1,0 +1,46 @@
+{
+  "run_id": "002-bronze-ph5-20251022-041013",
+  "task": "002-bronze-landing",
+  "phase": "5",
+  "timestamp": "2025-10-22T04:10:13Z",
+  "tools_invoked": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "python"
+  ],
+  "cp_files": [
+    "agents/crawler/mcp_crawler.py",
+    "agents/crawler/extractors/pdf_extractor.py",
+    "agents/crawler/writers/parquet_writer.py"
+  ],
+  "test_files": [
+    "tests/test_mcp_crawler.py",
+    "tests/test_pdf_extractor.py",
+    "tests/test_parquet_writer.py"
+  ],
+  "validation_results": {
+    "tdd_guard": "pass",
+    "coverage_cp": "pass",
+    "types_cp": "pass",
+    "complexity": "pass",
+    "docs_cp": "pass",
+    "integration": "pass"
+  },
+  "bronze_data_created": {
+    "org_id": "test_corporation",
+    "year": 2024,
+    "doc_id": "aca6c001-0500-4fac-b2e6-0155c70e6012",
+    "s3_path": "s3://esg-lake/bronze/test_corporation/2024/aca6c001-0500-4fac-b2e6-0155c70e6012/raw.parquet",
+    "size_bytes": 17401,
+    "sha256": "1d890195e95d2f67aeebe81e27dffa94fcacc4a0aa460e568cf388beb009be26",
+    "frameworks_detected": ["SBTi", "TCFD/ISSB", "GHG Protocol", "CSRD/ESRS"]
+  },
+  "environment": {
+    "python_version": "3.x",
+    "minio_endpoint": "localhost:9000",
+    "bucket": "esg-lake",
+    "dependencies": ["pymupdf", "pdfplumber", "pyarrow", "minio"]
+  }
+}

@@ -1,0 +1,895 @@
+{
+  "company": "ExxonMobil Corporation",
+  "deterministic_timestamp": "2025-10-28T06:00:00Z",
+  "doc_id": "XOM_2023",
+  "model_version": "1.0",
+  "parity": {
+    "evidence_ids": [
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023",
+      "XOM_2023"
+    ],
+    "fused_topk_ids": [
+      "XOM_2023"
+    ],
+    "parity_ok": true
+  },
+  "query": "ESG climate strategy and GHG emissions targets",
+  "rubric_version": "3.0",
+  "run": 1,
+  "scores": [
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Automated pipelines with real‑time validation, lineage tracking, and integrated reporting systems (e.g., Iceberg, Parquet architecture).",
+      "theme": "DM"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "AI/ML forecasting; optimization across assets; cost‑benefit analysis tied to decarbonization strategy.",
+      "theme": "EI"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Full third‑party reasonable assurance; GHG Protocol compliance; uncertainty analysis; auditor verification.",
+      "theme": "GHG"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls.",
+      "theme": "OSP"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "External assurance; digital tagging (XBRL/ESRS); integrated financial filing; near‑real‑time reporting.",
+      "theme": "RD"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Enterprise risk integrated with financial modeling; insured/uninsured analysis; public disclosure per ISSB/CSRD.",
+      "theme": "RMM"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 4436 0 obj <</Linearized 1/L 8354876/O 4439/E 303426/N 100/T 8266039/H [ 1196 3135]>> endobj xref 4436 45 0000000016 00000 n 0000004331 00000 n 0000004481 00000 n 0000004519 00000",
+          "sha256": "f4b448292cf3fa40461639fce20fcd730e84cbd862706267782d4ce17c351926"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000 n 0000303365 00000 n 0000001196 00000 n trailer",
+          "sha256": "4ef7375eade37313019db20c4eb51c7db8b672ce53aebb2e0c1b71e9e28257c0"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "12.0]/Parent 4413 0 R/Resources<</ColorSpace<</CS0 4443 0 R>>/ExtGState<</GS0 4445 0 R/GS1 4446 0 R/GS2 4444 0 R>>/Font<</TT0 4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0",
+          "sha256": "ac2727875acc05c4b5c35c2078bbff54c59d23346218862242e4328e6d6aed12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "3800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248 108.766 302.6 1.0 0.0 0.0 1.0 -252.669 295.836]>>/PageTransformationMatrixList<</0[1.0 0.0 0.0 1.0 0.0 0.0]>>/PageUIDList<</0 935>>/PageWidthList<</0 792.0>>>>>>>> endobj 4440 0 obj <</BaseFont/JLCRCP+EMprint-Light/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4442 0 R/LastChar 148/Subtype/TrueType/ToUnicode",
+          "sha256": "92ab0b54cf456e04471c412efa02c04f0fb7a888f6dd8bedce9bedb553c9bdcc"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": ".\u0003B\u0010\" \u0002ա\u0007v\u0002d=+\u0018*áP'۪{\u000eHʠA\u0003w6(Vofw\u001a\u0006\u0002ii\"\u000fB\u0005+*f\u0017V3\bٽ4\bwU>J\u0016w=:/+\u0006_:Xd)P\u0014s%/ޢ^\u0017\u0016i '^<ʚuhhT[OSDVH\u0001:sBqC%Ȅ\u0005υdJ-\u0004\u0000j*(S[ѳ)c:@qwx p6\"ņaCr\u0000Mڈ w.\u000et &1\u0006ȯ\u0007(ц\u0007\u001a\u0019\u0018c\u0011\u0012)CϹ;2\u0010Bf(F\u0012\u000fVη\u00162\u0000>H(3#P\u0010Yy\u0012Xpq\"b]fvu\u0014+&<kɀ2^V˸{)kNAċEC?P\u00171 ь\u0001\u0012\u0006ױ;`Jik\u000f:+ [\u0000 s6!l 0XFAtu9Mzw\u0006gRB[(3j ɓ\u001aH\u0000r%:5n\u0010>ի~$-jmr\u0001 !@軺0 ϐB ps\u00014]cK\u0003 [sl{~\u0003-<{|`tn!zu@chSJS\u0006\b~MbH~.B_n̚\u000f׶ S K<X)!pz\u000eRӉR\u0005\u0013猑\u0001~1\u001b y[\b 7 n\u0018\u0019\b\u0002Zl ;dl .k?qg,'-k $2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0",
+          "sha256": "369df46ea367d2d7326ef6a5d97c96c8f06ea3182090765f1e3d1289fcbb35ff"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575 245 393 245 431 575 575 575 575 575 575",
+          "sha256": "6afe98f4595b301d720f4daa5880745cbeb1dbbdc5642fb535cf7eb8e566e5ab"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "1 18544>>stream HtVkp\u0013\u0015v%Yv dٖk$K\u0006cHx,Ď 1` 8\u0015N\b1P<<GBR M\u001a\u00146\u0000i\u0002\u0017&CCдyn @udLtvFws9\b\u0010B,d\u0013aG\u0016\u0005B?\u0019lOH\u0015aetE ;G\b cB !p}Ute\b)\u0010U-O7]6e$ĳqS^^\u0019`_W:9s V5>ct\\\u0011k\u0017! !\u0015=TyOh㉴ \u0012RB\b=\u0012%!ollw\u00144~\u0011x\u0010z&\bKddq:=\u0011tYϐpe%/\u0007J^A\baGCU-\u0005 Z#=u&k\u000e:ԩ\u00061\u001038I6)\\mfV+g\\2'\u0018\u0003\u0011ы\u0017H;J f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr",
+          "sha256": "ee4d1f408f463871b63374fdf9a90296e482aca9497ba9b97f7372598cc9832a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000007287 00000 n 0000007326 00000 n 0000007451 00000 n 0000007566 00000 n 0000007679 00000 n 0000009369 00000 n 0000010009 00000 n 0000010663 00000 n 0000010933 00000 n 0000011192 00000",
+          "sha256": "74e46c2e0215be3ac1cc9c2953f60164bc75198e1eae6d92e32cdcd44780a1b5"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "4440 0 R/TT1 4449 0 R/TT2 4453 0 R>>/ProcSet[/PDF/Text/ImageC]/XObject<</Fm0 4462 0 R/Fm1 4464 0 R/Fm2 4466 0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3",
+          "sha256": "65ced02dce78c7eedf4b6617f938ecbaed7ff66a821b3f31e854ee44d8a1a238"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "$2Ng vs 4h\u0011Es`rGSjèus4I`u{+6xI,5Z \u0001\u0006\u0000HP endstream endobj 4448 0 obj <</Filter/FlateDecode/Length 569>>stream H\\͊@\u0014\u0005OQEcbݺ\u0003\u0012O7d1?Lf h%#LTY\u0011\u0012hy?\u000eX?tc_ m׌:S],\\__!6;YYGyƇ{4)>gc]ӯ0MnkszїjZ]e/&oKZ!b^\u0012SM U ǪĬ\\ct5ݷ\u0015j\u0002\u000f/\u0016锲0 2+1\u001b++ya o; yΜK䂹@ f\u000f\u000f\u0001~\u000f{=~\u000f#4\b B 4\b B 4\b B 4\b B 4\b B PСCA\u000e\u0005",
+          "sha256": "5a839a3025841df5046a37c9d51d4a5556d8f852b5911ec4d48505238c47bc12"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "f07p(29\bpT\u0002<m2 o* 1uVGj-(5ϫ[K\u0013*\u0016\u0017\u0015)\u0013¡$l\u0003|Eez\u0003hNf̉V..[\u0015[#C\u0011Y4.:œ;0>zSP\u0001\u0018D\u0013ɏL. \\t\u001b6lnҐ;\u0019ǯ\\8B_ܚ-cܥc/\u000fzQiUP\u0017%_\u00062 \u0002Uadj~ \u0004?k'kz}&^?zֶ T 4 C\u0015Z\u0019\u0000ZiM['Uvћ<xx\u0011 \u000fQ%\u0000iɮ7;i3nBt:\u001bC\u001a\u0004\u0016\u0011\u0014br64(އ@BDy# Ҫs\u0017I\u0014״\u000f$\u000fJNHF\u0002\bv9\u0000 l@Uu\u000eb\u0017&h\u001b\"76颭VVlشU*;\u0001;^9[\u0015ˊi!ڷZIT^<\u0005ޚ]$_nce)&Ȩ_U/ K g\u0013\u0013\u00181+ фr kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt=",
+          "sha256": "1809852d87d05a32006253ef054870f8e08153aadffe2d995ac5ac33a519f741"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000033877 00000 n 0000036527 00000 n 0000048438 00000 n 0000048842 00000 n 0000049259 00000 n 0000049619 00000 n 0000049997 00000 n 0000051415 00000 n 0000051492 00000 n 0000051814 00000",
+          "sha256": "8e42e542c57f3a1f925f7386d0238e280e28841af8ec689afc5c465efba5917a"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "0 R/Fm3 4468 0 R/Im0 4470 0 R/Im1 4472 0 R/Im2 4474 0 R/Im3 4476 0 R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0",
+          "sha256": "752595b1ea771220f6df10678d05be1cdc949eb017977515b5ded1a6185c46fe"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "B 4\b B 4\b B 4\b B PСCA\u000e\u0005 ;\u0014t(4 ́ \u0006t\u0018h\u000e0\u0007\u0003́\u0000s9 h\u000e0\u0007\u0003́\u0000g3Gяrbrbrbrbrbrb E?ʹʹ:e?~(QGُ e?~\u00181 ~7 ~7 ~7 ~7 ~7 \u0015\u0016%Y9\u00170l¹tGN;8mcު\u0002;El\u0007V\u0015`\u0000\u0018'\u0003 endstream endobj 4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar",
+          "sha256": "7b4b99028f498ee80c31e227297bb9353419884fa38a1ceec1d37fbf22cbbd98"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "kH\u0012\\DL \u0002\b%0\u000e'#/5wH\u0002 6\u0000 9u}#W\u0016\u0002u\u0010\u00107:-ިG lupD۶ԛ\u000eM#\u0004\bz\u0018ա\u0002F= a;+7i,FaK `*? KWGQ'\u0004\u0002Q* ZN% ZN>͔V%t`8#\u00118\u0018Gs\u0007\u0001S\u000f \u000f\u000eՆk \u0001\u0018R2#wTxYCvIfC\u0016@C<&\u0017|NQ\u0005p\u000f-WSt\u0013<Ki\u000fٿD9MY\b\u001b\u0010jS9N\u0019s\u0000gFߛz>.uL @\u0001헚\\<|⷗\u000e] 5]š/ y-Ѷ\u0016R-\u0017\u0013&\u0011thq\u0013\u0007_l\u0016X\u001b\u0014r_\u001b]\\b\u001b4q֎Y\u00155\u0017F<d4jt= 7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd&",
+          "sha256": "a574acf59fc3ca23539ddf37bd23a179e0cece1199642a9f49593f4510dc8f9d"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 1,
+          "quote": "n 0000052611 00000 n 0000064857 00000 n 0000086885 00000 n 0000093625 00000 n 0000117803 00000 n 0000149723 00000 n 0000178180 00000 n 0000210100 00000 n 0000250392 00000 n 0000282312 00000",
+          "sha256": "693d491ff0537547b30722636bb4b835a3875f2eeb2d9586c53b1f6fffabe599"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 2,
+          "quote": "R/Im4 4478 0 R>>>>/Rotate 0/Tabs/W/Thumb 4310 0 R/TrimBox[0.0 0.0 792.0 612.0]/Type/Page/PieceInfo<</InDesign<</DocumentID<FEFF0078006D0070002E006400690064003A00340063003800330066003600330031002D0033006600350031002D0034003100620061002D0039006200660033002D003600620032003700630066003600620033006600310036>/LastModified<FEFF0044003A00320030003200330030003400310037003100340032003500300036005A>/NumberOfPageItemsInPage 1/NumberofPages 1/OriginalDocumentID<FEFF0078006D0070002E006400690064003A00610031003800620036006100390033002D0034003200610035002D0034003100610062002D0038006200310062002D003900390066006100360061006600350036003900660037>/PageItemUIDToLocationDataMap<</0[-32768.0 0.0 3.0 -360.6 290.248",
+          "sha256": "bbdcce4f6e8fb3b64721ac10dbe3b8097965c996f0a9a147ffb08aba254eb096"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 3,
+          "quote": "4449 0 obj <</BaseFont/JLCRCP+EMprint-Semibold/Encoding/WinAnsiEncoding/FirstChar 32/FontDescriptor 4450 0 R/LastChar 186/Subtype/TrueType/ToUnicode 4448 0 R/Type/Font/Widths[234 0 0 0 575 0 715 188 322 322 449 575",
+          "sha256": "c4bdbb631598f073afaaf605a80d01c563686dfb1646c59e695488c353d73fdb"
+        },
+        {
+          "doc_id": "XOM_2023",
+          "page_no": 4,
+          "quote": "7/\bYn\u0015seN=r\u0014FP o s uP* +2TF}ՋkV/S,Yo^=;YJzΙMMwi \u0013%,\u0016 gR\u00011\u0017$v\u0010yBqط`]\\Ѓ?\u00052t\u000eM\\fFe]b쥈H4.z\u0004`\u0013\u0004c\u0015T΃\\<'ճJůbS<\u0005< K\u0003bmӫf]ȓYb</\u0018򞂍쒢Ł%˻fdˢ:% LT :=\u0012RE#\u0004 cL2\u0011:-o\u000e\\Y%g\u0002;lf nFFpĨVk]ĳ9U7y86E\u0007\u001b~̗gVgf~DG4V|\u0001\"S\u0002ʡ\u0007ͦ\u0000U\u0015>rzv3*\u000eR# W\\\"2I׏cQkG \u0006w0\u0003\u000f۝piޙ{:8ʻ{;[YR ߻/\u0014Z3ѳJSd& ( U\u0005JH\u0001٣",
+          "sha256": "ea2ba8d2da729d1c2e02eda307377a82eca5e25d9fd469ed177b333d2ffd952c"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Validated science‑based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+      "theme": "TSP"
+    }
+  ],
+  "theme_count": 7,
+  "trace_id": "sha256:69a00ab37a366700",
+  "year": 2023
+}

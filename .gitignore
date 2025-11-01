@@ -7,11 +7,15 @@ __pycache__/
 .env.template
 
 # Data
-artifacts/
 data/
 data_lake/
 *.parquet
 *.arrow
+
+# Large cache files (exceed GitHub limits)
+artifacts/wx_cache/
+artifacts/raw/*.pdf
+artifacts/**/*.pdf
 
 # IDE
 .vscode/

@@ -1,0 +1,175 @@
+{
+  "run_id": "task004-refinements-20251022",
+  "task_id": "004-rubric-v3-refinements",
+  "generated_artifacts": [
+    {
+      "category": "context",
+      "artifacts": [
+        {
+          "name": "Hypothesis",
+          "path": "tasks/004-rubric-v3-refinements/context/hypothesis.md",
+          "purpose": "Defines success metrics and validation plan"
+        },
+        {
+          "name": "Design",
+          "path": "tasks/004-rubric-v3-refinements/context/design.md",
+          "purpose": "Documents technical approach for each refinement"
+        },
+        {
+          "name": "Evidence",
+          "path": "tasks/004-rubric-v3-refinements/context/evidence.json",
+          "purpose": "EBSE sources supporting refinement decisions"
+        },
+        {
+          "name": "Data Sources",
+          "path": "tasks/004-rubric-v3-refinements/context/data_sources.json",
+          "purpose": "Data provenance and integrity metadata"
+        },
+        {
+          "name": "ADR",
+          "path": "tasks/004-rubric-v3-refinements/context/adr.md",
+          "purpose": "Architecture decision records"
+        },
+        {
+          "name": "Assumptions",
+          "path": "tasks/004-rubric-v3-refinements/context/assumptions.md",
+          "purpose": "Explicit assumptions and constraints"
+        },
+        {
+          "name": "Critical Path",
+          "path": "tasks/004-rubric-v3-refinements/context/cp_paths.json",
+          "purpose": "CP file paths and requirements"
+        }
+      ]
+    },
+    {
+      "category": "tests",
+      "artifacts": [
+        {
+          "name": "TDD Refinement Tests",
+          "path": "tests/test_rubric_v3_refinements.py",
+          "purpose": "14 TDD tests (4 refinement + regression + property + failure)",
+          "test_count": 14,
+          "cp_marked": true,
+          "hypothesis_properties": 3
+        }
+      ]
+    },
+    {
+      "category": "qa",
+      "artifacts": [
+        {
+          "name": "TDD Baseline Failures",
+          "path": "tasks/004-rubric-v3-refinements/qa/tdd_baseline_failures.txt",
+          "purpose": "Captured 6 expected failures before implementation"
+        },
+        {
+          "name": "TDD Post-Refinement Results",
+          "path": "tasks/004-rubric-v3-refinements/qa/tdd_post_refinement_results.txt",
+          "purpose": "14/14 passes after implementation"
+        },
+        {
+          "name": "Rubric Compliance Post-Refinement",
+          "path": "tasks/004-rubric-v3-refinements/qa/rubric_compliance_post_refinement.txt",
+          "purpose": "95.7% exact match validation"
+        },
+        {
+          "name": "Coverage Report",
+          "path": "tasks/004-rubric-v3-refinements/qa/coverage.xml",
+          "purpose": "60% shown (new tests only; comprehensive coverage from Task 003)"
+        },
+        {
+          "name": "Mypy Type Check",
+          "path": "tasks/004-rubric-v3-refinements/qa/mypy.txt",
+          "purpose": "0 type errors"
+        },
+        {
+          "name": "Lizard Complexity",
+          "path": "tasks/004-rubric-v3-refinements/qa/lizard_report.txt",
+          "purpose": "CCN ≤10 compliance"
+        },
+        {
+          "name": "Differential Post-Refinement",
+          "path": "tasks/004-rubric-v3-refinements/qa/differential_post_refinement_output.txt",
+          "purpose": "100% determinism across 2,447 cases"
+        },
+        {
+          "name": "Microsoft Post-Refinement",
+          "path": "tasks/004-rubric-v3-refinements/qa/microsoft_post_refinement_output.txt",
+          "purpose": "Delta comparison vs Task 003 baseline"
+        }
+      ]
+    },
+    {
+      "category": "reports",
+      "artifacts": [
+        {
+          "name": "Refinement Delta Report",
+          "path": "tasks/004-rubric-v3-refinements/reports/REFINEMENT_DELTA_REPORT.md",
+          "purpose": "Comprehensive delta report with all validation results"
+        }
+      ]
+    },
+    {
+      "category": "implementation",
+      "artifacts": [
+        {
+          "name": "Rubric V3 Scorer (Modified)",
+          "path": "agents/scoring/rubric_v3_scorer.py",
+          "lines_changed": "~60 lines added",
+          "refinements": [
+            "RD Stage 0 Detection (lines 446-462)",
+            "GHG Assurance Distinction (lines 426-441)",
+            "RMM Implicit Detection (lines 552-567)",
+            "RD Framework Attribution (lines 464-473)",
+            "Bonus: RD Annual Pattern (line 241)"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "traceability",
+      "artifacts": [
+        {
+          "name": "Run Context",
+          "path": "tasks/004-rubric-v3-refinements/artifacts/run_context.json",
+          "purpose": "Run metadata and environment info"
+        },
+        {
+          "name": "Run Manifest",
+          "path": "tasks/004-rubric-v3-refinements/artifacts/run_manifest.json",
+          "purpose": "This file - canonical artifact index"
+        },
+        {
+          "name": "Run Events",
+          "path": "tasks/004-rubric-v3-refinements/artifacts/run_events.jsonl",
+          "purpose": "Append-only event stream"
+        }
+      ]
+    }
+  ],
+  "validation_summary": {
+    "rubric_compliance": {
+      "exact_match": 0.957,
+      "acceptable": 1.0,
+      "violations": 0,
+      "warnings": 1
+    },
+    "tdd": {
+      "total_tests": 14,
+      "passes": 14,
+      "failures": 0
+    },
+    "determinism": {
+      "test_cases": 2447,
+      "determinism_rate": 1.0
+    },
+    "type_safety": {
+      "mypy_errors": 0
+    },
+    "complexity": {
+      "max_ccn": 10,
+      "compliant": true
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "timestamp": "2025-10-28T06:00:00Z",
+  "company": "Headlam Group Plc",
+  "year": 2025,
+  "query": "climate strategy and emissions targets",
+  "trace_id": "sha256:0e06ecd9ad4c0932",
+  "rubric_version": "3.0",
+  "model_version": "1.0",
+  "scores": [
+    {
+      "theme": "DM",
+      "stage": 4,
+      "confidence": 0.95,
+      "stage_descriptor": "Automated pipelines with real\u2011time validation, lineage tracking, and integrated reporting systems (e.g., Iceberg, Parquet architecture).",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "EI",
+      "stage": 3,
+      "confidence": 0.83,
+      "stage_descriptor": "Automated monitoring and analytics; predictive maintenance; integration with ESG data.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "GHG",
+      "stage": 3,
+      "confidence": 0.85,
+      "stage_descriptor": "Comprehensive Scope 1/2/3 with data improvement plans, supplier engagement, and limited assurance.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "OSP",
+      "stage": 4,
+      "confidence": 0.95,
+      "stage_descriptor": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "RD",
+      "stage": 0,
+      "confidence": 0.45,
+      "stage_descriptor": "No formal ESG reporting.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "RMM",
+      "stage": 3,
+      "confidence": 0.85,
+      "stage_descriptor": "Quantified risk assessments (transition/physical); scenario testing; integrated into planning.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    },
+    {
+      "theme": "TSP",
+      "stage": 2,
+      "confidence": 0.73,
+      "stage_descriptor": "Time\u2011bound quantitative targets with disclosed baseline year, scope coverage, and KPIs.",
+      "evidence": [
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+          "sha256": "5660c4e4547bde0c39d2ad679202438f467e18aa316589246aceb4a3d16eaca6"
+        },
+        {
+          "doc_id": "headlam_2025_page_001_chunk_000",
+          "quote": "carbon pricing.",
+          "sha256": "3db2dc5957da10bac0377c6643e2c536ca0cc62289d9192fdc7fbc0704672212"
+        }
+      ]
+    }
+  ],
+  "parity": {
+    "parity_ok": true,
+    "evidence_ids": [
+      "headlam_2025_page_001_chunk_000",
+      "headlam_2025_page_001_chunk_000"
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "task_id": "007-tier2-data-providers",
+  "date": "2025-10-22",
+  "protocol": "SCA v13.8-MEA",
+  "phase": "completed",
+  "status": "partially_successful",
+  "threshold_met": false,
+  "mea_iterations": 2,
+  "final_status": {
+    "hypothesis": "PARTIALLY VALIDATED",
+    "data_availability_pct": 83.3,
+    "target_availability_pct": 90.0,
+    "achieved_target": false,
+    "response_time_p95_seconds": 3.22,
+    "tier2_contribution_pct": 0.0,
+    "tier2_indirect_value": "Enables name disambiguation for SEC companies"
+  },
+  "context_artifacts": {
+    "hypothesis_md": true,
+    "design_md": true,
+    "evidence_json": true,
+    "data_sources_json": true,
+    "adr_md": true,
+    "assumptions_md": true,
+    "cp_paths_json": true
+  },
+  "gates": {
+    "context_gate": "pass",
+    "tdd_guard": "pass",
+    "pytest": "pass",
+    "coverage_cp": "not_required_for_poc",
+    "type_safety": "not_required_for_poc",
+    "complexity": "not_required_for_poc",
+    "phase2_integration": "completed"
+  },
+  "test_results": {
+    "unit_tests": {
+      "total_tests": 78,
+      "passed": 78,
+      "failed": 0,
+      "gri_provider_tests": 24,
+      "sasb_provider_tests": 22,
+      "ticker_lookup_tests": 32
+    },
+    "phase2_integration": {
+      "test_set_size": 30,
+      "companies_tested": 30,
+      "successful_downloads": 25,
+      "failed_downloads": 5,
+      "data_availability_pct": 83.3,
+      "response_time_p50_seconds": 2.15,
+      "response_time_p95_seconds": 3.22,
+      "response_time_max_seconds": 4.63,
+      "tier2_contribution_pct": 0.0,
+      "failed_companies": [
+        "Nestle (Switzerland, no SEC filing)",
+        "Siemens (Germany, no SEC filing)",
+        "Volkswagen (Germany, no SEC filing)",
+        "Samsung (South Korea, no SEC filing)",
+        "ICBC (China, no SEC filing)"
+      ]
+    }
+  },
+  "baseline": {
+    "task_006_availability": 83.3,
+    "task_006_p95_response_time": 4.37
+  },
+  "targets": {
+    "data_availability_pct": 95.0,
+    "threshold_availability_pct": 90.0,
+    "response_time_p95_seconds": 5.0,
+    "tier2_contribution_pct": 7.0
+  },
+  "critical_path_files": [
+    "agents/crawler/data_providers/ticker_lookup.py",
+    "agents/crawler/multi_source_crawler.py"
+  ],
+  "deprecated_files": [
+    "agents/crawler/data_providers/gri_provider.py (non-functional, removed from production)",
+    "agents/crawler/data_providers/sasb_provider.py (non-functional, removed from production)"
+  ],
+  "implementation_complete": true,
+  "tests_complete": true,
+  "context_complete": true,
+  "phase1_complete": true,
+  "phase2_complete": true,
+  "providers_implemented": {
+    "working": [
+      "Ticker Lookup provider (local SEC dataset, fuzzy matching, 10,142 companies)"
+    ],
+    "deprecated": [
+      "GRI Database provider (no accessible API, removed)",
+      "SASB Navigator provider (no accessible API, removed)"
+    ]
+  },
+  "data_sources": {
+    "sec_company_tickers_json": {
+      "path": "tasks/007-tier2-data-providers/data/company_tickers.json",
+      "companies": 10142,
+      "source": "https://www.sec.gov/files/company_tickers.json",
+      "updated": "2025-Q4",
+      "size_mb": 1.2
+    }
+  },
+  "key_findings": [
+    "Ticker Lookup provider successfully resolves company name ambiguities (e.g., JPMorgan Chase)",
+    "83.3% availability is the realistic ceiling for SEC-based providers",
+    "5 test failures are non-US companies without SEC filings (Nestlé, Siemens, VW, Samsung, ICBC)",
+    "Reaching 90% requires international data sources (European/Asian exchanges)",
+    "Pivoting from external APIs to local data improved reliability and determinism"
+  ],
+  "lessons_learned": [
+    "Don't assume external APIs exist without verification",
+    "Local datasets > external APIs for PoC development",
+    "Unit tests with mocks can give false confidence",
+    "Test data must use realistic years (year=None for most recent)",
+    "Honest reporting > inflated metrics (SCA protocol enforcement)"
+  ],
+  "recommendations": [
+    "Accept 83.3% as Task 007 final result for SEC-based providers",
+    "Implement international exchange APIs in Task 008 to reach 90%",
+    "Verify CDP credentials and retry for global companies",
+    "Consider company IR site crawling as fallback for non-SEC companies"
+  ],
+  "artifacts_generated": [
+    "TASK_007_FINAL_SUMMARY.md (comprehensive findings)",
+    "qa/PHASE2_FAILURE_ANALYSIS.md (root cause analysis)",
+    "qa/phase2_metrics.json (30-company test results)",
+    "qa/downloads/*.html (25 downloaded SEC filings)",
+    "data/company_tickers.json (10,142-company SEC dataset)"
+  ],
+  "next_task": "Task 008: International Data Sources (European/Asian exchanges)"
+}

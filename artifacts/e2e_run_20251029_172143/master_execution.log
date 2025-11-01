@@ -1,0 +1,128 @@
+======================================================================
+E2E COLD START EXECUTION - SCA v13.8-MEA
+Workspace: artifacts\e2e_run_20251029_172143
+Start Time: 2025-10-29T17:23:38.597906+00:00
+======================================================================
+
+======================================================================
+E2E COLD START EXECUTION - SCA v13.8-MEA
+Workspace: artifacts\e2e_run_20251029_172143
+Start Time: 2025-10-29T17:23:45.367017+00:00
+======================================================================
+
+======================================================================
+E2E COLD START EXECUTION - SCA v13.8-MEA
+Workspace: artifacts\e2e_run_20251029_172143
+Start Time: 2025-10-29T17:24:06.602549+00:00
+======================================================================
+
+
+======================================================================
+PHASE 1: Pre-Flight Setup
+======================================================================
+[CHECKPOINT 1] ✓ Pre-Flight Setup (0.5s) - PASS
+  Details: {
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "has_watson_credentials": false,
+  "seed": 42,
+  "pythonhashseed": 0
+}
+Phase 1 (Pre-Flight Setup): PASS
+======================================================================
+
+
+======================================================================
+PHASE 2: Zero-Mocks Guard
+======================================================================
+[CHECKPOINT 2] ✓ Zero-Mocks Guard (0.3s) - PASS
+  Details: {
+  "violations_count": 40,
+  "files": [
+    "agents\\crawler\\sustainability_reports_crawler.py",
+    "agents\\embedding\\watsonx_embedder.py",
+    "agents\\extraction\\enhanced_pdf_extractor.py",
+    "agents\\extraction\\extraction_router.py",
+    "agents\\extraction\\rd_locator_wx.py",
+    "agents\\storage\\silver_normalizer.py",
+    "libs\\data_lake\\duckdb_reader.py",
+    "libs\\llm\\watsonx_client.py",
+    "libs\\ranking\\cross_encoder.py",
+    "libs\\ranking\\cross_encoder_ranker.py"
+  ]
+}
+Phase 2 (Zero-Mocks Guard): PASS
+======================================================================
+
+
+======================================================================
+PHASE 3: PDF Validation & Ingestion
+======================================================================
+[CHECKPOINT 3] ✓ PDF Validation & Ingestion (5.4s) - PASS
+  Details: {
+  "pdf_count": 3,
+  "pdfs_found": 3,
+  "ingestion_status": "ok",
+  "ingested_count": null
+}
+Phase 3 (PDF Validation & Ingestion): PASS
+======================================================================
+
+
+======================================================================
+PHASE 4: Parquet Authenticity Audit
+======================================================================
+[CHECKPOINT 4] ✓ Parquet Authenticity Audit (0.9s) - PASS
+  Details: {
+  "documents": 3,
+  "total_chunks": 24052
+}
+Phase 4 (Parquet Authenticity Audit): PASS
+======================================================================
+
+
+======================================================================
+PHASE 5: WatsonX Embeddings Fetch
+======================================================================
+[CHECKPOINT 5] ⊘ WatsonX Embeddings Fetch (0.0s) - SKIP
+  Details: {
+  "reason": "No IBM Cloud credentials found in .env"
+}
+Phase 5 (WatsonX Embeddings Fetch): SKIP
+======================================================================
+
+
+======================================================================
+PHASE 6: Offline Replay 3× (Determinism)
+======================================================================
+[CHECKPOINT 6] ✗ Offline Replay 3× (Determinism) (0.9s) - FAIL
+  Details: {
+  "error": "Command '['C:\\\\projects\\\\Work Projects\\\\north-sea-drilling-optimization\\\\.venv\\\\Scripts\\\\python.exe', 'scripts/run_matrix.py', '--config', 'configs\\\\companies_local.yaml']' returned non-zero exit status 2."
+}
+Phase 6 (Offline Replay 3× (Determinism)): FAIL
+======================================================================
+
+
+
+EXECUTION FAILED: Command '['C:\\projects\\Work Projects\\north-sea-drilling-optimization\\.venv\\Scripts\\python.exe', 'scripts/run_matrix.py', '--config', 'configs\\companies_local.yaml']' returned non-zero exit status 2.
+
+
+======================================================================
+EXECUTION SUMMARY
+======================================================================
+Status: FAIL
+Duration: 8.0s
+Checkpoints: 4 passed, 1 failed, 1 skipped
+======================================================================
+
+======================================================================
+E2E COLD START EXECUTION - SCA v13.8-MEA
+Workspace: artifacts\e2e_run_20251029_172143
+Start Time: 2025-10-29T17:25:06.434515+00:00
+======================================================================
+
+======================================================================
+E2E COLD START EXECUTION - SCA v13.8-MEA
+Workspace: artifacts\e2e_run_20251029_172143
+Start Time: 2025-10-29T17:33:00.197655+00:00
+======================================================================
+

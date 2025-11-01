@@ -1,0 +1,150 @@
+{
+  "scores": [
+    {
+      "theme": "DM",
+      "stage": 2,
+      "label": "Partially automated",
+      "descriptor": "Partially automated collection; standardized formats; QA protocols.",
+      "evidence_count": 2,
+      "avg_word_count": 9.0,
+      "score_id": "6d0ec93abe1e5515",
+      "confidence": 0.8
+    },
+    {
+      "theme": "EI",
+      "stage": 2,
+      "label": "Systematic KPIs and improvement projects tracked",
+      "descriptor": "Systematic KPIs and improvement projects tracked.",
+      "evidence_count": 2,
+      "avg_word_count": 9.0,
+      "score_id": "66570206d3e58593",
+      "confidence": 0.8
+    },
+    {
+      "theme": "GHG",
+      "stage": 2,
+      "label": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy",
+      "descriptor": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy.",
+      "evidence_count": 2,
+      "avg_word_count": 7.0,
+      "score_id": "99ead8bab7e3dd3b",
+      "confidence": 0.8
+    },
+    {
+      "theme": "OSP",
+      "stage": 3,
+      "label": "Cross\u2011functional collaboration with clear KPIs, accountability, and oversight",
+      "descriptor": "Cross\u2011functional collaboration with clear KPIs, accountability, and oversight.",
+      "evidence_count": 2,
+      "avg_word_count": 22.0,
+      "score_id": "c8a61b45fbceddfa",
+      "confidence": 0.9
+    },
+    {
+      "theme": "RD",
+      "stage": 2,
+      "label": "ISSB/TCFD\u2011aligned narrative; annual updates",
+      "descriptor": "ISSB/TCFD\u2011aligned narrative; annual updates.",
+      "evidence_count": 2,
+      "avg_word_count": 16.0,
+      "score_id": "bfe2ffd7528034f3",
+      "confidence": 0.8
+    },
+    {
+      "theme": "RMM",
+      "stage": 3,
+      "label": "Integrated",
+      "descriptor": "Quantified risk assessments (transition/physical); scenario testing; integrated into planning.",
+      "evidence_count": 2,
+      "avg_word_count": 18.5,
+      "score_id": "dabbdff33e3af4a9",
+      "confidence": 0.9
+    },
+    {
+      "theme": "TSP",
+      "stage": 4,
+      "label": "Validated science\u2011based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy",
+      "descriptor": "Validated science\u2011based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+      "evidence_count": 2,
+      "avg_word_count": 17.5,
+      "score_id": "5fe722328c85e4e4",
+      "confidence": 1.0
+    }
+  ],
+  "aggregated": {
+    "overall_maturity": 2.5714285714285716,
+    "themes": {
+      "DM": {
+        "theme": "DM",
+        "stage": 2,
+        "label": "Partially automated",
+        "descriptor": "Partially automated collection; standardized formats; QA protocols.",
+        "evidence_count": 2,
+        "avg_word_count": 9.0,
+        "score_id": "6d0ec93abe1e5515",
+        "confidence": 0.8
+      },
+      "EI": {
+        "theme": "EI",
+        "stage": 2,
+        "label": "Systematic KPIs and improvement projects tracked",
+        "descriptor": "Systematic KPIs and improvement projects tracked.",
+        "evidence_count": 2,
+        "avg_word_count": 9.0,
+        "score_id": "66570206d3e58593",
+        "confidence": 0.8
+      },
+      "GHG": {
+        "theme": "GHG",
+        "stage": 2,
+        "label": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy",
+        "descriptor": "Scope 1/2 complete; partial Scope 3 with standard factors; recalculation policy.",
+        "evidence_count": 2,
+        "avg_word_count": 7.0,
+        "score_id": "99ead8bab7e3dd3b",
+        "confidence": 0.8
+      },
+      "OSP": {
+        "theme": "OSP",
+        "stage": 3,
+        "label": "Cross\u2011functional collaboration with clear KPIs, accountability, and oversight",
+        "descriptor": "Cross\u2011functional collaboration with clear KPIs, accountability, and oversight.",
+        "evidence_count": 2,
+        "avg_word_count": 22.0,
+        "score_id": "c8a61b45fbceddfa",
+        "confidence": 0.9
+      },
+      "RD": {
+        "theme": "RD",
+        "stage": 2,
+        "label": "ISSB/TCFD\u2011aligned narrative; annual updates",
+        "descriptor": "ISSB/TCFD\u2011aligned narrative; annual updates.",
+        "evidence_count": 2,
+        "avg_word_count": 16.0,
+        "score_id": "bfe2ffd7528034f3",
+        "confidence": 0.8
+      },
+      "RMM": {
+        "theme": "RMM",
+        "stage": 3,
+        "label": "Integrated",
+        "descriptor": "Quantified risk assessments (transition/physical); scenario testing; integrated into planning.",
+        "evidence_count": 2,
+        "avg_word_count": 18.5,
+        "score_id": "dabbdff33e3af4a9",
+        "confidence": 0.9
+      },
+      "TSP": {
+        "theme": "TSP",
+        "stage": 4,
+        "label": "Validated science\u2011based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy",
+        "descriptor": "Validated science\u2011based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+        "evidence_count": 2,
+        "avg_word_count": 17.5,
+        "score_id": "5fe722328c85e4e4",
+        "confidence": 1.0
+      }
+    },
+    "rubric_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\rubrics\\esg_rubric_schema_v3.json"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "chunks": "artifacts\\demo\\chunks.parquet",
+    "evidence": "artifacts\\demo\\evidence.parquet",
+    "maturity": "artifacts\\demo\\maturity.parquet",
+    "parity": "artifacts\\pipeline_validation\\demo_topk_vs_evidence.json",
+    "score": "artifacts\\demo\\score.jsonl"
+  },
+  "company": "Headlam Group PLC",
+  "query": {
+    "alpha": 0.6,
+    "k": 20,
+    "text": "ESG climate strategy and GHG emissions targets"
+  },
+  "timestamp": 1700000000.0,
+  "trace_id": "sha256:7ce3498f952a1f8a",
+  "year": 2025
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "company": "AAPL",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  },
+  {
+    "company": "AAPL",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  },
+  {
+    "company": "MSFT",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  },
+  {
+    "company": "MSFT",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  },
+  {
+    "company": "TSLA",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  },
+  {
+    "company": "TSLA",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo\\mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "coverage": 1.0,
+    "retrieval_mode": "local",
+    "retrieval_method": "unknown"
+  }
+]

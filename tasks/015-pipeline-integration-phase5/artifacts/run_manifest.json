@@ -1,0 +1,31 @@
+{
+  "run_id": "20251024-163608-1300327e",
+  "session_id": "78ac6519-bdd6-405e-8e7b-0f31f75080c1",
+  "timestamp": "2025-10-24T16:36:08.196694Z",
+  "artifacts": [
+    {
+      "name": "coverage",
+      "path": "qa\\coverage.xml",
+      "size_bytes": 192838,
+      "modified": "2025-10-24T11:35:18.989358Z"
+    },
+    {
+      "name": "pytest",
+      "path": "qa\\pytest.txt",
+      "size_bytes": 9875,
+      "modified": "2025-10-24T11:35:00.297724Z"
+    },
+    {
+      "name": "run_log",
+      "path": "qa\\run_log.txt",
+      "size_bytes": 42250,
+      "modified": "2025-10-24T11:35:20.214120Z"
+    },
+    {
+      "name": "cp_list",
+      "path": "qa\\cp_list.txt",
+      "size_bytes": 206,
+      "modified": "2025-10-24T11:34:38.254512Z"
+    }
+  ]
+}

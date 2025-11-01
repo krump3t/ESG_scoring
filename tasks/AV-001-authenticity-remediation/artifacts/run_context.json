@@ -1,0 +1,27 @@
+{
+  "run_id": "20251027-055008-9fd479d8",
+  "session_id": "prospecting-engine-f262cac6-a636-442a-823d-e218d00aec38",
+  "task_id": "AV-001",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\AV-001-authenticity-remediation",
+  "phase": "validation",
+  "timestamp": "2025-10-27T05:50:08.448818Z",
+  "tools": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

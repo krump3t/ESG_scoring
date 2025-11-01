@@ -1,0 +1,85 @@
+company,year,doc_id,theme,stage,evidence_count
+Apple Inc.,2023,AAPL_2023,DM,4,18
+Apple Inc.,2023,AAPL_2023,EI,4,18
+Apple Inc.,2023,AAPL_2023,GHG,4,18
+Apple Inc.,2023,AAPL_2023,OSP,4,18
+Apple Inc.,2023,AAPL_2023,RD,4,18
+Apple Inc.,2023,AAPL_2023,RMM,4,18
+Apple Inc.,2023,AAPL_2023,TSP,4,18
+Apple Inc.,2023,AAPL_2023,DM,4,18
+Apple Inc.,2023,AAPL_2023,EI,4,18
+Apple Inc.,2023,AAPL_2023,GHG,4,18
+Apple Inc.,2023,AAPL_2023,OSP,4,18
+Apple Inc.,2023,AAPL_2023,RD,4,18
+Apple Inc.,2023,AAPL_2023,RMM,4,18
+Apple Inc.,2023,AAPL_2023,TSP,4,18
+Apple Inc.,2023,AAPL_2023,DM,4,18
+Apple Inc.,2023,AAPL_2023,EI,4,18
+Apple Inc.,2023,AAPL_2023,GHG,4,18
+Apple Inc.,2023,AAPL_2023,OSP,4,18
+Apple Inc.,2023,AAPL_2023,RD,4,18
+Apple Inc.,2023,AAPL_2023,RMM,4,18
+Apple Inc.,2023,AAPL_2023,TSP,4,18
+JPMorgan Chase & Co.,2023,JPM_2023,DM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,EI,3,19
+JPMorgan Chase & Co.,2023,JPM_2023,GHG,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,OSP,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RD,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RMM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,TSP,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,DM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,EI,3,19
+JPMorgan Chase & Co.,2023,JPM_2023,GHG,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,OSP,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RD,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RMM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,TSP,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,DM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,EI,3,19
+JPMorgan Chase & Co.,2023,JPM_2023,GHG,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,OSP,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RD,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,RMM,4,19
+JPMorgan Chase & Co.,2023,JPM_2023,TSP,4,19
+Headlam Group PLC,2025,LSE_HEAD_2025,DM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,EI,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,GHG,3,24
+Headlam Group PLC,2025,LSE_HEAD_2025,OSP,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RD,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RMM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,TSP,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,DM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,EI,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,GHG,3,24
+Headlam Group PLC,2025,LSE_HEAD_2025,OSP,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RD,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RMM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,TSP,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,DM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,EI,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,GHG,3,24
+Headlam Group PLC,2025,LSE_HEAD_2025,OSP,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RD,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,RMM,4,24
+Headlam Group PLC,2025,LSE_HEAD_2025,TSP,4,24
+ExxonMobil Corporation,2023,XOM_2023,DM,4,19
+ExxonMobil Corporation,2023,XOM_2023,EI,4,19
+ExxonMobil Corporation,2023,XOM_2023,GHG,4,19
+ExxonMobil Corporation,2023,XOM_2023,OSP,4,19
+ExxonMobil Corporation,2023,XOM_2023,RD,4,19
+ExxonMobil Corporation,2023,XOM_2023,RMM,4,19
+ExxonMobil Corporation,2023,XOM_2023,TSP,4,19
+ExxonMobil Corporation,2023,XOM_2023,DM,4,19
+ExxonMobil Corporation,2023,XOM_2023,EI,4,19
+ExxonMobil Corporation,2023,XOM_2023,GHG,4,19
+ExxonMobil Corporation,2023,XOM_2023,OSP,4,19
+ExxonMobil Corporation,2023,XOM_2023,RD,4,19
+ExxonMobil Corporation,2023,XOM_2023,RMM,4,19
+ExxonMobil Corporation,2023,XOM_2023,TSP,4,19
+ExxonMobil Corporation,2023,XOM_2023,DM,4,19
+ExxonMobil Corporation,2023,XOM_2023,EI,4,19
+ExxonMobil Corporation,2023,XOM_2023,GHG,4,19
+ExxonMobil Corporation,2023,XOM_2023,OSP,4,19
+ExxonMobil Corporation,2023,XOM_2023,RD,4,19
+ExxonMobil Corporation,2023,XOM_2023,RMM,4,19
+ExxonMobil Corporation,2023,XOM_2023,TSP,4,19

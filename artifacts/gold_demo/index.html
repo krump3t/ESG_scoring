@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ESG Gold-Lite Export</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 50px auto; }
+    h1 { color: #2c5aa0; }
+    ul { list-style-type: square; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>ESG Maturity Scoring - Gold-Lite Export</h1>
+  <p>This bundle contains validated ESG scoring outputs from Phase F+ validation.</p>
+
+  <h2>Artifacts</h2>
+  <ul>
+    <li><code>scores.jsonl</code> - All scoring outputs (JSON lines format)</li>
+    <li><code>evidence_bundle.json</code> - All evidence audit data with page provenance</li>
+    <li><code>summary.csv</code> - Tabular summary (spreadsheet-ready)</li>
+  </ul>
+
+  <h2>Natural Language Reports</h2>
+  <ul>
+<li><a href="../reports/apple_2023_nl_report.md">apple_2023</a></li>
+<li><a href="../reports/exxonmobil_2023_nl_report.md">exxonmobil_2023</a></li>
+<li><a href="../reports/headlam_group_plc_2025_nl_report.md">headlam_group_plc_2025</a></li>
+<li><a href="../reports/jpmorgan_chase_2023_nl_report.md">jpmorgan_chase_2023</a></li>
+<li><a href="../reports/msft_2023_nl_report.md">msft_2023</a></li>
+  </ul>
+
+  <h2>Validation</h2>
+  <p>All outputs validated under SCA v13.8-MEA protocol:</p>
+  <ul>
+    <li>Determinism: SEED=42, PYTHONHASHSEED=0, 100% reproducible</li>
+    <li>Evidence Gates: >=3 distinct pages, span>=3-5 (adaptive)</li>
+    <li>Parity Gates: evidence_ids ⊆ fused_topk_ids + nonempty guard</li>
+    <li>Authenticity: No mocks/stubs in production paths</li>
+  </ul>
+
+  <p><small>Generated: 2025-10-30 05:45:32 UTC</small></p>
+</body>
+</html>

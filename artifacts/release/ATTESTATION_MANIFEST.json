@@ -1,0 +1,89 @@
+{
+  "release_id": "sca-v13.8-mea-semantic-retrieval",
+  "generated_at": "2025-10-29T03:24:13Z",
+  "protocol": "SCA v13.8-MEA (Fail-closed, No mocks)",
+  "agent": "Claude Code / Sonnet 4.5",
+  "status": "PASS",
+  "artifacts": {
+    "determinism": [
+      {
+        "file": "proof_determinism_report.json",
+        "source": "artifacts\\determinism_proof\\determinism_report.json",
+        "size": 402,
+        "sha256": "36b072973eec7fab..."
+      },
+      {
+        "file": "proof_authenticity_gates_report.json",
+        "source": "artifacts\\determinism_proof\\authenticity_gates_report.json",
+        "size": 344,
+        "sha256": "0a0b387bf154baf9..."
+      },
+      {
+        "file": "proof_COMPLIANCE_REPORT.md",
+        "source": "artifacts\\determinism_proof\\COMPLIANCE_REPORT.md",
+        "size": 6316,
+        "sha256": "04771b25271c5aac..."
+      },
+      {
+        "file": "proof_validation_report.json",
+        "source": "artifacts\\determinism_proof\\validation_report.json",
+        "size": 293,
+        "sha256": "68681dc7bc3a1482..."
+      }
+    ],
+    "semantic_index": [
+      {
+        "file": "index_meta.json",
+        "source": "data\\index\\msft_2023\\meta.json",
+        "size": 348,
+        "sha256": "32cfd49d10c2b73d..."
+      }
+    ],
+    "cache": [
+      {
+        "file": "ledger.jsonl",
+        "source": "artifacts\\wx_cache\\ledger.jsonl",
+        "size": 32310,
+        "sha256": "2a78f144e55190f6..."
+      }
+    ],
+    "config": [
+      {
+        "file": "config_integration_flags.json",
+        "source": "configs\\integration_flags.json",
+        "size": 415,
+        "sha256": "64f81f4b074edaa2..."
+      },
+      {
+        "file": "config_extraction.json",
+        "source": "configs\\extraction.json",
+        "size": 76,
+        "sha256": "3dbbf41a2758c0c2..."
+      }
+    ],
+    "summary": [
+      {
+        "file": "EXECUTIVE_SUMMARY.md",
+        "source": "artifacts\\EXECUTIVE_SUMMARY.md",
+        "size": 6630,
+        "sha256": "46c99ec8e392a191..."
+      }
+    ]
+  },
+  "total_files": 9,
+  "total_size_bytes": 47134,
+  "gates_passed": {
+    "determinism": "PASS",
+    "parity": "PASS",
+    "cache_replay": "PASS",
+    "artifacts": "PASS"
+  },
+  "attestation": {
+    "determinism_runs": 3,
+    "hash_consistency": "100%",
+    "cache_hits": "100%",
+    "online_calls_in_replay": 0,
+    "watsonx_model": "ibm/slate-125m-english-rtrvr",
+    "vector_dimensions": 768
+  }
+}

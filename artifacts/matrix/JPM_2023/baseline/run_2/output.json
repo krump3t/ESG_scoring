@@ -1,0 +1,895 @@
+{
+  "company": "JPMorgan Chase & Co.",
+  "deterministic_timestamp": "2025-10-28T06:00:00Z",
+  "doc_id": "JPM_2023",
+  "model_version": "1.0",
+  "parity": {
+    "evidence_ids": [
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023",
+      "JPM_2023"
+    ],
+    "fused_topk_ids": [
+      "JPM_2023"
+    ],
+    "parity_ok": true
+  },
+  "query": "ESG climate strategy and GHG emissions targets",
+  "rubric_version": "3.0",
+  "run": 2,
+  "scores": [
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Automated pipelines with real‑time validation, lineage tracking, and integrated reporting systems (e.g., Iceberg, Parquet architecture).",
+      "theme": "DM"
+    },
+    {
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 3,
+      "stage_descriptor": "Automated monitoring and analytics; predictive maintenance; integration with ESG data.",
+      "theme": "EI"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Full third‑party reasonable assurance; GHG Protocol compliance; uncertainty analysis; auditor verification.",
+      "theme": "GHG"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls.",
+      "theme": "OSP"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "External assurance; digital tagging (XBRL/ESRS); integrated financial filing; near‑real‑time reporting.",
+      "theme": "RD"
+    },
+    {
+      "confidence": 0.97,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Enterprise risk integrated with financial modeling; insured/uninsured analysis; public disclosure per ISSB/CSRD.",
+      "theme": "RMM"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "%PDF-1.7 % 28509 0 obj <</Filter/FlateDecode/First 1077/Length 1902/N 100/Type/ObjStm>>stream hZ[o[7 +z\\ \u0016KP`붢݀mAQ\u0004\u0019H\"q#\u0013/u|,9m \u0012Ƈǋ(hq DB19\"4Hΐ-*Ȇ]} R0޲JxzT&ڈń65!^r&V\u001bLdKlbTM)\u0014M*\u0001seH\u0014\u000e\"\u0014zu&YE ]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V",
+          "sha256": "67eac414dd1996da3182be05af2b2b378583b19fa5021178c879a5e50a729966"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "O@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1 I\u0019Ϝ6ٓ\u001b[f#dh젍4\u0019ⱡ6H\u0001 k\u0013MbL >t&) ,2 wWa4\u0006˷˕y$^:\u0017=7P_R\u00184`y Aٕ~@,n40|Sۧ:g\u0007ipT\u0003<F \u0007om4fdp$\u000e$uP+ =gׯV^~d֯׫\u0004\u0018\u00007,> endstream endobj 28510 0 obj <</Filter/FlateDecode/First 205/Length 416/N 20/Type/ObjStm>>stream hޜN$1\u0010_` @vt Nb.8@\u0012x+\u0000։r3.X]I\u001auTIEUɴDթG5hLjTB5{Jʩ[JC0g\\#{\u0006hjsֽKx\u0016̱D{QNNNWW|c|n7I%Ɩ3˟߷ط\u0013Ü}:",
+          "sha256": "eccd71f0d5e871162eee7cd226331bdfa2ea91d16a628bcc2237de68bc881a6b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "8,YO0\u0004 4?hl\u001ah]:\u0011\u0002adpLH\u0013!D8\u0011\"\u000eئ80Ϋga\u0016l\u0012DZT/9N8kTB4gŉqOh񼖡Y0Ki\u001a\\kcea^GO\u000e4k#Φ0Aj,̖>4_iᏧ/_74pt\u0000&\u0016?{\u000f>\u0017\u0017/OϿ#?\u001a\u0012t'\u0010?|{ Jn_Om>>WWj\u0007U %;dLHr<\u001a ^j'\u00170n\u0011.jH7\u0015|F\bnforp4d \u000fe2$2a\u001bdq`.\u0013\b\\C 3ߛ,!{o]5\u0006c\u0016;SGϛd\u001a MnU`\u0018S}/\"<VxI}Z}_\u0019.ǰ\u0001ƛMD_0 }{ELTs޿?݇ Z1\u001b>lȸ'_>]~f^~ksq^\\/_-k _}0uvq>8ɥ1ɋ Ťի߿.廳`j~|jn?\u000fv~z7&wa7˛^\u0006\u000fW ?pq홾?Ջ1 m?/Wg׹rr\u0017\u0003aˏ+ 'Gln\u000fM\u000fe\u000ff ^ 3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z",
+          "sha256": "17b2c7e1f2c6930a889b7dfbdadeed27df489b5df3642269ad3fc687d0fd9dc4"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*HZk\u0016KJn==\u000f \u0019.r[Ly\u0012w{\u0019*Kpw˥G씲*Ǽ Tr 9E(L#\u001a\\W x: y?uH -\u0018\u0016T 6Sn 4\u001bwZ\u0001I}ga﮳FP ϻY K(wPΕ\u0007P.F\u0004\u0012 17 }5\u001bC tJ *\u0019^a\u0018tnu&\u0012\u0012\u0016n0\u001b o\u0012I>rW~IHE]B\u0012\u0011#7tY`nzg\u0005\u0001\u0002}\u0001;9ZP\u0010:z'\u0006:Y\"]RPD\u0003e+\u000260\u0003C[z|=W\\\u0004(\u0012(nȞ8̈\u0002\u000e(NmX\u0006\u0016~rc{~w",
+          "sha256": "f542541517d86efcc762cdf7e2b6d33c5ae84256b5be1a83d775228e7e388f11"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "S{Q=\"L\u0019o爏 \u0010\u0015GzSKOA\u001b4KLr P\u0011Kq`yD{\u0018 ;#G?\bp g/9>5d\u0013t>|>KA y>*:/ J\u00054=}NT%\u0007ƣ\u0018tpcg\u0005%\u0002Gt,v\u0018 [AmY>\u0004\u000f\u0019r {\"3˕~5-܆~u><Yh~䰏ӎ\u0019tG +І \u0001Ѝ\u0016+ \u0004k\"\u0012\u0014E\u0002'Z.qȅ6o\\3HK\u0013\u0018iq\u0000VNjxʈ.[\u0004=*EA&\u0007=Y4XRR/M>W'>ሾ(\\Cm=d +m%LJxjX=wjpxԳ\u001a6\u0011U q^jH]7[l' em\"9|6\u0016A @\u0006=:\u0019 ӯD\u0010E+g[CBBhkP&R@ pgx,_e!W \b&\u0001oq\u0002\"\u001akQqJ HI? +7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F",
+          "sha256": "7882cdc089dda8cdb3c020da2a0d244da3f73ef8b2b7bc4458830ebe011ec4b0"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047\u0003=\u0010\u0019& \u000eh\b R0u twhxH{\b?\u0017\u0007J;\u0002B67\u001b`cQ\u0013\"uf\u001apj,E9@!ؼ\u0017搐\u0007\u00010<W$EGchE:C\u0010,$\u0001눴՜zp\u000e\u0006(id \u001a$|{HЄ%&\u0005k \u0003S\u0015\b3%\u00008xWVi\u0011DMPX颻y4Fr7G`\bף\u0010l c B{,A\u0010ׁIb)x3\u0007^،\bIL$QC\u0000\u0006MJ j)GMP1Kz E1\u0019\u0001KH(\u0007J[ 6v9Ŏ/N*'\\A\u0003Mz\u001b [(R~1+U]`y@t\u0014qaD`gV\u0019",
+          "sha256": "ffeee6ba8fd775449e6e7752197159232aacf181c5a80f4c6b84661c13c7768e"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "ǹ-24mN\u00102_,Y3*\u0006P0-b(nPi<Qn\u0015 j{&gd.#';}AeMy*E\u0017O6'yxj\u001aM|9 *Wd \u0018b98</ \u0007.?o\\?fe6לּ/ .**e}گ+ xjKeI e5C;fͬ\u00183\u00138z墩 lE\u0005\u0017݀\u0013{A\u0017K]k>fxFk;h?hQ<mPh`ZEmھ1?j,5xV8ʬ 7\u0019q\u0011;\u0010;r] %΂Rb\u0017٩Yn z~\"\u0016] k\u0013oC `MB>0\u0016c !\u0013sFH߬(Ym}Փa\u0013y*hV\u0007LA\u001b| \u001223M \u0006$TWxʚ*nj\u0005Y\u0011Tgj\u0003%kG&<+qDhXgqG\u000eЧr=;Kjx\u0011\u0012\u0005};F=fEM]U(+C\u0012B D,P=CM]D:u s 8&еtA8\u0014Pqŏ\b٧dQ;\u0017\"ZgӬDE<4p\u0000LB\u001a\u0005J\u000f'\u0013qw!6`otj4ś4}xxH'>} \\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl",
+          "sha256": "0f24a212cb2ac2ba88adf8e8c393a3489d9c4ac44aef2795413e1fa3a077f7c8"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "]@3l+ p\"Լ\"Lj?\u0010XA0)،I*Hu ^VC\u0016Gs\u0017K D${͐ ˆ U\u0002Qh؂H \"ֈ$D, D(& zC\u0001\"hDVH\u0015\u0006k1W^XKAE\u0007k\bk9)\bk \u0000؆*\u0006T\u001abjf|}5\u001b5CX kG P\u0019\u0002\u000e*\u0002 RNy R\"e8-\"e k\bJM\u0014K\u0003;T\"\u0019\\\u0015\u0019bX'V PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N",
+          "sha256": "3f15d03a400776623ec86c2f1913b06c89d970725e2cba6a9897207c75a58092"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "3\u0005{\\>>O0\b5ֈp.yawcnG1qM ]o!a\u0011D$ٰ \u0001`\u001b)&j{]v9>ϻrB\u0006dH#hh EH\u0004t׉U#S\u00196\u0001xG2rY \u0017-vi<?AL0^(\u001ae\u0006< t#{cx:\u0019\u0002\u00144\u0018\u0016 k} \u0014ۀ\u0012yދ湸;`<f;gWߟ~ޮދ LU>\u0017]?\u0016)1)RtL;A[BXޅ>\u0010xNLqzXnJ\u0017˝1۟rmzўua\u0010ԢX\u0018?|OT 7\u000e pFj~ Zl.;6\u0007c1^=\u0005\u0005+B\bO أWSèK\u0001O]x{^ܿ>|4\u00114\u00192J8 w+\u0004\u0017}[񘲚`A\u0016z 1QWǨh-c(dVE6fLIjI\u0016 ؎\u0013t]~\bk> x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v",
+          "sha256": "b39a7f25e84d2a3fe12761a2e1b0605c3181a11d09330165bae59f412626636a"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "+7^\u0002#&݊yJ\u001b \u0013\u0016l& GnL,?VYP\u0004bAR-G˒?\u0005\u0014\u0000]1\"\"\u001a\u0001-QZV6J!\u0002:\u0015y+\u0018 \u0017Jg=q)\"\u0019ֱ \u0013\\#d* e/+`RM\b Av\u0018\u0004y \u0007B\u0001*{B@P(l\u0014[V5#II8-LuHF,t \\\u001b\u0005: \u0014F DPW^ \u0000eLcY9\byPp:D z\u0014C,\bb!t輕WWɥz\u0013l\u0007iGwկ[.^\u0002k׌\u0010^#(.#)*Ye/&X`X\u0007B)\u0000 D\u0003d:mkV\u0014ҩB@\u001b^65Qؒ+Uz> V :\\?V \u0010\u0005\u000e_ \u0003:\u0018|VQ{\u001b:\u0014\u00066pJZڔ\u0015&,\\>(mB0\u001bw+X\u0003>5 鸉͵&P\u0000: \\w\bA\u0007b1+[A \u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl?",
+          "sha256": "c89d4cc0529f414a5354209ed6d41881772a6062e24d8b08da377143277c5c2b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\\=)W1C`G }՘f z\u0001VstbKE\u0017 f\u0003V\u0002 CI\u0010[\u0001Uc2j\\%!I]Z) U4 )PuYyKL!<q mG\u0011\u0010 ^ jl u}ɟӕx\u0019NݟqTV7\u0012n\u00138\u0006hZ|]$:\u0006 w?Jo;\u0003m\u001b\"\u0016 f4k>]H*QjmA??\u0003 k/\u0019΄\u0002,\\\u0005/T?/b;^Lb^ps`֍PG7/ sq\u00067txksRy\u00177pӋrj\u0003\u0017'_c\u000f u\u0002?@ա :ב\u0007#\u000fG 0:` }<y\u000fu\u000eX 0;` \u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N",
+          "sha256": "6a471653b086506bf10e4497d355bba30ccc05565f25eb296f3a6f6a074572a7"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "PgҀ8Cr1( \u0016bT\u0005\u0014\u000f¦\u000fQW\bah_#P\u0015`-֔xXKVya*dlU,1E\u0019Z/,Q]Ol~8s\\Hr\\J#\"tbx7_{e\" \u0013g?eՃ\u0007\u0013?<_@ߋ+;fqtK\b\u001b\u0000>\u000eݐm\u000fg]}5l\\||~%\u0007D\u0019\\8FP]w\u0018n߭Q\u0018 ͞9kV=?gVgWJKY\u0003xBUP˫9\u000e\u0007qi#p Z>7Iw\u0001t~ᓰlˡXZ \u0001:: p}4hܶn\u0016-\u0006\u0006nCZ\u00015ǢAmtO?L4<]_/\u000fؚw\u000fEҊ \u001bk|_mNN ><0,v %,p<\u0013mQ54]m>bL/LآwnGwGD\u0005{a{7 Mlh&Ϲ\u0015[`kh BۗVܶ u(ڻI33⏋v5OvAzyX]~Ó ٷ\u0005Y\u0017Yʥvj|?z>| $~O|{q1zx\u0002G\b\u0011N B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy",
+          "sha256": "b47d6608989e5454a865634a6144a58a720fcf849143f76393188f02ea535821"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "x0\u0015 û9K Tl 5 2-\u0015b\u001aKyG#I1) }%HVۭ9\u0018>,]c,{\u0016g\u001aM\u0013IC )\u0001AA*\u0010ߗǢ\u001aPE= ]\\ %G2޲\u0016\u0012'=\u0011! 9 \u001a@\u0019C7?c 9Ѵ9*I^;Y k}}Jh\u0001l\u0004 }Bďƌ\u0001i\\l9on\u0007}c\u0018}\u0018v -)]=c_A:Oo$X}ɹst1\u0017d5˨!7P q% \u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017",
+          "sha256": "5337ce7dddf46ad3934c064059d15ae7f55ac9c23d8dbfcf7af07634798ad9a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": "\u0007+<\u0019p/\\!8 Z\u0015n|7BM\u0007{;3\u0002 +vsn yTg\u001b3\u000f\u0015\u0018%Cq\u0010\u0018%(6F)P \u0007h8ҖX\u0002ά.<:6fXn[G\u0013\u001ao?\u0014;F\u001aVp\u0019X:e֠ E9op\u0010t\u0002Z\u0010 :^\\i\u0018\u0004gH~ C`~\u0004:$\u001a£Ca\u0005C c M⺑\u0002<\u0003MpsD&\u0007уEW&]diaQOl? G7&-\u000e­3I%tOGrP[(9\u000eP c{JޏlMq\u0003sz1= \u0014)FAM䤙\u0015\u0004h \u0005(\u0006\u0012YœQ v \u0010\u0011&\u0014t , J\u0006 \u0014^\u0007E _{j\u0010 .6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R",
+          "sha256": "9b9f20df12c0de701542ab88a1475a772f120ac6822ce5c847de08a9d52c6d09"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "\u0002+ O\u0001\u0000\u0006V endstream endobj 28514 0 obj <</Filter/FlateDecode/First 993/Length 1826/N 100/Type/ObjStm>>stream hY]o\u0012+\u0000\u0017~nQ\u0004 Mԁ>\u0004AHV!\u0003 {f)h8;;spw\u000eB \u0016\u0011!\u0015$\u0013 QI8\u000f\u0007sJx4ZL\u0015\u0004;\bND\"\u0016P2v$Tz\u001a\u0003e ?Z(6d\u0010L# yN!16\u001a\u0011\"\u0012\u0007%%hH \u00069!uH1=uBNMH:\u0012ښ B\u0004C\u0017\u0012t\u0014U E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%(",
+          "sha256": "9cd995f8a6fd4cdc30fa1ce7729e09e70f49d715a016771caaa842903b53c8a3"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 1,
+          "quote": "B@\u0012;HS\u000e\u0002dNK{88H INv\u0012\u0002r֟l;\u0003r$,\u0019ShLJpBoR^,,/ U.p%8\u0014Ԋ|\"R#v\u0016/,[\u0012Pj0\u0005 I$Rʡ#%9\u0016 8u,1'! $EHbgx&:L ^zPr\u0017^\u0013s)\u0012쮉\u0018-8D#9F\u0011n\u001a,с\u0005+P7ˑIƓ{`\u0005}\u0011\u0002\u0017C(҄\u0001,% Ke[f\u001a\u0014i}\u0007\u0014\u0011\u0007/HVrO@%sƎဴP/dYX.b5\u0005Cq5`*LE7 \u0013aD\u0002aԟ \u0002!A\u0013al\u00055 Ӕ᠝ Ӕh\b4 Sa\u0012T^+)){$%rZ Sa\u0012ODX$\u001avTD]eؒ\u0004pLiN\u001aZIE{ MIwIy Lġ\u0002WT\\\u0000No\u0000SqEpnZJ^vʴ\u0017N\"Q}ꅜEy/\u0005{5\br\u0017q\u0010r\u0011\u0003.C\u0014 \u0005\u0017\u00104\u0002KV\u0015,+\u000fX|/K\u0010˔DZ\u001b;nNR%u\\℅5\u0002,ҷИOlĬ,]>5\u0006E+C]h(4^+NY$;na\u0013h\u0017W1",
+          "sha256": "f4ef4159d241b145cd2cbe5cfd547809510dcf9cf538e33513f718ebd65a325b"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 2,
+          "quote": "\u0006\u0010\u000eHbt2қЌA³\u00171a\u0001\u0012\u0016X8$=aUl$님n\"(%Y;0[֢# (;\"\u0011c7PUy GsID \"0`%\u0006\u0019LJ ߣ`,@\b':@ñE\u0011:d68@lls($\u0010E>Sbv<9\b\u0012,&\b1A,D. lR]ϱإ\u001b\u0011q\u001aKNBҍm7q \u001aݲ-C&jH&j-*ء٪  \u0016V>p~I?!'şHN\u0017~{yk{B{D\u001b)\u0016M;8+ S\"zyPDj2\u0011ݿMD\u0017 4 \u0017 \u0011\u0013v.מn_$Դ9bv޽٥k厅fڱ\u0003D z?&Io.0\u00149̘\u0017 \u0016x~eA>3 \\|1)! VGbB8 IbtQꈬ\u0004\u00035YO0$*H",
+          "sha256": "51a9fcbfc98a02bd54a517c22e23f0d0257602bd1943b74d749ccca9927729ab"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 3,
+          "quote": ".6\u0005?\u0001E\u0012ѰxM~>\u0004\"\u000eB\b\b \u0005of\u0004=ErFºWh=fcbF ٓ Tߢ4 ;6:v.F ] O0\u0006 \b|@\u0014 (Wџ#\u001a\u000eC R w=r)Pyl\u00182q\b\u0010^4R) \u0013\\6\u000e!p3&C@E1yZ,&\u0003\u0013INyD[JT\u000e\b\u0006A E G\u0012ڝ<,x(dB1\u0004 \u0004\u0013#M Xx\u0015Evѷl8?>@x`\u0015`sw P ]`u]ȰY\u0019뤠 -\u0000\u0014!\\+x IBjEզ$P<$I|\u0013v z\u0007bg\u0001Ǥ\u0015 2\u0006J-*8 at\u0004\u0018xȃ2\u0005;\u000e'nAf\u0012\\Q\u0003hJ\u000e^f\u0003n{M_38O8*\u0007?D8\u0018ρ+\u00047",
+          "sha256": "a15c61c6e93964b380e508a58ec325fa6c10ff791f7cdbdbc0d42ed2cc76a5b9"
+        },
+        {
+          "doc_id": "JPM_2023",
+          "page_no": 4,
+          "quote": "E' I &\u0004QG`\u0017I\u0014H \u0012T9) ɱN)H10&\u0014 cL9Ht^\u0018y\u000e /N \u001a^\\L:q!4\u0000`H\u0004] ]RXiXgJ' K\b\u00143joMZ\u0004;\b\u0011\u0000Φ\u0011\u0001RL(OsN\u0007ց\u0007(%( m\u0011.:S !6g#S \u0012} \bF\u0010e\u0014ԇTIXEvbZD\u0011pZ\u0011DrL=/e 4H {j\u0004VG\u001a &N\u0013t4,\"Op/&\u0011\u0002\u000f\"<EE0bmLm: \u00034 <i\u00182\u0007SHC\u001b0\u0014oW\u000e Pz^毿{1LϺ5Ə1\u0017(\u001bkc\u0017]4V2\u0006vƀo^Voբ '?_6?ΖU}hUSY",
+          "sha256": "687b17da9d0d6556b0edd7520de846b546a3e0291ba9216efb11481e59ba95a7"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Validated science‑based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+      "theme": "TSP"
+    }
+  ],
+  "theme_count": 7,
+  "trace_id": "sha256:11ee531c81515254",
+  "year": 2023
+}

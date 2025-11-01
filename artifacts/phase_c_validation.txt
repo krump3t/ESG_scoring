@@ -1,0 +1,304 @@
+
+======================================================================
+REPLAY PASS: Scoring 4 documents (ALLOW_NETWORK unset)
+SEED=42, PYTHONHASHSEED=0 (deterministic)
+======================================================================
+
+Scoring: msft_2023 (Microsoft Corporation, 2023)
+  Determinism check (3× runs)...
+    Run 1: ba6164cff401663c...
+    Run 2: ba6164cff401663c...
+    Run 3: ba6164cff401663c...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: AAPL_2023 (Apple Inc., 2023)
+  Determinism check (3× runs)...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+
+    Run 1: 2e4c78baa5d322c4...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+
+    Run 2: 2e4c78baa5d322c4...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 262: character maps to <undefined>
+
+    Run 3: 2e4c78baa5d322c4...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: XOM_2023 (ExxonMobil Corporation, 2023)
+  Determinism check (3× runs)...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+
+    Run 1: 42c10a1676fa4077...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+
+    Run 2: 42c10a1676fa4077...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 274: character maps to <undefined>
+
+    Run 3: 42c10a1676fa4077...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: JPM_2023 (JPMorgan Chase & Co., 2023)
+  Determinism check (3× runs)...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+
+    Run 1: 51a2f7184e9a86bc...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+
+    Run 2: 51a2f7184e9a86bc...
+ERROR in scoring pipeline: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 75, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 135, in run_score
+    _write_retrieval_diagnostics(
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 526, in _write_retrieval_diagnostics
+    selector_log_path.write_text("\n".join(selector_log))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1079, in write_text
+    return f.write(data)
+           ^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 272: character maps to <undefined>
+
+    Run 3: 51a2f7184e9a86bc...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+======================================================================
+REPLAY PASS COMPLETE
+Status: revise
+Determinism: PASS
+Matrix contract: artifacts/matrix/matrix_contract.json
+======================================================================
+
+{
+  "agent": "SCA",
+  "version": "13.8-MEA",
+  "status": "revise",
+  "documents": 4,
+  "determinism_pass": true,
+  "document_contracts": [
+    {
+      "doc_id": "msft_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/msft_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/msft_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/msft_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/msft_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "AAPL_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/AAPL_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/AAPL_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/AAPL_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/AAPL_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "XOM_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/XOM_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/XOM_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/XOM_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/XOM_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "JPM_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/JPM_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/JPM_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/JPM_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/JPM_2023/pipeline_validation/rd_sources.json"
+      }
+    }
+  ],
+  "timestamp": "2025-10-28T06:00:00Z"
+}

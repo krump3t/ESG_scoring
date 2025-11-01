@@ -1,0 +1,478 @@
+{
+  "target_setting": {
+    "theme_name": "Target setting, planning and decarbonisation",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 10,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions 0.5% (4,133 ktCO2e) \u0007Upstream Transportation and Distribution 0.4% (3,215..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 2,
+        "characteristic": "May have targets aligned to formal methodologies and frameworks (e.g., SBTi, GHG Protocol, ISO 14064, ISO 14068, ACT Initiative, CDP, PAS 2060, TCFD/ISSB, Net Zero commitment).",
+        "evidence_extract": "The \nCompany will follow a \u2018true\u2019 Net Zero strategy whereby it will focus on actual \ndecarbonisation in achieving these targets and only consider offsetting \nactions for the residual 10%"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "Reducing our Carbon Emissions\nWe continued throughout 2024 to deliver against our carbon reduction \ntarget timeline and have now set our target and timescale for Scope 3"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "Further planned through 2025 2030 Interim target of 46% reduction against 2019 (Scope 1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "03 ENVIRONMENTAL UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "We will continue to measure Scope 1 & 2 against a 2019 baseline and Scope 3 \nagainst a 2023 baseline"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 3,
+        "characteristic": "Has targets aligned to formal methodologies (e.g., SBTi, GHG Protocol, ISO 14064, ISO 14068, ACT Initiative, CDP, PAS 2060, TCFD/ISSB, Net Zero commitment).",
+        "evidence_extract": "Review and develop ESG data and reporting capability to create harmonised ESG dashboard and confirm requirements for new ERP Programme Headlam Group PLC March 2025 02 Sustainability Report Key achievements..."
+      },
+      {
+        "priority_score": 8,
+        "maturity_stage": 0,
+        "characteristic": "No formal ESG or emissions reduction targets for Scope 1, Scope 2, or Scope 3.",
+        "evidence_extract": "Scope 3 targets now set \nenabling focused planning\nb"
+      }
+    ],
+    "avg_maturity_stage": 0.5,
+    "max_maturity_stage": 3
+  },
+  "operational_structure": {
+    "theme_name": "Operational structure and processes",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 8,
+        "maturity_stage": 4,
+        "characteristic": "Advanced supplier engagement to drive Scope 3 accuracy.",
+        "evidence_extract": "Scope 3 actions plans \ndefined in 2025, continue \nto inform and educate \nbuying and supply teams on \nresponsible sourcing best \npractices\nb"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Supplier engagement and Scope 3 process integration.",
+        "evidence_extract": "Further planned through 2025 2030 Interim target of 46% reduction against 2019 (Scope 1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Integrated systems for managing ESG data (e.g., \"integrated ESG data architecture\", \"real-time ESG dashboarding\").",
+        "evidence_extract": "Our in-person \nEmployee Forums are attended by our CEO and Karen \nHubbard (Non Executive Director) who reports back to the \nBoard on ideas, suggestions and obstacles raised by our \ncolleagues"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Advanced supplier engagement to drive Scope 3 accuracy.",
+        "evidence_extract": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Advanced supplier engagement to drive Scope 3 accuracy.",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 0,
+        "characteristic": "Lack of stated ESG governance, process owners, or repeatable processes.",
+        "evidence_extract": "During the trial this service has been provided free to our customers to encourage them to bring back uplifted flooring (post-consumer waste), off cuts (post industrial waste), underlay, vinyl, LVT,..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Supplier engagement and Scope 3 process integration.",
+        "evidence_extract": "Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions 0.5% (4,133 ktCO2e) \u0007Upstream Transportation and Distribution 0.4% (3,215..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Supplier engagement and Scope 3 process integration.",
+        "evidence_extract": "We will continue to measure Scope 1 & 2 against a 2019 baseline and Scope 3 \nagainst a 2023 baseline"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Advanced supplier engagement to drive Scope 3 accuracy.",
+        "evidence_extract": "Scope 3 targets now set \nenabling focused planning\nb"
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 4,
+        "characteristic": "Advanced supplier engagement to drive Scope 3 accuracy.",
+        "evidence_extract": "03 ENVIRONMENTAL UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key..."
+      }
+    ],
+    "avg_maturity_stage": 3.3,
+    "max_maturity_stage": 4
+  },
+  "data_maturity": {
+    "theme_name": "Data maturity (collection and management)",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 10,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "03 ENVIRONMENTAL UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions 0.5% (4,133 ktCO2e) \u0007Upstream Transportation and Distribution 0.4% (3,215..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "Further planned through 2025 2030 Interim target of 46% reduction against 2019 (Scope 1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Data validation and audit trails fully implemented by internal or external assurance.",
+        "evidence_extract": "ESG standards and \nassurances form part of the \nnew product introduction \nprocess for own brand \nproducts"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 0,
+        "characteristic": "No formal data documentation, ownership, validation process or governance.",
+        "evidence_extract": "During the trial this service has been provided free to our customers to encourage them to bring back uplifted flooring (post-consumer waste), off cuts (post industrial waste), underlay, vinyl, LVT,..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Dynamic dashboards for internal/external use.",
+        "evidence_extract": "Karen Hubbard,\nNon-Executive Director\n\t\u201c \u0007In today\u2019s business \nlandscape, ESG \ngovernance is not just \na responsibility \u2013 it\u2019s \nan opportunity"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Dynamic dashboards for internal/external use.",
+        "evidence_extract": "Our in-person \nEmployee Forums are attended by our CEO and Karen \nHubbard (Non Executive Director) who reports back to the \nBoard on ideas, suggestions and obstacles raised by our \ncolleagues"
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 3,
+        "characteristic": "Scope 3 data actively managed through suppliers.",
+        "evidence_extract": "Scope 3 actions plans \ndefined in 2025, continue \nto inform and educate \nbuying and supply teams on \nresponsible sourcing best \npractices\nb"
+      }
+    ],
+    "avg_maturity_stage": 2.9,
+    "max_maturity_stage": 4
+  },
+  "ghg_accounting": {
+    "theme_name": "GHG accounting",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 10,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions 0.5% (4,133 ktCO2e) \u0007Upstream Transportation and Distribution 0.4% (3,215..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "We will continue to measure Scope 1 & 2 against a 2019 baseline and Scope 3 \nagainst a 2023 baseline"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "Further planned through 2025 2030 Interim target of 46% reduction against 2019 (Scope 1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 3,
+        "characteristic": "Calculation and reporting of most 15 Scope 3 categories with details on data sources.",
+        "evidence_extract": "Scope 3 actions plans \ndefined in 2025, continue \nto inform and educate \nbuying and supply teams on \nresponsible sourcing best \npractices\nb"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "First disclosures of Scope 1 and 2, with varying completeness (no Scope 3).",
+        "evidence_extract": "03 ENVIRONMENTAL UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 2,
+        "characteristic": "Partial inclusion of Scope 3 categories.",
+        "evidence_extract": "Reducing our Carbon Emissions\nWe continued throughout 2024 to deliver against our carbon reduction \ntarget timeline and have now set our target and timescale for Scope 3"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Calculation and reporting of most 15 Scope 3 categories with details on data sources.",
+        "evidence_extract": "Scope 3 targets \nhave been set and agreed\nb"
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 0,
+        "characteristic": "No assurance or internal review.",
+        "evidence_extract": "ESG standards and \nassurances form part of the \nnew product introduction \nprocess for own brand \nproducts"
+      }
+    ],
+    "avg_maturity_stage": 1.4,
+    "max_maturity_stage": 3
+  },
+  "reporting_disclosure": {
+    "theme_name": "Reporting and disclosure process",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 10,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "We will continue to measure Scope 1 & 2 against a 2019 baseline and Scope 3 \nagainst a 2023 baseline"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions 0.5% (4,133 ktCO2e) \u0007Upstream Transportation and Distribution 0.4% (3,215..."
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales"
+      },
+      {
+        "priority_score": 9,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "Further planned through 2025 2030 Interim target of 46% reduction against 2019 (Scope 1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "03 ENVIRONMENTAL UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 0,
+        "characteristic": "No assurance validation.",
+        "evidence_extract": "ESG standards and \nassurances form part of the \nnew product introduction \nprocess for own brand \nproducts"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 2,
+        "characteristic": "Disclosure of consistent Scope 1 & 2 data year-over-year with partial inclusion of Scope 3.",
+        "evidence_extract": "Scope 3 actions plans \ndefined in 2025, continue \nto inform and educate \nbuying and supply teams on \nresponsible sourcing best \npractices\nb"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Integration of multiple frameworks: GRI, CDP, TCFD, SBTi, and SASB or ISSB drafts.",
+        "evidence_extract": "The \nCompany will follow a \u2018true\u2019 Net Zero strategy whereby it will focus on actual \ndecarbonisation in achieving these targets and only consider offsetting \nactions for the residual 10%"
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 1,
+        "characteristic": "No consistent year-over-year comparability; minimal governance disclosure.",
+        "evidence_extract": "During the trial this service has been provided free to our customers to encourage them to bring back uplifted flooring (post-consumer waste), off cuts (post industrial waste), underlay, vinyl, LVT,..."
+      }
+    ],
+    "avg_maturity_stage": 1.8,
+    "max_maturity_stage": 3
+  },
+  "energy_intelligence": {
+    "theme_name": "Energy intelligence",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 10,
+        "maturity_stage": 3,
+        "characteristic": "Energy and GHG performance tied to corporate Net Zero or SBTi commitments.",
+        "evidence_extract": "The \nCompany will follow a \u2018true\u2019 Net Zero strategy whereby it will focus on actual \ndecarbonisation in achieving these targets and only consider offsetting \nactions for the residual 10%"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 3,
+        "characteristic": "Energy and GHG performance tied to corporate Net Zero or SBTi commitments.",
+        "evidence_extract": "Review and develop ESG data and reporting capability to create harmonised ESG dashboard and confirm requirements for new ERP Programme Headlam Group PLC March 2025 02 Sustainability Report Key achievements..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "All internal review/assurance processes.",
+        "evidence_extract": "ESG standards and \nassurances form part of the \nnew product introduction \nprocess for own brand \nproducts"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "Initial internal tracking via spreadsheets or simple dashboards.",
+        "evidence_extract": "The governance we have in place to track progress against these actions are hard wired into many of our ways of working, standard reporting and meetings to provide leadership and..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 2,
+        "characteristic": "Integration of energy data with Scope 1 and 2 GHG accounting.",
+        "evidence_extract": "We have now set an interim target for Scope 3 whilst Scope 1 & 2 will remain in line with our previously published commitment to achieve a 46% reduction by..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "Real-time or near-real-time energy and carbon data systems.",
+        "evidence_extract": "As we open new sites \n(Rayleigh and Trade \nCounters) we should \ncontinuously improve their \nenergy efficiency and \nminimise carbon emissions\nProgress made\na"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "Initial internal tracking via spreadsheets or simple dashboards.",
+        "evidence_extract": "Finally, Headlam are represented on two of the BITC \nRegional Boards, East Midlands and Yorkshire & Humber"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "Initial internal tracking via spreadsheets or simple dashboards.",
+        "evidence_extract": "During the trial this service has been provided free to our customers to encourage them to bring back uplifted flooring (post-consumer waste), off cuts (post industrial waste), underlay, vinyl, LVT,..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 1,
+        "characteristic": "Initial internal tracking via spreadsheets or simple dashboards.",
+        "evidence_extract": "Chris Payne, CEO \u201c As a distributor, to be truly sustainable takes a coordinated effort across the flooring industry and I am proud to say we have had successes in..."
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 1,
+        "characteristic": "Initial internal tracking via spreadsheets or simple dashboards.",
+        "evidence_extract": "Our in-person \nEmployee Forums are attended by our CEO and Karen \nHubbard (Non Executive Director) who reports back to the \nBoard on ideas, suggestions and obstacles raised by our \ncolleagues"
+      }
+    ],
+    "avg_maturity_stage": 1.8,
+    "max_maturity_stage": 4
+  },
+  "risk_management": {
+    "theme_name": "Risk management and mitigation",
+    "row_count": 10,
+    "rows": [
+      {
+        "priority_score": 8,
+        "maturity_stage": 4,
+        "characteristic": "**Priority Score** (1-10): Ranking of evidence strength",
+        "evidence_extract": "Review and develop ESG data and reporting capability to create harmonised ESG dashboard and confirm requirements for new ERP Programme Headlam Group PLC March 2025 02 Sustainability Report Key achievements..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Features**: Specific features to pitch",
+        "evidence_extract": "Our focus for 2025 will be on product development following our sustainable \nby design principles see ESG Priorities for 2025, non-commercial fleet, \npromoting and educating colleagues on good energy behaviours"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Features**: Specific features to pitch",
+        "evidence_extract": "Work with operations and \nproperty teams to create \nbuilding blueprint for \noptimum sustainability\nPriorities\na"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Features**: Specific features to pitch",
+        "evidence_extract": "This is a great \nexample of the flooring industry pulling together to support \nlocal communities and improve the sustainability of the \nindustry"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Characteristic**: Matched maturity characteristic from rubric",
+        "evidence_extract": "Our Colleague Code of Ethics, which we refer to as The Headlam Way covers a range of topics including safety, behaviours towards each other, conflicts of interest, sustainability, bribery and..."
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Characteristic**: Matched maturity characteristic from rubric",
+        "evidence_extract": "Working as part of Carpets \nRecycling UK to develop \nSustainability Pledge across \nthe industry\nb"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Features**: Specific features to pitch",
+        "evidence_extract": "Creating a scalable take-\nback scheme enhances our \ncustomer offer and supports \nsustainability\nc"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Features**: Specific features to pitch",
+        "evidence_extract": "I truly believe that this has been achieved because our ESG \nplans are integral to our business strategy"
+      },
+      {
+        "priority_score": 7,
+        "maturity_stage": 4,
+        "characteristic": "**Priority Score** (1-10): Ranking of evidence strength",
+        "evidence_extract": "The \nCompany will follow a \u2018true\u2019 Net Zero strategy whereby it will focus on actual \ndecarbonisation in achieving these targets and only consider offsetting \nactions for the residual 10%"
+      },
+      {
+        "priority_score": 6,
+        "maturity_stage": 4,
+        "characteristic": "**Priority Score** (1-10): Ranking of evidence strength",
+        "evidence_extract": "Where non-renewable raw materials are used, we \nencourage the inclusion of recycled materials and are \ndeveloping our products to be easier and more recyclable \nat end of life"
+      }
+    ],
+    "avg_maturity_stage": 4.0,
+    "max_maturity_stage": 4
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-10-28T06:16:18Z",
+  "project": "prospecting-engine",
+  "task": "Differential Testing",
+  "parity_ok": true,
+  "variants": [
+    {
+      "name": "baseline",
+      "parameters": {
+        "topk": 5,
+        "alpha": 0.6
+      },
+      "hash": "d1ca49eb3ff4e542bcb48ff84ca42fa1b64178168488ea80d8b3bf055c34b4b1",
+      "parity_ok": true,
+      "theme_count": 7
+    },
+    {
+      "name": "variant_topk7",
+      "parameters": {
+        "topk": 7,
+        "alpha": 0.6
+      },
+      "hash": "49adf3cbc015051ff44f84ea9870ce3d31616e1acca494d61e49aae70f2e76ca",
+      "parity_ok": true,
+      "theme_count": 7
+    },
+    {
+      "name": "variant_alpha05",
+      "parameters": {
+        "topk": 5,
+        "alpha": 0.5
+      },
+      "hash": "764ef3ff65eb056fa7fe07c08fd7ea3f42f5c749089440d073bda2f14e747a49",
+      "parity_ok": true,
+      "theme_count": 7
+    }
+  ],
+  "parameters": {
+    "company": "Headlam Group Plc",
+    "year": 2025,
+    "query": "climate strategy and emissions targets"
+  },
+  "message": "Differential testing complete. All variants maintain parity constraints."
+}

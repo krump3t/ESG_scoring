@@ -1,0 +1,79 @@
+{
+  "protocol_version": "13.8-MEA",
+  "generated_at": "2025-10-27T00:00:00Z",
+  "source": "ESG_SCORING_NAMING_CONVENTIONS_MAP.md",
+  "description": "Canonical symbol map for naming refactor Phase 1-3",
+  "canonical_symbols": {
+    "metrics_extraction": {
+      "legacy_name": "ExtractionResult",
+      "canonical_name": "MetricsExtractionResult",
+      "module": "libs.contracts.extraction_contracts",
+      "location": "libs/contracts/extraction_contracts.py:72",
+      "rationale": "Result of extracting ESG metrics from company reports (contracts domain)",
+      "fields": ["metrics: Optional[ESGMetrics]", "quality: ExtractionQuality", "errors: List[ExtractionError]"],
+      "phase1_action": "Rename class to MetricsExtractionResult; add TypeAlias alias; emit import-time DeprecationWarning",
+      "phase2_action": "Codemod all internal references to canonical name",
+      "phase3_action": "Remove TypeAlias and DeprecationWarning"
+    },
+    "evidence_extraction": {
+      "legacy_name": "ExtractionResult",
+      "canonical_name": "EvidenceExtractionResult",
+      "module": "agents.parser.models",
+      "location": "agents/parser/models.py:174",
+      "rationale": "Result of extracting evidence from a single filing (parser domain)",
+      "fields": ["company_name: str", "year: int", "doc_id: str", "evidence_by_theme: dict[str, list[Evidence]]", "extraction_timestamp: str", "snapshot_id: str"],
+      "phase1_action": "Rename class to EvidenceExtractionResult; add TypeAlias alias; emit import-time DeprecationWarning",
+      "phase2_action": "Codemod all internal references to canonical name",
+      "phase3_action": "Remove TypeAlias and DeprecationWarning"
+    },
+    "theme_rubric_v3": {
+      "legacy_name": "ThemeRubric",
+      "canonical_name": "ThemeRubricV3",
+      "module": "apps.scoring.rubric_v3_loader",
+      "location": "apps/scoring/rubric_v3_loader.py:21",
+      "rationale": "Rubric for a single ESG theme in v3 schema (version-specific)",
+      "fields": ["code: str", "name: str", "intent: str", "stages: Dict[int, StageDescriptor]"],
+      "phase1_action": "Rename class to ThemeRubricV3; add assignment alias; emit import-time DeprecationWarning",
+      "phase2_action": "Codemod all internal references to canonical name",
+      "phase3_action": "Remove assignment alias and DeprecationWarning"
+    },
+    "hybrid_retriever_app": {
+      "legacy_name": "HybridRetriever (apps.index)",
+      "canonical_name": "IndexedHybridRetriever",
+      "module": "apps.index.retriever",
+      "location": "apps/index/retriever.py:5",
+      "rationale": "App-layer HybridRetriever with graph enrichment (distinct from library variant)",
+      "note": "Keep module-scoped golden path: apps.index.retriever.IndexedHybridRetriever",
+      "phase1_action": "Rename class to IndexedHybridRetriever; keep HybridRetriever as alias with DeprecationWarning",
+      "phase2_action": "Codemod internal references; update re-exports",
+      "phase3_action": "Remove alias; document module-scoped naming"
+    }
+  },
+  "golden_import_paths": {
+    "MetricsExtractionResult": "from libs.contracts.extraction_contracts import MetricsExtractionResult",
+    "EvidenceExtractionResult": "from agents.parser.models import EvidenceExtractionResult",
+    "ThemeRubricV3": "from apps.scoring.rubric_v3_loader import ThemeRubricV3",
+    "IndexedHybridRetriever": "from apps.index.retriever import IndexedHybridRetriever",
+    "HybridRetriever (library)": "from libs.retrieval.hybrid_retriever import HybridRetriever"
+  },
+  "package_exports": {
+    "agents.parser.__init__": ["EvidenceExtractionResult"],
+    "libs.contracts.__init__": ["MetricsExtractionResult"],
+    "apps.scoring.__init__": ["ThemeRubricV3"],
+    "apps.index.__init__": ["IndexedHybridRetriever"],
+    "libs.retrieval.__init__": ["HybridRetriever"]
+  },
+  "deprecation_policy": {
+    "legacy_support_duration": "one minor release or 4 weeks, whichever is longer",
+    "warning_type": "DeprecationWarning",
+    "warning_trigger": "import-time (module load), not constructor",
+    "warning_frequency": "once per process",
+    "internal_enforcement": "pytest -W error::DeprecationWarning (internal modules only)",
+    "public_allowlist": ["apps.api", "apps.rubric"]
+  },
+  "related_documents": {
+    "rolling_plan": "NAMING_REFACTOR_ROLLING_PLAN.md",
+    "deprecation_plan": "naming_refactor_deprecation_plan.md",
+    "conventions_map": "ESG_SCORING_NAMING_CONVENTIONS_MAP.md"
+  }
+}

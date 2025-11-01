@@ -1,0 +1,56 @@
+{
+  "company": "Headlam Group Plc",
+  "trace_id": "sha256:684da9eb05066dd1",
+  "scores": {
+    "TSP": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    },
+    "OSP": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    },
+    "DM": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    },
+    "GHG": {
+      "score": 2
+    },
+    "RD": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    },
+    "EI": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    },
+    "RMM": {
+      "score": null,
+      "reason": "no_score_or_evidence"
+    }
+  },
+  "evidence": [
+    {
+      "theme": "TSP",
+      "quote": "We are committed to achieving net-zero emissions by 2050 through renewable energy adoption.",
+      "doc_id": "headlam_2025_page_002_chunk_000",
+      "page": null,
+      "source": "LSE_HEAD_2025.pdf"
+    },
+    {
+      "theme": "GHG",
+      "quote": "Climate risk assessment: We have identified transition risks related to carbon pricing.",
+      "doc_id": "headlam_2025_page_001_chunk_000",
+      "page": null,
+      "source": "LSE_HEAD_2025.pdf"
+    },
+    {
+      "theme": "GHG",
+      "quote": "Our Scope 1 and Scope 2 emissions totaled 5,240 tCO2e in 2025.",
+      "doc_id": "headlam_2025_page_001_chunk_001",
+      "page": null,
+      "source": "LSE_HEAD_2025.pdf"
+    }
+  ]
+}

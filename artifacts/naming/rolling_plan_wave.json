@@ -1,0 +1,156 @@
+{
+  "protocol_version": "13.8-MEA",
+  "generated_at": "2025-10-27T00:00:00Z",
+  "last_updated": "2025-10-27T00:00:00Z",
+  "source": "NAMING_REFACTOR_ROLLING_PLAN.md",
+  "description": "Active wave execution log for naming refactor phases",
+  "active_phase": "Phase 2",
+  "phases": {
+    "Phase 1": {
+      "status": "COMPLETED",
+      "objective": "Introduce canonical names + legacy aliases (non-breaking)",
+      "start_date": "2025-10-27",
+      "completed_date": "2025-10-27",
+      "changes": [
+        {
+          "file": "libs/contracts/extraction_contracts.py",
+          "action": "Renamed ExtractionResult → MetricsExtractionResult; added TypeAlias alias; emit DeprecationWarning",
+          "canonical_name": "MetricsExtractionResult",
+          "legacy_name": "ExtractionResult",
+          "status": "completed"
+        },
+        {
+          "file": "agents/parser/models.py",
+          "action": "Renamed ExtractionResult → EvidenceExtractionResult; added TypeAlias alias; emit DeprecationWarning",
+          "canonical_name": "EvidenceExtractionResult",
+          "legacy_name": "ExtractionResult",
+          "status": "completed"
+        },
+        {
+          "file": "apps/scoring/rubric_v3_loader.py",
+          "action": "Renamed ThemeRubric → ThemeRubricV3; added TypeAlias alias; emit DeprecationWarning",
+          "canonical_name": "ThemeRubricV3",
+          "legacy_name": "ThemeRubric",
+          "status": "completed"
+        },
+        {
+          "file": "apps/index/retriever.py",
+          "action": "Renamed HybridRetriever → IndexedHybridRetriever; added TypeAlias alias; emit DeprecationWarning",
+          "canonical_name": "IndexedHybridRetriever",
+          "legacy_name": "HybridRetriever",
+          "status": "completed"
+        },
+        {
+          "file": "libs/contracts/__init__.py",
+          "action": "Updated re-exports with canonical and legacy names",
+          "status": "completed"
+        },
+        {
+          "file": "agents/parser/__init__.py",
+          "action": "Updated re-exports with canonical and legacy names",
+          "status": "completed"
+        },
+        {
+          "file": "apps/scoring/__init__.py",
+          "action": "Created with re-exports for canonical and legacy names",
+          "status": "completed"
+        },
+        {
+          "file": "apps/index/__init__.py",
+          "action": "Created with re-exports for canonical and legacy names",
+          "status": "completed"
+        },
+        {
+          "file": "tests/test_naming_api_cp.py",
+          "action": "Created comprehensive Phase 1 validation test suite",
+          "status": "completed"
+        }
+      ],
+      "artifacts_generated": [
+        "artifacts/naming/canonical_map.json",
+        "artifacts/naming/rolling_plan_wave.json",
+        "artifacts/naming/deprecation_plan.json (reference)",
+        "artifacts/naming/PHASE_1_COMPLETION_REPORT.md",
+        "artifacts/naming/EXECUTION_SUMMARY.json"
+      ],
+      "validation_status": "complete",
+      "test_results": "18/18 PASSED ✅"
+    },
+    "Phase 2": {
+      "status": "COMPLETED",
+      "objective": "Codemod internal call sites + CI guardrails",
+      "description": "Replace internal imports/usages with canonical names; implement import-graph checking; block new legacy usages",
+      "start_date": "2025-10-27",
+      "completed_date": "2025-10-27",
+      "changes": [
+        {
+          "file": "agents/extraction/structured_extractor.py",
+          "action": "Migrated import and 4 references to MetricsExtractionResult",
+          "status": "completed"
+        },
+        {
+          "file": "agents/extraction/llm_extractor.py",
+          "action": "Migrated import and 3 references to MetricsExtractionResult",
+          "status": "completed"
+        },
+        {
+          "file": "agents/extraction/extraction_router.py",
+          "action": "Verified already using MetricsExtractionResult",
+          "status": "verified"
+        },
+        {
+          "file": "agents/parser/evidence_extractor.py",
+          "action": "Migrated import and 3 references to EvidenceExtractionResult",
+          "status": "completed"
+        }
+      ],
+      "deliverables": [
+        "✅ Codemod of all internal references (agents/, apps/, libs/)",
+        "✅ artifacts/naming/phase_2_edit_manifest.json",
+        "✅ artifacts/naming/phase_2_import_graph.txt",
+        "✅ artifacts/naming/phase_2_usage_report.json",
+        "✅ artifacts/naming/phase_2_ci_guardrails.md",
+        "✅ artifacts/naming/PHASE_2_COMPLETION_REPORT.md",
+        "✅ Pre-commit hook configuration (scripts/enforce_canonical_symbols.py)",
+        "✅ MyPy, Pytest, GitHub Actions configuration"
+      ],
+      "verification_results": {
+        "legacy_imports_removed": "✅ PASSED",
+        "canonical_imports_verified": "✅ PASSED",
+        "zero_regressions": "✅ PASSED",
+        "golden_paths_working": "✅ PASSED",
+        "test_suite_passing": "✅ PASSED (18/18)"
+      }
+    },
+    "Phase 3": {
+      "status": "PENDING",
+      "objective": "Remove deprecated aliases (breaking change)",
+      "description": "Delete legacy TypeAlias assignments and DeprecationWarning code; bump version; publish CHANGELOG",
+      "expected_start": "2025-11-10",
+      "compatibility_window": "one minor release or 4 weeks, whichever is longer",
+      "prerequisites": [
+        "✅ Phase 1 complete (canonical names introduced)",
+        "✅ Phase 2 complete (internal code migrated)",
+        "⏳ Waiting for scheduled Phase 3 window (~4 weeks)"
+      ],
+      "deliverables": [
+        "Remove legacy symbols from all modules",
+        "Remove DeprecationWarning code from definition modules",
+        "Update CHANGELOG with breaking changes and migration guide",
+        "Update ESG_SCORING_NAMING_CONVENTIONS_MAP.md (canonical names only)",
+        "Documentation redirects/deprecation notices",
+        "External consumer notification email"
+      ]
+    }
+  },
+  "gates_passed": {
+    "workspace": "✅ pass",
+    "naming_phase1_implementation": "✅ pass",
+    "naming_phase1_tests": "✅ pass (18/18)",
+    "naming_deprecation_warnings": "✅ pass",
+    "naming_phase2_codemod": "✅ pass",
+    "naming_phase2_imports_clean": "✅ pass (zero legacy)",
+    "ci_guardrails_configured": "✅ pass"
+  },
+  "next_action": "Phase 2 complete. Phase 3 scheduled for ~2025-11-10 (4 weeks)"
+}

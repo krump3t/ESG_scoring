@@ -1,0 +1,122 @@
+{
+  "release_id": "sca-v13.8-mea-matrix-determinism",
+  "generated_at": "2025-10-28T22:15:00Z",
+  "protocol": "SCA v13.8-MEA (Fail-closed, No mocks, Offline replay)",
+  "agent": "Claude Code / Sonnet 4.5",
+  "status": "PASS",
+  "artifacts": {
+    "determinism": [
+      {
+        "file": "determinism_report.json",
+        "source": "artifacts/matrix_determinism/determinism_report.json",
+        "size": 1412,
+        "sha256_prefix": "e9c92dce32b29eb3",
+        "description": "Determinism proof report with 3x identical hashes"
+      },
+      {
+        "file": "authenticity_gates_report.json",
+        "source": "artifacts/matrix_determinism/authenticity_gates_report.json",
+        "size": 2764,
+        "sha256_prefix": "f3d70a607006f5f6",
+        "description": "Comprehensive authenticity gates validation results"
+      },
+      {
+        "file": "COMPLIANCE_REPORT.md",
+        "source": "artifacts/matrix_determinism/COMPLIANCE_REPORT.md",
+        "size": 9159,
+        "sha256_prefix": "df58ecf382865753",
+        "description": "Human-readable compliance documentation"
+      },
+      {
+        "file": "run_1_replay_log.txt",
+        "source": "artifacts/matrix_determinism/run_1/replay_log.txt",
+        "size": 1578,
+        "sha256_prefix": "5f09e22c7b636ba4",
+        "description": "REPLAY run 1 execution log"
+      },
+      {
+        "file": "run_2_replay_log.txt",
+        "source": "artifacts/matrix_determinism/run_2/replay_log.txt",
+        "size": 1578,
+        "sha256_prefix": "5f09e22c7b636ba4",
+        "description": "REPLAY run 2 execution log"
+      },
+      {
+        "file": "run_3_replay_log.txt",
+        "source": "artifacts/matrix_determinism/run_3/replay_log.txt",
+        "size": 1578,
+        "sha256_prefix": "5f09e22c7b636ba4",
+        "description": "REPLAY run 3 execution log"
+      }
+    ],
+    "semantic_index": [
+      {
+        "file": "index_meta.json",
+        "source": "data/index/msft_2023/meta.json",
+        "size": 348,
+        "sha256_prefix": "32cfd49d10c2b73d",
+        "description": "Semantic index metadata (model, dimensions)"
+      }
+    ],
+    "cache": [
+      {
+        "file": "wx_ledger.jsonl",
+        "source": "artifacts/wx_cache/ledger.jsonl",
+        "size": 32310,
+        "sha256_prefix": "2a78f144e55190f6",
+        "description": "watsonx.ai API call audit trail"
+      }
+    ],
+    "config": [
+      {
+        "file": "integration_flags.json",
+        "source": "configs/integration_flags.json",
+        "size": 415,
+        "sha256_prefix": "64f81f4b074edaa2",
+        "description": "Semantic retrieval configuration (alpha=0.6, k=50)"
+      },
+      {
+        "file": "extraction.json",
+        "source": "configs/extraction.json",
+        "size": 76,
+        "sha256_prefix": "3dbbf41a2758c0c2",
+        "description": "Chunk extraction parameters"
+      }
+    ]
+  },
+  "total_files": 10,
+  "total_size_bytes": 51218,
+  "gates_passed": {
+    "determinism": "PASS",
+    "parity": "PASS",
+    "cache_replay": "PASS",
+    "artifacts": "PASS",
+    "evidence": "SKIP"
+  },
+  "attestation": {
+    "determinism_runs": 3,
+    "hash_consistency": "100%",
+    "canonical_hash": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca",
+    "cache_hits": "100%",
+    "online_calls_in_replay": 0,
+    "watsonx_model": "ibm/slate-125m-english-rtrvr",
+    "vector_dimensions": 768,
+    "hybrid_retrieval": {
+      "algorithm": "BM25 + Semantic",
+      "alpha": 0.6,
+      "k": 50
+    }
+  },
+  "validation_summary": {
+    "document": "msft_2023",
+    "query": "ESG climate strategy and GHG emissions targets",
+    "test_mode": "Offline REPLAY (cache-only)",
+    "determinism_control": {
+      "seed": 42,
+      "pythonhashseed": 0,
+      "offline_replay": true
+    },
+    "pass_rate": "100%",
+    "applicable_gates_passed": "4/4"
+  }
+}

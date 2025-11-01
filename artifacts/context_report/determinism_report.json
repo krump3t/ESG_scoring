@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "run_id": "run1",
+      "output_sha256": "601e78669ce9a2c6065859f251787a14f8923727a6054053070d036e02c3e81d",
+      "timestamp_utc": "2025-11-01T16:59:44Z",
+      "exit_code": 0
+    },
+    {
+      "run_id": "run2",
+      "output_sha256": "601e78669ce9a2c6065859f251787a14f8923727a6054053070d036e02c3e81d",
+      "timestamp_utc": "2025-11-01T16:59:46Z",
+      "exit_code": 0
+    },
+    {
+      "run_id": "run3",
+      "output_sha256": "601e78669ce9a2c6065859f251787a14f8923727a6054053070d036e02c3e81d",
+      "timestamp_utc": "2025-11-01T16:59:50Z",
+      "exit_code": 0
+    }
+  ],
+  "identical": true,
+  "diff_summary": {
+    "byte_equal": true,
+    "fields_delta_count": 0
+  },
+  "input_fingerprint": {
+    "query": "context_report_assembler",
+    "company_id": "N/A",
+    "env_hash": "434d8d4785701ace1fe2a07266f46b1cd98350d2d22bab24549aff917b859c68"
+  },
+  "seed": {
+    "SEED": "42",
+    "PYTHONHASHSEED": "0"
+  }
+}

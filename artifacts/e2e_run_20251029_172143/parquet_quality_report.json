@@ -1,0 +1,26 @@
+[
+  {
+    "doc_id": "AAPL_2023",
+    "chunks": 12433,
+    "min_page": 1,
+    "max_page": 3316,
+    "ge30": 12433.0,
+    "empty": 0.0
+  },
+  {
+    "doc_id": "XOM_2023",
+    "chunks": 6829,
+    "min_page": 1,
+    "max_page": 1822,
+    "ge30": 6829.0,
+    "empty": 0.0
+  },
+  {
+    "doc_id": "JPM_2023",
+    "chunks": 4790,
+    "min_page": 1,
+    "max_page": 1278,
+    "ge30": 4790.0,
+    "empty": 0.0
+  }
+]

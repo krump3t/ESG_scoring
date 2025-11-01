@@ -1,0 +1,14 @@
+{
+  "company": "ExxonMobil Corporation",
+  "determinism_seed": 42,
+  "doc_id": "XOM_2023",
+  "hashes": [
+    "823621c833ee2bb7e5304debc690f403c75ee2181937c34f2743ec35f1ceee79",
+    "823621c833ee2bb7e5304debc690f403c75ee2181937c34f2743ec35f1ceee79",
+    "823621c833ee2bb7e5304debc690f403c75ee2181937c34f2743ec35f1ceee79"
+  ],
+  "identical": true,
+  "pythonhashseed": 0,
+  "runs": 3,
+  "year": 2023
+}

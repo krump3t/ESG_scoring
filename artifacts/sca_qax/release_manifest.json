@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0-alpha",
+  "determinism": {
+    "PYTHONHASHSEED": "0",
+    "ESG_SEED": "42"
+  },
+  "artifacts": {
+    "outputs": [
+      {
+        "path": "artifacts/demo/headlam_demo_response.json",
+        "sha256": "472c5a9c8404778d91dc5a707d80d8e916447a984cb23e6fb0315102fc5b7d99"
+      },
+      {
+        "path": "artifacts/sca_qax/determinism_report.json",
+        "sha256": "f872489653bca08b40b5cd0006231defe5ddedbba3723665988b4d93b92b2abd"
+      },
+      {
+        "path": "artifacts/sca_qax/authenticity_audit_json_source.md",
+        "sha256": "92b9496e3c2ce57aa874f46a6417ddc480d158b6d566fb2c2f8bdebe250ddeb5"
+      },
+      {
+        "path": "artifacts/sca_qax/THEME_MAPPING_COMPLETE.md",
+        "sha256": "d07f57f26272731e343f97a1e95bd7ac50d7b3845fbdd0f9ed6bb3c049285b25"
+      },
+      {
+        "path": "artifacts/sca_qax/codex_violations_verification.md",
+        "sha256": "5730af47c10542f1410380d4c25bd0608f6a2e44c75f3fcd8b17eb589f4e9ce2"
+      },
+      {
+        "path": "artifacts/sca_qax/PROTOCOL_GATES_UNBLOCKED.md",
+        "sha256": "fa5f35845d8ce7f4cc41237e6b6a25fd683b070b9ed8c5387852fbdfa00885dc"
+      }
+    ],
+    "gates": [
+      "artifacts/sca_qax/run.log.jsonl"
+    ],
+    "qa": []
+  },
+  "api": {
+    "health": "/health",
+    "ready": "/ready",
+    "live": "/live",
+    "metrics": "/metrics",
+    "score": "/score"
+  }
+}

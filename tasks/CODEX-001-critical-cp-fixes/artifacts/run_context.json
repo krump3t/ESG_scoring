@@ -1,0 +1,27 @@
+{
+  "run_id": "20251027-055536-b5e9e9a7",
+  "session_id": "prospecting-engine-7dc4b26e-837a-4a51-bafc-84afec05a441",
+  "task_id": "AV-001",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\CODEX-001-critical-cp-fixes",
+  "phase": "validation",
+  "timestamp": "2025-10-27T05:55:36.180153Z",
+  "tools": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

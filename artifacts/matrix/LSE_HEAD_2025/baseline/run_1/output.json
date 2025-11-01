@@ -1,0 +1,1110 @@
+{
+  "company": "Headlam Group PLC",
+  "deterministic_timestamp": "2025-10-28T06:00:00Z",
+  "doc_id": "LSE_HEAD_2025",
+  "model_version": "1.0",
+  "parity": {
+    "evidence_ids": [
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025",
+      "LSE_HEAD_2025"
+    ],
+    "fused_topk_ids": [
+      "LSE_HEAD_2025"
+    ],
+    "parity_ok": true
+  },
+  "query": "ESG climate strategy and GHG emissions targets",
+  "rubric_version": "3.0",
+  "run": 1,
+  "scores": [
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Automated pipelines with real‑time validation, lineage tracking, and integrated reporting systems (e.g., Iceberg, Parquet architecture).",
+      "theme": "DM"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "AI/ML forecasting; optimization across assets; cost‑benefit analysis tied to decarbonization strategy.",
+      "theme": "EI"
+    },
+    {
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 3,
+      "stage_descriptor": "Comprehensive Scope 1/2/3 with data improvement plans, supplier engagement, and limited assurance.",
+      "theme": "GHG"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Fully embedded ESG management system with internal audit, continuous improvement, and integrated financial risk controls.",
+      "theme": "OSP"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "External assurance; digital tagging (XBRL/ESRS); integrated financial filing; near‑real‑time reporting.",
+      "theme": "RD"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Enterprise risk integrated with financial modeling; insured/uninsured analysis; public disclosure per ISSB/CSRD.",
+      "theme": "RMM"
+    },
+    {
+      "confidence": 0.98,
+      "evidence": [
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "Sustainable by design As we accelerate the delivery of our strategy, we are ensuring that ESG is a key consideration in the design of our business. Our first example of",
+          "sha256": "09679ea32f3dbd931826b7f81744246da4f15c6ae18e81912d2279a913856427"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "E Environmental S Social G Governance Priorities a. Product design b. Service design c. Building design Why we have chosen them a. To meet the long-term ambition of creating a",
+          "sha256": "7684af0d93474e2ac6dd94a25f892fb5688ae6d957f866a14ff0c4ebefefc389"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "Key achievements in 2024: • Scope 1,2 & 3 targets aligned and set to be net zero by 2040 • 46% reduction of Scope 1 and 2 against a 2019",
+          "sha256": "079ee4834e02cf105bffeafb601121dcdcfd102a8c3269d3fb6d3896a5189ab5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "UK and Continental Europe Scope 1 and 2 emissions 2024 Full Year Data 91% 9% Scope 1: 91% (14.0ktCO2e) \u0007Scope 2: 9% (1.6ktCO2e) Net Zero Emissions Timeline Key Achievements and",
+          "sha256": "308cf8f0e4ca53123daf407c46508fa3cf63ff2df8714d17eff7bb2e2358f717"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "Sustainable Product Development Sustainable by design Sales Takeback/ Recovery Distribution Material Processing Manufacturing Recycled material In 2024 we focused our attention on understanding how sustainable the full product lifecycle is",
+          "sha256": "77025d94e1bad90f21b2da06e216c909a3c502a5c807cfc2a40b6634023f08b4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "Partnerships Biffa provide the bulkers and skips and routinely collect and sort the materials into raw material component types; for example, on broadloom carpet, by using chemical analysers they sort",
+          "sha256": "c3a7867275acc0db09b9830ed8a7b1003bffcc66d2ce0e4378ed0064505dc270"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "trial in 2025 and I am confident that if this extended trial is a success we will be able to scale up a take-back scheme with national geographic reach through",
+          "sha256": "c8177c6824bfa9c7e394cc3a4233c3a652d60b2cdaf2e3b5c94ea7882f8521ab"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "in environmental planning as part of site development which incorporates waste, energy efficiency, biodiversity etc Outlook a. Educate the central buying team, under the leadership of the new Chief Buying",
+          "sha256": "77c218e59386f9af4fbcb3d6ff1f692e5cc7066252f13b1766668c25376974be"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "a supply chain that is circular and includes taking responsibility for recovering as much material as we place onto the market. Reducing our Carbon Emissions We continued throughout 2024 to",
+          "sha256": "03f709464180942b0d1338001662d62d30750b793d2bffba9b275969ce9a2532"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "fleet electric/low emission Good Energy and Recycling Behaviours workshops held at 11 of our largest sites Continued trailing of electric/low emission commercial vehicles Transport integration completed 2024 Use telematics to",
+          "sha256": "6a05a7512523f5cff975233cdd014bd207c0ec5f4266852b481cd587dca0d510"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "of our products as possible. Our Florprotec brand offers a collection service at end of life, and we are working with a recycler and the manufacturer to ensure this material",
+          "sha256": "9e78e29d01aa08161cfa5574c7e77dff2453c2fbd129ef0b99b77e1ae8b72849"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "of material. Water The Company is not a large consumer of water, which is primarily used for cleaning its commercial vehicles, and continues to engage in limiting usage whenever possible.",
+          "sha256": "b3d3c5d368b739abf8cd988e58b6834373a715cafddf07590c67f8bcc272fed3"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "help increase this valuable skill set in the market for the long term sustainability of the industry and we envisage this programme growing over time. At the end of the",
+          "sha256": "12fb8843cd03455822a1fb581d668f8d8974ebfa3b685cf0e60408f3d13e1b6d"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "fullest b. A lack of trained flooring fitters is an industry wide challenge, and by working across our supply chain we can help to grow this valuable resource whilst also",
+          "sha256": "8e1e203f592ef521b3b0be71025cd763757968b9bb10d19d190abd20f2ef9928"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "2 will remain in line with our previously published commitment to achieve a 46% reduction by 2030. Our focus for 2025 will be on product development following our sustainable by",
+          "sha256": "e2b15ea6db1eac7221412d8e22c76ab2bee91f29e2e31b0d8861a93650d9fd6f"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "Scope 3 strategy and targets to be developed Continued trial of low emission commercial fleet vehicles Trial of Trade Counter take-back and recycling scheme in Northampton Launched EV salary sacrifice",
+          "sha256": "ce4a7e16c6da1d9699b74c2b1dcd9ffe33c219974221a5017fa4b5e71adab2e7"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "May 2024 we launched this facility to our Mercado Northampton trade counter customers. During the trial this service has been provided free to our customers to encourage them to bring",
+          "sha256": "e39625c27488c035f5c33c231103f199f0c0b108141b2b76e9411938461655e5"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "either through our manufacturers or through recycling facilities specialising in textile or resilient flooring. The Group continues to use the most sustainable sources for packaging ensuring the products’ integrity remains",
+          "sha256": "fb01b40268d1c937d218e31d1d206e6d904e3fcc39301f649bb8efb2b1712130"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 2,
+          "quote": "by 5ppts, supporting our colleagues’ development and improving our governance and controls. I truly believe that this has been achieved because our ESG plans are integral to our business strategy.",
+          "sha256": "da0c14c1bba3468e50562139b874e8e7842f98b0d5d2c1a74c3e8a02eed11daa"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 3,
+          "quote": "enable consistent group processes. Scope 3 targets now set enabling focused planning b. The new ERP implementation programme means we will be reviewing several systems across the business and have",
+          "sha256": "b4b369cb3a366a949a5e7f5664271773a67140d32e9e678543ea8ffd4aa6c8eb"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 4,
+          "quote": "of our fleet. Energy Intensity In the last 2 years we have invested in solar panels across 12 of our distribution centres with the final installation taking place in Coleshill",
+          "sha256": "f7b5449f448e8f5c785b3d62601822be7dd43e8d4cca06033b00329210f601e0"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 5,
+          "quote": "1 and 2) Roll-out of low carbon commercial vehicles Potential heating electrification to reduce gas consumption 2032 Interim target of 42% reduction of Scope 3 emissions against 2023 baseline 2040",
+          "sha256": "4cebde0580d39a30b60137f0cad449038468b6e31a4a69037f4c8a40e7090fa1"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 6,
+          "quote": "and knowing that the waste material is being recycled. Scope 3 Emissions 2024 Full Year Data \u0007Purchased goods and services 80.2% (653,926 ktCO2e) \u0007Capital goods 0.5% (3,848 ktCO2e) \u0007Fuel-related Emissions",
+          "sha256": "127b810b43673a3fc24586a375f11a189b7d6305c96e35fa20d5b35140d355d4"
+        },
+        {
+          "doc_id": "LSE_HEAD_2025",
+          "page_no": 7,
+          "quote": "most sustainable solutions available in a responsible way. Through our Sustainable by Design programme, we look at renewable materials first and incorporate these wherever possible, many of which can be",
+          "sha256": "aec17c5796fd5418948476aec57601cfa6d72fbae7f5865b4166d3e369ab83b8"
+        }
+      ],
+      "stage": 4,
+      "stage_descriptor": "Validated science‑based targets (SBTi or equivalent); financial integration (CAPEX/OPEX linkage); scenario planning embedded in enterprise strategy.",
+      "theme": "TSP"
+    }
+  ],
+  "theme_count": 7,
+  "trace_id": "sha256:7ce3498f952a1f8a",
+  "year": 2025
+}

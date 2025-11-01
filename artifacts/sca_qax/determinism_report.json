@@ -1,0 +1,19 @@
+{
+  "seeds": {
+    "PYTHONHASHSEED": "0",
+    "ESG_SEED": "42"
+  },
+  "container_image": "Debian GNU/Linux 13 \\n \\l",
+  "artifacts": {
+    "outputs": [
+      {
+        "path": "artifacts/demo/headlam_demo_response.json",
+        "sha256": "e3da9efc30e1fea7353b8cc6da9a0cbedc1f5ac643148973e0b851fd759938c6"
+      },
+      {
+        "path": "artifacts/demo/headlam_demo_response_theme.json",
+        "sha256": "3b959d522216a0c7ee7f1e61373cd2e918b6cc6eafe374e9ce81314bf15bfbb1"
+      }
+    ]
+  }
+}

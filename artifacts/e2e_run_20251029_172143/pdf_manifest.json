@@ -1,0 +1,26 @@
+[
+  {
+    "org_id": "AAPL",
+    "year": 2023,
+    "pdf_path": "data\\pdf_cache\\Apple_2023_sustainability.pdf",
+    "size_bytes": 15806770,
+    "sha256": "da75397bede881a2a58628328ea068d53b5c44f805f117a82d8f1f63be2b339d",
+    "exists": true
+  },
+  {
+    "org_id": "XOM",
+    "year": 2023,
+    "pdf_path": "data\\pdf_cache\\ExxonMobil_2023_sustainability.pdf",
+    "size_bytes": 8369301,
+    "sha256": "10ab36045d49536229beace55f56fb9b29ff1aa8c700bc324c5a25a4c631775e",
+    "exists": true
+  },
+  {
+    "org_id": "JPM",
+    "year": 2023,
+    "pdf_path": "data\\pdf_cache\\JPMorgan_Chase_2023_esg.pdf",
+    "size_bytes": 7143472,
+    "sha256": "1e50d70500c58b40682137173e47ef229f6eb4ad9aab1dd1aa9cc910051a22b8",
+    "exists": true
+  }
+]

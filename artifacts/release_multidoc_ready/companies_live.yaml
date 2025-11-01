@@ -1,0 +1,51 @@
+# Multi-Company Configuration for Live Ingestion Pipeline
+# SCA v13.8-MEA | watsonx.ai Integration
+
+companies:
+  # Example 1: SEC EDGAR (auto-route via CIK lookup)
+  - name: "Microsoft Corporation"
+    ticker: "MSFT"
+    region: "US"
+    year: 2024
+    doc_id: "msft_2024"
+    provider: null  # Auto-route: SEC EDGAR first, fallback to Company IR
+
+  # Example 2: Company IR (direct URL)
+  - name: "Unilever PLC"
+    ticker: "UL"
+    region: "UK"
+    year: 2023
+    doc_id: "unilever_2023"
+    provider: "company_ir"
+    direct_url: "https://www.unilever.com/investor-relations/annual-report-and-accounts/sustainability-report-2023.pdf"
+
+  # Example 3: Local fixture (for testing/demo)
+  - name: "Headlam Group Plc"
+    ticker: "HEAD.L"
+    region: "UK"
+    year: 2025
+    doc_id: "headlam_2025"
+    provider: "local"
+    local_path: "tests/fixtures/headlam_group_plc_2025.pdf"
+
+# watsonx.ai Configuration
+watsonx:
+  embed_model: "ibm/slate-125m-english-rtrvr"
+  json_gen_model: "meta-llama/llama-3-8b-instruct"
+  edit_model: "meta-llama/llama-3-70b-instruct"
+  temperature: 0.0
+  top_k: 1
+  cache_dir: "artifacts/wx_cache"
+
+# Retrieval Configuration
+retrieval:
+  hybrid_alpha: 0.6  # BM25 weight (1-alpha = semantic weight)
+  top_k: 20
+  min_chunk_tokens: 50
+  max_chunk_tokens: 500
+
+# Evidence Gates (strict mode, no waivers)
+evidence_gates:
+  min_quotes_per_theme: 2
+  min_distinct_pages: 2
+  require_parity: true  # evidence_ids ⊆ fused_top_k

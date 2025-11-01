@@ -1,0 +1,77 @@
+{
+  "run_id": "002-bronze-ph5-20251022-041013",
+  "task_dir": "tasks/002-bronze-landing",
+  "qa_artifacts": [
+    {
+      "name": "Coverage XML",
+      "artifact_path": "qa/coverage_crawler.xml",
+      "status": "generated",
+      "timestamp": "2025-10-22T04:05:00Z"
+    },
+    {
+      "name": "Mypy Type Check",
+      "artifact_path": "qa/mypy_crawler.txt",
+      "status": "generated",
+      "timestamp": "2025-10-22T04:06:30Z",
+      "result": "Success: no issues found in 3 source files"
+    },
+    {
+      "name": "Lizard Complexity",
+      "artifact_path": "qa/lizard_crawler.txt",
+      "status": "generated",
+      "timestamp": "2025-10-22T04:07:00Z",
+      "max_ccn": 9
+    },
+    {
+      "name": "Interrogate Docs",
+      "artifact_path": "qa/interrogate_crawler.txt",
+      "status": "generated",
+      "timestamp": "2025-10-22T04:07:30Z",
+      "coverage": 1.0
+    },
+    {
+      "name": "Pytest Tests",
+      "artifact_path": "qa/test_output.txt",
+      "status": "generated",
+      "timestamp": "2025-10-22T04:05:00Z",
+      "tests_passed": 15,
+      "tests_failed": 0
+    }
+  ],
+  "code_artifacts": [
+    {
+      "name": "MCP Crawler Agent",
+      "artifact_path": "agents/crawler/mcp_crawler.py",
+      "type": "critical_path",
+      "lines": 152
+    },
+    {
+      "name": "PDF Extractor",
+      "artifact_path": "agents/crawler/extractors/pdf_extractor.py",
+      "type": "critical_path",
+      "lines": 176
+    },
+    {
+      "name": "Parquet Writer",
+      "artifact_path": "agents/crawler/writers/parquet_writer.py",
+      "type": "critical_path",
+      "lines": 265
+    }
+  ],
+  "integration_artifacts": [
+    {
+      "name": "Test Bronze Data Script",
+      "artifact_path": "scripts/create_test_bronze_data.py",
+      "status": "executed",
+      "result": "success",
+      "output_s3_path": "s3://esg-lake/bronze/test_corporation/2024/aca6c001-0500-4fac-b2e6-0155c70e6012/raw.parquet"
+    }
+  ],
+  "reports": [
+    {
+      "name": "Phase 5 Completion Report",
+      "artifact_path": "tasks/002-bronze-landing/reports/phase5_complete.md",
+      "status": "pending"
+    }
+  ]
+}

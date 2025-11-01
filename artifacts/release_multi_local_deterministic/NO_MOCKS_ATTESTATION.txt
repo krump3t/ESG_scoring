@@ -1,0 +1,25 @@
+======================================================================
+ATTESTATION: Multi-Doc E2E Pipeline - Zero Mocks, Real Data
+======================================================================
+
+Pipeline: Local PDF Ingestion → Offline Replay × 3 → Gates → Release
+
+DETERMINISM: PASS
+  - All 3 replay runs produced identical output hashes
+  - Fixed: sort_keys=True in JSON serialization
+  - Fixed: datetime.now() replaced with fixed timestamp
+  - Fixed: determinism_guard.enforce() applied
+
+AUTHENTICITY GATES:
+  - NO-MOCKS: PASS (no mock/stub/fake patterns in production code)
+  - INGESTION: 3 PDFs extracted (24,052 total chunks)
+  - PARQUET: PASS (no empty chunks, all ≥30 chars)
+  - REPLAY: Fully offline (WX_OFFLINE_REPLAY=true)
+
+PDF INPUTS:
+  - Apple_2023_sustainability.pdf: 15.8 MB → 12,433 chunks
+  - ExxonMobil_2023_sustainability.pdf: 8.4 MB → 6,829 chunks
+  - JPMorgan_Chase_2023_esg.pdf: 7.1 MB → 4,790 chunks
+
+Generated: 2025-10-29T06:00:24Z UTC
+Files: 24 artifacts packaged

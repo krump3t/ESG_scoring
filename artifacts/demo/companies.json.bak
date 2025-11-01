@@ -1,0 +1,34 @@
+[
+  {
+    "company": "Microsoft Corporation",
+    "year": 2023,
+    "org_id": "MSFT",
+    "doc_id": "msft_2023",
+    "bronze": "data/silver/org_id=MSFT/year=2023/MSFT_2023_chunks.parquet",
+    "source": "pre-processed"
+  },
+  {
+    "company": "Apple Inc.",
+    "year": 2023,
+    "org_id": "AAPL",
+    "doc_id": "AAPL_2023",
+    "bronze": "data/silver/org_id=AAPL/year=2023/AAPL_2023_chunks.parquet",
+    "pdf_path": "data/pdf_cache/Apple_2023_sustainability.pdf"
+  },
+  {
+    "company": "ExxonMobil Corporation",
+    "year": 2023,
+    "org_id": "XOM",
+    "doc_id": "XOM_2023",
+    "bronze": "data/silver/org_id=XOM/year=2023/XOM_2023_chunks.parquet",
+    "pdf_path": "data/pdf_cache/ExxonMobil_2023_sustainability.pdf"
+  },
+  {
+    "company": "JPMorgan Chase & Co.",
+    "year": 2023,
+    "org_id": "JPM",
+    "doc_id": "JPM_2023",
+    "bronze": "data/silver/org_id=JPM/year=2023/JPM_2023_chunks.parquet",
+    "pdf_path": "data/pdf_cache/JPMorgan_Chase_2023_esg.pdf"
+  }
+]

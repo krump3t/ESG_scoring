@@ -1,0 +1,126 @@
+=== SCA v13.8-MEA Remediation Run ===
+Start: 2025-10-28T05:35:00Z
+Workspace: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine
+Steps: 0-2, 5-8 (Fail-Closed)
+Git Commit: 38a2c7cc
+Branch: release/lse-headlam-2025
+
+Environment:
+  SEED=42
+  PYTHONHASHSEED=0
+  PROVIDER=local
+  PYTHON_VERSION=3.11
+  PLATFORM=win32
+
+Container:
+  Image: esg-scoring:ci
+  Base: python:3.11-slim
+  Digest: sha256:705fa0921369
+
+---
+Step 0: PRE-FLIGHT [COMPLETED at 2025-10-28T05:30:00Z]
+  Status: ok
+  Actions:
+    - Workspace isolated: /c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine
+    - SEED=42, PYTHONHASHSEED=0 exported for subprocesses
+    - Artifact directories created
+  Duration: ~5 minutes
+  Result: Environment ready for deterministic execution
+
+---
+Step 1: TRACEABILITY PRIMERS [IN PROGRESS at 2025-10-28T05:35:00Z]
+  Goal: Create run_manifest.json, run_log.txt, run_context.json, run_events.jsonl
+
+  Artifacts Created:
+    ✓ artifacts/run_manifest.json (input hashes, config, environment)
+    ✓ artifacts/run_context.json (CLI args, timestamps, git info)
+    ✓ artifacts/run_log.txt (unified execution log)
+    - artifacts/run_events.jsonl (per-stage events, will populate during step 2)
+
+  Input File Hashes:
+    - companies.json: 77bb878ab0e2884c17e61517652aa0b4fd8c0cc751435be061e03892ab6257e9
+    - requirements.txt: 10349a11893f993e7f5fbec7897913d1acee5eb8ccd217cfe88d91d28aed6f02
+    - Dockerfile: 0f5b23c80091078e82dacfc395718a33e0a18262eb01049bd2d39e21be799eb0
+    - .dockerignore: c784e1fe2b00e3b65bdedd4665e175295b41b0e6068e7f8787a691da5a0a2599
+
+  Configuration Locked:
+    - Orchestration: company=Headlam Group Plc, year=2025, query="climate strategy...", topk=5, alpha=0.6, semantic=false
+    - Determinism: SEED=42, PYTHONHASHSEED=0
+
+---
+Step 2: DETERMINISM LOCK [PENDING]
+  Goal: Execute 3-run baseline with identical parameter lock, validate hash parity
+  Expected: output_hash[1] == output_hash[2] == output_hash[3]
+
+  Runs to Execute:
+    1. Run 1: Generate output.json, hash.txt
+    2. Run 2: Generate output.json, hash.txt
+    3. Run 3: Generate output.json, hash.txt
+
+  Validation:
+    - Hash equality check (all 3 identical)
+    - Theme count validation (7 ESG themes per run)
+    - Parity constraint validation (evidence_ids ⊆ fused_topk)
+
+---
+Step 5: PARITY + DIFFERENTIAL [PENDING]
+  Goal: Validate A/B parameter variants maintain parity constraints
+  Variants:
+    - baseline: topk=5, alpha=0.6
+    - variant_topk7: topk=7, alpha=0.6
+    - variant_alpha05: topk=5, alpha=0.5
+
+  Output: differential_report.json with parity_ok validation
+
+---
+Step 6: QA PROOF BUNDLE [PENDING]
+  Goal: Generate comprehensive QA artifacts
+  Gates:
+    - Coverage: ≥95% line & branch on CP files
+    - Mypy --strict: 0 errors on CP files
+    - Lizard: CCN ≤10, Cognitive ≤15
+    - Interrogate: ≥95% docstring coverage
+    - Bandit: No security issues
+    - Pip-audit: No vulnerable dependencies
+    - SBOM: CycloneDX manifest
+
+  Expected Artifacts:
+    - artifacts/qa/coverage.xml
+    - artifacts/qa/mypy_report.txt
+    - artifacts/qa/lizard_report.txt
+    - artifacts/qa/interrogate_report.txt
+    - artifacts/security/bandit_report.json
+    - artifacts/security/pip_audit_report.json
+    - artifacts/security/sbom.json
+
+---
+Step 7: AUTHENTICITY & HYGIENE [PENDING]
+  Goal: AST validation (no TODO/FIXME/PLACEHOLDER/HARDCODED in CP paths)
+  Tools:
+    - AST parsing for code inspection
+    - Pinned dependency verification
+    - Placeholder detection in committed code
+
+  CP Paths to Validate:
+    - apps/pipeline/demo_flow.py
+    - agents/*/score*.py
+    - libs/*/**.py
+
+---
+Step 8: OUTPUT CONTRACT + COMPLIANCE REPORT [PENDING]
+  Goal: Generate final SCA v13.8 output-contract JSON and compliance summary
+
+  Output Contract Schema:
+    - agent: "SCA"
+    - version: "13.8-MEA"
+    - status: ok|blocked|revise
+    - ci, security, determinism, service, differential, release
+    - artifacts, git, phases_complete, quality_summary, deployment_readiness
+
+  Compliance Report:
+    - Gate results inventory (PASS/FAIL per gate)
+    - Root cause analysis for any failures
+    - Artifacts attestation
+    - Deployment readiness assessment
+
+=== End of Log ===

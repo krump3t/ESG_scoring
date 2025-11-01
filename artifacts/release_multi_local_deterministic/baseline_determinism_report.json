@@ -1,0 +1,14 @@
+{
+  "company": "Microsoft Corporation",
+  "determinism_seed": 42,
+  "doc_id": "msft_2023",
+  "hashes": [
+    "845ed919085a4567068086d2c37d6f3c8c6242cf9d53a7a8e08aa5fa8065ca0f",
+    "5ca06170660122220f95c45b7f15013a6542dd267e5008542aca9eb3a9cfdd2c",
+    "71f21e3202b45a146dfd4afc9ea137219cd743ebd9d5fcf366c411c6938ebbdb"
+  ],
+  "identical": false,
+  "pythonhashseed": 0,
+  "runs": 3,
+  "year": 2023
+}

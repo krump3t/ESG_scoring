@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-10-24T20:51:58.594687+00:00",
+  "source": "data/ingested/esg_documents.parquet",
+  "output": "data/ingested/esg_docs_enriched.parquet",
+  "record_count": 27,
+  "distinct_ids": 27,
+  "ordering": "published_at DESC, id",
+  "columns": [
+    "id",
+    "company",
+    "theme",
+    "title",
+    "text",
+    "published_at",
+    "text_len",
+    "long_text_flag",
+    "age_days"
+  ]
+}

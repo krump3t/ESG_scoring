@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "run_id": "run1",
+      "output_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "timestamp_utc": "2025-11-01T16:59:52Z",
+      "exit_code": 2
+    },
+    {
+      "run_id": "run2",
+      "output_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "timestamp_utc": "2025-11-01T16:59:52Z",
+      "exit_code": 2
+    },
+    {
+      "run_id": "run3",
+      "output_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "timestamp_utc": "2025-11-01T16:59:53Z",
+      "exit_code": 2
+    }
+  ],
+  "identical": false,
+  "diff_summary": {
+    "byte_equal": false,
+    "fields_delta_count": 0
+  },
+  "input_fingerprint": {
+    "query": "context_report_assembler",
+    "company_id": "N/A",
+    "env_hash": "434d8d4785701ace1fe2a07266f46b1cd98350d2d22bab24549aff917b859c68"
+  },
+  "seed": {
+    "SEED": "42",
+    "PYTHONHASHSEED": "0"
+  }
+}

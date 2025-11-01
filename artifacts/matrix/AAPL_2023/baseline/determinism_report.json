@@ -1,0 +1,14 @@
+{
+  "company": "Apple Inc.",
+  "determinism_seed": 42,
+  "doc_id": "AAPL_2023",
+  "hashes": [
+    "dea49eab71e27e3fd1264f838e3f071fdbfb9b3b5fcef8a008cb249b9e793e9c",
+    "dea49eab71e27e3fd1264f838e3f071fdbfb9b3b5fcef8a008cb249b9e793e9c",
+    "dea49eab71e27e3fd1264f838e3f071fdbfb9b3b5fcef8a008cb249b9e793e9c"
+  ],
+  "identical": true,
+  "pythonhashseed": 0,
+  "runs": 3,
+  "year": 2023
+}

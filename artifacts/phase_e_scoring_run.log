@@ -1,0 +1,91 @@
+
+======================================================================
+REPLAY PASS: Scoring 1 documents (ALLOW_NETWORK unset)
+SEED=42, PYTHONHASHSEED=0 (deterministic)
+======================================================================
+
+Scoring: LSE_HEAD_2025 (Headlam Group PLC, 2025)
+  Determinism check (3× runs)...
+ERROR in scoring pipeline: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 82, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 52, in run_score
+    bronze_records = _load_data_records(manifest_record)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 225, in _load_data_records
+    raise RuntimeError(
+RuntimeError: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+
+    Run 1: 9e8e732c69858a4e...
+ERROR in scoring pipeline: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 82, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 52, in run_score
+    bronze_records = _load_data_records(manifest_record)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 225, in _load_data_records
+    raise RuntimeError(
+RuntimeError: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+
+    Run 2: 9e8e732c69858a4e...
+ERROR in scoring pipeline: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\run_matrix.py", line 82, in deterministic_score
+    result = run_score(
+             ^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 52, in run_score
+    bronze_records = _load_data_records(manifest_record)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\apps\pipeline\demo_flow.py", line 225, in _load_data_records
+    raise RuntimeError(
+RuntimeError: Bronze tier disabled for offline replay (set RETRIEVAL_TIER=silver or layer=auto). Offline mode requires deterministic silver layer data.
+
+    Run 3: 9e8e732c69858a4e...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+======================================================================
+REPLAY PASS COMPLETE
+Status: revise
+Determinism: PASS
+Matrix contract: artifacts/matrix/matrix_contract.json
+======================================================================
+
+{
+  "agent": "SCA",
+  "version": "13.8-MEA",
+  "status": "revise",
+  "documents": 1,
+  "determinism_pass": true,
+  "document_contracts": [
+    {
+      "doc_id": "LSE_HEAD_2025",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/LSE_HEAD_2025/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/rd_sources.json"
+      }
+    }
+  ],
+  "timestamp": "2025-10-28T06:00:00Z"
+}

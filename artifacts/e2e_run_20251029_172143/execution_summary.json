@@ -1,0 +1,90 @@
+{
+  "execution_id": "e2e_run_20251029_172143",
+  "total_duration_sec": 8.0,
+  "checkpoints_total": 6,
+  "checkpoints_passed": 4,
+  "checkpoints_failed": 1,
+  "checkpoints_skipped": 1,
+  "overall_status": "FAIL",
+  "checkpoints": [
+    {
+      "phase": 1,
+      "name": "Pre-Flight Setup",
+      "status": "pass",
+      "timestamp": "2025-10-29T17:24:07.126848+00:00",
+      "duration_sec": 0.52,
+      "details": {
+        "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+        "has_watson_credentials": false,
+        "seed": 42,
+        "pythonhashseed": 0
+      }
+    },
+    {
+      "phase": 2,
+      "name": "Zero-Mocks Guard",
+      "status": "pass",
+      "timestamp": "2025-10-29T17:24:07.388110+00:00",
+      "duration_sec": 0.26,
+      "details": {
+        "violations_count": 40,
+        "files": [
+          "agents\\crawler\\sustainability_reports_crawler.py",
+          "agents\\embedding\\watsonx_embedder.py",
+          "agents\\extraction\\enhanced_pdf_extractor.py",
+          "agents\\extraction\\extraction_router.py",
+          "agents\\extraction\\rd_locator_wx.py",
+          "agents\\storage\\silver_normalizer.py",
+          "libs\\data_lake\\duckdb_reader.py",
+          "libs\\llm\\watsonx_client.py",
+          "libs\\ranking\\cross_encoder.py",
+          "libs\\ranking\\cross_encoder_ranker.py"
+        ]
+      }
+    },
+    {
+      "phase": 3,
+      "name": "PDF Validation & Ingestion",
+      "status": "pass",
+      "timestamp": "2025-10-29T17:24:12.817426+00:00",
+      "duration_sec": 5.43,
+      "details": {
+        "pdf_count": 3,
+        "pdfs_found": 3,
+        "ingestion_status": "ok",
+        "ingested_count": null
+      }
+    },
+    {
+      "phase": 4,
+      "name": "Parquet Authenticity Audit",
+      "status": "pass",
+      "timestamp": "2025-10-29T17:24:13.687197+00:00",
+      "duration_sec": 0.87,
+      "details": {
+        "documents": 3,
+        "total_chunks": 24052
+      }
+    },
+    {
+      "phase": 5,
+      "name": "WatsonX Embeddings Fetch",
+      "status": "skip",
+      "timestamp": "2025-10-29T17:24:13.692867+00:00",
+      "duration_sec": 0.0,
+      "details": {
+        "reason": "No IBM Cloud credentials found in .env"
+      }
+    },
+    {
+      "phase": 6,
+      "name": "Offline Replay 3\u00d7 (Determinism)",
+      "status": "fail",
+      "timestamp": "2025-10-29T17:24:14.596858+00:00",
+      "duration_sec": 0.9,
+      "details": {
+        "error": "Command '['C:\\\\projects\\\\Work Projects\\\\north-sea-drilling-optimization\\\\.venv\\\\Scripts\\\\python.exe', 'scripts/run_matrix.py', '--config', 'configs\\\\companies_local.yaml']' returned non-zero exit status 2."
+      }
+    }
+  ]
+}

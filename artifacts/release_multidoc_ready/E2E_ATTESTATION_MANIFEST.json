@@ -1,0 +1,116 @@
+{
+  "release_id": "sca-v13.8-e2e-matrix-test",
+  "generated_at": "2025-10-29T03:58:59Z",
+  "protocol": "SCA v13.8-MEA (Fail-closed, No mocks, Offline replay)",
+  "agent": "Claude Code / Sonnet 4.5",
+  "workflow": "FETCH (online) \u2192 REPLAY 3\u00d7 (offline) \u2192 GATES (validation) \u2192 TUNING (\u03b1/k sweep)",
+  "status": "PASS",
+  "artifacts": [
+    {
+      "file": "e2e_gates_report.json",
+      "source": "artifacts\\e2e_matrix\\authenticity_gates_report.json",
+      "size": 2989,
+      "sha256_prefix": "0a49e6553c09814b"
+    },
+    {
+      "file": "E2E_COMPLIANCE.md",
+      "source": "artifacts\\e2e_matrix\\E2E_COMPLIANCE_REPORT.md",
+      "size": 10646,
+      "sha256_prefix": "c314938209e863e4"
+    },
+    {
+      "file": "tuning_report.json",
+      "source": "artifacts\\e2e_matrix\\tuning_report.json",
+      "size": 734,
+      "sha256_prefix": "4482f66278a064f2"
+    },
+    {
+      "file": "replay_run_1.txt",
+      "source": "artifacts\\e2e_matrix\\run_1\\replay_log.txt",
+      "size": 1578,
+      "sha256_prefix": "5f09e22c7b636ba4"
+    },
+    {
+      "file": "replay_run_2.txt",
+      "source": "artifacts\\e2e_matrix\\run_2\\replay_log.txt",
+      "size": 1578,
+      "sha256_prefix": "5f09e22c7b636ba4"
+    },
+    {
+      "file": "replay_run_3.txt",
+      "source": "artifacts\\e2e_matrix\\run_3\\replay_log.txt",
+      "size": 1578,
+      "sha256_prefix": "5f09e22c7b636ba4"
+    },
+    {
+      "file": "matrix_determinism_report.json",
+      "source": "artifacts\\matrix_determinism\\determinism_report.json",
+      "size": 1412,
+      "sha256_prefix": "e9c92dce32b29eb3"
+    },
+    {
+      "file": "MATRIX_COMPLIANCE.md",
+      "source": "artifacts\\matrix_determinism\\COMPLIANCE_REPORT.md",
+      "size": 9159,
+      "sha256_prefix": "df58ecf382865753"
+    },
+    {
+      "file": "MATRIX_MANIFEST.json",
+      "source": "artifacts\\matrix_determinism\\RELEASE_MANIFEST.json",
+      "size": 3938,
+      "sha256_prefix": "decaf13df8411404"
+    },
+    {
+      "file": "integration_flags.json",
+      "source": "configs\\integration_flags.json",
+      "size": 415,
+      "sha256_prefix": "64f81f4b074edaa2"
+    },
+    {
+      "file": "extraction.json",
+      "source": "configs\\extraction.json",
+      "size": 76,
+      "sha256_prefix": "3dbbf41a2758c0c2"
+    },
+    {
+      "file": "semantic_index_meta.json",
+      "source": "data\\index\\msft_2023\\meta.json",
+      "size": 348,
+      "sha256_prefix": "e6eec2600d6a2d57"
+    },
+    {
+      "file": "wx_ledger.jsonl",
+      "source": "artifacts\\wx_cache\\ledger.jsonl",
+      "size": 32310,
+      "sha256_prefix": "2a78f144e55190f6"
+    }
+  ],
+  "total_files": 13,
+  "total_size_bytes": 66761,
+  "gates_passed": {
+    "determinism": "PASS",
+    "parity": "PASS",
+    "cache_replay": "PASS",
+    "artifacts": "PASS",
+    "evidence": "SKIP"
+  },
+  "e2e_validation": {
+    "preflight": "PASS",
+    "config_setup": "PASS",
+    "fetch_phase": "PASS",
+    "replay_3x": "PASS",
+    "gates_validation": "PASS",
+    "tuning_sweep": "PASS"
+  },
+  "attestation": {
+    "determinism_runs": 3,
+    "hash_consistency": "100%",
+    "canonical_hash": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca",
+    "cache_hits": "100%",
+    "online_calls_in_replay": 0,
+    "watsonx_model": "ibm/slate-125m-english-rtrvr",
+    "vector_dimensions": 768,
+    "tuning_combinations_tested": 6,
+    "tuning_success_rate": "100%"
+  }
+}

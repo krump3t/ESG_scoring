@@ -1,0 +1,67 @@
+{
+  "run_id": "20251023-231231-dde6c49b",
+  "session_id": "10735f2a-f75a-477a-90c7-e6933adeb928",
+  "timestamp": "2025-10-23T23:12:57.245751Z",
+  "artifacts": [
+    {
+      "name": "coverage",
+      "path": "qa\\coverage.xml",
+      "size_bytes": 155402,
+      "modified": "2025-10-23T18:12:56.297243Z"
+    },
+    {
+      "name": "pytest",
+      "path": "qa\\pytest.txt",
+      "size_bytes": 7382,
+      "modified": "2025-10-23T18:12:49.752099Z"
+    },
+    {
+      "name": "mypy",
+      "path": "qa\\mypy.txt",
+      "size_bytes": 7665,
+      "modified": "2025-10-23T01:30:49.290552Z"
+    },
+    {
+      "name": "lizard",
+      "path": "qa\\lizard_report.txt",
+      "size_bytes": 918,
+      "modified": "2025-10-23T01:30:49.479468Z"
+    },
+    {
+      "name": "interrogate",
+      "path": "qa\\interrogate.txt",
+      "size_bytes": 2044,
+      "modified": "2025-10-23T01:30:49.938438Z"
+    },
+    {
+      "name": "secrets",
+      "path": "qa\\secrets.json",
+      "size_bytes": 2,
+      "modified": "2025-10-23T01:30:50.238319Z"
+    },
+    {
+      "name": "bandit",
+      "path": "qa\\bandit.json",
+      "size_bytes": 518,
+      "modified": "2025-10-23T01:09:26.708683Z"
+    },
+    {
+      "name": "pip_audit",
+      "path": "qa\\pip_audit.txt",
+      "size_bytes": 341,
+      "modified": "2025-10-23T01:31:32.015325Z"
+    },
+    {
+      "name": "run_log",
+      "path": "qa\\run_log.txt",
+      "size_bytes": 410666,
+      "modified": "2025-10-23T18:12:57.226472Z"
+    },
+    {
+      "name": "cp_list",
+      "path": "qa\\cp_list.txt",
+      "size_bytes": 876,
+      "modified": "2025-10-23T18:12:37.391277Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-28T06:17:12Z",
+  "project": "prospecting-engine",
+  "scan_type": "Full Security Analysis",
+  "results": {
+    "bandit_issues": 0,
+    "pip_audit_vulnerabilities": 0,
+    "sbom_generated": true
+  },
+  "status": "PASS",
+  "artifacts": {
+    "bandit_report": "bandit_report.json",
+    "pip_audit_report": "pip_audit_report.json",
+    "sbom": "sbom.json",
+    "pip_freeze": "pip_freeze.txt"
+  }
+}

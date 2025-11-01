@@ -1,0 +1,158 @@
+{
+  "agent": "SCA",
+  "protocol_version": "13.8-MEA",
+  "status": "ok",
+  "phase": "naming_refactor_phase_1",
+  "task_id": "esg-haiku-exec-naming-001",
+  "mea_attempt": 1,
+  "execution_timestamp": "2025-10-27T00:00:00Z",
+  "gates": {
+    "workspace": "pass",
+    "context": "pass",
+    "naming_phase1_implementation": "pass",
+    "naming_phase1_tests": "pass",
+    "naming_phase1_artifacts": "pass",
+    "authenticity": "pass"
+  },
+  "summary": {
+    "title": "Naming Refactor Phase 1 — Complete",
+    "objective": "Introduce canonical names + legacy aliases (non-breaking)",
+    "outcome": "SUCCESS",
+    "critical_symbols_resolved": 4,
+    "legacy_symbols_with_aliases": 4,
+    "test_suite_status": "18/18 PASSED",
+    "artifacts_generated": 4
+  },
+  "canonical_symbols_implemented": [
+    {
+      "domain": "metrics_extraction",
+      "canonical_name": "MetricsExtractionResult",
+      "legacy_name": "ExtractionResult",
+      "module": "libs.contracts.extraction_contracts",
+      "golden_import_path": "from libs.contracts import MetricsExtractionResult",
+      "deprecation_warning": "yes",
+      "test_status": "pass"
+    },
+    {
+      "domain": "evidence_extraction",
+      "canonical_name": "EvidenceExtractionResult",
+      "legacy_name": "ExtractionResult",
+      "module": "agents.parser.models",
+      "golden_import_path": "from agents.parser import EvidenceExtractionResult",
+      "deprecation_warning": "yes",
+      "test_status": "pass"
+    },
+    {
+      "domain": "theme_rubric",
+      "canonical_name": "ThemeRubricV3",
+      "legacy_name": "ThemeRubric",
+      "module": "apps.scoring.rubric_v3_loader",
+      "golden_import_path": "from apps.scoring import ThemeRubricV3",
+      "deprecation_warning": "yes",
+      "test_status": "pass"
+    },
+    {
+      "domain": "hybrid_retriever_app",
+      "canonical_name": "IndexedHybridRetriever",
+      "legacy_name": "HybridRetriever",
+      "module": "apps.index.retriever",
+      "golden_import_path": "from apps.index import IndexedHybridRetriever",
+      "deprecation_warning": "yes",
+      "test_status": "pass",
+      "note": "Distinct from libs.retrieval.HybridRetriever (library variant)"
+    }
+  ],
+  "files_modified": 4,
+  "files_created": 4,
+  "files_modified_list": [
+    "libs/contracts/extraction_contracts.py",
+    "agents/parser/models.py",
+    "apps/scoring/rubric_v3_loader.py",
+    "apps/index/retriever.py"
+  ],
+  "files_created_list": [
+    "libs/contracts/__init__.py",
+    "agents/parser/__init__.py",
+    "apps/scoring/__init__.py",
+    "apps/index/__init__.py",
+    "tests/test_naming_api_cp.py"
+  ],
+  "artifacts_generated_list": [
+    "artifacts/naming/canonical_map.json",
+    "artifacts/naming/rolling_plan_wave.json",
+    "artifacts/naming/deprecation_plan.json",
+    "artifacts/naming/PHASE_1_COMPLETION_REPORT.md",
+    "artifacts/naming/EXECUTION_SUMMARY.json"
+  ],
+  "test_results": {
+    "test_suite": "tests/test_naming_api_cp.py",
+    "total_tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": "100%",
+    "test_categories": {
+      "golden_imports_exposed": 5,
+      "legacy_alias_warns_once": 4,
+      "canonical_legacy_equivalence": 4,
+      "legacy_symbols_in_all": 4,
+      "phase1_completion_criteria": 1
+    }
+  },
+  "deprecation_warnings": {
+    "trigger": "import-time (module load)",
+    "frequency": "once_per_process",
+    "scope": "all_4_legacy_symbols",
+    "stacklevel": 2,
+    "enforcement": "active"
+  },
+  "backward_compatibility": {
+    "legacy_imports_work": true,
+    "behavior_change": false,
+    "api_change": false,
+    "breaking_change": false,
+    "compatibility_level": "100%"
+  },
+  "golden_import_paths": {
+    "MetricsExtractionResult": "from libs.contracts import MetricsExtractionResult",
+    "EvidenceExtractionResult": "from agents.parser import EvidenceExtractionResult",
+    "ThemeRubricV3": "from apps.scoring import ThemeRubricV3",
+    "IndexedHybridRetriever": "from apps.index import IndexedHybridRetriever",
+    "HybridRetriever_library": "from libs.retrieval import HybridRetriever"
+  },
+  "next_phase": {
+    "phase": "Phase 2",
+    "objective": "Codemod internal call sites + CI guardrails",
+    "status": "pending",
+    "expected_start": "2025-10-28",
+    "deliverables": [
+      "Codemod of all internal references",
+      "artifacts/naming/preview.diff",
+      "artifacts/naming/import_graph.txt",
+      "artifacts/naming/edit_manifest.json",
+      "artifacts/naming/usage_report.json",
+      "Pre-commit hook configuration",
+      "pytest deprecation warning enforcement"
+    ]
+  },
+  "compliance": {
+    "sca_protocol_v13_8_mea": "compliant",
+    "phase1_objectives_met": "all",
+    "authenticity_invariants": [
+      "determinism: no mocks, real aliases",
+      "algorithmic_fidelity: proper TypeAlias, not subclassing",
+      "honest_validation: comprehensive test suite",
+      "traceability: artifacts documented",
+      "status_reporting: verified with tests"
+    ]
+  },
+  "notes": [
+    "Phase 1 complete: 4 canonical symbols introduced with full backward compatibility",
+    "All 18 Phase 1 validation tests passing",
+    "Deprecation warnings properly configured (import-time, once per process)",
+    "Golden import paths established and re-exported at package level",
+    "TypeAlias used (not subclassing) to preserve type semantics",
+    "Ready for Phase 2 codemod transition",
+    "Phase 3 removal window: 4 weeks after Phase 1 completion"
+  ]
+}

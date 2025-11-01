@@ -1,0 +1,112 @@
+{
+  "agent": "SCA",
+  "protocol_version": "13.8",
+  "task_id": "QA-001",
+  "phase": "6x",
+  "timestamp": "2025-10-24T17:00:00Z",
+  "scan_type": "authenticity_verification",
+  "scanned_modules": [
+    "libs/ranking/cross_encoder.py",
+    "libs/ranking/hybrid.py",
+    "libs/ranking/lexical.py",
+    "libs/analytics/prefilter.py",
+    "agents/scoring/rubric_v3_scorer.py"
+  ],
+  "scanned_test_dirs": [
+    "tests/phase5c",
+    "tests/phase5d",
+    "tests/phase6b"
+  ],
+  "placeholder_scan": {
+    "patterns_searched": [
+      "TODO",
+      "FIXME",
+      "PLACEHOLDER",
+      "XXX",
+      "HACK",
+      "STUB",
+      "NotImplemented"
+    ],
+    "matches_found": 0,
+    "files_with_placeholders": [],
+    "status": "pass"
+  },
+  "mock_usage_scan": {
+    "patterns_searched": [
+      "mock",
+      "Mock",
+      "patch",
+      "MagicMock",
+      "unittest.mock"
+    ],
+    "matches_found": 1,
+    "files_with_mocks": [
+      "tests/phase5c/test_integration_compare_esg_cp.py"
+    ],
+    "legitimate_usage": true,
+    "explanation": "Mock usage limited to pytest monkeypatch fixture for environment variable testing (ESG_STRICT_AUTH). No implementation mocking detected.",
+    "status": "pass"
+  },
+  "network_call_scan": {
+    "patterns_searched": [
+      "requests.",
+      "urllib.",
+      "http.client",
+      "socket.",
+      "httpx."
+    ],
+    "matches_found": 0,
+    "files_with_network_calls": [],
+    "status": "pass"
+  },
+  "algorithmic_fidelity": {
+    "bm25_implementation": {
+      "formula": "Okapi BM25 (Robertson-Sparck Jones)",
+      "parameters": ["k1=1.2", "b=0.75"],
+      "authentic": true,
+      "source": "libs/ranking/lexical.py:93-133"
+    },
+    "tfidf_implementation": {
+      "formula": "TF-IDF with smooth IDF",
+      "normalization": "Sigmoid [0,1]",
+      "authentic": true,
+      "source": "libs/ranking/lexical.py:33-91"
+    },
+    "cross_encoder_implementation": {
+      "algorithm": "Token overlap (Jaccard similarity)",
+      "determinism": "Hash-based tie-breaking",
+      "authentic": true,
+      "source": "libs/ranking/cross_encoder.py:22-66"
+    },
+    "hybrid_fusion": {
+      "formula": "alpha * lex_score + (1 - alpha) * ce_score",
+      "tie_breaking": "(final DESC, lex DESC, ce DESC, doc_id ASC)",
+      "authentic": true,
+      "source": "libs/ranking/hybrid.py:23-68"
+    },
+    "rubric_scoring": {
+      "dimensions": 7,
+      "stages_per_dimension": 5,
+      "total_descriptors": 35,
+      "evidence_extraction": "Pattern-based (deterministic)",
+      "authentic": true,
+      "source": "agents/scoring/rubric_v3_scorer.py"
+    },
+    "status": "pass"
+  },
+  "hardcoded_data_scan": {
+    "test_fixtures_allowed": true,
+    "production_code_hardcoded_data": false,
+    "explanation": "Test files use small synthetic corpora for unit testing. Production code uses real Parquet data (esg_docs_enriched.parquet) with STRICT mode enforcement.",
+    "status": "pass"
+  },
+  "gates": {
+    "no_placeholders": "pass",
+    "no_implementation_mocks": "pass",
+    "no_network_calls": "pass",
+    "real_algorithms": "pass",
+    "no_hardcoded_production_data": "pass"
+  },
+  "overall_status": "pass",
+  "summary": "All authenticity gates passed. No placeholders, no implementation mocks, no network calls. All algorithms are real implementations (BM25, TF-IDF, Jaccard, hybrid fusion, rubric scoring)."
+}

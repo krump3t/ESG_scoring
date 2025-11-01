@@ -1,0 +1,146 @@
+================================================================================
+PHASE 2 IMPORT GRAPH - CANONICAL NAMING MIGRATION
+================================================================================
+Date: 2025-10-27
+Status: COMPLETED
+
+================================================================================
+METRICS EXTRACTION DOMAIN (MetricsExtractionResult)
+================================================================================
+
+Source (Definition):
+  libs/contracts/extraction_contracts.py
+    - Class: MetricsExtractionResult (canonical)
+    - Legacy: ExtractionResult (TypeAlias, deprecated)
+
+Golden Import Path:
+  from libs.contracts import MetricsExtractionResult
+  from libs.contracts import ExtractionResult  # deprecated
+
+Package Re-Export:
+  libs/contracts/__init__.py
+    └─> Exports both MetricsExtractionResult (canonical) and ExtractionResult (legacy)
+
+Internal Usage (After Phase 2 Codemod):
+  ✓ agents/extraction/structured_extractor.py (Line 18 import, Lines 47, 91, 225, 227 usage)
+  ✓ agents/extraction/llm_extractor.py (Lines 20-24 import, Lines 72, 106, 133, 145 usage)
+  ✓ agents/extraction/extraction_router.py (Lines 14-18 import, Lines 53, 83, 105 usage)
+
+Import Chain:
+  agents/extraction/structured_extractor.py
+    └─> from libs.contracts.extraction_contracts import MetricsExtractionResult
+        └─> libs/contracts/extraction_contracts.py (canonical definition)
+
+  agents/extraction/llm_extractor.py
+    └─> from libs.contracts.extraction_contracts import MetricsExtractionResult
+        └─> libs/contracts/extraction_contracts.py (canonical definition)
+
+  agents/extraction/extraction_router.py
+    └─> from libs.contracts.extraction_contracts import MetricsExtractionResult
+        └─> libs/contracts/extraction_contracts.py (canonical definition)
+
+================================================================================
+EVIDENCE EXTRACTION DOMAIN (EvidenceExtractionResult)
+================================================================================
+
+Source (Definition):
+  agents/parser/models.py
+    - Class: EvidenceExtractionResult (canonical)
+    - Legacy: ExtractionResult (TypeAlias, deprecated)
+
+Golden Import Path:
+  from agents.parser import EvidenceExtractionResult
+  from agents.parser import ExtractionResult  # deprecated
+
+Package Re-Export:
+  agents/parser/__init__.py
+    └─> Exports both EvidenceExtractionResult (canonical) and ExtractionResult (legacy)
+
+Internal Usage (After Phase 2 Codemod):
+  ✓ agents/parser/evidence_extractor.py (Line 17 import, Lines 60, 111, 215, 256 usage)
+
+Import Chain:
+  agents/parser/evidence_extractor.py
+    └─> from .models import EvidenceExtractionResult
+        └─> agents/parser/models.py (canonical definition)
+
+================================================================================
+RUBRIC DOMAIN (ThemeRubricV3)
+================================================================================
+
+Source (Definition):
+  apps/scoring/rubric_v3_loader.py
+    - Class: ThemeRubricV3 (canonical)
+    - Legacy: ThemeRubric (TypeAlias, deprecated)
+
+Golden Import Path:
+  from apps.scoring import ThemeRubricV3
+  from apps.scoring import ThemeRubric  # deprecated
+
+Package Re-Export:
+  apps/scoring/__init__.py
+    └─> Exports both ThemeRubricV3 (canonical) and ThemeRubric (legacy)
+
+Note:
+  agents/scoring/rubric_models.py contains original ThemeRubric class
+  - This is NOT part of the refactor (separate domain)
+  - agents/scoring/rubric_loader.py correctly imports from rubric_models, not apps.scoring
+
+Internal Usage (After Phase 2 Codemod):
+  (none found - no internal usage of apps/scoring/ThemeRubricV3)
+
+================================================================================
+RETRIEVER DOMAIN (IndexedHybridRetriever)
+================================================================================
+
+Source (Definition - App Layer):
+  apps/index/retriever.py
+    - Class: IndexedHybridRetriever (canonical, app-layer)
+    - Legacy: HybridRetriever (TypeAlias, deprecated, app-variant)
+
+Source (Definition - Library Layer):
+  libs/retrieval/hybrid_retriever.py
+    - Class: HybridRetriever (canonical, library-variant, no refactor)
+
+Golden Import Path (App Layer):
+  from apps.index import IndexedHybridRetriever  (canonical, recommended)
+  from apps.index import HybridRetriever  # deprecated (app variant)
+
+Golden Import Path (Library Layer):
+  from libs.retrieval import HybridRetriever  (canonical library variant, recommended)
+
+Package Re-Export:
+  apps/index/__init__.py
+    └─> Exports both IndexedHybridRetriever (canonical) and HybridRetriever (legacy)
+
+Internal Usage (After Phase 2 Codemod):
+  (none found - no internal usage of apps/index variant)
+
+================================================================================
+SUMMARY OF MIGRATION STATUS
+================================================================================
+
+✓ COMPLETED:
+  - MetricsExtractionResult: 4 files migrated, 9 references updated
+  - EvidenceExtractionResult: 1 file migrated, 4 references updated
+  - Golden import paths established for all canonical symbols
+  - Package re-exports configured correctly
+
+NOT MIGRATED (By Design):
+  - ThemeRubricV3: No internal usage found (apps/scoring isolated)
+  - IndexedHybridRetriever: No internal usage found (apps/index isolated)
+  - agents/scoring/rubric_models.ThemeRubric: Not part of refactor (different domain)
+
+================================================================================
+VERIFICATION: Zero Legacy Imports in Internal Code
+================================================================================
+
+Search Results:
+  ✓ No "from agents.parser import ExtractionResult" (legacy) found
+  ✓ No "from libs.contracts import ExtractionResult" (legacy) found
+  ✓ No "from apps.scoring import ThemeRubric" (legacy, app-variant) found
+  ✓ No "from apps.index import HybridRetriever" (legacy, app-variant) found
+
+All internal imports now use canonical names exclusively.
+
+================================================================================

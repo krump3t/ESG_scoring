@@ -1,0 +1,9 @@
+{
+  "constraint": "evidence_ids subset_of fused_topk",
+  "doc_id": "apple_2023",
+  "evidence_ids": [],
+  "fused_topk_ids": [],
+  "notes": "",
+  "subset_ok": true,
+  "themes_covered": 0
+}

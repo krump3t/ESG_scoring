@@ -1,0 +1,31 @@
+
+======================================================================
+REPLAY PHASE: Querying JPM_2023 (offline, cache-only)
+======================================================================
+
+Integration flags: {'semantic_enabled': True, 'watsonx_enabled': True, 'astradb_enabled': False, 'wx_embeddings': True, 'wx_locator': True, 'wx_edit': True, 'wx_rerank': False, '_comment': 'watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.', 'alpha': 0.6, 'k': 50}
+Query: ESG climate strategy and GHG emissions targets
+Top-K: 50, Alpha: 0.6
+
+Querying JPM_2023...
+  Loaded 4790 chunks, 4790 vectors for JPM_2023
+
+Top-10 Results:
+  Rank  1: JPM_2023_p989_c3708            (score=0.3033)
+            BM25=0.0000, Semantic=0.7583
+
+======================================================================
+ERROR: 'charmap' codec can't encode character '\u043e' in position 65: character maps to <undefined>
+======================================================================
+
+Traceback (most recent call last):
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\semantic_fetch_replay.py", line 232, in main
+    result = replay_phase(
+             ^^^^^^^^^^^^^
+  File "C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\semantic_fetch_replay.py", line 155, in replay_phase
+    print(f"            Text: {r['text'][:80]}...")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u043e' in position 65: character maps to <undefined>
+

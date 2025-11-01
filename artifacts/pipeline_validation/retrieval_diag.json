@@ -1,0 +1,138 @@
+{
+  "company": "Headlam Group PLC",
+  "evidence_pages": {
+    "ALL": [
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 2
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 3
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 4
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 5
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 6
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::00",
+        "page": 7
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 2
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 3
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 4
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 5
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 6
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::01",
+        "page": 7
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 2
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 3
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 4
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 5
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 6
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::02",
+        "page": 7
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 2
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 3
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 4
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 5
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 6
+      },
+      {
+        "doc_id": "LSE_HEAD_2025",
+        "evidence_id": "LSE_HEAD_2025::03",
+        "page": 7
+      }
+    ]
+  },
+  "evidence_selected": 24,
+  "query": "ESG climate strategy and GHG emissions targets",
+  "timestamp": 1700000000.0,
+  "top_k_candidates": [
+    {
+      "doc_id": "LSE_HEAD_2025",
+      "score": 0.0
+    }
+  ],
+  "trace_id": "sha256:7ce3498f952a1f8a",
+  "year": 2025
+}

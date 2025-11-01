@@ -1,0 +1,27 @@
+{
+  "run_id": "task004-refinements-20251022",
+  "task_id": "004-rubric-v3-refinements",
+  "phase": "5",
+  "timestamp": "2025-10-22T00:00:00Z",
+  "protocol_version": "SCA v13.8",
+  "tools_invoked": [
+    "pytest",
+    "pytest-cov",
+    "mypy",
+    "lizard",
+    "python"
+  ],
+  "critical_path": [
+    "agents/scoring/rubric_v3_scorer.py"
+  ],
+  "entry_points": [
+    "agents.scoring.rubric_v3_scorer.RubricV3Scorer.score_rd",
+    "agents.scoring.rubric_v3_scorer.RubricV3Scorer.score_ghg",
+    "agents.scoring.rubric_v3_scorer.RubricV3Scorer.score_rmm"
+  ],
+  "environment": {
+    "platform": "win32",
+    "python_version": "3.x",
+    "working_directory": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine"
+  }
+}

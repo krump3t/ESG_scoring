@@ -1,0 +1,278 @@
+{
+  "agent": "SCA v13.8 Evidence-First Auditor",
+  "date": "2025-10-25",
+  "execution_mode": "docker_compose_runner",
+  "determinism": {
+    "SEED": 42,
+    "PYTHONHASHSEED": 0
+  },
+  "critical_discovery": {
+    "finding": "agents/ directory does not exist",
+    "description": "The 'codex high' report references agents/ directory structure that is not present in this repository",
+    "actual_structure": ["apps/", "libs/", "scripts/", "tests/", "rubrics/"],
+    "missing_paths": [
+      "agents/query/orchestrator.py",
+      "agents/crawler/sustainability_reports_crawler.py",
+      "agents/crawler/mcp_crawler.py",
+      "agents/embedding/watsonx_embedder.py",
+      "agents/storage/silver_normalizer.py",
+      "agents/extraction/extraction_router.py",
+      "agents/scoring/rubric_v3_scorer.py"
+    ]
+  },
+  "verification_matrix": [
+    {
+      "id": "A1",
+      "claim": "SEC EDGAR path unimplemented (agents/query/orchestrator.py:241)",
+      "status": "FAIL",
+      "reason": "File agents/query/orchestrator.py does not exist in repository",
+      "evidence": null
+    },
+    {
+      "id": "A2",
+      "claim": "SustainabilityReports.com stub (agents/crawler/sustainability_reports_crawler.py:524)",
+      "status": "FAIL",
+      "reason": "File agents/crawler/sustainability_reports_crawler.py does not exist",
+      "evidence": null
+    },
+    {
+      "id": "A3",
+      "claim": "MCP tool stub (agents/crawler/mcp_crawler.py:144)",
+      "status": "FAIL",
+      "reason": "File agents/crawler/mcp_crawler.py does not exist",
+      "evidence": null
+    },
+    {
+      "id": "A4",
+      "claim": "NotImplementedError in backends (watsonx, astradb)",
+      "status": "PASS",
+      "reason": "Confirmed at libs/retrieval/embeddings/watsonx_embedder.py:86 and libs/retrieval/vector_backends/astradb_store.py:84,112",
+      "evidence": {
+        "files": [
+          "libs/retrieval/embeddings/watsonx_embedder.py:86",
+          "libs/retrieval/vector_backends/astradb_store.py:84",
+          "libs/retrieval/vector_backends/astradb_store.py:112"
+        ],
+        "snippet": "raise NotImplementedError(\"Watsonx API integration not implemented. Use integration_flags.watsonx_enabled=false for deterministic mode.\")"
+      }
+    },
+    {
+      "id": "A5",
+      "claim": "Orchestrator not wired to crawler",
+      "status": "PARTIAL",
+      "reason": "Found self.crawler = None at apps/pipeline_orchestrator.py:98 (different location than claimed agents/query/orchestrator.py:241)",
+      "evidence": {
+        "file": "apps/pipeline_orchestrator.py:98",
+        "snippet": "self.crawler = None  # TODO: Initialize with Phase 2 providers"
+      }
+    },
+    {
+      "id": "A6",
+      "claim": "JSON disguised as .parquet",
+      "status": "PASS",
+      "reason": "Confirmed at scripts/ingest_company.py:86-98, apps/pipeline/demo_flow.py:227",
+      "evidence": {
+        "files": [
+          "scripts/ingest_company.py:86-98",
+          "apps/pipeline/demo_flow.py:227"
+        ],
+        "snippet": "# Write as JSON with .parquet extension (tests check file existence)\nbronze_path.write_text(json.dumps(stub_data, indent=2))"
+      }
+    },
+    {
+      "id": "B1",
+      "claim": "Bad import in apps/integration_validator.py:18",
+      "status": "PASS",
+      "reason": "Confirmed: imports from non-existent agents.extraction.models",
+      "evidence": {
+        "file": "apps/integration_validator.py:18",
+        "snippet": "from agents.extraction.models import ESGMetrics",
+        "error": "ModuleNotFoundError: No module named 'agents'"
+      }
+    },
+    {
+      "id": "B2",
+      "claim": "Missing runtime deps (bs4, lxml, playwright, opentelemetry-instrumentation, numpy)",
+      "status": "PASS",
+      "reason": "None of these packages found in requirements*.txt",
+      "evidence": {
+        "search": "cat requirements*.txt | grep 'beautifulsoup4|lxml|playwright|opentelemetry-instrumentation|^numpy'",
+        "result": "NOT FOUND"
+      }
+    },
+    {
+      "id": "B3",
+      "claim": "Import smoke tests fail",
+      "status": "PASS",
+      "reason": "Both imports fail (ModuleNotFoundError)",
+      "evidence": {
+        "test1": {
+          "import": "apps.integration_validator",
+          "error": "ModuleNotFoundError: No module named 'agents'"
+        },
+        "test2": {
+          "import": "apps.api.main",
+          "error": "ModuleNotFoundError: No module named 'fastapi'"
+        }
+      }
+    },
+    {
+      "id": "C1",
+      "claim": "Duplicate embedders (agents/ vs libs/)",
+      "status": "FAIL",
+      "reason": "Only libs/retrieval/embeddings/watsonx_embedder.py exists; agents/embedding/ does not exist",
+      "evidence": null
+    },
+    {
+      "id": "C2",
+      "claim": "Unstable demo embedding with random.seed(hash(...))",
+      "status": "PASS",
+      "reason": "Confirmed at apps/scoring/wx_client.py:7",
+      "evidence": {
+        "file": "apps/scoring/wx_client.py:7",
+        "snippet": "random.seed(hash(t) % (2**32))"
+      }
+    },
+    {
+      "id": "C3",
+      "claim": "Unused silver dedup (agents/storage/silver_normalizer.py:71)",
+      "status": "FAIL",
+      "reason": "File agents/storage/silver_normalizer.py does not exist",
+      "evidence": null
+    },
+    {
+      "id": "C4",
+      "claim": "Observability packages",
+      "status": "PARTIAL",
+      "reason": "opentelemetry-* imports exist in code but packages missing from requirements*.txt",
+      "evidence": {
+        "imports_found": [
+          "apps/api/telemetry.py:14-18"
+        ],
+        "packages_missing": "opentelemetry-instrumentation not in requirements"
+      }
+    },
+    {
+      "id": "C5",
+      "claim": "Data layer parquet stubs",
+      "status": "PASS",
+      "reason": "Same as A6",
+      "evidence": "See A6"
+    },
+    {
+      "id": "C6",
+      "claim": "Config flags for network adapters",
+      "status": "PASS",
+      "reason": "integration_flags.json system exists (libs/config/integration_flags.py)",
+      "evidence": {
+        "files": [
+          "libs/config/integration_flags.py",
+          "tests/integration/test_integration_flags_cp.py"
+        ]
+      }
+    },
+    {
+      "id": "D1",
+      "claim": "MultiSourceCrawler with priority logic",
+      "status": "FAIL",
+      "reason": "File agents/crawler/multi_source_crawler.py does not exist",
+      "evidence": null
+    },
+    {
+      "id": "D2",
+      "claim": "Extraction router defer logic",
+      "status": "FAIL",
+      "reason": "File agents/extraction/extraction_router.py does not exist",
+      "evidence": null
+    },
+    {
+      "id": "D3",
+      "claim": "Bronze writer & Silver normalizer",
+      "status": "FAIL",
+      "reason": "Files in agents/ path do not exist",
+      "evidence": null
+    },
+    {
+      "id": "D4",
+      "claim": "Rubric V3 scorer and evidence gate",
+      "status": "PARTIAL",
+      "reason": "Evidence gate exists at libs/scoring/evidence_gate.py; rubric_v3_scorer at claimed path does not exist",
+      "evidence": {
+        "found": ["libs/scoring/evidence_gate.py"],
+        "missing": ["agents/scoring/rubric_v3_scorer.py"]
+      }
+    },
+    {
+      "id": "D5",
+      "claim": "API with health/metrics/logging/telemetry",
+      "status": "PASS",
+      "reason": "Confirmed in apps/api/main.py:29-46",
+      "evidence": {
+        "file": "apps/api/main.py:29-46",
+        "features": ["telemetry", "logging", "metrics", "health"]
+      }
+    }
+  ],
+  "summary": {
+    "total_claims": 18,
+    "pass": 7,
+    "fail": 8,
+    "partial": 3,
+    "pass_rate": 0.39
+  },
+  "gaps_and_fixes": [
+    {
+      "priority": "CRITICAL",
+      "issue": "Fix import in apps/integration_validator.py",
+      "details": "Line 18 imports from non-existent agents.extraction.models",
+      "fix": "Update import to use actual location (likely libs.models.esg_metrics or create the module)",
+      "impact": "Module is currently unimportable, blocking any integration validation"
+    },
+    {
+      "priority": "CRITICAL",
+      "issue": "Add missing runtime dependencies",
+      "details": "requirements*.txt missing: beautifulsoup4, lxml, playwright, opentelemetry-instrumentation, numpy",
+      "fix": "Add to requirements.txt or requirements-runtime.txt as appropriate",
+      "impact": "Imports fail, preventing API and pipeline execution"
+    },
+    {
+      "priority": "HIGH",
+      "issue": "Replace unstable hash-based seeding",
+      "details": "apps/scoring/wx_client.py:7 uses random.seed(hash(text)) which is non-deterministic",
+      "fix": "Use stable hash function (e.g., hashlib.md5(text.encode()).digest()[:4])",
+      "impact": "Breaks reproducibility claims (SCA v13.8 compliance violation)"
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "Replace JSON-as-.parquet stubs with real Parquet",
+      "details": "scripts/ingest_company.py writes JSON with .parquet extension",
+      "fix": "Use pandas.to_parquet() or pyarrow.parquet.write_table()",
+      "impact": "Misleading file format, potential downstream parsing failures"
+    },
+    {
+      "priority": "LOW",
+      "issue": "Reconcile report with actual codebase structure",
+      "details": "Codex high report references agents/ directory that doesn't exist",
+      "fix": "Either update report to reference actual apps/+libs/ structure, or clarify that report describes a different/planned architecture",
+      "impact": "Confusion, wasted verification effort on non-existent files"
+    }
+  ],
+  "methodology": {
+    "determinism_enforcement": "SEED=42, PYTHONHASHSEED=0 in container",
+    "execution": "docker compose exec -T runner",
+    "code_modifications": "none (read-only verification)",
+    "evidence_standards": {
+      "PASS": "Direct code evidence at stated location OR equivalent location with explanation",
+      "FAIL": "File/line does not exist, OR claim contradicted by code",
+      "PARTIAL": "Claim partially true but location/details differ"
+    }
+  },
+  "conclusion": "The 'codex high' report cannot be verified against this repository because it references a agents/ directory structure that does not exist. Of 18 claims: 7 PASS (verified with evidence), 8 FAIL (files not found), 3 PARTIAL (issue exists but different location). Recommendation: Obtain correct report for this codebase or clarify which codebase the report references.",
+  "generated": "2025-10-25",
+  "environment": {
+    "platform": "Docker Compose",
+    "service": "runner",
+    "seed": 42,
+    "pythonhashseed": 0
+  }
+}

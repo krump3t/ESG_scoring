@@ -1,0 +1,207 @@
+{
+  "company_maturity": {
+    "company": "Microsoft",
+    "year": 2023,
+    "report_type": "Environmental Sustainability Report",
+    "findings_analyzed": 8,
+    "aggregation_methods": {
+      "maximum": {
+        "overall": 1.8571428571428572,
+        "label": "Emerging",
+        "dimensions": {
+          "TSP": 4,
+          "OSP": 0,
+          "DM": 1,
+          "GHG": 3,
+          "RD": 2,
+          "EI": 0,
+          "RMM": 3
+        }
+      },
+      "average": {
+        "overall": 0.39285714285714285,
+        "label": "Nascent",
+        "dimensions": {
+          "TSP": 0.875,
+          "OSP": 0.0,
+          "DM": 0.25,
+          "GHG": 0.625,
+          "RD": 0.375,
+          "EI": 0.0,
+          "RMM": 0.625
+        }
+      },
+      "percentile_75": {
+        "overall": 1.2857142857142858,
+        "label": "Emerging",
+        "dimensions": {
+          "TSP": 3,
+          "OSP": 0,
+          "DM": 1,
+          "GHG": 2,
+          "RD": 1,
+          "EI": 0,
+          "RMM": 2
+        }
+      }
+    },
+    "recommended_score": 1.8571428571428572,
+    "recommended_label": "Emerging",
+    "timestamp": "2025-10-22T15:45:33.262460Z"
+  },
+  "cross_validation": {
+    "predicted_score": 1.8571428571428572,
+    "predicted_label": "Emerging",
+    "external_ratings": {
+      "msci": {
+        "rating": "AAA",
+        "expected_score": 3.5,
+        "diff": 1.6428571428571428
+      },
+      "cdp": {
+        "score": "A-",
+        "expected_score": 3.25,
+        "diff": 1.3928571428571428
+      }
+    },
+    "alignment": "PARTIAL"
+  },
+  "findings_scores": [
+    {
+      "finding_id": "msft_2023_001",
+      "section": "Carbon Negative Commitment",
+      "theme": "Climate",
+      "framework": "SBTi",
+      "scores": {
+        "TSP": 4,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 2,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.8571428571428571,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_002",
+      "section": "Emissions Reporting",
+      "theme": "Climate",
+      "framework": "GHG Protocol",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 3,
+        "RD": 1,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.5714285714285714,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_003",
+      "section": "Climate Disclosure",
+      "theme": "Climate",
+      "framework": "TCFD",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 2,
+        "EI": 0,
+        "RMM": 2
+      },
+      "overall": 0.5714285714285714,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_004",
+      "section": "Data & Technology",
+      "theme": "Operations",
+      "framework": "Internal",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 1,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.14285714285714285,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_005",
+      "section": "ESG Governance",
+      "theme": "Governance",
+      "framework": "Internal",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 1,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.14285714285714285,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_006",
+      "section": "Renewable Energy",
+      "theme": "Energy",
+      "framework": "RE100",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.0,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_007",
+      "section": "Climate Risk Management",
+      "theme": "Risk",
+      "framework": "TCFD",
+      "scores": {
+        "TSP": 3,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 3
+      },
+      "overall": 0.8571428571428571,
+      "overall_label": "Nascent"
+    },
+    {
+      "finding_id": "msft_2023_008",
+      "section": "Water Stewardship",
+      "theme": "Water",
+      "framework": "Internal",
+      "scores": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "overall": 0.0,
+      "overall_label": "Nascent"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ESG Scoring API",
+    "description": "Deterministic ESG maturity assessment via hybrid retrieval + rubric scoring",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/metrics": {
+      "get": {
+        "summary": "Metrics",
+        "description": "Export Prometheus metrics.\n\nReturns:\n    Response with Prometheus text format",
+        "operationId": "metrics_metrics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Basic health check",
+        "description": "Basic health check endpoint.\n\nReturns service status and timestamp. Always returns 200 if the\napplication is running.\n\nReturns:\n    Health status dictionary",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Service is operational",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Readiness probe",
+        "description": "Kubernetes-style readiness probe.\n\nIndicates whether the service is ready to accept traffic.\nReturns 200 if ready, 503 if not ready (future enhancement).\n\nReturns:\n    Readiness status",
+        "operationId": "readiness_ready_get",
+        "responses": {
+          "200": {
+            "description": "Service is ready to accept traffic",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "boolean"
+                  },
+                  "type": "object",
+                  "title": "Response Readiness Ready Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Liveness probe",
+        "description": "Kubernetes-style liveness probe.\n\nIndicates whether the service is alive. Returns 200 if alive,\notherwise the service should be restarted.\n\nReturns:\n    Liveness status",
+        "operationId": "liveness_live_get",
+        "responses": {
+          "200": {
+            "description": "Service is alive and not deadlocked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "boolean"
+                  },
+                  "type": "object",
+                  "title": "Response Liveness Live Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/score": {
+      "post": {
+        "tags": [
+          "Scoring"
+        ],
+        "summary": "Score Esg",
+        "description": "Score ESG maturity for a company based on query/theme.\n\nDeterministic pipeline:\n1. Prefilter documents by company+year\n2. Lexical scoring (BM25)\n3. Semantic KNN (if semantic=1)\n4. \u03b1-Fusion (if semantic=1)\n5. Rubric V3 scoring (7 dimensions)\n\nQuery params:\n- semantic: 1 to enable semantic, 0 for lexical only\n- k: Top-k results (default 10)\n- alpha: Fusion weight (default 0.6 = 60% lexical, 40% semantic)\n\nReturns:\n    ScoreResponse with dimension scores and evidence\n\nRaises:\n    404: If company not found in manifest\n    422: If validation errors",
+        "operationId": "score_esg_score_post",
+        "parameters": [
+          {
+            "name": "semantic",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1,
+              "minimum": 0,
+              "description": "Enable semantic retrieval (0 or 1)",
+              "default": 0,
+              "title": "Semantic"
+            },
+            "description": "Enable semantic retrieval (0 or 1)"
+          },
+          {
+            "name": "k",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "description": "Top-k results",
+              "default": 10,
+              "title": "K"
+            },
+            "description": "Top-k results"
+          },
+          {
+            "name": "alpha",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "description": "Fusion parameter (0.0-1.0)",
+              "default": 0.6,
+              "title": "Alpha"
+            },
+            "description": "Fusion parameter (0.0-1.0)"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScoreRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DimensionScore": {
+        "properties": {
+          "theme": {
+            "type": "string",
+            "title": "Theme",
+            "description": "Dimension name (TSP, OSP, DM, GHG, RD, EI, RMM)"
+          },
+          "stage": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 0.0,
+            "title": "Stage",
+            "description": "Maturity stage (0-4)"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "description": "Confidence score (0.0-1.0)"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence",
+            "description": "Supporting evidence"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme",
+          "stage",
+          "confidence"
+        ],
+        "title": "DimensionScore",
+        "description": "Score for a single ESG dimension."
+      },
+      "Evidence": {
+        "properties": {
+          "quote": {
+            "type": "string",
+            "title": "Quote",
+            "description": "Text quote from source document"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page",
+            "description": "Page number in source document"
+          }
+        },
+        "type": "object",
+        "required": [
+          "quote"
+        ],
+        "title": "Evidence",
+        "description": "Evidence citation for scoring."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ScoreRequest": {
+        "properties": {
+          "company": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Company",
+            "description": "Company name to score"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 2100.0,
+                "minimum": 2000.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year",
+            "description": "Reporting year (optional)"
+          },
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Query",
+            "description": "ESG query/theme to assess"
+          }
+        },
+        "type": "object",
+        "required": [
+          "company",
+          "query"
+        ],
+        "title": "ScoreRequest",
+        "description": "Request schema for /score endpoint."
+      },
+      "ScoreResponse": {
+        "properties": {
+          "company": {
+            "type": "string",
+            "title": "Company"
+          },
+          "year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Year"
+          },
+          "scores": {
+            "items": {
+              "$ref": "#/components/schemas/DimensionScore"
+            },
+            "type": "array",
+            "title": "Scores"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version",
+            "default": "v1.0"
+          },
+          "rubric_version": {
+            "type": "string",
+            "title": "Rubric Version",
+            "default": "3.0"
+          },
+          "trace_id": {
+            "type": "string",
+            "title": "Trace Id",
+            "description": "SHA256 hash for request traceability"
+          }
+        },
+        "type": "object",
+        "required": [
+          "company",
+          "year",
+          "scores",
+          "trace_id"
+        ],
+        "title": "ScoreResponse",
+        "description": "Response schema for /score endpoint."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

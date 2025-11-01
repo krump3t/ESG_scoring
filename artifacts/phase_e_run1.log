@@ -1,0 +1,12 @@
+BLOCKED: Cannot import demo_flow: No module named 'libs.utils'
+This is a HARD BLOCKER - no fallback mechanisms allowed.
+Fix: Ensure Python environment has all dependencies and libs.utils is importable.
+sys.path: ['C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine', 'C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\scripts', 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python311.zip']
+
+======================================================================
+REPLAY PASS: Scoring 1 documents (ALLOW_NETWORK unset)
+SEED=42, PYTHONHASHSEED=0 (deterministic)
+======================================================================
+
+Scoring: LSE_HEAD_2025 (Headlam Group PLC, 2025)
+  Determinism check (3× runs)...

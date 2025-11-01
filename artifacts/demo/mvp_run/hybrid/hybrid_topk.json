@@ -1,0 +1,15 @@
+{
+  "retrieval_mode": "local",
+  "retrieval_method": "hybrid(bm25+tfidf)",
+  "fusion": {
+    "alpha": 0.6,
+    "tfidf": {
+      "norm": "l2",
+      "idf": "smoothed"
+    },
+    "bm25_source": "artifact"
+  },
+  "bm25_topk_count": 0,
+  "fused_topk_count": 0,
+  "fused_topk": []
+}

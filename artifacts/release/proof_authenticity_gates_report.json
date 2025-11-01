@@ -1,0 +1,17 @@
+{
+  "final_status": "PASS",
+  "gates": {
+    "determinism": "PASS",
+    "parity": "PASS",
+    "cache_replay": "PASS",
+    "artifacts": "PASS",
+    "evidence": "SKIP"
+  },
+  "passed_count": 4,
+  "failed_count": 0,
+  "skipped_count": 1,
+  "issues": [],
+  "doc_id": "msft_2023",
+  "runs": 3,
+  "timestamp": "2025-10-29T03:12:00Z"
+}

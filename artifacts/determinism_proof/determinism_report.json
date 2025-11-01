@@ -1,0 +1,13 @@
+{
+  "doc_id": "msft_2023",
+  "runs": 3,
+  "identical": true,
+  "hashes": [
+    "ea9412b7d4eb743c66a5a7c8d663dcade5faefd52e3a7d4da7fcf866cd24164f",
+    "ea9412b7d4eb743c66a5a7c8d663dcade5faefd52e3a7d4da7fcf866cd24164f",
+    "ea9412b7d4eb743c66a5a7c8d663dcade5faefd52e3a7d4da7fcf866cd24164f"
+  ],
+  "determinism_status": "PASS",
+  "fields_match": true,
+  "timestamp": "2025-10-29T03:11:00Z"
+}

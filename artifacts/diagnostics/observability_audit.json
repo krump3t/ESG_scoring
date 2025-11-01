@@ -1,0 +1,13 @@
+{
+  "latency_metrics_present": true,
+  "logs_format": "json",
+  "prometheus_present": true,
+  "root": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine",
+  "run_artifacts_present": [
+    "artifacts/run_manifest.json",
+    "artifacts/run_events.jsonl",
+    "artifacts/pipeline_validation/topk_vs_evidence.json",
+    "artifacts/audit/determinism_report.json"
+  ],
+  "token_metrics_present": true
+}

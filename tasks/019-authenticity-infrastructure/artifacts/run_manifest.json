@@ -1,0 +1,31 @@
+{
+  "run_id": "20251027-001819-00f96c86",
+  "session_id": "prospecting-engine-41e0257e-29b1-4a66-a3fc-2ec1a96b53ea",
+  "timestamp": "2025-10-27T00:19:18.621087Z",
+  "artifacts": [
+    {
+      "name": "coverage",
+      "path": "qa\\coverage.xml",
+      "size_bytes": 13195,
+      "modified": "2025-10-26T19:19:17.457671Z"
+    },
+    {
+      "name": "pytest",
+      "path": "qa\\pytest.txt",
+      "size_bytes": 6489,
+      "modified": "2025-10-26T19:18:53.044030Z"
+    },
+    {
+      "name": "run_log",
+      "path": "qa\\run_log.txt",
+      "size_bytes": 47268,
+      "modified": "2025-10-26T19:19:18.614321Z"
+    },
+    {
+      "name": "cp_list",
+      "path": "qa\\cp_list.txt",
+      "size_bytes": 292,
+      "modified": "2025-10-26T19:18:22.745336Z"
+    }
+  ]
+}

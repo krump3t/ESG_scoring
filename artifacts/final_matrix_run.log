@@ -1,0 +1,151 @@
+
+======================================================================
+REPLAY PASS: Scoring 4 documents (ALLOW_NETWORK unset)
+SEED=42, PYTHONHASHSEED=0 (deterministic)
+======================================================================
+
+Scoring: msft_2023 (Microsoft Corporation, 2023)
+  Determinism check (3× runs)...
+    Run 1: ba6164cff401663c...
+    Run 2: ba6164cff401663c...
+    Run 3: ba6164cff401663c...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: AAPL_2023 (Apple Inc., 2023)
+  Determinism check (3× runs)...
+    Run 1: 052febd75d60fafe...
+    Run 2: 052febd75d60fafe...
+    Run 3: 052febd75d60fafe...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: XOM_2023 (ExxonMobil Corporation, 2023)
+  Determinism check (3× runs)...
+    Run 1: 44b6a26f85a68619...
+    Run 2: 44b6a26f85a68619...
+    Run 3: 44b6a26f85a68619...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+Scoring: JPM_2023 (JPMorgan Chase & Co., 2023)
+  Determinism check (3× runs)...
+    Run 1: ac692a0bf2786bd7...
+    Run 2: ac692a0bf2786bd7...
+    Run 3: ac692a0bf2786bd7...
+    Result: PASS (identical)
+  [OK] Complete (status: revise)
+
+======================================================================
+REPLAY PASS COMPLETE
+Status: revise
+Determinism: PASS
+Matrix contract: artifacts/matrix/matrix_contract.json
+======================================================================
+
+{
+  "agent": "SCA",
+  "version": "13.8-MEA",
+  "status": "revise",
+  "documents": 4,
+  "determinism_pass": true,
+  "document_contracts": [
+    {
+      "doc_id": "msft_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/msft_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/msft_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/msft_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/msft_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "AAPL_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/AAPL_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/AAPL_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/AAPL_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/AAPL_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "XOM_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/XOM_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/XOM_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/XOM_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/XOM_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "JPM_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "PASS",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "All 3 hashes identical",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/JPM_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/JPM_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/JPM_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/JPM_2023/pipeline_validation/rd_sources.json"
+      }
+    }
+  ],
+  "timestamp": "2025-10-28T06:00:00Z"
+}

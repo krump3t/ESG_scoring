@@ -1,0 +1,29 @@
+{
+  "generated_at": "2025-10-27T19:53:49Z",
+  "seed": 42,
+  "semantic": 0,
+  "alpha": 0.6,
+  "fused_top_k": [
+    {
+      "rank": 1,
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "score": 0.97
+    },
+    {
+      "rank": 2,
+      "doc_id": "cdp-apple-2023-climate",
+      "score": 0.95
+    },
+    {
+      "rank": 3,
+      "doc_id": "apple-environmental-progress-2025",
+      "score": 0.93
+    }
+  ],
+  "evidence_doc_ids": [
+    "sec-edgar-apple-2023-10k",
+    "cdp-apple-2023-climate",
+    "apple-environmental-progress-2025"
+  ],
+  "parity_ok": true
+}

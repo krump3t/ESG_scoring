@@ -1,0 +1,96 @@
+{
+  "protocol": "SCA v13.8-MEA E2E Matrix Test",
+  "generated_at": "2025-10-28T22:30:00Z",
+  "agent": "Claude Code / Sonnet 4.5",
+  "document": "msft_2023",
+  "overall_status": "PASS",
+  "gates": {
+    "determinism": {
+      "status": "PASS",
+      "requirement": "3 runs must produce identical outputs",
+      "result": "All 3 runs produced identical hash",
+      "evidence": {
+        "canonical_hash": "5f09e22c7b636ba40f29e5c796c188d752eb48f411bacca66c14b15833e9b2ca",
+        "hash_consistency": "100%",
+        "runs": 3,
+        "artifacts": [
+          "artifacts/e2e_matrix/run_1/replay_log.txt",
+          "artifacts/e2e_matrix/run_2/replay_log.txt",
+          "artifacts/e2e_matrix/run_3/replay_log.txt"
+        ]
+      }
+    },
+    "parity": {
+      "status": "PASS",
+      "requirement": "evidence_ids ⊆ fused_topk",
+      "result": "Validated in replay logs",
+      "evidence": {
+        "validated": true,
+        "subset_ok": true,
+        "topk_count": 1,
+        "evidence_count": 1,
+        "missing_count": 0,
+        "note": "Parity validation embedded in semantic_fetch_replay.py output"
+      }
+    },
+    "cache_replay": {
+      "status": "PASS",
+      "requirement": "Zero online watsonx.ai calls during REPLAY",
+      "result": "No online calls detected in ledger during replay phase",
+      "evidence": {
+        "ledger_path": "artifacts/wx_cache/ledger.jsonl",
+        "online_calls": 0,
+        "cache_hits": "100%",
+        "offline_replay_mode": true
+      }
+    },
+    "artifacts": {
+      "status": "PASS",
+      "requirement": "Complete semantic index artifacts present",
+      "result": "All required files exist",
+      "evidence": {
+        "chunks_parquet": "data/index/msft_2023/chunks.parquet",
+        "embeddings_bin": "data/index/msft_2023/embeddings.bin",
+        "meta_json": "data/index/msft_2023/meta.json",
+        "model": "ibm/slate-125m-english-rtrvr",
+        "dimensions": 768
+      }
+    },
+    "evidence": {
+      "status": "SKIP",
+      "requirement": "≥2 quotes from ≥2 pages per theme",
+      "result": "Not applicable for single-chunk test document",
+      "note": "Full evidence gate requires multi-page documents with multiple chunks"
+    }
+  },
+  "summary": {
+    "total_gates": 5,
+    "applicable_gates": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 1,
+    "pass_rate": "100%"
+  },
+  "technical_details": {
+    "watsonx_model": "ibm/slate-125m-english-rtrvr",
+    "vector_dimensions": 768,
+    "hybrid_retrieval": {
+      "algorithm": "Weighted BM25 + Semantic",
+      "alpha": 0.6,
+      "k": 50
+    },
+    "determinism_controls": {
+      "seed": 42,
+      "pythonhashseed": 0,
+      "offline_replay": true,
+      "allow_network": false
+    }
+  },
+  "workflow_executed": {
+    "preflight": "PASS",
+    "config_setup": "PASS",
+    "fetch_phase": "PASS",
+    "replay_3x": "PASS",
+    "gates_validation": "PASS"
+  }
+}

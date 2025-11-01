@@ -1,0 +1,151 @@
+
+======================================================================
+REPLAY PASS: Scoring 4 documents (ALLOW_NETWORK unset)
+SEED=42, PYTHONHASHSEED=0 (deterministic)
+======================================================================
+
+Scoring: msft_2023 (Microsoft Corporation, 2023)
+  Determinism check (3× runs)...
+    Run 1: e064caaf4f2f74d6...
+    Run 2: a4b4b660fd1e3fd1...
+    Run 3: 4ff931637c23865b...
+    Result: FAIL (different hashes)
+  [OK] Complete (status: revise)
+
+Scoring: apple_2023 (Apple Inc., 2023)
+  Determinism check (3× runs)...
+    Run 1: 1530751d4133cd41...
+    Run 2: 797f1836d2479d88...
+    Run 3: cbda91152dfacd7b...
+    Result: FAIL (different hashes)
+  [OK] Complete (status: revise)
+
+Scoring: exxonmobil_2023 (ExxonMobil Corporation, 2023)
+  Determinism check (3× runs)...
+    Run 1: b014c87945e761e7...
+    Run 2: cd349a9c67464192...
+    Run 3: 6a059590dfe6c456...
+    Result: FAIL (different hashes)
+  [OK] Complete (status: revise)
+
+Scoring: jpmorgan_chase_2023 (JPMorgan Chase & Co., 2023)
+  Determinism check (3× runs)...
+    Run 1: f1c277a49c883f22...
+    Run 2: 802b574737c9441b...
+    Run 3: 11a81374967dee70...
+    Result: FAIL (different hashes)
+  [OK] Complete (status: revise)
+
+======================================================================
+REPLAY PASS COMPLETE
+Status: revise
+Determinism: FAIL
+Matrix contract: artifacts/matrix/matrix_contract.json
+======================================================================
+
+{
+  "agent": "SCA",
+  "version": "13.8-MEA",
+  "status": "revise",
+  "documents": 4,
+  "determinism_pass": false,
+  "document_contracts": [
+    {
+      "doc_id": "msft_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "FAIL",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "Hash mismatch detected",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/msft_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/msft_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/msft_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/msft_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "apple_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "FAIL",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "Hash mismatch detected",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/apple_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/apple_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/apple_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/apple_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "exxonmobil_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "FAIL",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "Hash mismatch detected",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/exxonmobil_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/exxonmobil_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/exxonmobil_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/exxonmobil_2023/pipeline_validation/rd_sources.json"
+      }
+    },
+    {
+      "doc_id": "jpmorgan_chase_2023",
+      "agent": "SCA",
+      "version": "13.8-MEA",
+      "status": "revise",
+      "gates": {
+        "determinism": "FAIL",
+        "parity": "PASS",
+        "evidence": "FAIL",
+        "authenticity": "PASS",
+        "traceability": "PASS"
+      },
+      "gate_details": {
+        "determinism": "Hash mismatch detected",
+        "parity": "evidence_ids \u2286 fused_topk",
+        "evidence": "Some themes have <2 distinct pages"
+      },
+      "artifacts": {
+        "determinism_report": "artifacts/matrix/jpmorgan_chase_2023/baseline/determinism_report.json",
+        "parity_report": "artifacts/matrix/jpmorgan_chase_2023/pipeline_validation/demo_topk_vs_evidence.json",
+        "evidence_audit": "artifacts/matrix/jpmorgan_chase_2023/pipeline_validation/evidence_audit.json",
+        "rd_sources": "artifacts/matrix/jpmorgan_chase_2023/pipeline_validation/rd_sources.json"
+      }
+    }
+  ],
+  "timestamp": "2025-10-28T06:00:00Z"
+}

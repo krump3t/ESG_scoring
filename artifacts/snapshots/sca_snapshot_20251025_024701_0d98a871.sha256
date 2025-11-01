@@ -1,0 +1,31 @@
+0d98a871bb195bd53f1a5a38a2d6a252e4971341feacf4ab8b34fbc1a1abb746  sca_snapshot_20251025_024701_0d98a871.sha256
+
+Snapshot metadata:
+{
+  "agent": "SCA",
+  "components": {
+    "api": {
+      "health_endpoints": [
+        "/health",
+        "/ready",
+        "/live"
+      ],
+      "metrics_endpoint": "/metrics",
+      "score_endpoint": "/score"
+    },
+    "coverage": {
+      "apps_api_health": "100%",
+      "apps_api_main": "63%",
+      "type_safety": "mypy --strict PASS"
+    },
+    "tests": {
+      "api_tests": 40,
+      "health_tests": 14,
+      "xfail_converted": 4
+    }
+  },
+  "phase": "9",
+  "protocol_version": "13.8",
+  "task_id": "PH9-PREPROD-HARDEN",
+  "timestamp": "2025-10-25T02:47:01.932071Z"
+}

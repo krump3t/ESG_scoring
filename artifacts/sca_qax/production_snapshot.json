@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0-pass",
+  "frozen_at": "2025-10-25",
+  "determinism": {
+    "PYTHONHASHSEED": "0",
+    "ESG_SEED": "42"
+  },
+  "audit": {
+    "status": "PASS",
+    "themes_passing": 7,
+    "total_evidence": 34,
+    "evidence_per_theme": {
+      "TSP": 4,
+      "OSP": 5,
+      "DM": 5,
+      "GHG": 5,
+      "RD": 5,
+      "EI": 5,
+      "RMM": 5
+    }
+  },
+  "baselines": {
+    "golden_evidence": "artifacts/baselines/real_evidence.golden.json",
+    "golden_mapped": "artifacts/baselines/headlam_demo_response.golden.json",
+    "manifest": "artifacts/baselines/golden_manifest.json"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/demo/real_evidence.json",
+      "sha256": "75830df43056411c56f12336295de35c51408b019a5d61bf45d9a59498f80348"
+    },
+    {
+      "path": "artifacts/demo/headlam_demo_response.json",
+      "sha256": "14f3215208790c356a693dea94ef1abacf2805724b176937fa45aadc848f508b"
+    },
+    {
+      "path": "artifacts/baselines/real_evidence.golden.json",
+      "sha256": "75830df43056411c56f12336295de35c51408b019a5d61bf45d9a59498f80348"
+    },
+    {
+      "path": "artifacts/baselines/headlam_demo_response.golden.json",
+      "sha256": "14f3215208790c356a693dea94ef1abacf2805724b176937fa45aadc848f508b"
+    },
+    {
+      "path": "artifacts/sca_qax/ingestion_debug.json",
+      "sha256": "006d267ab53b4f50521a4cda4de6806fe6e21d571803dfea66cad0da7367c02d"
+    },
+    {
+      "path": "artifacts/sca_qax/authenticity_audit_json_source.md",
+      "sha256": "c9f14c6f0d7780deeb574e6a08bb3e105163ee695b478fc47334177d35ab2622"
+    }
+  ],
+  "guards_enforced": [
+    "No demo fallback (real evidence required)",
+    "Evidence-first: >=2 quotes per theme",
+    "All 7 themes must be present",
+    "Audit PASS required",
+    "Baseline drift detection"
+  ]
+}

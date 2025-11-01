@@ -1,0 +1,16 @@
+{
+  "run_id": "test-progressive-20251022-050457-e961bfed",
+  "timestamp": "2025-10-22T05:05:00.725558Z",
+  "base_url": "http://localhost:8002",
+  "protocol_version": "SCA-v13.7",
+  "authenticity": {
+    "no_mocks": true,
+    "real_server": true,
+    "real_data": true,
+    "deterministic": true
+  },
+  "end_timestamp": "2025-10-22T05:05:22.532581Z",
+  "total_tests": 7,
+  "passed": 7,
+  "failed": 0
+}

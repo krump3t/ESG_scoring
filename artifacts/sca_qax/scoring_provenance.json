@@ -1,0 +1,79 @@
+{
+  "trace_id": "sha256:62a7530dbae86fa1",
+  "scored_themes": [
+    "TSP",
+    "OSP",
+    "DM",
+    "GHG",
+    "RD",
+    "EI",
+    "RMM"
+  ],
+  "rubric_version": "v3",
+  "min_evidence_required": 2,
+  "explanations": {
+    "TSP": {
+      "theme_name": "Target Setting & Planning",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 4,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "OSP": {
+      "theme_name": "Operational Structure & Processes",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "DM": {
+      "theme_name": "Data Maturity",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "GHG": {
+      "theme_name": "GHG Accounting",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "RD": {
+      "theme_name": "Reporting & Disclosure",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "EI": {
+      "theme_name": "Energy Intelligence",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    },
+    "RMM": {
+      "theme_name": "Risk Management & Mitigation",
+      "score": 2,
+      "confidence": 0.7,
+      "evidence_count": 5,
+      "frameworks_detected": [],
+      "freshness_penalty": 0.0,
+      "scoring_method": "Evidence-first threshold (rubric v3 enhanced)"
+    }
+  }
+}

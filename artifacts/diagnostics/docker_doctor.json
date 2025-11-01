@@ -1,0 +1,14 @@
+{
+  "compose_files": [
+    "docker-compose.yml",
+    "docker-compose.mvp.yml"
+  ],
+  "docker": {
+    "cli": true
+  },
+  "endpoints": {
+    "health": "http://localhost:8080/healthz",
+    "ready": "http://localhost:8080/readyz",
+    "metrics": "http://localhost:8080/metrics"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "20251024-042345-205b1ab1",
+  "session_id": "4b4a41df-f644-43c7-913c-5d35ddfb7cc2",
+  "task_id": "010",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\010-hybrid-ingestion-phase1",
+  "phase": "validation",
+  "timestamp": "2025-10-24T04:23:45.654684Z",
+  "tools": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

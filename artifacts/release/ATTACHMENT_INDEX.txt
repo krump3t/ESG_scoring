@@ -1,0 +1,73 @@
+======================================================================
+SCA v13.8-MEA SEMANTIC RETRIEVAL - ATTESTED RELEASE PACK
+======================================================================
+
+Generated: 2025-10-29T03:24:13Z
+Status: PASS
+Total Files: 9
+Total Size: 47,134 bytes (46.0 KB)
+
+======================================================================
+ARTIFACTS
+======================================================================
+
+DETERMINISM:
+  - proof_determinism_report.json
+    Source: artifacts\determinism_proof\determinism_report.json
+    Size: 402 bytes
+    SHA256: 36b072973eec7fab...
+  - proof_authenticity_gates_report.json
+    Source: artifacts\determinism_proof\authenticity_gates_report.json
+    Size: 344 bytes
+    SHA256: 0a0b387bf154baf9...
+  - proof_COMPLIANCE_REPORT.md
+    Source: artifacts\determinism_proof\COMPLIANCE_REPORT.md
+    Size: 6,316 bytes
+    SHA256: 04771b25271c5aac...
+  - proof_validation_report.json
+    Source: artifacts\determinism_proof\validation_report.json
+    Size: 293 bytes
+    SHA256: 68681dc7bc3a1482...
+
+SEMANTIC_INDEX:
+  - index_meta.json
+    Source: data\index\msft_2023\meta.json
+    Size: 348 bytes
+    SHA256: 32cfd49d10c2b73d...
+
+CACHE:
+  - ledger.jsonl
+    Source: artifacts\wx_cache\ledger.jsonl
+    Size: 32,310 bytes
+    SHA256: 2a78f144e55190f6...
+
+CONFIG:
+  - config_integration_flags.json
+    Source: configs\integration_flags.json
+    Size: 415 bytes
+    SHA256: 64f81f4b074edaa2...
+  - config_extraction.json
+    Source: configs\extraction.json
+    Size: 76 bytes
+    SHA256: 3dbbf41a2758c0c2...
+
+SUMMARY:
+  - EXECUTIVE_SUMMARY.md
+    Source: artifacts\EXECUTIVE_SUMMARY.md
+    Size: 6,630 bytes
+    SHA256: 46c99ec8e392a191...
+
+======================================================================
+ABSOLUTE PATHS
+======================================================================
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\ATTACHMENT_INDEX.txt
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\ATTESTATION_MANIFEST.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\config_extraction.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\config_integration_flags.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\EXECUTIVE_SUMMARY.md
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\index_meta.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\ledger.jsonl
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\proof_authenticity_gates_report.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\proof_COMPLIANCE_REPORT.md
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\proof_determinism_report.json
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release\proof_validation_report.json

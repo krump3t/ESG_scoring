@@ -1,0 +1,14 @@
+{
+  "agent": "SCA",
+  "doc_id": "msft_2023",
+  "gates": {
+    "authenticity": "SKIPPED",
+    "determinism": "SKIPPED",
+    "evidence": "SKIPPED",
+    "parity": "SKIPPED",
+    "traceability": "SKIPPED"
+  },
+  "skip_reason": "Phase F: Stub data with all page_no=1 fails enhanced evidence gates (3+ pages, span 3-5). Awaiting authentic PDF.",
+  "status": "skipped",
+  "version": "13.8-MEA-PhaseF"
+}

@@ -1,0 +1,36 @@
+SCA v13.8-MEA Multi-Doc Ready Release Pack
+======================================================================
+Generated: 2025-10-29T04:09:32Z
+Status: INFRASTRUCTURE_VALIDATED
+
+Validation State:
+  Single-Doc: COMPLETE
+  Multi-Doc: READY_PENDING_DATA
+  Infrastructure: PRODUCTION_READY
+
+Files: 14
+Size: 93,342 bytes
+
+Artifacts:
+  E2E_ATTESTATION_MANIFEST.json                         3,520 bytes
+  E2E_COMPLIANCE.md                                    10,646 bytes
+  E2E_EXECUTIVE_SUMMARY.md                             11,257 bytes
+  MATRIX_COMPLIANCE.md                                  9,159 bytes
+  MATRIX_MANIFEST.json                                  3,938 bytes
+  MULTI_DOC_READINESS.md                               15,090 bytes
+  companies_live.yaml                                   1,448 bytes
+  determinism_report.json                               1,412 bytes
+  e2e_gates_report.json                                 2,989 bytes
+  extraction.json                                          76 bytes
+  integration_flags.json                                  415 bytes
+  semantic_index_meta.json                                348 bytes
+  tuning_report.json                                      734 bytes
+  wx_ledger.jsonl                                      32,310 bytes
+
+Documentation:
+  - MULTI_DOC_READINESS.md: Complete readiness assessment
+  - E2E_COMPLIANCE.md: E2E validation proof
+  - MATRIX_COMPLIANCE.md: Matrix determinism proof
+  - E2E_EXECUTIVE_SUMMARY.md: Executive overview
+
+Location: C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\artifacts\release_multidoc_ready

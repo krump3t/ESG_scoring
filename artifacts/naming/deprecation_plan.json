@@ -1,0 +1,110 @@
+{
+  "protocol_version": "13.8-MEA",
+  "generated_at": "2025-10-27T00:00:00Z",
+  "source": "naming_refactor_deprecation_plan.md",
+  "description": "Deprecation policy and enforcement rules for naming refactor",
+  "design_principles": [
+    "Stability first: No behavioral changes during P1-P2; only symbol exposure and mechanical rewrites",
+    "Transparency: Single deprecation warning per legacy symbol ON IMPORT; documented policy and timeline",
+    "Determinism: Codemods are deterministic, idempotent, and produce auditable diffs",
+    "Narrow surface: One 'golden' import path per public symbol, re-exported at package boundaries",
+    "Reversibility: Easy rollback - aliases + re-exports + preview diffs before apply"
+  ],
+  "symbol_aliasing_strategy": {
+    "preferred_approach": "Assignment aliases (TypeAlias), NOT subclassing",
+    "rationale": "Avoid altering MRO, isinstance checks, equality, dataclass patterns, serializers",
+    "pattern": "ExtractionResult: TypeAlias = MetricsExtractionResult"
+  },
+  "deprecation_warning_policy": {
+    "trigger": "Import-time (module load), not constructor/instantiation",
+    "frequency": "Once per process",
+    "severity": "DeprecationWarning",
+    "example": "warnings.warn('...is deprecated; use ...', DeprecationWarning, stacklevel=2)"
+  },
+  "deprecation_timeline": {
+    "legacy_support_duration": "One minor release OR 4 weeks, whichever is longer",
+    "announcement_phase": "CHANGELOG + release notes with examples",
+    "phase_3_behavior": "Legacy imports raise ImportError (not just warning)",
+    "external_user_allowance": "PYTHONWARNINGS=ignore::DeprecationWarning (not recommended for maintainers)"
+  },
+  "enforcement_gates": {
+    "pytest_internal": {
+      "rule": "-W error::DeprecationWarning",
+      "scope": "Internal modules (agents/, apps/, libs/, src/)",
+      "allowlist": ["apps.api (public entrypoint)"]
+    },
+    "mypy": {
+      "rule": "--strict --warn-redundant-casts --warn-unused-ignores",
+      "scope": "All modules (catch stale suppressions)"
+    },
+    "pre_commit": {
+      "rule": "Grep/Ruff rule blocks legacy symbols in changed lines",
+      "legacy_symbol_list": ["ExtractionResult (metrics)", "ExtractionResult (evidence)", "ThemeRubric", "HybridRetriever (apps.index)"]
+    },
+    "ci_gate": {
+      "rule": "Fail if artifacts/naming/usage_report.json shows >0 internal legacy refs post-codemod",
+      "rationale": "Prevent legacy usage creep after Phase 2"
+    }
+  },
+  "symbol_mapping": {
+    "metrics_extraction": {
+      "module": "libs.contracts.extraction_contracts",
+      "canonical": "MetricsExtractionResult",
+      "legacy": "ExtractionResult",
+      "aliasing_method": "TypeAlias",
+      "warning_message": "libs.contracts.extraction_contracts.ExtractionResult is deprecated; use MetricsExtractionResult",
+      "phase1_status": "IMPLEMENTED",
+      "phase2_status": "PENDING (codemod)",
+      "phase3_status": "PENDING (removal)"
+    },
+    "evidence_extraction": {
+      "module": "agents.parser.models",
+      "canonical": "EvidenceExtractionResult",
+      "legacy": "ExtractionResult",
+      "aliasing_method": "TypeAlias",
+      "warning_message": "agents.parser.models.ExtractionResult is deprecated; use EvidenceExtractionResult",
+      "phase1_status": "IMPLEMENTED",
+      "phase2_status": "PENDING (codemod)",
+      "phase3_status": "PENDING (removal)"
+    },
+    "theme_rubric": {
+      "module": "apps.scoring.rubric_v3_loader",
+      "canonical": "ThemeRubricV3",
+      "legacy": "ThemeRubric",
+      "aliasing_method": "TypeAlias",
+      "warning_message": "apps.scoring.rubric_v3_loader.ThemeRubric is deprecated; use ThemeRubricV3",
+      "phase1_status": "IMPLEMENTED",
+      "phase2_status": "PENDING (codemod)",
+      "phase3_status": "PENDING (removal)"
+    },
+    "hybrid_retriever_app": {
+      "module": "apps.index.retriever",
+      "canonical": "IndexedHybridRetriever",
+      "legacy": "HybridRetriever",
+      "aliasing_method": "TypeAlias",
+      "warning_message": "apps.index.retriever.HybridRetriever is deprecated; use IndexedHybridRetriever (or libs.retrieval.HybridRetriever for library variant)",
+      "note": "Distinct from libs.retrieval.HybridRetriever (library variant)",
+      "phase1_status": "IMPLEMENTED",
+      "phase2_status": "PENDING (codemod)",
+      "phase3_status": "PENDING (removal)"
+    }
+  },
+  "test_requirements": {
+    "deprecation_import_test": "Importing legacy symbol raises single DeprecationWarning per process",
+    "api_exposure_test": "Public symbols importable via ONLY golden paths",
+    "equivalence_test": "Canonical and legacy types satisfy shared Protocols (if defined)",
+    "serialization_parity": "Objects created via canonical vs legacy names round-trip identical JSON/Parquet",
+    "no_spam_test": "Constructing many objects does NOT multiply warnings (import-time only)"
+  },
+  "rollback_strategy": {
+    "if_ci_fails_post_codemod": "Revert using preview diff; keep P1 aliases in place",
+    "feature_branch": "feature/naming-refactor until P2 is green",
+    "gate_merges_on": "Artifact presence and green CI"
+  },
+  "documentation_updates": {
+    "readme": "Canonical names only (immediate, P1)",
+    "naming_conventions_map": "Legacy → Canonical table + policy + timelines",
+    "migration_guide": "One-page with mechanical replacements and common pitfalls",
+    "doc_redirects": "Keep old anchors live through one release after P3"
+  }
+}

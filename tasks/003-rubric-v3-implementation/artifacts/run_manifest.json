@@ -1,0 +1,286 @@
+{
+  "run_id": "test-progressive-20251022-050457-e961bfed",
+  "timestamp": "2025-10-22T05:05:22.535018Z",
+  "artifacts": [
+    {
+      "name": "Run Log",
+      "path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\qa\\run_log.txt",
+      "type": "log"
+    },
+    {
+      "name": "Run Context",
+      "path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_context.json",
+      "type": "json"
+    },
+    {
+      "name": "Run Events",
+      "path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\run_events.jsonl",
+      "type": "jsonl"
+    },
+    {
+      "name": "Test Results",
+      "path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\qa\\test_results.json",
+      "type": "json"
+    },
+    {
+      "name": "Test Summary",
+      "path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\qa\\test_summary.md",
+      "type": "markdown"
+    }
+  ],
+  "test_results": [
+    {
+      "test_id": "e2601e37b6a8efec",
+      "test": "L1.1 - Simple Climate Query (test_corporation)",
+      "status": "PASS",
+      "elapsed": 2.0889081954956055,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "test_corporation",
+          "year": 2024,
+          "theme": "Climate"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "test_corporation",
+        "year": 2024,
+        "theme": "Climate",
+        "maturity_level": 4,
+        "maturity_label": "Leading",
+        "confidence": 0.76,
+        "findings_count": 1,
+        "key_findings": [
+          {
+            "finding_id": "3cf5275c-68c2-449b-a796-af0f65488f27",
+            "finding_text": "Environmental, Social, and Governance Report 2024\nTest Corporation Environmental Sustainability Report\nExecutive Summary:\nTest Corporation is committe...",
+            "page_number": 0,
+            "framework": "SBTi",
+            "confidence": 0.76
+          }
+        ],
+        "snapshot_id": 0,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:02.815924Z",
+          "run_id": "run-673a48b2a39c",
+          "themes_analyzed": [
+            "Climate"
+          ],
+          "score_distribution": {
+            "level_4": 1
+          }
+        }
+      },
+      "response_hash": "7de9e5147a16698f72530aeedced125c6bdcdcd4bcf7d699158c14f5a57849fc"
+    },
+    {
+      "test_id": "ea16c8928e379dfa",
+      "test": "L1.2 - Query Social Theme",
+      "status": "PASS",
+      "elapsed": 2.206291913986206,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "test_corporation",
+          "year": 2024,
+          "theme": "Social"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "test_corporation",
+        "year": 2024,
+        "theme": "Social",
+        "maturity_level": 0,
+        "maturity_label": "None",
+        "confidence": 0.0,
+        "findings_count": 0,
+        "key_findings": [],
+        "snapshot_id": null,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:06.027931Z",
+          "run_id": "run-b4d6e5588a38",
+          "message": "No scores found for this organization/year/theme"
+        }
+      },
+      "response_hash": "0d831010b1372d17250e83131cb4b68de495e909c9539cbda5b182dcecb2a1f5"
+    },
+    {
+      "test_id": "dc9b33783e959d70",
+      "test": "L1.3 - Query Governance Theme",
+      "status": "PASS",
+      "elapsed": 2.21795392036438,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "test_corporation",
+          "year": 2024,
+          "theme": "Governance"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "test_corporation",
+        "year": 2024,
+        "theme": "Governance",
+        "maturity_level": 0,
+        "maturity_label": "None",
+        "confidence": 0.0,
+        "findings_count": 0,
+        "key_findings": [],
+        "snapshot_id": null,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:09.251531Z",
+          "run_id": "run-29285241b24e",
+          "message": "No scores found for this organization/year/theme"
+        }
+      },
+      "response_hash": "415970b6395c4ef2392acedfa472dff61fe29a2354bda9096e026790be93b81a"
+    },
+    {
+      "test_id": "03b4e3698a356ea6",
+      "test": "L2.1 - Climate Score Explanation",
+      "status": "PASS",
+      "elapsed": 2.0773630142211914,
+      "request": {
+        "tool": "esg.explain.score",
+        "params": {
+          "org_id": "test_corporation",
+          "year": 2024,
+          "theme": "Climate"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "test_corporation",
+        "year": 2024,
+        "theme": "Climate",
+        "explanation": {
+          "score_id": "d78e098e-9d51-460c-9fdf-275945ce7847",
+          "maturity_level": 4,
+          "maturity_label": "Leading",
+          "reasoning": "The organization achieved a maturity level of 4 (Leading) for Climate with 76% confidence. This assessment is based on evidence aligned with the SBTi framework. The score is supported by 1 distinct finding(s) from the organization's sustainability disclosure. Strong evidence was found in 1 findings with high confidence (>75%).",
+          "evidence": [
+            {
+              "finding_id": "ce045c00-24f8-41a9-ac7b-98d12b6e91f3",
+              "finding_text": "Assessed as Leading (Level 4) based on evidence characteristics.",
+              "page_number": 0,
+              "framework": "SBTi",
+              "confidence": 0.76
+            }
+          ],
+          "framework_mappings": {
+            "SBTi": 4
+          },
+          "confidence_breakdown": {
+            "overall": 0.76,
+            "framework_alignment": 1.0
+          }
+        },
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:12.332485Z",
+          "run_id": "run-656331f6162a",
+          "scores_analyzed": 1
+        }
+      },
+      "response_hash": "c23f474b8ee8f77a357840562cb55d86528407b5deda75431818a1f9b8bc0c44"
+    },
+    {
+      "test_id": "c931ae3b3e968f87",
+      "test": "L3.1 - New Company Query (Microsoft)",
+      "status": "PASS",
+      "elapsed": 2.052720069885254,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "microsoft",
+          "year": 2023,
+          "theme": "Climate"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "microsoft",
+        "year": 2023,
+        "theme": "Climate",
+        "maturity_level": 0,
+        "maturity_label": "None",
+        "confidence": 0.0,
+        "findings_count": 0,
+        "key_findings": [],
+        "snapshot_id": null,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:15.387765Z",
+          "run_id": "run-70abb80e7a7f",
+          "message": "No scores found for this organization/year/theme"
+        }
+      },
+      "response_hash": "a659265dc173a26796cb18492bfbcf5e4b898e6af1f3de3a26981df6a83c67a9"
+    },
+    {
+      "test_id": "00959643a94dabbd",
+      "test": "L3.2 - New Company Query (Shell)",
+      "status": "PASS",
+      "elapsed": 2.0597269535064697,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "shell",
+          "year": 2023,
+          "theme": "Climate"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "shell",
+        "year": 2023,
+        "theme": "Climate",
+        "maturity_level": 0,
+        "maturity_label": "None",
+        "confidence": 0.0,
+        "findings_count": 0,
+        "key_findings": [],
+        "snapshot_id": null,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:18.451359Z",
+          "run_id": "run-f9f648d16600",
+          "message": "No scores found for this organization/year/theme"
+        }
+      },
+      "response_hash": "8c5f7832402daaa5f32db03480d83229104f16c35a1dab0e163de4323f4f6146"
+    },
+    {
+      "test_id": "a3230c5cce6f0e9a",
+      "test": "L4.1 - Year-over-Year Comparison",
+      "status": "PASS",
+      "elapsed": 2.075040578842163,
+      "request": {
+        "tool": "esg.query.maturity",
+        "params": {
+          "org_id": "test_corporation",
+          "year": 2023,
+          "theme": "Climate"
+        }
+      },
+      "response": {
+        "success": true,
+        "org_id": "test_corporation",
+        "year": 2023,
+        "theme": "Climate",
+        "maturity_level": 0,
+        "maturity_label": "None",
+        "confidence": 0.0,
+        "findings_count": 0,
+        "key_findings": [],
+        "snapshot_id": null,
+        "metadata": {
+          "timestamp": "2025-10-22T05:05:21.528107Z",
+          "run_id": "run-709902fba758",
+          "message": "No scores found for this organization/year/theme"
+        }
+      },
+      "response_hash": "b359abaf8e8086cc2ed33e8b62f119ac2ddd92537578e69d2cc90e2c3500012f"
+    }
+  ]
+}

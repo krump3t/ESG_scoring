@@ -1,0 +1,54 @@
+[
+  {
+    "chunk_id": "chunk_4cf4abab0c57",
+    "doc_id": "doc_climate_001",
+    "evidence_id": "ev_climate_001",
+    "extract_30w": "Evidence statement for Climate theme item 1",
+    "hash_sha256": "4cf4abab0c57e918dc63cb363929a7d7d0c1cbd8de3dda0426d5f25b8ff948b3",
+    "org_id": "test_org",
+    "page_no": 10,
+    "span_end": 200,
+    "span_start": 100,
+    "theme_code": "Climate",
+    "year": 2024
+  },
+  {
+    "chunk_id": "chunk_5ab65a5857eb",
+    "doc_id": "doc_climate_002",
+    "evidence_id": "ev_climate_002",
+    "extract_30w": "Evidence statement for Climate theme item 2",
+    "hash_sha256": "5ab65a5857ebbb95bf83bc471a3189e469e847f8fe548dbababb306356ac7b33",
+    "org_id": "test_org",
+    "page_no": 20,
+    "span_end": 300,
+    "span_start": 200,
+    "theme_code": "Climate",
+    "year": 2024
+  },
+  {
+    "chunk_id": "chunk_c11b439f4cca",
+    "doc_id": "doc_climate_003",
+    "evidence_id": "ev_climate_003",
+    "extract_30w": "Evidence statement for Climate theme item 3",
+    "hash_sha256": "c11b439f4cca19c51f47a2bad7d8f5abe21e1be0acddcd2f0e0614b6e0f11b9e",
+    "org_id": "test_org",
+    "page_no": 30,
+    "span_end": 400,
+    "span_start": 300,
+    "theme_code": "Climate",
+    "year": 2024
+  },
+  {
+    "chunk_id": "chunk_da8c1e86d94f",
+    "doc_id": "doc_climate_004",
+    "evidence_id": "ev_climate_004",
+    "extract_30w": "Evidence statement for Climate theme item 4",
+    "hash_sha256": "da8c1e86d94fc7ee813e8794f1c52afc37aa8a9d55ae027cd32457e089902bf4",
+    "org_id": "test_org",
+    "page_no": 40,
+    "span_end": 500,
+    "span_start": 400,
+    "theme_code": "Climate",
+    "year": 2024
+  }
+]

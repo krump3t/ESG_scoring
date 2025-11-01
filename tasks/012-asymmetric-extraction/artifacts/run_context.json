@@ -1,0 +1,19 @@
+{
+  "run_id": "20251024-144046-0b74ea4d",
+  "session_id": "a13fba13-92fc-4f59-a0c5-01bb921457d3",
+  "task_id": "012",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\012-asymmetric-extraction",
+  "phase": "snapshot",
+  "timestamp": "2025-10-24T14:40:46.858622Z",
+  "tools": [],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

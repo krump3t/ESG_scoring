@@ -1,0 +1,26 @@
+=== Rubric Conformance Audit (JSON Schema Source) ===
+
+[AUDIT] Input file: artifacts/demo/headlam_demo_response.json
+[AUDIT] theme=TSP evidence=4 score=2
+[AUDIT] theme=OSP evidence=5 score=2
+[AUDIT] theme=DM evidence=5 score=2
+[AUDIT] theme=GHG evidence=5 score=2
+[AUDIT] theme=RD evidence=5 score=2
+[AUDIT] theme=EI evidence=5 score=2
+[AUDIT] theme=RMM evidence=5 score=2
+[1/3] Schema loaded: 7 themes, min evidence = 2
+[2/3] Demo loaded: 7 scored themes, 0 evidence items
+[3/3] Parity: 0 evidence IDs, 0 top-k IDs
+
+  [OK] Target Setting & Planning: Score + evidence present
+  [OK] Operational Structure & Processes: Score + evidence present
+  [OK] Data Maturity: Score + evidence present
+  [OK] GHG Accounting: Score + evidence present
+  [OK] Reporting & Disclosure: Score + evidence present
+  [OK] Energy Intelligence: Score + evidence present
+  [OK] Risk Management & Mitigation: Score + evidence present
+
+============================================================
+Report written to: artifacts/sca_qax/authenticity_audit_json_source.md
+Status: PASS
+============================================================

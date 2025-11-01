@@ -1,0 +1,39 @@
+{
+  "agent": "SCA-Sonnet-4.5",
+  "protocol_version": "13.8",
+  "task_id": "PH9-SONNET-FINALIZE",
+  "phase": "9",
+  "status": "partial_pass",
+  "gates": {
+    "workspace": "pass",
+    "context": "pass",
+    "tdd": "pass",
+    "coverage_main_py": "pass",
+    "coverage_demo_flow": "warn",
+    "types_cp": "pass",
+    "placeholders_cp": "pass",
+    "api_contract": "pass",
+    "determinism": "pass",
+    "parity_validation": "pass",
+    "traceability": "pass",
+    "openapi_export": "pass",
+    "snapshot_saved": "pass",
+    "demo_ready": "pass"
+  },
+  "metrics": {
+    "coverage_main_py_pct": 100.0,
+    "coverage_demo_flow_pct": 85.3,
+    "determinism_runs": 3,
+    "determinism_identical": true,
+    "tests_passed": 127,
+    "tests_failed": 4,
+    "mypy_strict_errors": 0
+  },
+  "artifacts": {
+    "coverage_xml": "artifacts/sca_qax/coverage.xml",
+    "determinism_report": "artifacts/sca_qax/determinism_report.json",
+    "types_report": "artifacts/sca_qax/types_report.txt",
+    "openapi_schema": "artifacts/api/openapi.json",
+    "snapshot": "artifacts/sca_qax/ph9_sonnet_finalize_snapshot.json"
+  }
+}

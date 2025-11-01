@@ -1,0 +1,30 @@
+{
+  "agent": "SCA",
+  "artifacts": {
+    "determinism_report": "artifacts/matrix/LSE_HEAD_2025/baseline/determinism_report.json",
+    "evidence_audit": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/evidence_audit.json",
+    "parity_report": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/demo_topk_vs_evidence.json",
+    "rd_sources": "artifacts/matrix/LSE_HEAD_2025/pipeline_validation/rd_sources.json"
+  },
+  "doc_id": "LSE_HEAD_2025",
+  "evidence_config": {
+    "doc_length_threshold": 10,
+    "min_distinct_pages": 3,
+    "min_span_for_doc": 3,
+    "total_pages": 7
+  },
+  "gate_details": {
+    "determinism": "All 3 hashes identical",
+    "evidence": "All themes ≥3 pages, span≥3",
+    "parity": "evidence_ids ⊆ fused_topk AND (fused_topk non-empty OR no evidence)"
+  },
+  "gates": {
+    "authenticity": "PASS",
+    "determinism": "PASS",
+    "evidence": "PASS",
+    "parity": "PASS",
+    "traceability": "PASS"
+  },
+  "status": "ok",
+  "version": "13.8-MEA-PhaseF"
+}

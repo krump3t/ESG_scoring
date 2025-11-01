@@ -1,0 +1,85 @@
+{
+  "agent": "SCA v13.8",
+  "date": "2025-10-25",
+  "execution_mode": "docker_local_fixes",
+  "source_report": "codex_report_verification.md",
+  "fixes_applied": [
+    {
+      "id": "FIX1",
+      "priority": "CRITICAL",
+      "issue": "Bad import in apps/integration_validator.py",
+      "file": "apps/integration_validator.py",
+      "line": 18,
+      "change": "from agents.extraction.models \u2192 from libs.models.esg_metrics",
+      "status": "complete"
+    },
+    {
+      "id": "FIX2",
+      "priority": "CRITICAL",
+      "issue": "Missing runtime dependencies",
+      "file": "requirements.txt",
+      "packages_added": [
+        "beautifulsoup4",
+        "lxml",
+        "playwright",
+        "opentelemetry-instrumentation",
+        "numpy",
+        "pyarrow",
+        "pandas"
+      ],
+      "status": "complete",
+      "pending": "Docker rebuild required"
+    },
+    {
+      "id": "FIX3",
+      "priority": "HIGH",
+      "issue": "Unstable hash-based seeding",
+      "file": "apps/scoring/wx_client.py",
+      "line": 7,
+      "change": "random.seed(hash(t)) \u2192 hashlib.sha256-based stable seed",
+      "status": "complete"
+    },
+    {
+      "id": "FIX4",
+      "priority": "MEDIUM",
+      "issue": "JSON disguised as .parquet",
+      "files": [
+        "scripts/ingest_company.py",
+        "apps/pipeline/demo_flow.py"
+      ],
+      "change": "Converted to true Parquet I/O using pandas",
+      "status": "complete"
+    }
+  ],
+  "summary": {
+    "total_fixes": 4,
+    "completed": 4,
+    "pending_actions": [
+      "rebuild_docker",
+      "verify_imports",
+      "run_demo",
+      "run_qa_suite"
+    ]
+  },
+  "files_modified": [
+    "apps/integration_validator.py",
+    "requirements.txt",
+    "apps/scoring/wx_client.py",
+    "scripts/ingest_company.py",
+    "apps/pipeline/demo_flow.py"
+  ],
+  "verification_status": {
+    "import_fix": "applied",
+    "dependencies": "added_to_requirements",
+    "determinism": "improved",
+    "parquet_io": "converted"
+  },
+  "next_steps": [
+    "docker compose build",
+    "verify import apps.integration_validator",
+    "verify import apps.api.main",
+    "run demo pipeline",
+    "run QA suite",
+    "commit changes"
+  ]
+}

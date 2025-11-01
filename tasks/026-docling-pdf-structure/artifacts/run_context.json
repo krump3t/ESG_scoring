@@ -1,0 +1,27 @@
+{
+  "run_id": "20251030-153933-5a941ce5",
+  "session_id": "prospecting-engine-c8b78c94-f7d4-42e7-a0b3-3e9e62720e42",
+  "task_id": "026",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\026-docling-pdf-structure",
+  "phase": "validation",
+  "timestamp": "2025-10-30T15:39:33.008505Z",
+  "tools": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

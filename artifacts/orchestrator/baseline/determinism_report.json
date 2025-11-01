@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-10-28T06:16:17+00:00",
+  "project": "prospecting-engine",
+  "task": "ESG Scoring Orchestration",
+  "determinism": {
+    "deterministic": true,
+    "total_runs": 1,
+    "successful_runs": 1,
+    "failed_runs": 0,
+    "unique_output_hashes": 1,
+    "all_hashes": [
+      "d1ca49eb3ff4e542bcb48ff84ca42fa1b64178168488ea80d8b3bf055c34b4b1"
+    ],
+    "message": "[OK] DETERMINISTIC: All runs produced identical output hashes"
+  },
+  "runs": [
+    {
+      "run_num": 1,
+      "timestamp": "2025-10-28T06:00:00Z",
+      "status": "ok",
+      "company": "Headlam Group Plc",
+      "year": 2025,
+      "query": "climate strategy and emissions targets",
+      "topk": 5,
+      "alpha": 0.6,
+      "semantic": false,
+      "trace_id": "sha256:0e06ecd9ad4c0932",
+      "rubric_version": "3.0",
+      "model_version": "1.0",
+      "theme_count": 7,
+      "parity": {
+        "parity_ok": true,
+        "evidence_ids": [
+          "headlam_2025_page_001_chunk_000",
+          "headlam_2025_page_001_chunk_000"
+        ]
+      },
+      "output_hash": "d1ca49eb3ff4e542bcb48ff84ca42fa1b64178168488ea80d8b3bf055c34b4b1"
+    }
+  ],
+  "parameters": {
+    "company": "Headlam Group Plc",
+    "year": 2025,
+    "query": "climate strategy and emissions targets",
+    "topk": 5,
+    "alpha": 0.6,
+    "semantic": false
+  },
+  "seeds": {
+    "PYTHONHASHSEED": "0",
+    "SEED": "42",
+    "PROVIDER": "local"
+  }
+}

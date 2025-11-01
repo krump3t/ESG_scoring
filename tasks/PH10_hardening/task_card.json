@@ -1,0 +1,20 @@
+{
+  "id": "PH10-parse-evidence-auth",
+  "phase": "PH10_hardening",
+  "objective": "Verify parsing authenticity (pdf_sha256, char_span), evidence >=2 per theme, rubric checksum; parity presence; determinism n=3.",
+  "gates": [
+    "evidence_gate",
+    "parity_present",
+    "determinism_contract"
+  ],
+  "inputs": [
+    "rubrics/esg_rubric_schema_v3.json",
+    "artifacts/demo/mvp_run/*"
+  ],
+  "artifacts_out": [
+    "artifacts/context_report/*",
+    "artifacts/demo/mvp_run/*"
+  ],
+  "status": "pending",
+  "created_at": 1762018281
+}

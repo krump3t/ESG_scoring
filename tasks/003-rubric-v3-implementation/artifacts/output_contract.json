@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "phase": "context",
+  "task_id": "esg-evaluation",
+  "AUTO": 2,
+  "SAFE_MODE": "on",
+  "DRY_RUN": "off",
+  "tools_available": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "ruff",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_thresholds": {
+    "coverage_line_branch": 0.95,
+    "mypy_strict": 0,
+    "ccn_max": 10,
+    "cognitive_max": 15,
+    "doc_coverage": 0.95
+  },
+  "gates": {
+    "workspace": "unknown",
+    "context": "pass",
+    "tdd": "unknown",
+    "coverage_cp": "unknown",
+    "types_cp": "unknown",
+    "complexity": "unknown",
+    "docs_cp": "unknown",
+    "security": "unknown",
+    "hygiene": "unknown",
+    "authenticity": "unknown",
+    "performance": "unknown",
+    "fuzz": "unknown",
+    "data_integrity": "unknown",
+    "traceability": "unknown"
+  },
+  "cp_coverage": {
+    "line": 0.0,
+    "branch": 0.0
+  },
+  "deliverables": [],
+  "validation_artifacts": [],
+  "run": {
+    "run_id": "66adf5e6",
+    "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine",
+    "log": "qa/run_log.txt",
+    "manifest": "artifacts/run_manifest.json",
+    "events": "artifacts/run_events.jsonl"
+  },
+  "next_actions": [
+    "Proceed to Phase 1 - TDD implementation"
+  ]
+}

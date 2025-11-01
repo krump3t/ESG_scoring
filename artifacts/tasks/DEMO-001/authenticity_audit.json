@@ -1,0 +1,12 @@
+{
+  "generated_at": "2025-10-27T19:54:29Z",
+  "cp_files": [
+    "apps/pipeline/score_flow.py",
+    "agents/scoring/evidence_aggregator.py",
+    "agents/scoring/parity_validator.py"
+  ],
+  "placeholder_scan": [],
+  "rubric_source": "rubrics/maturity_v3.json",
+  "rubric_exists": true,
+  "rubric_json_valid": true
+}

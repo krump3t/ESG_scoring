@@ -1,0 +1,5159 @@
+{
+  "files": [
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "demo_oil_gas_scoring.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "demo_real_scoring.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "demo_simple_scoring.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "diagnose_quality_issues.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "evaluate_real_reports.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "fetch_real_reports.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "generate_headlam_report.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "mcp_report_fetcher.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "run_authenticity_audit_OLD_MD_DEPRECATED.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "run_authenticity_audit_v2_OLD_MD_DEPRECATED.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "test_real_pipeline.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "test_response_quality.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "bm25"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\rank_bm25.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\_hypothesis_ftz_detector.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\adbc_driver_duckdb\\dbapi.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\adbc_driver_duckdb\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\attr\\_make.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\click\\parser.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\coverage\\results.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\coverage\\templite.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\dateutil\\parser\\_parser.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\dateutil\\tz\\tz.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\filesystem.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\polars_io.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\udf.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\_dbapi_type_object.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\_version.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\__init__.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\conf.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\context.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\exception.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\_globals.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\catalog.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\column.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\conf.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\dataframe.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\functions.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\readwriter.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\session.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\types.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\experimental\\spark\\sql\\type_utils.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\func\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\functional\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\query_graph\\__main__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\sqltypes\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\typing\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\duckdb\\value\\constant\\__init__.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\h11\\_headers.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\h11\\_state.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\httpcore\\_async\\http11.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\httpcore\\_sync\\http11.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\httpx\\_models.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\core.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\_settings.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\extra\\array_api.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\extra\\numpy.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\internal\\conjecture\\datatree.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\internal\\conjecture\\pareto.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\strategies\\_internal\\core.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\strategies\\_internal\\datetime.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\strategies\\_internal\\regex.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\strategies\\_internal\\strategies.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\hypothesis\\strategies\\_internal\\strings.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_botocore\\session.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_botocore\\docs\\bcdoc\\docstringparser.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\client.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\deployments.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models_manager.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\href_definitions.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\metanames.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\models.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\pipelines.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\repository.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\wml_client_error.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\deployment\\base_deployment.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\deployment\\batch.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\deployment\\web_service.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\autoai.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\engines\\rag_engine.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\engines\\service_engine.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\engines\\wml_engine.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\optimizers\\local_auto_pipelines.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\optimizers\\rag_optimizer.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\autoai\\runs\\auto_pipelines_runs.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\experiment\\fm_tune\\tune_runs.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\embeddings\\base_embeddings.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\embeddings\\embeddings.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\embeddings\\sentence_transformer_embeddings.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\embeddings\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "tfidf",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\chunker\\hybrid_semantic_chunker.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\chunker\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\pattern\\default_inference_service_milvus.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\pattern\\default_inference_service_milvus_deployment.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\pattern\\pattern.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\pattern\\pattern_assets.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\pattern\\prompt_builder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\retriever\\retriever.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\base_vector_store.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\langchain_vector_store_adapter.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\vector_store.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\vector_store_connector.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\__init__.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\adapters\\db2_adapter.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\adapters\\es_adapter.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\adapters\\es_utils.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\adapters\\milvus_adapter.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\extensions\\rag\\vector_stores\\adapters\\milvus_utils.py",
+      "stores": [
+        "milvus"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\ilab\\helper.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\rerank\\rerank.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\rerank\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid",
+        "rerank"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\schema\\_api.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\utils\\enums.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\utils\\utils.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\utils\\vector_indexes.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\foundation_models\\utils\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\gateway\\gateway.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\gateway\\models.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\helpers\\connections\\connections.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\helpers\\connections\\flight_service.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\base_constants.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepository\\hybrid_model_artifact.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepository\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\hybrid_artifact_loader.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\hybrid_pipeline_model_artifact.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\hybrid_pipeline_model_loader.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\hybrid_pipeline_model_reader.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\ml_repository_artifact.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryartifact\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryclient\\model_adapter.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\libs\\repo\\mlrepositoryclient\\model_collection.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\utils\\utils.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\utils\\autoai\\enums.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\utils\\autoai\\knowledge_base.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\ibm_watsonx_ai\\utils\\autoai\\utils.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\numpy\\distutils\\mingw32ccompiler.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\f2py\\crackfortran.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\lib\\_arraypad_impl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\lib\\_function_base_impl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\lib\\_npyio_impl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\linalg\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\matrixlib\\defmatrix.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_core\\tests\\test_dtype.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_core\\tests\\test_overrides.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_core\\tests\\test_umath_accuracy.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_typing\\_array_like.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_typing\\_dtype_like.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\numpy\\_utils\\_inspect.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\packaging\\version.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\conftest.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\compat\\_optional.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\apply.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\arraylike.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\base.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\config_init.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\frame.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\generic.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\resample.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\series.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\arrays\\base.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\arrays\\arrow\\array.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\arrays\\arrow\\extension_types.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\array_algos\\masked_reductions.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\array_algos\\replace.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\dtypes\\cast.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\groupby\\generic.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\groupby\\groupby.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\groupby\\indexing.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\groupby\\ops.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\indexes\\multi.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\indexes\\period.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\interchange\\dataframe_protocol.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\internals\\array_manager.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\internals\\blocks.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\internals\\concat.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\internals\\managers.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\reshape\\reshape.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\core\\window\\rolling.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\api.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\orc.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\parquet.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\pickle.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\pytables.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\spss.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\stata.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\excel\\_base.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\formats\\format.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\formats\\html.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\formats\\style.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\formats\\style_render.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\json\\_normalize.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\parsers\\c_parser_wrapper.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\plotting\\_core.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\plotting\\_matplotlib\\boxplot.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\test_multilevel.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\api\\test_api.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\arrays\\interval\\test_interval_pyarrow.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\copy_view\\test_core_functionalities.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\copy_view\\test_indexing.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\copy_view\\test_internals.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\extension\\base\\methods.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\test_reductions.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\test_stack_unstack.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\test_subclass.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\indexing\\test_indexing.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\indexing\\test_xs.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_asof.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_astype.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_dropna.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_drop_duplicates.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_duplicated.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_explode.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_fillna.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_first_and_last.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\frame\\methods\\test_value_counts.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\test_apply.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\test_groupby.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\test_grouping.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\test_raises.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\aggregate\\test_aggregate.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\groupby\\methods\\test_value_counts.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexes\\test_setops.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexes\\datetimes\\test_setops.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexes\\timedeltas\\test_setops.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexing\\test_coercion.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexing\\multiindex\\test_indexing_slow.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\indexing\\multiindex\\test_setitem.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_common.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_fsspec.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_gcs.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_html.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_http_headers.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\test_parquet.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\excel\\test_writers.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_bar.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_format.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_highlight.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_matplotlib.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_non_unique.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_style.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\formats\\style\\test_to_latex.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\parser\\test_network.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\parser\\usecols\\test_usecols_basic.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\io\\pytables\\test_append.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\resample\\test_period_index.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\reshape\\test_get_dummies.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\series\\methods\\test_asof.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\strings\\test_api.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\tools\\test_to_datetime.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\tseries\\offsets\\test_offsets.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\tests\\window\\test_groupby.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pandas\\util\\_validators.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_internal\\resolution\\resolvelib\\resolver.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_internal\\utils\\compat.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_vendor\\typing_extensions.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_vendor\\chardet\\hebrewprober.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_vendor\\distro\\distro.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\filters\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\abc.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\recipes.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pluggy\\_hooks.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pluggy\\_manager.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\conftest.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\dataset.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\feather.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\pandas_compat.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\interchange\\dataframe.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\parquet\\core.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\parquet\\encryption.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\conftest.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\pandas_examples.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_acero.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_dataset.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_dataset_encryption.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_extension_type.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_flight.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_fs.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\test_pandas.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\common.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\conftest.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\encryption.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_basic.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_compliant_nested_type.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_dataset.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_data_types.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_datetime.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_encryption.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_metadata.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_pandas.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_parquet_file.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\test_parquet_writer.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pyarrow\\tests\\parquet\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pydantic\\types.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pydantic\\v1\\class_validators.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pydantic\\v1\\types.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\filters\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\algebra.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\apdlexer.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\arturo.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\esoteric.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\factor.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\fortran.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\graph.py",
+      "stores": [
+        "neo4j"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\lisp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\macaulay2.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\maple.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\matlab.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\modula2.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\ncl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\perl.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\prql.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\ride.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\scripting.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\verification.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_cl_builtins.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_cocoa_builtins.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_lasso_builtins.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_mysql_builtins.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_php_builtins.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pygments\\lexers\\_qlik_builtins.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pymupdf\\extra.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pymupdf\\mupdf.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pymupdf\\table.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pymupdf\\_apply_pages.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pymupdf\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\pytz\\lazy.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\pytz\\__init__.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\command\\easy_install.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_vendor\\ordered_set.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_vendor\\typing_extensions.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_resources\\abc.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\sortedcontainers\\sortedset.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\_pytest\\cacheprovider.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\_pytest\\fixtures.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\_pytest\\main.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": ".venv\\Lib\\site-packages\\_pytest\\python.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\batch\\batch_processor.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\crawler\\mcp_crawler.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\crawler\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "agents\\crawler\\extractors\\enhanced_pdf_extractor.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\crawler\\writers\\parquet_writer.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\crawler\\writers\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "agents\\embedding\\watsonx_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "agents\\embedding\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\normalizer\\mcp_normalizer.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\query\\cache_manager.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\query\\orchestrator.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\retrieval\\parquet_retriever.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\retrieval\\__init__.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "agents\\scoring\\characteristic_matcher.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\scoring\\mcp_scoring.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "agents\\scoring\\parity_validator.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\storage\\bronze_writer.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\storage\\duckdb_manager.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "agents\\storage\\silver_normalizer.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "apps\\pipeline_orchestrator.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "apps\\api\\main.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "apps\\api\\metrics.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "apps\\index\\retriever.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "apps\\index\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "apps\\ingestion\\validator.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "apps\\pipeline\\demo_flow.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "apps\\pipeline\\score_flow.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "apps\\scoring\\pipeline.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "apps\\scoring\\wx_client.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "artifacts\\release_multi_local_deterministic\\generate_llm_reports.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "artifacts\\release_multi_local_deterministic\\llm_implementation\\generate_llm_reports.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "iceberg\\tables\\gold_schema.py",
+      "stores": [
+        "astra",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "iceberg\\tables\\silver_schema.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "infrastructure\\main.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "infrastructure\\config\\environment.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "infrastructure\\health\\check_all.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "integrations\\__init__.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "libs\\analytics\\duck.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "libs\\analytics\\parity_util.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "libs\\analytics\\prefilter.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "libs\\analytics\\__init__.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\config\\integration_flags.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\data_lake\\duckdb_reader.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\data_lake\\parquet_writer.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\embedding\\deterministic_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\embedding\\watsonx_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\llm\\watsonx_client.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\llm\\watsonx_client_improved.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "libs\\models\\esg_metrics.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\cross_encoder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "crossencoder",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\cross_encoder_ranker.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\hybrid.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\lexical.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "crossencoder",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\real_cross_encoder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf",
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "libs\\ranking\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\hybrid_retriever.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\hybrid_semantic.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "libs\\retrieval\\parity_checker.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\retrieval\\parquet_retriever.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\semantic_retriever.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "libs\\retrieval\\semantic_wx.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\retrieval\\silver_locator.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\vector_index.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\embeddings\\deterministic_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\embeddings\\factory.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\embeddings\\watsonx_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\embeddings\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\vector_backends\\astradb_store.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\retrieval\\vector_backends\\factory.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\storage\\astradb_graph.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "libs\\storage\\astradb_vector.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": "libs\\utils\\env.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "libs\\utils\\io.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "libs\\wx\\wx_client.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "mcp_server\\data_access.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "mcp_server\\data_access_local.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "mcp_server\\orchestrator.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "mcp_server\\handlers\\explainability_handler.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "mcp_server\\handlers\\query_handler.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "pipelines\\airflow\\dags\\esg_scoring_dag.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\aggregate_output_contract.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "scripts\\alignment_audit.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\bronze_to_silver.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "scripts\\build_enriched_docs.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\compute_embeddings.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\context_report_assembler.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf",
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "scripts\\context_scan.py",
+      "stores": [
+        "astra",
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\cp_gates_sanity.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\create_astradb_collections.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\create_real_bronze_data.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\create_task_contexts.py",
+      "stores": [
+        "astra",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\create_test_bronze_data.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\data_inventory.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\demo_b_full_pipeline.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\demo_matrix.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\demo_mcp_server_e2e.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\dev_seed.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\duckdb_checks.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\edgar_validate.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\embed_and_index.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "scripts\\emit_summary_md.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\fix_task_compliance.py",
+      "stores": [
+        "astra",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\fix_task_compliance_ascii.py",
+      "stores": [
+        "astra",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\generate_esg_analysis.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\generate_llm_reports.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset",
+        "evidence subset"
+      ],
+      "path": "scripts\\generate_nl_report.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "scripts\\generate_structure_snapshot.py",
+      "stores": [
+        "astra",
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\ingest_company.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\ingest_esg_corpus.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\ingest_real_companies.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\ingest_single_doc.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\load_embeddings_to_astradb.py",
+      "stores": [
+        "astra",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence"
+      ],
+      "path": "scripts\\observability_audit.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\orchestrate.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\pdf_to_silver.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\phase3_regenerate_artifacts.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\refresh_gold_lite.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf",
+        "embedding",
+        "hybrid",
+        "crossencoder",
+        "rerank"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset",
+        "evidence subset"
+      ],
+      "path": "scripts\\retrieval_scanner.py",
+      "stores": [
+        "astra",
+        "faiss",
+        "duckdb",
+        "parquet",
+        "weaviate",
+        "milvus",
+        "neo4j"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "scripts\\run_e2e_cold_start.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\run_matrix.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\run_scoring.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\score_silver_evidence.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\scoring_gate_audit.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\semantic_fetch_replay.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\test_bronze_extraction.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "scripts\\test_connections.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\test_lse_report.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "scripts\\test_lse_report_sca_compliant.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\verify_nl_report.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "scripts\\verify_scoring_authenticity.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "crossencoder",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "scripts\\cp\\compare_esg_analysis.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "scripts\\qa\\audit_rubric_conformance.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence"
+      ],
+      "path": "scripts\\qa\\authenticity_audit.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "src\\probe.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "src\\orchestration\\mvp_graph.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "src\\tools\\mcp_client.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tasks\\007-tier2-data-providers\\qa\\phase2_integration_test.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tasks\\DEMO-001-multi-source-e2e\\scripts\\check_env_live.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tasks\\DEMO-001-multi-source-e2e\\scripts\\edgar_validate.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tasks\\DEMO-001-multi-source-e2e\\scripts\\run_demo_live.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tasks\\LSE-HEADLAM-2025\\scripts\\edgar_validate.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tasks\\LSE-HEADLAM-2025\\scripts\\ingest_headlam.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tasks\\LSE-HEADLAM-2025\\scripts\\run_headlam_live.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tasks\\LSE-HEADLAM-2025\\scripts\\run_headlam_offline.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tasks\\LSE-HEADLAM-2025\\tests\\test_headlam_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\test_api_score_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_authenticity_audit.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_crawler_agent.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\test_datetime_remediation.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\test_demo_flow_semantic_fusion.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_gold_schema.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\test_graph_store.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_infrastructure.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "tests\\test_integration.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "tests\\test_naming_api_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\test_parity_gate.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "tests\\test_phase4_integration.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_phase_5_7_remediation.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\test_rubric_contract.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\test_silver_schema.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\test_smoke_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\test_validation.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\test_vector_store.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\agents\\scoring\\test_parity_validator.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\analytics\\test_prefilter_edge_cases_cp.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\api\\test_coverage_lift_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\api\\test_demo_functional_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\api\\test_error_paths_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\api\\test_score_api_contract_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\api\\test_score_api_semantic_cp.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\apps\\pipeline\\test_score_flow.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\authenticity\\test_determinism_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\authenticity\\test_parity_gate_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\authenticity\\test_parquet_retriever.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\authenticity\\test_rubric_compliance_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\authenticity\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\batch\\test_batch_processor.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\cp\\test_alignment_audit.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\cp\\test_cp_gates.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\cp\\test_pdf_to_silver.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\cp\\test_silver_locator.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\crawler\\test_multi_source_crawler_phase2.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\crawler\\test_sec_edgar_provider_enhanced.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\data_lake\\test_duckdb_reader_phase4.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\data_lake\\test_parquet_writer_phase4.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\demo\\test_demo_flow_coverage_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\demo\\test_demo_flow_coverage_cp_extra.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\demo\\test_demo_flow_coverage_cp_finalize.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\demo\\test_demo_flow_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\demo\\test_demo_flow_cp_edge_branches.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\demo\\test_demo_flow_cp_sonnet_finalize.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\determinism\\test_output_hash_stable.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\e2e\\test_lse_healthcare_e2e.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\embedding\\test_watsonx_embedder.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\embedding\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\extraction\\test_pdf_text_extractor_phase3b.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\extraction\\test_structured_extractor_phase3.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\infrastructure\\conftest.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\infrastructure\\test_cloud_connectivity.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\infrastructure\\test_dependency_lock_cp.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\infrastructure\\test_docker_services.py",
+      "stores": [
+        "astra",
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity"
+      ],
+      "path": "tests\\integration\\test_api_real_components.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset",
+        "evidence subset"
+      ],
+      "path": "tests\\integration\\test_ar001_e2e_pipeline.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\integration\\test_e2e_pipeline_phase5.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\integration\\test_embeddings_real.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\integration\\test_evidence_storage_pipeline.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\integration\\test_integration_flags_cp.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\integration\\test_lse_healthcare_report.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\integration\\test_watsonx_integration.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\metrics\\test_demo_metrics_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\models\\test_esg_metrics.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\phase5\\test_semantic_retriever.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "tests\\phase5b\\test_hybrid_with_prefilter.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "tests\\phase5c\\test_hybrid_ranking_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "tests\\phase5c\\test_integration_compare_esg_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [],
+      "path": "tests\\phase5c\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf",
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "tests\\phase5d\\test_hybrid_with_real_lexical_cp.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "bm25",
+        "tfidf"
+      ],
+      "parity": [],
+      "path": "tests\\phase5d\\test_lexical_scorers_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25"
+      ],
+      "parity": [],
+      "path": "tests\\phase5d\\__init__.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "bm25",
+        "hybrid",
+        "crossencoder"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\phase6b\\test_e2e_pipeline_cp.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\pipeline\\test_embed_index_cli_cp.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\query\\test_cache_manager.py",
+      "stores": [
+        "duckdb"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\query\\test_orchestrator.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "crossencoder"
+      ],
+      "parity": [],
+      "path": "tests\\ranking\\test_cross_encoder_edge_cases_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "rerank"
+      ],
+      "parity": [],
+      "path": "tests\\ranking\\test_cross_encoder_ranker.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding",
+        "crossencoder",
+        "rerank"
+      ],
+      "parity": [],
+      "path": "tests\\ranking\\test_real_cross_encoder_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "parity"
+      ],
+      "path": "tests\\retrieval\\test_hybrid_semantic_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "hybrid"
+      ],
+      "parity": [
+        "topk_vs_evidence",
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\retrieval\\test_parity_invariant_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\retrieval\\test_parquet_retriever.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding",
+        "hybrid"
+      ],
+      "parity": [
+        "parity",
+        "subset"
+      ],
+      "path": "tests\\retrieval\\test_semantic_wx.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\retrieval\\test_vector_index_cp.py",
+      "stores": []
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\retrieval\\test_watsonx_adapter_types_cp.py",
+      "stores": [
+        "astra"
+      ]
+    },
+    {
+      "methods": [
+        "embedding"
+      ],
+      "parity": [],
+      "path": "tests\\scoring\\test_characteristic_matcher.py",
+      "stores": []
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\storage\\test_bronze_writer.py",
+      "stores": [
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [
+        "subset"
+      ],
+      "path": "tests\\storage\\test_duckdb_manager.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    },
+    {
+      "methods": [],
+      "parity": [],
+      "path": "tests\\storage\\test_silver_normalizer.py",
+      "stores": [
+        "duckdb",
+        "parquet"
+      ]
+    }
+  ],
+  "root": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine",
+  "summary": {
+    "methods": [
+      "embedding",
+      "bm25",
+      "hybrid",
+      "rerank",
+      "tfidf",
+      "crossencoder"
+    ],
+    "parity": [
+      "topk_vs_evidence",
+      "parity",
+      "subset",
+      "evidence subset"
+    ],
+    "stores": [
+      "astra",
+      "duckdb",
+      "parquet",
+      "milvus",
+      "neo4j",
+      "faiss",
+      "weaviate"
+    ]
+  }
+}

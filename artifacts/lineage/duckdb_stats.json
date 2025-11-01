@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-10-24T20:50:00Z",
+  "verification": "parity_passed",
+  "documents": {
+    "document_count": 27,
+    "embedding_count": 27,
+    "text_statistics": {
+      "min_length": 77,
+      "median_length": 2893,
+      "max_length": 5710
+    },
+    "latest_published_at": "2025-10-24T20:06:09.308054+00:00"
+  },
+  "distribution": {
+    "company_distribution": {
+      "LSE": 27
+    },
+    "theme_distribution": {
+      "general": 27
+    }
+  }
+}

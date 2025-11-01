@@ -1,0 +1,273 @@
+{
+  "company": "Headlam Group Plc",
+  "trace_id": "sha256:62a7530dbae86fa1",
+  "scores": {
+    "TSP": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "The \nCompany will follow a ‘true’ Net Zero strategy whereby it will focus on actual \ndecarbonisation in achieving these targets and only consider offsetting \nactions for the residual 10%.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "We will continue to use a science-based \napproach and have aligned our Scope 1 & 2 target to our Scope 3 timescales.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "It should be read as part of the full report which \nincludes the Group’s key decarbonisation actions to reach Net Zero and reduce its contribution to climate change, together \nwith KPIs and targets to measure progress.",
+          "page": 18,
+          "doc_id": "LSE_HEAD_2025_p18",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Targets used by \nthe organisation to \nmanage climate-\nrelated risks and \nopportunities and \nperformance against \ntargets\nThe Group’s Scope 1, 2 and 3 targets are aligned and set to be net zero by 2040.",
+          "page": 22,
+          "doc_id": "LSE_HEAD_2025_p22",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "OSP": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "E\n \nEnvironmental\nS\n \nSocial\nG\n \nGovernance\nPriorities\na.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Review and develop \nESG data and reporting \ncapability to create \nharmonised ESG dashboard \nand confirm requirements for \nnew ERP Programme\nHeadlam Group PLC March 2025\n02\nSustainability Report",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "During the trial this service has been provided free to our customers to encourage \nthem to bring back uplifted flooring (post-consumer waste), off cuts (post \nindustrial waste), underlay, vinyl, LVT, laminate, packaging (plastics & cardboard) \nand general waste.",
+          "page": 6,
+          "doc_id": "LSE_HEAD_2025_p6",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "It also refers to and \ncomplements our Speak Up policy which ensures that our colleagues know how \nto confidentially raise whistleblowing concerns which are seen directly by our \nAudit Committee Chair.",
+          "page": 8,
+          "doc_id": "LSE_HEAD_2025_p8",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Our in-person \nEmployee Forums are attended by our CEO and Karen \nHubbard (Non Executive Director) who reports back to the \nBoard on ideas, suggestions and obstacles raised by our \ncolleagues.",
+          "page": 10,
+          "doc_id": "LSE_HEAD_2025_p10",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "DM": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "The new ERP implementation \nprogramme means we will \nbe reviewing several systems \nacross the business and \nhave the opportunity to \ninfluence the data that will \nbe collected\nProgress made\na.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "ESG standards and \nassurances form part of the \nnew product introduction \nprocess for own brand \nproducts.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "ESG Director has contributed \nto the appropriate ERP \nrequirements workshops\nOutlook\na.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "We maintained our ISO 45001 standards throughout 2024 \nwith successful audits of four of our key sites.",
+          "page": 9,
+          "doc_id": "LSE_HEAD_2025_p9",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "We remain members of SEDEX and require all suppliers \nmanufacturing products under a Headlam brand to \nundergo an independent audit, every two years, using the \nSMETA format, covering human rights, health & safety, \nenvironment & business ethics.",
+          "page": 16,
+          "doc_id": "LSE_HEAD_2025_p16",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "GHG": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "As we open new sites \n(Rayleigh and Trade \nCounters) we should \ncontinuously improve their \nenergy efficiency and \nminimise carbon emissions\nProgress made\na.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Scope 3 targets now set \nenabling focused planning\nb.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Scope 3 targets \nhave been set and agreed\nb.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Scope 3 actions plans \ndefined in 2025, continue \nto inform and educate \nbuying and supply teams on \nresponsible sourcing best \npractices\nb.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Reducing our Carbon Emissions\nWe continued throughout 2024 to deliver against our carbon reduction \ntarget timeline and have now set our target and timescale for Scope 3.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "RD": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "Sustainability \nReport\nMarch 2025\nHeadlam Group Plc\nCompany number: 00460129",
+          "page": 1,
+          "doc_id": "LSE_HEAD_2025_p1",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Systems and reporting \nrequirements\nWhy we have chosen them\na.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Take-back Scheme\nWe stated in our 2023 report that we would introduce a full take-back and \nrecycling scheme and in May 2024 we launched this facility to our Mercado \nNorthampton trade counter customers.",
+          "page": 6,
+          "doc_id": "LSE_HEAD_2025_p6",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "The Group continues to use the most sustainable sources \nfor packaging ensuring the products’ integrity remains \nduring transit to avoid damage and unnecessary waste.",
+          "page": 7,
+          "doc_id": "LSE_HEAD_2025_p7",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Headlam Group PLC March 2025\n06\nSustainability Report",
+          "page": 7,
+          "doc_id": "LSE_HEAD_2025_p7",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "EI": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "In addition, \nthe facilities which operate under solar have seen on average 32.5% reduction \nin energy costs against the comparative periods in 2023.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "We will \ncontinue to review ways to further reduce our consumption and invest in \nrenewable energy solutions whenever possible.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "E\n \nEnvironmental\n1\t\nData used May 24 to Dec 24 compared to same period in 2023, as Solar operational from \nMay 2024.",
+          "page": 4,
+          "doc_id": "LSE_HEAD_2025_p4",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Through our Sustainable by Design programme, we \nlook at renewable materials first and incorporate these \nwherever possible, many of which can be found in our \nflagship brand, Crucial Trading.",
+          "page": 7,
+          "doc_id": "LSE_HEAD_2025_p7",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Where non-renewable raw materials are used, we \nencourage the inclusion of recycled materials and are \ndeveloping our products to be easier and more recyclable \nat end of life.",
+          "page": 7,
+          "doc_id": "LSE_HEAD_2025_p7",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    },
+    "RMM": {
+      "score": 2,
+      "evidence": [
+        {
+          "quote": "We have created \nthis programme to help increase this valuable skill set in the \nmarket for the long term sustainability of the industry and \nwe envisage this programme growing over time.",
+          "page": 2,
+          "doc_id": "LSE_HEAD_2025_p2",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "To meet the long-term \nambition of creating a \ncircular product cycle we \nmust act now to engineer \nproducts to use more \nrecycled material and be \nrecyclable at end of life\nb.",
+          "page": 3,
+          "doc_id": "LSE_HEAD_2025_p3",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "We continually focus on making Headlam a \ngreat place to work, and ensure colleagues share in the Group’s long-term success.",
+          "page": 8,
+          "doc_id": "LSE_HEAD_2025_p8",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "In 2024 most of our colleagues were \npermanent workers with temporary workers making up approx.",
+          "page": 8,
+          "doc_id": "LSE_HEAD_2025_p8",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        },
+        {
+          "quote": "Temporary workers are primarily engaged \nto manage peaks in work, cover long term absences or support through period of \ntransition during business change projects.",
+          "page": 8,
+          "doc_id": "LSE_HEAD_2025_p8",
+          "pdf_hash": "6a1dd9269c1cbba0"
+        }
+      ],
+      "frameworks": [],
+      "boost_applied": false,
+      "confidence": 0.7,
+      "freshness_penalty": 0.0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "PH11-hybrid-offline",
+  "phase": "PH11_hybrid",
+  "objective": "Introduce deterministic hybrid (bm25+emb_hash) and produce fused_topk + parity report with retrieval disclosure.",
+  "gates": [
+    "parity_present",
+    "retrieval_disclosure"
+  ],
+  "inputs": [
+    "artifacts/demo/mvp_run/run_manifest.json",
+    "artifacts/demo/mvp_run/topk_vs_evidence.json"
+  ],
+  "artifacts_out": [
+    "artifacts/demo/mvp_run/hybrid/hybrid_topk.json",
+    "artifacts/demo/mvp_run/hybrid/hybrid_parity_report.json"
+  ],
+  "status": "pending",
+  "created_at": 1762018281
+}

@@ -1,0 +1,19 @@
+{
+  "alpha": 0.6,
+  "company": "Headlam Group PLC",
+  "evidence_doc_ids": [
+    "LSE_HEAD_2025"
+  ],
+  "fused_top_k": [
+    {
+      "doc_id": "LSE_HEAD_2025",
+      "score": 0.0
+    }
+  ],
+  "k": 20,
+  "parity_ok": true,
+  "query": "ESG climate strategy and GHG emissions targets",
+  "timestamp": 1700000000.0,
+  "trace_id": "sha256:7ce3498f952a1f8a",
+  "year": 2025
+}

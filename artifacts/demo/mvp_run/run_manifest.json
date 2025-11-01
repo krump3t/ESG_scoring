@@ -1,0 +1,14 @@
+{
+  "company_id": "TSLA",
+  "query": "Score sustainability maturity per rubric themes with citations.",
+  "year": 2023,
+  "nodes": [
+    "ingest",
+    "extract",
+    "retrieve",
+    "quote",
+    "score",
+    "verify",
+    "emit"
+  ]
+}

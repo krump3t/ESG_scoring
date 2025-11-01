@@ -1,0 +1,14 @@
+{
+  "company": "JPMorgan Chase & Co.",
+  "determinism_seed": 42,
+  "doc_id": "JPM_2023",
+  "hashes": [
+    "8bf28e6cd8f7cbb8d9dd2b39c2cb353c93df384590c60fa5b7c729e0c660d405",
+    "8bf28e6cd8f7cbb8d9dd2b39c2cb353c93df384590c60fa5b7c729e0c660d405",
+    "8bf28e6cd8f7cbb8d9dd2b39c2cb353c93df384590c60fa5b7c729e0c660d405"
+  ],
+  "identical": true,
+  "pythonhashseed": 0,
+  "runs": 3,
+  "year": 2023
+}

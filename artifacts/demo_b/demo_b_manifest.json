@@ -1,0 +1,56 @@
+{
+  "run_id": "demo-b-20251027-071020",
+  "timestamp": "2025-10-27T07:10:24.925360+00:00",
+  "company": {
+    "ticker": "MSFT",
+    "fiscal_year": 2023
+  },
+  "phases": {
+    "phase_0": {
+      "status": "PASS",
+      "checks": {
+        "directories": true,
+        "imports": true,
+        "network": true
+      }
+    },
+    "phase_1": {
+      "status": "PASS",
+      "cik": "0000789019",
+      "company_name": "MSFT",
+      "filing_size": 370832,
+      "content_sha256": "20028937e6977dc2582dae00ebcef56c963a1ccf5d852ca45f6b5b19c8abf469"
+    },
+    "phase_2": {
+      "status": "PASS",
+      "evidence_count": 1,
+      "themes": [
+        "GHG"
+      ]
+    },
+    "phase_3": {
+      "status": "PASS",
+      "records_written": 1,
+      "themes": [
+        "GHG"
+      ]
+    },
+    "phase_4": {
+      "status": "PASS",
+      "silver_files": 3
+    },
+    "phase_5": {
+      "status": "PASS",
+      "total_evidence": 4,
+      "evidence_by_theme": {
+        "GHG": 4
+      }
+    }
+  },
+  "paths": {
+    "bronze": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\bronze",
+    "silver": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\silver",
+    "duckdb": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\evidence.duckdb",
+    "artifacts": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\artifacts\\demo_b"
+  }
+}

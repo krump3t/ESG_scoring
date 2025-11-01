@@ -1,0 +1,6 @@
+{"node": "ingest", "payload": {"documents": 6}, "timestamp": "2025-11-01T16:59:41Z"}
+{"node": "extract", "payload": {"findings": 14}, "timestamp": "2025-11-01T16:59:41Z"}
+{"node": "retrieve", "payload": {"mode": "local", "topk": 3}, "timestamp": "2025-11-01T16:59:41Z"}
+{"node": "quote", "payload": {"evidence": 14}, "timestamp": "2025-11-01T16:59:41Z"}
+{"node": "score", "payload": {"themes": ["DM", "EI", "GHG", "OSP", "RD", "RMM", "TSP"]}, "timestamp": "2025-11-01T16:59:41Z"}
+{"node": "verify", "payload": {"evidence_gate": true, "parity": "PASS", "schema": true}, "timestamp": "2025-11-01T16:59:41Z"}

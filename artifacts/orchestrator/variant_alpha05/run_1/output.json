@@ -1,0 +1,23 @@
+{
+  "run_num": 1,
+  "timestamp": "2025-10-28T06:00:00Z",
+  "status": "ok",
+  "company": "Headlam Group Plc",
+  "year": 2025,
+  "query": "climate strategy and emissions targets",
+  "topk": 5,
+  "alpha": 0.5,
+  "semantic": false,
+  "trace_id": "sha256:985a61bcabc730be",
+  "rubric_version": "3.0",
+  "model_version": "1.0",
+  "theme_count": 7,
+  "parity": {
+    "parity_ok": true,
+    "evidence_ids": [
+      "headlam_2025_page_001_chunk_000",
+      "headlam_2025_page_001_chunk_000"
+    ]
+  },
+  "output_hash": "764ef3ff65eb056fa7fe07c08fd7ea3f42f5c749089440d073bda2f14e747a49"
+}

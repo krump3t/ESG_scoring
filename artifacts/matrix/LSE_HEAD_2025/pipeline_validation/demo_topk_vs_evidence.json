@@ -1,0 +1,16 @@
+{
+  "constraint": "evidence_ids subset_of fused_topk AND (fused_topk non-empty OR no evidence)",
+  "coverage": 1.0,
+  "doc_id": "LSE_HEAD_2025",
+  "evidence_ids": [
+    "LSE_HEAD_2025"
+  ],
+  "fused_nonempty_or_no_evidence": true,
+  "fused_topk_ids": [
+    "LSE_HEAD_2025"
+  ],
+  "notes": "",
+  "passed": true,
+  "subset_ok": true,
+  "themes_covered": 7
+}

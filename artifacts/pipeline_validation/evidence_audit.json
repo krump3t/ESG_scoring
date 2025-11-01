@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-10-28T06:00:00Z",
+  "audit_type": "evidence_distribution",
+  "theme_coverage": {
+    "DM": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "EI": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "GHG": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "OSP": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "RD": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "RMM": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    },
+    "TSP": {
+      "total_evidence": 2,
+      "unique_pages": 0,
+      "pages_used": []
+    }
+  },
+  "summary": {
+    "total_themes": 7,
+    "total_evidence_items": 14
+  }
+}

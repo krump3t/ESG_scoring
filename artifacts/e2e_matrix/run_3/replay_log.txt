@@ -1,0 +1,38 @@
+
+======================================================================
+REPLAY PHASE: Querying msft_2023 (offline, cache-only)
+======================================================================
+
+Integration flags: {'semantic_enabled': True, 'watsonx_enabled': True, 'astradb_enabled': False, 'wx_embeddings': True, 'wx_locator': True, 'wx_edit': True, 'wx_rerank': False, '_comment': 'watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.', 'alpha': 0.6, 'k': 50}
+Query: ESG climate strategy and GHG emissions targets
+Top-K: 50, Alpha: 0.6
+
+Querying msft_2023...
+  Loaded 1 chunks, 1 vectors for msft_2023
+
+Top-10 Results:
+  Rank  1: msft_2023_p1_c0                (score=0.1426)
+            BM25=-0.2747, Semantic=0.7684
+            Text: ns. corporate social responsibility commitment to sustainability microsoft’s app...
+
+
+======================================================================
+Parity Validation (evidence_ids subset of topk)
+======================================================================
+
+{
+  "doc_id": "msft_2023",
+  "constraint": "evidence_ids \u2286 fused_topk",
+  "validated": true,
+  "subset_ok": true,
+  "topk_count": 1,
+  "evidence_count": 1,
+  "missing_count": 0,
+  "missing_ids": [],
+  "notes": ""
+}
+
+======================================================================
+REPLAY PHASE COMPLETE
+======================================================================
+

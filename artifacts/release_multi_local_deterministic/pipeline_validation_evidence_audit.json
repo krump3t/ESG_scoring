@@ -1,0 +1,49 @@
+{
+  "all_themes_passed": false,
+  "doc_id": "msft_2023",
+  "notes": "Some themes have <2 distinct pages",
+  "themes": {
+    "DM": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "EI": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "GHG": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "OSP": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "RD": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "RMM": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    },
+    "TSP": {
+      "evidence_count": 0,
+      "pages": [],
+      "passed": false,
+      "unique_pages": 0
+    }
+  }
+}

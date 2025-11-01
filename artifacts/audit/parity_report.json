@@ -1,0 +1,157 @@
+{
+  "checked_at": "2025-10-27T00:50:09.439571Z",
+  "status": "fail",
+  "reason": "evidence doc_ids absent from fused top-k lists",
+  "evidence_total": 21,
+  "topk_total": 35,
+  "missing_in_topk": 21,
+  "dimensions": [
+    {
+      "dimension": "TSP",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p18",
+        "LSE_HEAD_2025_p22",
+        "LSE_HEAD_2025_p4"
+      ],
+      "topk_doc_ids": [
+        "doc_1",
+        "doc_5",
+        "doc_12",
+        "doc_18",
+        "doc_23"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p18",
+        "LSE_HEAD_2025_p22",
+        "LSE_HEAD_2025_p4"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "OSP",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p10",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p6",
+        "LSE_HEAD_2025_p8"
+      ],
+      "topk_doc_ids": [
+        "doc_2",
+        "doc_7",
+        "doc_11",
+        "doc_16",
+        "doc_22"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p10",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p6",
+        "LSE_HEAD_2025_p8"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "DM",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p16",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p9"
+      ],
+      "topk_doc_ids": [
+        "doc_3",
+        "doc_9",
+        "doc_14",
+        "doc_19",
+        "doc_25"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p16",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p9"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "GHG",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p4"
+      ],
+      "topk_doc_ids": [
+        "doc_4",
+        "doc_8",
+        "doc_13",
+        "doc_17",
+        "doc_21"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p4"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "RD",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p1",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p6",
+        "LSE_HEAD_2025_p7"
+      ],
+      "topk_doc_ids": [
+        "doc_6",
+        "doc_10",
+        "doc_15",
+        "doc_20",
+        "doc_24"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p1",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p6",
+        "LSE_HEAD_2025_p7"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "EI",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p4",
+        "LSE_HEAD_2025_p7"
+      ],
+      "topk_doc_ids": [
+        "doc_7",
+        "doc_11",
+        "doc_16",
+        "doc_22",
+        "doc_26"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p4",
+        "LSE_HEAD_2025_p7"
+      ],
+      "parity_ok": false
+    },
+    {
+      "dimension": "RMM",
+      "evidence_doc_ids": [
+        "LSE_HEAD_2025_p2",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p8"
+      ],
+      "topk_doc_ids": [
+        "doc_5",
+        "doc_12",
+        "doc_18",
+        "doc_23",
+        "doc_27"
+      ],
+      "missing_evidence_doc_ids": [
+        "LSE_HEAD_2025_p2",
+        "LSE_HEAD_2025_p3",
+        "LSE_HEAD_2025_p8"
+      ],
+      "parity_ok": false
+    }
+  ]
+}

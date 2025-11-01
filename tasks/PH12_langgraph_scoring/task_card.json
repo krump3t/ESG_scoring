@@ -1,0 +1,19 @@
+{
+  "id": "PH12-langgraph-scoring",
+  "phase": "PH12_langgraph_scoring",
+  "objective": "Assert LangGraph topology, path determinism, retrieval disclosure, and scoring integrity; emit hybrid scoring diff.",
+  "gates": [
+    "langgraph_topology",
+    "retrieval_disclosure",
+    "determinism_contract"
+  ],
+  "inputs": [
+    "artifacts/context_report/*",
+    "artifacts/demo/mvp_run/*"
+  ],
+  "artifacts_out": [
+    "artifacts/demo/mvp_run/hybrid/hybrid_scoring_diff.json"
+  ],
+  "status": "pending",
+  "created_at": 1762018281
+}

@@ -1,0 +1,127 @@
+{
+  "all_themes_passed": true,
+  "doc_id": "JPM_2023",
+  "notes": "",
+  "themes": {
+    "DM": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "EI": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "GHG": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "OSP": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "RD": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "RMM": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    },
+    "TSP": {
+      "evidence_count": 19,
+      "gate_details": {
+        "min_distinct": true,
+        "min_span": true
+      },
+      "min_span_required": 3,
+      "page_span": 3,
+      "pages": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "passed": true,
+      "unique_pages": 4
+    }
+  },
+  "total_pages": 4
+}

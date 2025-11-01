@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-10-24T20:06:09.389468+00:00",
+  "record_count": 27,
+  "input_files": [
+    "data\\raw\\LSE_HEAD_2025.pdf"
+  ],
+  "output_format": "parquet",
+  "parquet_sha256": null,
+  "schema": {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "theme",
+        "type": "string"
+      },
+      {
+        "name": "sha256",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "string"
+      },
+      {
+        "name": "section",
+        "type": "string"
+      },
+      {
+        "name": "published_at",
+        "type": "string"
+      }
+    ]
+  },
+  "lineage": [
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_0",
+      "sha256": "9aebc3a91c99fa3f6a11908fa2adc54b4c8a5f588a1c28177fd4c02adebb542c"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_1",
+      "sha256": "dc9771658116679333027d7802b88889485d9f4c9b6fbbd0db445f2017f9f1c6"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_10",
+      "sha256": "b00cb974dfd51b147e3f90837afc942fb9577974f0fb5a342f0edcc5b555fc72"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_11",
+      "sha256": "d8f1b7919a3b3f68e179bd1039e3185c515407f853d732c8c8ee747a3168b408"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_12",
+      "sha256": "1116b5a7d957a2ed892996a16438ffac477779a3b0a738d2454176aa46bf6253"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_13",
+      "sha256": "101b740a26308a900051d1a0615aaad1c580e1e2b88da99241a6c68810168a97"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_14",
+      "sha256": "66b42f8d4afd87c02b869f12eeb31fbc09d843de2ca0a3c7e989dd0f529c2289"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_15",
+      "sha256": "e1e63f42f3bb2ed9b6dd959f21c56b0b4d8dac094b68ff4bd4ae53d884da4aee"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_16",
+      "sha256": "db77374db38a4fb6ebf64d5298c75e20f5b3a155e7f6287d3903db6821e684b5"
+    },
+    {
+      "source": "LSE_HEAD_2025.pdf",
+      "company": "LSE",
+      "theme": "general",
+      "record_id": "LSE_HEAD_2025_page_17",
+      "sha256": "dbe0af2d2bdf59ee2b4b51bf408722f15e9a16533db5cf1b8aad531bc17543fb"
+    }
+  ]
+}

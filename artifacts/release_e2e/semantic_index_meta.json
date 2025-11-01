@@ -1,0 +1,11 @@
+{
+  "doc_id": "msft_2023",
+  "model_id": "ibm/slate-125m-english-rtrvr",
+  "vector_dim": 768,
+  "vector_count": 1,
+  "chunk_count": 1,
+  "build_ts": "2025-10-29T03:52:44.955252+00:00",
+  "deterministic_timestamp": "2025-10-28T06:00:00Z",
+  "seed": 42,
+  "text_sha_all": "b735db112ee416ac4cac2a82a8ff9721a128088b89202d2f4d46054162115f74"
+}

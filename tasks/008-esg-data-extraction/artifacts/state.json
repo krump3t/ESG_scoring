@@ -1,0 +1,9 @@
+{
+  "phase": "context",
+  "status": "ok",
+  "task_id": "008-esg-data-extraction",
+  "ts": 1761201108.2618155,
+  "AUTO": 2,
+  "SAFE_MODE": "on",
+  "DRY_RUN": "off"
+}

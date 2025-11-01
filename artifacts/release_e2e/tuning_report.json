@@ -1,0 +1,44 @@
+[
+  {
+    "alpha": 0.4,
+    "k": 30,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.7
+  },
+  {
+    "alpha": 0.4,
+    "k": 50,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.64
+  },
+  {
+    "alpha": 0.6,
+    "k": 30,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.65
+  },
+  {
+    "alpha": 0.6,
+    "k": 50,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.68
+  },
+  {
+    "alpha": 0.8,
+    "k": 30,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.66
+  },
+  {
+    "alpha": 0.8,
+    "k": 50,
+    "status": "ok",
+    "parity_validated": true,
+    "duration_sec": 3.63
+  }
+]

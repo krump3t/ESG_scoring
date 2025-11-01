@@ -1,0 +1,27 @@
+{
+  "run_id": "20251024-152712-fef1a5ce",
+  "session_id": "ee32d95f-a36b-44de-bd5c-7092b3f541e1",
+  "task_id": "013",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\013-unstructured-extraction-phase3b",
+  "phase": "validation",
+  "timestamp": "2025-10-24T15:27:12.076306Z",
+  "tools": [
+    "pytest",
+    "mypy",
+    "lizard",
+    "interrogate",
+    "bandit",
+    "detect-secrets",
+    "pip-audit"
+  ],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "20251024-163608-1300327e",
+  "session_id": "78ac6519-bdd6-405e-8e7b-0f31f75080c1",
+  "task_id": "015",
+  "task_dir": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\tasks\\015-pipeline-integration-phase5",
+  "phase": "snapshot",
+  "timestamp": "2025-10-24T16:36:08.189511Z",
+  "tools": [],
+  "cp_files": [],
+  "data_sources": [],
+  "config": {},
+  "environment": {
+    "AUTO": "2",
+    "SAFE_MODE": "on",
+    "DRY_RUN": "off",
+    "SCA_SKILL_PATH": "C:\\projects\\Work Projects\\sca-protocol-skill",
+    "SCA_CANONICAL_PROTOCOL": ""
+  }
+}

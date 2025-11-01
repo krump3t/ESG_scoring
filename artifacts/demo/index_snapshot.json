@@ -1,0 +1,21 @@
+{
+  "alpha": 0.6,
+  "backend": "in_memory",
+  "dim": 128,
+  "docs": [
+    {
+      "id": "doc_0001",
+      "meta": {
+        "company": "Headlam Group Plc",
+        "doc_id": "doc_0001",
+        "text": "PDF stub: LSE_HEAD_2025_temp.pdf",
+        "year": 2025
+      },
+      "norm": 1.0
+    }
+  ],
+  "index_digest": "c6bc99f06177cc14",
+  "k": 10,
+  "seed": 42,
+  "total_docs": 1
+}

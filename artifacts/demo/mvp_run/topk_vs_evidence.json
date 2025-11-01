@@ -1,0 +1,272 @@
+{
+  "retrieval_mode": "local",
+  "topk": [
+    {
+      "rank": 1,
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "score": 0.97
+    },
+    {
+      "rank": 2,
+      "doc_id": "cdp-apple-2023-climate",
+      "score": 0.95
+    },
+    {
+      "rank": 3,
+      "doc_id": "apple-environmental-progress-2025",
+      "score": 0.93
+    }
+  ],
+  "evidence": [
+    {
+      "char_span": [
+        0,
+        56
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "6e684fa5f8c751d1",
+      "extract_30w": "GHG Protocol Corporate Accounting and Reporting Standard",
+      "org_id": "AAPL",
+      "page": "ghg_emissions.methodology",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "DM",
+      "word_count": 7,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        68
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "f6c798af4b748f2b",
+      "extract_30w": "Third-party limited assurance by Apex Companies, LLC (Scope 1 and 2)",
+      "org_id": "AAPL",
+      "page": "ghg_emissions.verification",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "DM",
+      "word_count": 11,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        49
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "ff65d6dd09238377",
+      "extract_30w": "100% renewable energy for all facilities globally",
+      "org_id": "AAPL",
+      "page": "climate_targets",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "EI",
+      "word_count": 7,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        74
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "8808473a3f1b29fc",
+      "extract_30w": "Over 250 suppliers committed to 100% renewable energy for Apple production",
+      "org_id": "AAPL",
+      "page": "renewable_energy.supplier_renewable_commitment",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "EI",
+      "word_count": 11,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        39
+      ],
+      "doc_id": "apple-environmental-progress-2025",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\test_data\\ground_truth\\apple_2024_sustainability_ground_truth.json",
+      "evidence_id": "eadfe4babf08e14a",
+      "extract_30w": "Net greenhouse gas emissions (14.5 Mmt)",
+      "org_id": "AAPL",
+      "page": null,
+      "pdf_sha256": "fd3816cb5d94bd999f93fc52b666d2bb9755e44e2b9798ef92a91182a3bc9640",
+      "source": "Apple Environmental Progress Report 2025 ground truth",
+      "theme_code": "GHG",
+      "word_count": 6,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        50
+      ],
+      "doc_id": "apple-environmental-progress-2025",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\test_data\\ground_truth\\apple_2024_sustainability_ground_truth.json",
+      "evidence_id": "f5be185658b75c62",
+      "extract_30w": "Total avoided emissions across all scopes (41 Mmt)",
+      "org_id": "AAPL",
+      "page": null,
+      "pdf_sha256": "fd3816cb5d94bd999f93fc52b666d2bb9755e44e2b9798ef92a91182a3bc9640",
+      "source": "Apple Environmental Progress Report 2025 ground truth",
+      "theme_code": "GHG",
+      "word_count": 8,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        151
+      ],
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\sec_edgar_apple_2023_10k.json",
+      "evidence_id": "7ecf0278bbc863a4",
+      "extract_30w": "The Company's Board of Directors, through its Audit and Finance Committee, provides oversight of the Company's climate-related risks and opportunities.",
+      "org_id": "AAPL",
+      "page": "13-17",
+      "pdf_sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "source": "SEC EDGAR FY2023 10-K (cached)",
+      "theme_code": "OSP",
+      "word_count": 20,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        183
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "05da5c219364d65b",
+      "extract_30w": "Apple's Vice President of Environment, Policy and Social Initiatives reports directly to senior leadership and is responsible for developing and implementing Apple's climate strategy.",
+      "org_id": "AAPL",
+      "page": "governance.management_responsibility",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "OSP",
+      "word_count": 24,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        211
+      ],
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\sec_edgar_apple_2023_10k.json",
+      "evidence_id": "2892a5e7d37f20a5",
+      "extract_30w": "The Company publishes an annual Environmental Progress Report detailing progress toward environmental goals, including greenhouse gas emissions reduction, renewable energy use, and product recycling initiatives.",
+      "org_id": "AAPL",
+      "page": "13-17",
+      "pdf_sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "source": "SEC EDGAR FY2023 10-K (cached)",
+      "theme_code": "RD",
+      "word_count": 25,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        53
+      ],
+      "doc_id": "apple-environmental-progress-2025",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\test_data\\ground_truth\\apple_2024_sustainability_ground_truth.json",
+      "evidence_id": "88cb1172eac5be04",
+      "extract_30w": "Environmental Progress Report 2025 (covering FY 2024)",
+      "org_id": "AAPL",
+      "page": null,
+      "pdf_sha256": "fd3816cb5d94bd999f93fc52b666d2bb9755e44e2b9798ef92a91182a3bc9640",
+      "source": "Apple Environmental Progress Report 2025 ground truth",
+      "theme_code": "RD",
+      "word_count": 7,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        156
+      ],
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\sec_edgar_apple_2023_10k.json",
+      "evidence_id": "f18491f061122e7f",
+      "extract_30w": "The Company's facilities, supply chain, and logistics operations face physical risks from extreme weather events, including flooding, wildfires, and storms.",
+      "org_id": "AAPL",
+      "page": "13-17",
+      "pdf_sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "source": "SEC EDGAR FY2023 10-K (cached)",
+      "theme_code": "RMM",
+      "word_count": 20,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        127
+      ],
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\sec_edgar_apple_2023_10k.json",
+      "evidence_id": "cd126c59bb6208cb",
+      "extract_30w": "Rising temperatures could affect equipment performance and increase cooling costs at the Company's data centers and facilities.",
+      "org_id": "AAPL",
+      "page": "13-17",
+      "pdf_sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "source": "SEC EDGAR FY2023 10-K (cached)",
+      "theme_code": "RMM",
+      "word_count": 17,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        140
+      ],
+      "doc_id": "sec-edgar-apple-2023-10k",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\sec_edgar_apple_2023_10k.json",
+      "evidence_id": "3eeffd54eda2efbd",
+      "extract_30w": "The Company has committed to becoming carbon neutral across its entire business, manufacturing supply chain, and product life cycle by 2030.",
+      "org_id": "AAPL",
+      "page": "13-17",
+      "pdf_sha256": "c71ad9ff3140ddeace9eedcc37fc7c94c9075b5c5bef760aaed61b8a781ae85c",
+      "source": "SEC EDGAR FY2023 10-K (cached)",
+      "theme_code": "TSP",
+      "word_count": 21,
+      "year": 2023
+    },
+    {
+      "char_span": [
+        0,
+        97
+      ],
+      "doc_id": "cdp-apple-2023-climate",
+      "doc_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\crawler_cache\\cdp_apple_2023_climate.json",
+      "evidence_id": "8fa959d435798f50",
+      "extract_30w": "Carbon neutral across entire business, manufacturing supply chain, and product life cycle by 2030",
+      "org_id": "AAPL",
+      "page": "climate_targets",
+      "pdf_sha256": "f12a036cbf237856196c5ec1dd33fcc03af65227d4687fc09b20153ffb2bdf4a",
+      "source": "CDP 2023 Climate Response (cached)",
+      "theme_code": "TSP",
+      "word_count": 14,
+      "year": 2023
+    }
+  ],
+  "parity": {
+    "verdict": "PASS",
+    "coverage": 1.0,
+    "evidence_count": 3,
+    "topk_count": 3,
+    "violations": [],
+    "valid_evidence": [
+      "apple-environmental-progress-2025",
+      "cdp-apple-2023-climate",
+      "sec-edgar-apple-2023-10k"
+    ]
+  }
+}

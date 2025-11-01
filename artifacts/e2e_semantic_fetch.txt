@@ -1,0 +1,30 @@
+
+======================================================================
+FETCH PHASE: Building embeddings for msft_2023
+======================================================================
+
+Integration flags: {'semantic_enabled': True, 'watsonx_enabled': True, 'astradb_enabled': False, 'wx_embeddings': True, 'wx_locator': True, 'wx_edit': True, 'wx_rerank': False, '_comment': 'watsonx.ai integration enabled for retrieval + RD locator + report editing. Semantic retrieval: alpha=0.6 (BM25 weight), k=50 (top-K). Offline replay enforced via WX_OFFLINE_REPLAY=true.', 'alpha': 0.6, 'k': 50}
+
+Building embeddings for msft_2023...
+  Found 3 parquet files for msft_2023
+  Total unique chunks: 1
+  Generating embeddings (model: ibm/slate-125m-english-rtrvr)...
+  Embeddings generated in 0.00s
+  Vector shape: (1, 768) (N=1, D=768)
+  [OK] Chunks metadata: data\index\msft_2023\chunks.parquet
+  [OK] Embeddings: data\index\msft_2023\embeddings.bin
+  [OK] Metadata: data\index\msft_2023\meta.json
+
+======================================================================
+FETCH PHASE COMPLETE
+======================================================================
+
+{
+  "status": "ok",
+  "doc_id": "msft_2023",
+  "vector_count": 1,
+  "chunk_count": 1,
+  "vector_dim": 768,
+  "model_id": "ibm/slate-125m-english-rtrvr",
+  "index_path": "data\\index\\msft_2023"
+}

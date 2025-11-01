@@ -1,0 +1,30 @@
+{
+  "generated_at": "2025-10-27T19:53:59Z",
+  "input": {
+    "org_id": "Apple Inc",
+    "year": 2023,
+    "evidence_source": "tasks/DEMO-001-multi-source-e2e/context/evidence.json"
+  },
+  "runs": [
+    {
+      "run_id": "run-1",
+      "alpha": 0.6,
+      "semantic": 0,
+      "digest": "feb0e9ac279623ec9ef9cba727895f7ba4bc7eac02131ca9d9b0a571873855c5"
+    },
+    {
+      "run_id": "run-2",
+      "alpha": 0.6,
+      "semantic": 0,
+      "digest": "feb0e9ac279623ec9ef9cba727895f7ba4bc7eac02131ca9d9b0a571873855c5"
+    },
+    {
+      "run_id": "run-3",
+      "alpha": 0.7,
+      "semantic": 0,
+      "digest": "a6d7f4f1e694b39c14d20f4f0794d8c81d1a80cb2dae13866f8ea6d7e102bfdd"
+    }
+  ],
+  "identical_repeats": true,
+  "alpha_variant_differs": true
+}

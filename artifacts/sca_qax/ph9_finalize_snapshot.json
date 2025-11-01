@@ -1,0 +1,31 @@
+{
+  "task_id": "PH9-FINALIZE",
+  "phase": "9",
+  "timestamp": "2025-10-25T04:00:23.269817",
+  "status": "completed",
+  "coverage": {
+    "apps_api_main_py": 95.8,
+    "apps_pipeline_demo_flow_py": 84.5,
+    "target": 95.0
+  },
+  "determinism": {
+    "runs": 3,
+    "identical": true,
+    "digest_prefix": "89edbac7fd6901fc"
+  },
+  "parity": {
+    "status": "pass",
+    "parity_ok": true
+  },
+  "tests": {
+    "total_passed": 116,
+    "total_failed": 3,
+    "new_tests": 9
+  },
+  "artifacts": [
+    "artifacts/sca_qax/coverage.xml",
+    "artifacts/sca_qax/determinism_report.json",
+    "artifacts/api/openapi.json",
+    "artifacts/pipeline_validation/demo_topk_vs_evidence.json"
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "company": "AAPL",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  },
+  {
+    "company": "AAPL",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  },
+  {
+    "company": "MSFT",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  },
+  {
+    "company": "MSFT",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  },
+  {
+    "company": "TSLA",
+    "query": "Assess ESG maturity with grounded evidence.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  },
+  {
+    "company": "TSLA",
+    "query": "Score sustainability maturity per rubric themes with citations.",
+    "run_dir": "/mnt/c/projects/Work Projects/ibm-projects/ESG Evaluation/prospecting-engine/artifacts/demo/mvp_run",
+    "overall": 2.5714285714285716,
+    "themes": [
+      "DM",
+      "EI",
+      "GHG",
+      "OSP",
+      "RD",
+      "RMM",
+      "TSP"
+    ],
+    "evidence_gate": true,
+    "parity": "PASS",
+    "retrieval_mode": "local"
+  }
+]

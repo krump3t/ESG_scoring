@@ -1,0 +1,27 @@
+{
+  "agent": "SCA",
+  "determinism": {
+    "pythonhashseed": 0,
+    "seed": 42
+  },
+  "inputs": {
+    "md_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\rubrics\\esg_maturity_rubricv3.md",
+    "md_sha256": "d66f0be7f41b6c1a8286b4dac58cdd116aa2f80b08548462fa1f09d860dafdb7",
+    "schema_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\rubrics\\esg_rubric_schema_v3.json",
+    "schema_sha256": "91d1f8d2406e5c9ff7a4ad1d850f72c94e1e63f9fa510bbeceeded24f7a4c88d"
+  },
+  "outputs": {
+    "json_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\rubrics\\maturity_v3.json",
+    "json_sha256": "48f8460848a61d6d18603a9392f64eed80513ed2a6526755894f92f917888963"
+  },
+  "performance": {
+    "elapsed_ms": 4.01
+  },
+  "protocol_version": "13.8",
+  "timestamp_utc": "2025-10-27T04:46:44.225667+00:00",
+  "tool": "compile_rubric.py",
+  "validation": {
+    "errors": [],
+    "status": "pass"
+  }
+}

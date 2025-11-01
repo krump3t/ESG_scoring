@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-10-24T20:27:37.837685+00:00",
+  "record_count": 27,
+  "model": "ibm/slate-125m-english-rtrvr-v2",
+  "embedding_dim": 768,
+  "parquet_sha256": "30a12f02f9053fee9e365a0cd0cc7ce07f98022b19c2a1b0df903882ef092558",
+  "schema": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "sha256",
+        "type": "string"
+      },
+      {
+        "name": "model",
+        "type": "string"
+      },
+      {
+        "name": "dim",
+        "type": "integer"
+      },
+      {
+        "name": "vector",
+        "type": "array"
+      },
+      {
+        "name": "created_at",
+        "type": "datetime"
+      },
+      {
+        "name": "text_len",
+        "type": "integer"
+      }
+    ]
+  },
+  "lineage": [
+    {
+      "record_id": "LSE_HEAD_2025_page_0",
+      "document_sha256": "9aebc3a91c99fa3f6a11908fa2adc54b4c8a5f588a1c28177fd4c02adebb542c",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 77
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_1",
+      "document_sha256": "dc9771658116679333027d7802b88889485d9f4c9b6fbbd0db445f2017f9f1c6",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 1980
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_2",
+      "document_sha256": "96867665e47294ee42e695cfe8bbf802fce5dc88a0c138a7e091ba75abcf63c9",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 3477
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_3",
+      "document_sha256": "d2a0b8aeaab7b4c012491eb7295edd5a63c39b72e8bc03cc81a0f1523a77ca2c",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 3251
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_4",
+      "document_sha256": "ccf168749972430cf210396d3c61193f87587427e5df00af0f503a67fa025c26",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 1499
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_5",
+      "document_sha256": "e73c6996bae183b3842c4af9e61d09da2d691503ab7cfbfedc0a9c5a33f4ab6d",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 2578
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_6",
+      "document_sha256": "e4375e84170606dc3bfa1491a64a3058a905ffa1c0e6e0a6f92a52ef531a8c77",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 3009
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_7",
+      "document_sha256": "257925d5622de935e93c346e76ed33cc9fd2ffe6d92dc3b44ce7616ccdbfd42f",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 3689
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_8",
+      "document_sha256": "fa7df0869c8fe6e7804f51ac494aeadb78f4adab96d97fbf51fde5b56246f8cd",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 3605
+    },
+    {
+      "record_id": "LSE_HEAD_2025_page_9",
+      "document_sha256": "702e256937bc055f9d3a6aa606cf951498f04aedcb93f7e1687adc8afd2c34d2",
+      "embedding_dim": 768,
+      "model": "ibm/slate-125m-english-rtrvr-v2",
+      "text_length": 5672
+    }
+  ]
+}
