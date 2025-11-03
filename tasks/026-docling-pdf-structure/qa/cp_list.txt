@@ -1,0 +1,7 @@
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\extraction\backend_default.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\extraction\backend_docling.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\extraction\parser_backend.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\extraction\text_clean.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\libs\retrieval\silver_locator.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\alignment_audit.py
+C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\scripts\pdf_to_silver.py

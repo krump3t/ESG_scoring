@@ -1,0 +1,306 @@
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+__________ ERROR collecting tests/cache/test_real_redis_cache_cp.py ___________
+'failure_path' not found in `markers` configuration option
+=========================== short test summary info ===========================
+ERROR tests/cache/test_real_redis_cache_cp.py - Failed: 'failure_path' not fo...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 error in 2.26s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+__________ ERROR collecting tests/cache/test_real_redis_cache_cp.py ___________
+'property' not found in `markers` configuration option
+=========================== short test summary info ===========================
+ERROR tests/cache/test_real_redis_cache_cp.py - Failed: 'property' not found ...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 error in 1.59s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+__ ERROR collecting tests/crawler/data_providers/test_sec_edgar_provider.py ___
+ImportError while importing test module 'C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\crawler\data_providers\test_sec_edgar_provider.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\crawler\data_providers\test_sec_edgar_provider.py:17: in <module>
+    from agents.crawler.data_providers.sec_edgar_provider import SECEdgarProvider
+E   ImportError: cannot import name 'SECEdgarProvider' from 'agents.crawler.data_providers.sec_edgar_provider' (C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\agents\crawler\data_providers\sec_edgar_provider.py)
+=========================== short test summary info ===========================
+ERROR tests/crawler/data_providers/test_sec_edgar_provider.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 error in 2.05s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+_________ ERROR collecting tests/crawler/test_multi_source_crawler.py _________
+ImportError while importing test module 'C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\crawler\test_multi_source_crawler.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\crawler\test_multi_source_crawler.py:23: in <module>
+    from agents.crawler.data_providers.sec_edgar_provider import SECEdgarProvider
+E   ImportError: cannot import name 'SECEdgarProvider' from 'agents.crawler.data_providers.sec_edgar_provider' (C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\agents\crawler\data_providers\sec_edgar_provider.py)
+=========================== short test summary info ===========================
+ERROR tests/crawler/test_multi_source_crawler.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 skipped, 1 error in 2.58s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+____________ ERROR collecting tests/e2e/test_lse_healthcare_e2e.py ____________
+'e2e' not found in `markers` configuration option
+=========================== short test summary info ===========================
+ERROR tests/e2e/test_lse_healthcare_e2e.py - Failed: 'e2e' not found in `mark...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+3 skipped, 1 error in 1.91s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+_______ ERROR collecting tests/extraction/test_llm_extractor_phase3b.py _______
+'slow' not found in `markers` configuration option
+=========================== short test summary info ===========================
+ERROR tests/extraction/test_llm_extractor_phase3b.py - Failed: 'slow' not fou...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+3 skipped, 1 error in 10.50s
+
+> pytest -q --maxfail=1
+Warning: Error in pytest_sessionfinish: name 'time' is not defined
+
+=================================== ERRORS ====================================
+________________ ERROR collecting tests/test_crawler_agent.py _________________
+ImportError while importing test module 'C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\test_crawler_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_crawler_agent.py:18: in <module>
+    from agents.crawler.extractors.pdf_extractor import PDFExtractor
+E   ImportError: cannot import name 'PDFExtractor' from 'agents.crawler.extractors.pdf_extractor' (C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\agents\crawler\extractors\pdf_extractor.py)
+============================== warnings summary ===============================
+tests\extraction\test_llm_extractor_phase3b.py:362
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\extraction\test_llm_extractor_phase3b.py:362: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+tests\parser\matchers\test_base_matcher.py:21
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\parser\matchers\test_base_matcher.py:21: PytestCollectionWarning: cannot collect test class 'TestMatcher' because it has a __init__ constructor (from: tests/parser/matchers/test_base_matcher.py)
+    class TestMatcher(BaseMatcher):
+
+tests\phase5\test_semantic_retriever.py:22
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5
+
+tests\phase5\test_semantic_retriever.py:279
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:279: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5
+
+tests\phase5b\test_hybrid_with_prefilter.py:16
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5b
+
+tests\phase5b\test_hybrid_with_prefilter.py:103
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5b
+
+tests\phase5c\test_hybrid_ranking_cp.py:19
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_hybrid_ranking_cp.py:19: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+tests\phase5c\test_integration_compare_esg_cp.py:17
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_integration_compare_esg_cp.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_crawler_agent.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+5 skipped, 8 warnings, 1 error in 16.99s
+
+> pytest -q --maxfail=1
+
+=================================== ERRORS ====================================
+__________ ERROR collecting tests/cp/test_structure_aware_chunker.py __________
+ImportError while importing test module 'C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\cp\test_structure_aware_chunker.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\cp\test_structure_aware_chunker.py:27: in <module>
+    from libs.chunking.structure_aware_chunker import StructureAwareChunker, Chunk
+E   ModuleNotFoundError: No module named 'libs.chunking.structure_aware_chunker'
+============================== warnings summary ===============================
+tests\cp\test_backend_docling.py:547
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\cp\test_backend_docling.py:547: PytestUnknownMarkWarning: Unknown pytest.mark.slow - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.slow
+
+tests\cp\test_backend_docling.py:549
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\cp\test_backend_docling.py:549: PytestUnknownMarkWarning: Unknown pytest.mark.perf - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.perf
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/cp/test_structure_aware_chunker.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+2 warnings, 1 error in 2.49s
+
+> pytest -q --maxfail=1
+..FWarning: Error in pytest_sessionfinish: name 'time' is not defined
+
+================================== FAILURES ===================================
+__________________ test_evidence_provenance_always_complete ___________________
+tests\agents\scoring\test_evidence_aggregator.py:152: in test_evidence_provenance_always_complete
+    @given(
+            
+E   hypothesis.errors.FailedHealthCheck: Input generation is slow: Hypothesis only generated 2 valid inputs after 1.84 seconds.
+E   
+E                  count | fraction |    slowest draws (seconds)
+E      char_end  |    2  |    100%  |      --      --      --      --   1.843
+E      page_no   |    2  |      0%  |      --      --      --      --      -- 
+E     char_start |    2  |      0%  |      --      --      --      --      -- 
+E   
+E   This could be for a few reasons:
+E   1. This strategy could be generating too much data per input. Try decreasing the amount of data generated, for example by decreasing the minimum size of collection strategies like st.lists().
+E   2. Some other expensive computation could be running during input generation. For example, if @st.composite or st.data() is interspersed with an expensive computation, HealthCheck.too_slow is likely to trigger. If this computation is unrelated to input generation, move it elsewhere. Otherwise, try making it more efficient, or disable this health check if that is not possible.
+E   
+E   If you expect input generation to take this long, you can disable this health check with @settings(suppress_health_check=[HealthCheck.too_slow]). See https://hypothesis.readthedocs.io/en/latest/reference/api.html#hypothesis.HealthCheck for details.
+--------------------------------- Hypothesis ----------------------------------
+You can add @seed(41030687677741776818389220255660994368) to this test or run pytest with --hypothesis-seed=41030687677741776818389220255660994368 to reproduce this failure.
+============================== warnings summary ===============================
+tests\parser\matchers\test_base_matcher.py:21
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\parser\matchers\test_base_matcher.py:21: PytestCollectionWarning: cannot collect test class 'TestMatcher' because it has a __init__ constructor (from: tests/parser/matchers/test_base_matcher.py)
+    class TestMatcher(BaseMatcher):
+
+tests\phase5\test_semantic_retriever.py:22
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5
+
+tests\phase5\test_semantic_retriever.py:279
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:279: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5
+
+tests\phase5b\test_hybrid_with_prefilter.py:16
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5b
+
+tests\phase5b\test_hybrid_with_prefilter.py:103
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5b
+
+tests\phase5c\test_hybrid_ranking_cp.py:19
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_hybrid_ranking_cp.py:19: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+tests\phase5c\test_integration_compare_esg_cp.py:17
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_integration_compare_esg_cp.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/agents/scoring/test_evidence_aggregator.py::test_evidence_provenance_always_complete
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 2 passed, 7 skipped, 189 deselected, 7 warnings in 21.75s
+
+> pytest -q --maxfail=1
+..................ssssssssssssssssssssssss..s..........................s [  4%]
+ssssssssss................................................FWarning: Error in pytest_sessionfinish: name 'time' is not defined
+
+================================== FAILURES ===================================
+________ TestStructuredLogging.test_logging_middleware_adds_request_id ________
+tests\api\test_runtime_phase11_cp.py:192: in test_logging_middleware_adds_request_id
+    assert "X-Request-Id" in response.headers or "x-request-id" in response.headers
+E   AssertionError: assert ('X-Request-Id' in Headers({'content-length': '93', 'content-type': 'application/json'}) or 'x-request-id' in Headers({'content-length': '93', 'content-type': 'application/json'}))
+E    +  where Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+E    +  and   Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+============================== warnings summary ===============================
+tests\parser\matchers\test_base_matcher.py:21
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\parser\matchers\test_base_matcher.py:21: PytestCollectionWarning: cannot collect test class 'TestMatcher' because it has a __init__ constructor (from: tests/parser/matchers/test_base_matcher.py)
+    class TestMatcher(BaseMatcher):
+
+tests\phase5\test_semantic_retriever.py:22
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5
+
+tests\phase5\test_semantic_retriever.py:279
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:279: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5
+
+tests\phase5b\test_hybrid_with_prefilter.py:16
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5b
+
+tests\phase5b\test_hybrid_with_prefilter.py:103
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5b
+
+tests\phase5c\test_hybrid_ranking_cp.py:19
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_hybrid_ranking_cp.py:19: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+tests\phase5c\test_integration_compare_esg_cp.py:17
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_integration_compare_esg_cp.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/api/test_runtime_phase11_cp.py::TestStructuredLogging::test_logging_middleware_adds_request_id
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 94 passed, 43 skipped, 196 deselected, 7 warnings in 23.26s
+
+> pytest -q --maxfail=1
+..................ssssssssssssssssssssssss..s..........................s [  4%]
+ssssssssss................................................FWarning: Error in pytest_sessionfinish: name 'time' is not defined
+
+================================== FAILURES ===================================
+________ TestStructuredLogging.test_logging_middleware_adds_request_id ________
+tests\api\test_runtime_phase11_cp.py:195: in test_logging_middleware_adds_request_id
+    assert "X-Request-Id" in response.headers or "x-request-id" in response.headers
+E   AssertionError: assert ('X-Request-Id' in Headers({'content-length': '93', 'content-type': 'application/json'}) or 'x-request-id' in Headers({'content-length': '93', 'content-type': 'application/json'}))
+E    +  where Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+E    +  and   Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+============================== warnings summary ===============================
+tests\parser\matchers\test_base_matcher.py:21
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\parser\matchers\test_base_matcher.py:21: PytestCollectionWarning: cannot collect test class 'TestMatcher' because it has a __init__ constructor (from: tests/parser/matchers/test_base_matcher.py)
+    class TestMatcher(BaseMatcher):
+
+tests\phase5\test_semantic_retriever.py:22
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5
+
+tests\phase5\test_semantic_retriever.py:279
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:279: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5
+
+tests\phase5b\test_hybrid_with_prefilter.py:16
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5b
+
+tests\phase5b\test_hybrid_with_prefilter.py:103
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5b
+
+tests\phase5c\test_hybrid_ranking_cp.py:19
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_hybrid_ranking_cp.py:19: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+tests\phase5c\test_integration_compare_esg_cp.py:17
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_integration_compare_esg_cp.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/api/test_runtime_phase11_cp.py::TestStructuredLogging::test_logging_middleware_adds_request_id
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 94 passed, 43 skipped, 196 deselected, 7 warnings in 23.20s

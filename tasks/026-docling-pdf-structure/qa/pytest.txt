@@ -1,0 +1,44 @@
+..................ssssssssssssssssssssssss..s..........................s [  4%]
+ssssssssss................................................FWarning: Error in pytest_sessionfinish: name 'time' is not defined
+
+================================== FAILURES ===================================
+________ TestStructuredLogging.test_logging_middleware_adds_request_id ________
+tests\api\test_runtime_phase11_cp.py:195: in test_logging_middleware_adds_request_id
+    assert "X-Request-Id" in response.headers or "x-request-id" in response.headers
+E   AssertionError: assert ('X-Request-Id' in Headers({'content-length': '93', 'content-type': 'application/json'}) or 'x-request-id' in Headers({'content-length': '93', 'content-type': 'application/json'}))
+E    +  where Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+E    +  and   Headers({'content-length': '93', 'content-type': 'application/json'}) = <Response [200 OK]>.headers
+============================== warnings summary ===============================
+tests\parser\matchers\test_base_matcher.py:21
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\parser\matchers\test_base_matcher.py:21: PytestCollectionWarning: cannot collect test class 'TestMatcher' because it has a __init__ constructor (from: tests/parser/matchers/test_base_matcher.py)
+    class TestMatcher(BaseMatcher):
+
+tests\phase5\test_semantic_retriever.py:22
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:22: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5
+
+tests\phase5\test_semantic_retriever.py:279
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5\test_semantic_retriever.py:279: PytestUnknownMarkWarning: Unknown pytest.mark.phase5 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5
+
+tests\phase5b\test_hybrid_with_prefilter.py:16
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:16: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5b
+
+tests\phase5b\test_hybrid_with_prefilter.py:103
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5b\test_hybrid_with_prefilter.py:103: PytestUnknownMarkWarning: Unknown pytest.mark.phase5b - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.phase5b
+
+tests\phase5c\test_hybrid_ranking_cp.py:19
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_hybrid_ranking_cp.py:19: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+tests\phase5c\test_integration_compare_esg_cp.py:17
+  C:\projects\Work Projects\ibm-projects\ESG Evaluation\prospecting-engine\tests\phase5c\test_integration_compare_esg_cp.py:17: PytestUnknownMarkWarning: Unknown pytest.mark.phase5c - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.phase5c
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/api/test_runtime_phase11_cp.py::TestStructuredLogging::test_logging_middleware_adds_request_id
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 94 passed, 43 skipped, 196 deselected, 7 warnings in 23.20s
