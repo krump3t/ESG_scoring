@@ -1,0 +1,522 @@
+ M .coveragerc
+ M .env.example
+ M .github/workflows/ci.yml
+ M AUTHENTICITY_REMEDIATION_STATUS.md
+ M BLOCKERS_RESOLVED.md
+ M CODEX_VALIDATION_REPORT.md
+ M COMPONENT_2_E2E_EXECUTION_STATUS.md
+ M COMPONENT_2_E2E_TEST_GUIDE.md
+ M COMPONENT_2_FINAL_REPORT.md
+ M COMPONENT_2_FINAL_STATUS.md
+ M COMPONENT_2_IMPLEMENTATION_COMPLETE.md
+ M COMPONENT_2_INTEGRATION_COMPLETE.md
+ M COMPONENT_2_INTEGRATION_GUIDE.md
+ M COMPONENT_2_QUICK_START.md
+ M DEMO_B_E2E_PLAN.md
+ M E2E_COMPLETE_SUMMARY.md
+ M E2E_DEMO_BLOCKER_ASSESSMENT.md
+ M E2E_EXECUTION_REPORT.md
+ M E2E_FINAL_STATUS.md
+ M ESG_SCORING_NAMING_CONVENTIONS_MAP.md
+ M IMPLEMENTATION_SPECS.md
+ M LLM_NARRATIVE_IMPLEMENTATION.md
+ M Makefile
+ M PHASE_E_PROGRESS_REPORT.md
+ M README.md
+ M Remediation_Plan/ISSUE_TRACKER.md
+ M "Remediation_Plan/REMEDIATION_PLAN (1).md"
+ M agents/batch/__init__.py
+ M agents/batch/batch_processor.py
+ M agents/crawler/data_providers/base_provider.py
+ M agents/crawler/data_providers/cdp_provider.py
+ M agents/crawler/data_providers/gri_provider.py
+ M agents/crawler/data_providers/sasb_provider.py
+ M agents/crawler/data_providers/sec_edgar_provider.py
+ M agents/crawler/data_providers/sec_edgar_provider_legacy.py
+ M agents/crawler/data_providers/ticker_lookup.py
+ M agents/crawler/extractors/cdp_extractor.py
+ M agents/crawler/extractors/enhanced_pdf_extractor.py
+ M agents/crawler/extractors/pdf_extractor.py
+ M agents/crawler/extractors/sec_edgar_extractor.py
+ M agents/crawler/ledger.py
+ M agents/crawler/mcp_crawler.py
+ M agents/crawler/multi_source_crawler.py
+ M agents/crawler/multi_source_crawler_v2.py
+ M agents/crawler/provider_local.py
+ M agents/crawler/providers/company_ir.py
+ M agents/crawler/providers/sec_edgar.py
+ M agents/crawler/sustainability_reports_crawler.py
+ M agents/crawler/writers/parquet_writer.py
+ M agents/embedding/__init__.py
+ M agents/embedding/watsonx_embedder.py
+ M agents/extraction/enhanced_pdf_extractor.py
+ M agents/extraction/extraction_router.py
+ M agents/extraction/llm_extractor.py
+ M agents/extraction/pdf_text_extractor.py
+ M agents/extraction/rd_locator_wx.py
+ M agents/extraction/structured_extractor.py
+ M agents/normalizer/mcp_normalizer.py
+ M agents/parser/__init__.py
+ M agents/parser/evidence_extractor.py
+ M agents/parser/html_parser.py
+ M agents/parser/matchers/base_matcher.py
+ M agents/parser/matchers/ghg_matcher.py
+ M agents/parser/models.py
+ M agents/query/__init__.py
+ M agents/query/cache_manager.py
+ M agents/query/orchestrator.py
+ M agents/query/query_parser.py
+ M agents/retrieval/__init__.py
+ M agents/retrieval/hybrid_retriever.py
+ M agents/retrieval/parquet_retriever.py
+ M agents/scoring/__init__.py
+ M agents/scoring/characteristic_matcher.py
+ M agents/scoring/evidence_aggregator.py
+ M agents/scoring/evidence_table_generator.py
+ M agents/scoring/mcp_scoring.py
+ M agents/scoring/parity_validator.py
+ M agents/scoring/rubric_loader.py
+ M agents/scoring/rubric_models.py
+ M agents/scoring/rubric_scorer.py
+ M agents/scoring/rubric_v3_scorer.py
+ M agents/storage/bronze_writer.py
+ M agents/storage/duckdb_manager.py
+ M agents/storage/silver_normalizer.py
+ M apps/api/health.py
+ M apps/api/logging_config.py
+ M apps/api/main.py
+ M apps/api/metrics.py
+ M apps/api/telemetry.py
+ M apps/evaluation/response_quality.py
+ M apps/index/__init__.py
+ M apps/index/graph_index.py
+ M apps/index/graph_store.py
+ M apps/index/ontology.py
+ M apps/index/retriever.py
+ M apps/index/vector_store.py
+ M apps/ingestion/crawler.py
+ M apps/ingestion/parser.py
+ M apps/ingestion/report_fetcher.py
+ M apps/ingestion/validator.py
+ M apps/integration_validator.py
+ M apps/mcp_server/server.py
+ D apps/pipeline/demo_flow.py.bak
+ M apps/pipeline/score_flow.py
+ M apps/pipeline/theme_adapter.py
+ M apps/pipeline_orchestrator.py
+ M apps/rubric/integrate_gate.py
+ M apps/rubric/loader.py
+ M apps/scoring/__init__.py
+ M apps/scoring/grade.py
+ M apps/scoring/pipeline.py
+ M apps/scoring/rubric_v3_loader.py
+ M apps/scoring/scorer.py
+ M apps/scoring/watsonx_client.py
+ M apps/scoring/wx_client.py
+ M apps/utils/provenance.py
+ M artifacts/COMPREHENSIVE_VALIDATION_SUMMARY.md
+ M artifacts/EXECUTIVE_SUMMARY.md
+ M artifacts/FINAL_COMPLETE_SUMMARY.md
+ M artifacts/MULTI_DOC_READINESS_REPORT.md
+ M artifacts/ZERO_MOCKS_EXECUTION_STATUS.md
+ M artifacts/ZERO_MOCKS_INGESTION_COMPLETE.md
+ M artifacts/audit/risk_register.md
+ M artifacts/authenticity/ANALYSIS_REPORT.md
+ M artifacts/authenticity/INITIAL_FINDINGS_SCA_v13_8.md
+ M artifacts/authenticity/REMEDIATION_LOG.md
+ M artifacts/authenticity/REVERT_PLAYBOOK.md
+ M artifacts/context_report/ESG_Context_OutputContract.json
+ M artifacts/context_report/determinism_report.json
+ M artifacts/demo/companies.json
+ D artifacts/demo/companies.json.bak
+ M artifacts/demo/mvp_run/hybrid/hybrid_parity_report.json
+ M artifacts/demo/mvp_run/hybrid/hybrid_topk.json
+ M artifacts/demo/mvp_run/scoring_report.json
+ M artifacts/demo/mvp_run/topk_vs_evidence.json
+ M artifacts/determinism_proof/COMPLIANCE_REPORT.md
+ M artifacts/diagnostics/context_scan.json
+ M artifacts/diagnostics/data_inventory.csv
+ M artifacts/diagnostics/data_inventory.json
+ M artifacts/diagnostics/retrieval_scan.json
+ M artifacts/e2e_matrix/E2E_COMPLIANCE_REPORT.md
+ M artifacts/index.md
+ D artifacts/ingestion/local_bronze_manifest.json
+ D artifacts/ingestion/manifest.json
+ M artifacts/pipeline_validation/demo_topk_vs_evidence.json
+ M artifacts/pipeline_validation/evidence_selector.log
+ M artifacts/pipeline_validation/retrieval_diag.json
+ M artifacts/release/EXECUTIVE_SUMMARY.md
+ M artifacts/release/proof_COMPLIANCE_REPORT.md
+ M artifacts/release_e2e/E2E_COMPLIANCE.md
+ M artifacts/release_e2e/EXECUTIVE_SUMMARY.md
+ M artifacts/release_e2e/MATRIX_COMPLIANCE.md
+ M artifacts/release_multi_local_deterministic/ARCHITECTURE_NOTES.md
+ M artifacts/release_multi_local_deterministic/FINAL_ATTESTATION.md
+ M artifacts/release_multi_local_deterministic/FINAL_PROJECT_SUMMARY.md
+ M artifacts/release_multi_local_deterministic/LLM_NARRATIVE_IMPLEMENTATION.md
+ M artifacts/release_multi_local_deterministic/PROJECT_COMPLETION_SUMMARY.md
+ M artifacts/release_multi_local_deterministic/README.md
+ M artifacts/release_multidoc_ready/E2E_COMPLIANCE.md
+ M artifacts/release_multidoc_ready/E2E_EXECUTIVE_SUMMARY.md
+ M artifacts/release_multidoc_ready/FINAL_SUMMARY.md
+ M artifacts/release_multidoc_ready/IMPLEMENTATION_GUIDE.md
+ M artifacts/release_multidoc_ready/MATRIX_COMPLIANCE.md
+ M artifacts/release_multidoc_ready/MULTI_DOC_READINESS.md
+ M artifacts/run_manifest.json
+ M artifacts/sca_qax/codex_report_verification.md
+ M configs/companies_local.yaml
+ M context/adr.md
+ M context/assumptions.md
+ M context/design.md
+ M context/hypothesis.md
+ D docker-compose.override.yml.bak
+ D docker-compose.yml.bak
+ M libs/analytics/__init__.py
+ M libs/analytics/duck.py
+ M libs/analytics/evidence_config.py
+ M libs/analytics/parity_util.py
+ M libs/analytics/prefilter.py
+ M libs/cache/real_redis_cache.py
+ M libs/cache/redis_cache.py
+ M libs/config/integration_flags.py
+ M libs/contracts/__init__.py
+ M libs/contracts/extraction_contracts.py
+ M libs/contracts/ingestion_contracts.py
+ M libs/embedding/deterministic_embedder.py
+ M libs/embedding/watsonx_embedder.py
+ M libs/extraction/backend_default.py
+ M libs/extraction/backend_docling.py
+ M libs/extraction/parser_backend.py
+ M libs/extraction/text_clean.py
+ M libs/llm/watsonx_client.py
+ M libs/llm/watsonx_client_improved.py
+ M libs/models/esg_metrics.py
+ M libs/narrative/watsonx_narrator.py
+ M libs/query/query_synthesizer.py
+ M libs/ranking/__init__.py
+ M libs/ranking/cross_encoder.py
+ M libs/ranking/cross_encoder_ranker.py
+ M libs/ranking/hybrid.py
+ M libs/ranking/lexical.py
+ M libs/ranking/real_cross_encoder.py
+ M libs/retrieval/__init__.py
+ M libs/retrieval/embeddings/deterministic_embedder.py
+ M libs/retrieval/embeddings/factory.py
+ D libs/retrieval/embeddings/watsonx_embedder.py
+ D libs/retrieval/hybrid_retriever.py
+ M libs/retrieval/hybrid_semantic.py
+ M libs/retrieval/parity_checker.py
+ M libs/retrieval/parquet_retriever.py
+ M libs/retrieval/semantic_retriever.py
+ M libs/retrieval/semantic_wx.py
+ M libs/retrieval/vector_backends/astradb_store.py
+ M libs/retrieval/vector_backends/factory.py
+ M libs/retrieval/vector_index.py
+ M libs/scoring/bayesian_confidence.py
+ M libs/scoring/evidence_gate.py
+ M libs/storage/astradb_graph.py
+ M libs/storage/astradb_vector.py
+ M libs/utils/__init__.py
+ M libs/utils/canonical.py
+ M libs/utils/clock.py
+ M libs/utils/determinism.py
+ M libs/utils/determinism_guard.py
+ M libs/utils/env.py
+ M libs/utils/http_client.py
+ M libs/utils/io.py
+ M libs/utils/trace.py
+ M libs/wx/wx_client.py
+ M pytest.ini
+ M requirements-dev.txt
+ M requirements.txt
+ M rubrics/archive/esg_maturity_rubric.md
+ M sca_infrastructure/runner.py
+ M scripts/aggregate_output_contract.py
+ M scripts/authentic_demo_e2e.ps1
+ M scripts/build_enriched_docs.py
+ M scripts/cp/compare_esg_analysis.py
+ M scripts/demo_b_full_pipeline.py
+ M scripts/duckdb_checks.py
+ M scripts/embed_and_index.py
+ M scripts/execute_full_workflow.sh
+ M scripts/ingest_company.py
+ M scripts/ingest_esg_corpus.py
+ M scripts/ingest_esg_documents.py
+ M scripts/ingest_live_matrix.py
+ M scripts/load_embeddings_to_astradb.py
+ M scripts/ops/runtime_gates.sh
+ M scripts/preflight_check.py
+ M scripts/qa/authenticity_audit.py
+ M scripts/refresh_gold_lite.py
+ M scripts/run_matrix.py
+ M scripts/run_scoring.py
+ M scripts/score_silver_evidence.py
+ M scripts/semantic_fetch_replay.py
+ M scripts/setup-local.sh
+ M src/probe.py
+ M tasks/001-mcp-iceberg-infrastructure/context/adr.md
+ M tasks/001-mcp-iceberg-infrastructure/context/assumptions.md
+ M tasks/001-mcp-iceberg-infrastructure/context/design.md
+ M tasks/001-mcp-iceberg-infrastructure/context/hypothesis.md
+ M tasks/003-iceberg-core-silver-gold/context/adr.md
+ M tasks/003-iceberg-core-silver-gold/context/assumptions.md
+ M tasks/003-iceberg-core-silver-gold/context/design.md
+ M tasks/003-iceberg-core-silver-gold/context/hypothesis.md
+ M tasks/004a-mcp-server/context/design.md
+ M tasks/004a-mcp-server/context/hypothesis.md
+ M tasks/008-esg-data-extraction/IMPLEMENTATION_PLAN.md
+ M tasks/010-hybrid-ingestion-phase1/context/assumptions.md
+ M tasks/010-hybrid-ingestion-phase1/context/cp_paths.json
+ M tasks/010-hybrid-ingestion-phase1/context/data_sources.json
+ M tasks/010-hybrid-ingestion-phase1/context/evidence.json
+ M tasks/010-hybrid-ingestion-phase1/context/hypothesis.md
+ M tasks/011-multi-source-phase2/context/data_sources.json
+ M tasks/012-asymmetric-extraction/context/AUTHENTICITY_PLAN.md
+ M tasks/012-asymmetric-extraction/context/adr.md
+ M tasks/012-asymmetric-extraction/context/assumptions.md
+ M tasks/012-asymmetric-extraction/context/design.md
+ M tasks/013-unstructured-extraction-phase3b/context/adr.md
+ M tasks/013-unstructured-extraction-phase3b/context/assumptions.md
+ M tasks/013-unstructured-extraction-phase3b/context/design.md
+ M tasks/013-unstructured-extraction-phase3b/context/hypothesis.md
+ M tasks/015-pipeline-integration-phase5/context/data_sources.json
+ M tasks/016-production-integration-phase1/EXECUTION_SUMMARY.md
+ M tasks/016-production-integration-phase1/context/adr.md
+ M tasks/016-production-integration-phase1/context/assumptions.md
+ M tasks/016-production-integration-phase1/context/design.md
+ M tasks/016-production-integration-phase1/context/hypothesis.md
+ M tasks/017-watsonx-integration-phase2/context/adr.md
+ M tasks/017-watsonx-integration-phase2/context/assumptions.md
+ M tasks/017-watsonx-integration-phase2/context/design.md
+ M tasks/017-watsonx-integration-phase2/context/executive_summary.md
+ M tasks/017-watsonx-integration-phase2/context/hypothesis.md
+ M tasks/018-esg-query-synthesis/context/assumptions.md
+ M tasks/018-esg-query-synthesis/context/hypothesis.md
+ M tasks/019-authenticity-infrastructure/context/cp_paths.json
+ M tasks/019-authenticity-infrastructure/context/evidence.json
+ M tasks/020-hybrid-retrieval/00_context/design.md
+ M tasks/021-hybrid-ranking/00_context/hypothesis.md
+ M tasks/037-remediation-031-035/context/design.md
+ M tasks/CODEX-001-critical-cp-fixes/context/assumptions.md
+ M tasks/CODEX-001-critical-cp-fixes/context/evidence.json
+ M tasks/DEMO-001-multi-source-e2e/README_TASK.md
+ M tasks/LSE-HEADLAM-2025/README_TASK.md
+ M tasks/QA-001-verification/QA-001-HARDEN-FINAL_SUMMARY.md
+ M tasks/QA-001-verification/TASK_QA_SUMMARY.md
+ M tasks/README.md
+ M tests/api/test_demo_functional_cp.py
+?? .envrc
+?? .githooks/
+?? Dockerfile.api.offline
+?? FINAL_VALIDATION_REPORT_031_035.md
+?? Makefile.context
+?? README_MCP.md
+?? README_SCAFFOLD.txt
+?? README_make_compose.md
+?? README_schema_tests.md
+?? RELEASE_NOTES_031_035.md
+?? REVERIFICATION_SUMMARY.md
+?? SYSTEM_PROMPT_SCA-CodexGPT5M_MVP_Context_Report_FULL.md
+?? TASKS_030_036_IMPLEMENTATION_GUIDE.md
+?? TASKS_031_036_IMPLEMENTATION_SUMMARY.md
+?? agents/ingestion/
+?? agents/orchestration/
+?? agents/orchestrator/
+?? api/
+?? artifacts/FINAL_COMPLETION_036B.md
+?? artifacts/OUTPUT_CONTRACT_DELTA.json
+?? artifacts/TASKS_031_034_COMPLETION.md
+?? artifacts/TASKS_031_036_FINAL_COMPLETION.md
+?? artifacts/TASK_031_032_COMPLETION.md
+?? artifacts/context_report/openapi.json
+?? artifacts/demo/bm25_topk.json
+?? artifacts/demo/evidence.json
+?? artifacts/demo/parity.json
+?? artifacts/demo/retrieval_topk.json
+?? artifacts/demo/run_events.jsonl
+?? artifacts/demo/scoring_report.json
+?? artifacts/demo/vector_topk.json
+?? artifacts/demo_proven/
+?? artifacts/diagnostics/STATUS.json
+?? artifacts/diagnostics/STATUS_031_035.json
+?? artifacts/diagnostics/STATUS_031_035_reverify.json
+?? artifacts/diagnostics/STATUS_stage3.json
+?? artifacts/diagnostics/VALIDATION_FINAL_031_035.md
+?? artifacts/diagnostics/bandit.json
+?? artifacts/diagnostics/chunker_cli.log
+?? artifacts/diagnostics/coverage_037.txt
+?? artifacts/diagnostics/coverage_core.xml
+?? artifacts/diagnostics/coverage_report.json
+?? artifacts/diagnostics/cp_manifest_audit.json
+?? artifacts/diagnostics/creds_doctor.json
+?? artifacts/diagnostics/detect_secrets.json
+?? artifacts/diagnostics/determinism_035_036.json
+?? artifacts/diagnostics/determinism_check.json
+?? artifacts/diagnostics/determinism_sha256.json
+?? artifacts/diagnostics/doc_impl_reconciliation.json
+?? artifacts/diagnostics/doctor.json
+?? artifacts/diagnostics/env_snapshot.json
+?? artifacts/diagnostics/gap_report.json
+?? artifacts/diagnostics/gap_report.md
+?? artifacts/diagnostics/hybrid_cli.log
+?? artifacts/diagnostics/import_ban_violations.json
+?? artifacts/diagnostics/mypy.txt
+?? artifacts/diagnostics/new_impl_presence.json
+?? artifacts/diagnostics/no_stubs_audit.ok
+?? artifacts/diagnostics/no_stubs_plan/
+?? artifacts/diagnostics/output_contract_delta_031.json
+?? artifacts/diagnostics/output_contract_delta_031_034.json
+?? artifacts/diagnostics/output_contract_delta_031_035.json
+?? artifacts/diagnostics/output_contract_delta_031_036.json
+?? artifacts/diagnostics/output_contract_delta_031_036_auth_exec.json
+?? artifacts/diagnostics/parity_031.json
+?? artifacts/diagnostics/plan_reconciliation.json
+?? artifacts/diagnostics/promotion_decision_031_035.json
+?? artifacts/diagnostics/requirements.lock
+?? artifacts/diagnostics/ruff.txt
+?? artifacts/diagnostics/ruff_fix.txt
+?? artifacts/diagnostics/srft_032_invalid_project_guid.json
+?? artifacts/diagnostics/target_endstate.json
+?? artifacts/diagnostics/task_032_embeddings_log.txt
+?? artifacts/diagnostics/task_032_embeddings_run1_log.txt
+?? artifacts/diagnostics/task_032_replacement_summary.json
+?? artifacts/diagnostics/truth_source_delta.json
+?? artifacts/diagnostics/v0_results.json
+?? artifacts/diagnostics/v1_toolchain_verification.json
+?? artifacts/diagnostics/v2_static_hygiene.json
+?? artifacts/diagnostics/v2_static_hygiene_post_fix.json
+?? artifacts/diagnostics/v3_doc_impl_reconciliation.json
+?? artifacts/diagnostics/v3_file_check.json
+?? artifacts/diagnostics/v4_smoke_tests.json
+?? artifacts/diagnostics/v5_targeted_coverage.json
+?? artifacts/diagnostics/v6_parity_determinism.json
+?? artifacts/diagnostics/v7_schema_vector_dim.json
+?? artifacts/diagnostics/v8_todo_audit.json
+?? artifacts/diagnostics/v9_security_scans.json
+?? artifacts/diagnostics/validation_summary_031_035.md
+?? artifacts/diagnostics/verification_summary.md
+?? artifacts/embeddings/
+?? artifacts/git_status_before_037.txt
+?? artifacts/ingestion/ingestion_contract.json
+?? artifacts/release/esg_demo_release_20251101_235402.zip
+?? artifacts/release/requirements.lock
+?? artifacts/restart_037_utc.txt
+?? artifacts/smoke_trace.json
+?? configs/extract_schema_v1.json
+?? configs/pdf_backend.json
+?? configs/retrieval.yaml
+?? configs/scoring.yaml
+?? configs/seed_queries_033.json
+?? determinism_schema_tests_scaffold.zip
+?? docker-compose.api.yml
+?? docker-compose.mvp.yml
+?? docs/operations/
+?? docs/remediation_plan_authentic_e2e.md
+?? docs/remediation_plan_authentic_e2e_FULL.md
+?? fix_tests.py
+?? libs/chunking/
+?? libs/embedding/embed_runner.py
+?? libs/fusion/
+?? libs/ingestion/
+?? libs/parity/
+?? libs/retrieval/_deprecated/
+?? libs/retrieval/bm25_search.py
+?? libs/retrieval/embeddings/_deprecated/
+?? libs/retrieval/vector_search_astra.py
+?? libs/vectors/
+?? make_compose_bundle.zip
+?? pytest-cp-only.ini
+?? requirements.api.txt
+?? requirements.lock
+?? rubrics/rubric_v3.sha256
+?? sca_infrastructure/cp_paths.json
+?? sca_infrastructure/no_stubs_exemptions.json
+?? sca_infrastructure/no_stubs_policy.json
+?? schema_and_tests_scaffold.zip
+?? schemas/
+?? script_frameworks_scaffold.zip
+?? scripts/_common.py
+?? scripts/add_cli_wrappers.ps1
+?? scripts/apply_cp_patches.py
+?? scripts/astra_create_vector_collection.py
+?? scripts/chaos_suite.py
+?? scripts/chunk_cli.py
+?? scripts/ci_local.sh
+?? scripts/codex_run.ps1
+?? scripts/context_report_assembler.py
+?? scripts/context_scan.py
+?? scripts/data_inventory.py
+?? scripts/demo_mcp_server_e2e.py.bak
+?? scripts/determinism_harness.py
+?? scripts/docker_doctor.ps1
+?? scripts/docker_doctor.py
+?? scripts/docker_doctor.sh
+?? scripts/doctor_credentials.py
+?? scripts/emit_contract.py
+?? scripts/emit_summary_md.py
+?? scripts/env_check.py
+?? scripts/extract_evidence_from_chunks.py
+?? scripts/finalize_031_035.ps1
+?? scripts/finalize_validation.py
+?? scripts/gap_analyzer.py
+?? scripts/generate_esg_analysis.py.bak
+?? scripts/generate_llm_reports.py.bak
+?? scripts/generate_nl_report.py.bak
+?? scripts/generate_structure_snapshot.py.bak
+?? scripts/hybrid_retrieval_eval.py
+?? scripts/hybrid_tfidf.py
+?? scripts/langgraph_branch_tests.py
+?? scripts/langgraph_cli.py
+?? scripts/load_dotenv.ps1
+?? scripts/load_dotenv.sh
+?? scripts/make_release_bundle.sh
+?? scripts/no_stubs_audit.py
+?? scripts/no_stubs_remediator.py
+?? scripts/observability_audit.py
+?? scripts/offline_deps_check.py
+?? scripts/preflight_check.py.bak
+?? scripts/qa_sweep.py
+?? scripts/quick_load_probe.py
+?? scripts/quote_alignment_study.py
+?? scripts/reconcile_plan.py
+?? scripts/retrieval_scanner.py
+?? scripts/run_api.sh
+?? scripts/run_e2e_cold_start.py.bak
+?? scripts/run_matrix.py.bak
+?? scripts/scoring_gate_audit.py
+?? scripts/test_lse_report.py.bak
+?? scripts/test_progressive_queries_sca.py.bak
+?? scripts/update_cp_manifest.py
+?? scripts/update_design_refs.py
+?? scripts/validate_determinism_report.py
+?? scripts/validate_output_contract.py
+?? scripts/verify_phase0.sh
+?? scriptsalignment_audit.py
+?? src/api/
+?? src/orchestration/
+?? src/tools/
+?? tasks/026-docling-pdf-structure/TASK_026_COMPLETION_SUMMARY.md
+?? tasks/030-phase0-governance/
+?? tasks/031-ingestion-authenticity/
+?? tasks/032-embeddings-astradb/
+?? tasks/033-hybrid-retrieval-fusion/
+?? tasks/034-orchestration-langgraph/
+?? tasks/035-grounded-scoring-evidence/
+?? tasks/036-resilience-performance-e2e/
+?? tasks/037-remediation-031-035/DOCLING_MIGRATION_PLAN.md
+?? tasks/037-remediation-031-035/EXECUTION_PLAN.md
+?? tasks/037-remediation-031-035/REMEDIATION_SUMMARY.md
+?? tasks/037-remediation-031-035/SCAFFOLDING_ANALYSIS.md
+?? tasks/037-remediation-031-035/context/adr.md
+?? tasks/037-remediation-031-035/context/assumptions.md
+?? tasks/037-remediation-031-035/context/claims_index.json
+?? tasks/037-remediation-031-035/context/cp_paths.json
+?? tasks/037-remediation-031-035/context/data_sources.json
+?? tasks/037-remediation-031-035/context/evidence.json
+?? tasks/037-remediation-031-035/context/executive_summary.md
+?? tasks/037-remediation-031-035/context/hypothesis.md
+?? tasks/PH13_gap_visibility/
+?? tests/apps/
+?? tests/test_crawler_agent.py.disabled
+?? tools/
+?? vendor/

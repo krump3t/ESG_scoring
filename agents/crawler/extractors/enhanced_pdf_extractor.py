@@ -12,12 +12,12 @@ Authenticity Requirements:
 - Determinism: 100% (same input → same output)
 - Manual Audit Match: ≥85% overlap
 """
-from typing import Dict, List, Any, Tuple, Optional
-from pathlib import Path
 import hashlib
 import logging
 import re
 from datetime import datetime
+from pathlib import Path
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +63,7 @@ class EnhancedPDFExtractor:
 
         logger.info("Initialized Enhanced PDF Extractor")
 
-    def extract(self, pdf_path: str) -> Dict[str, Any]:
+    def extract(self, pdf_path: str) -> dict[str, Any]:
         """
         Extract comprehensive findings from PDF document
 
@@ -77,7 +77,7 @@ class EnhancedPDFExtractor:
             - sha256: Document hash for deduplication
         """
         try:
-            import fitz  # PyMuPDF
+            from libs.extraction.backend_docling import DoclingBackend
 
             pdf_path_obj = Path(pdf_path)
             if not pdf_path_obj.exists():
@@ -88,26 +88,34 @@ class EnhancedPDFExtractor:
             # Calculate SHA256 hash
             sha256_hash = self._calculate_sha256(pdf_path)
 
-            # Open PDF and extract text per page
-            with fitz.open(pdf_path) as doc:
-                page_texts = []
-                page_boundaries = []  # Track character positions for page mapping
+            # Extract pages using Docling backend
+            backend = DoclingBackend()
+            doc_id = pdf_path_obj.stem
+            pages = backend.parse_pdf_to_pages(str(pdf_path), doc_id)
 
-                char_position = 0
-                for page_num, page in enumerate(doc):
-                    text = page.get_text("text")
-                    page_texts.append(text)
-                    page_boundaries.append((char_position, char_position + len(text), page_num + 1))
-                    char_position += len(text)
+            if not pages:
+                raise ValueError(f"No pages extracted from PDF: {pdf_path}")
 
-                full_text = "\n\n".join(page_texts)
+            # Build page texts and boundaries
+            page_texts = []
+            page_boundaries = []  # Track character positions for page mapping
+            char_position = 0
 
-                # Extract metadata
-                metadata = {
-                    'title': doc.metadata.get('title', ''),
-                    'author': doc.metadata.get('author', ''),
-                    'page_count': len(doc),
-                }
+            for page_data in pages:
+                text = page_data['text']
+                page_num = page_data['page']  # Docling provides 1-indexed page numbers
+                page_texts.append(text)
+                page_boundaries.append((char_position, char_position + len(text), page_num))
+                char_position += len(text)
+
+            full_text = "\n\n".join(page_texts)
+
+            # Extract metadata
+            metadata = {
+                'title': '',  # Docling doesn't provide title in basic extraction
+                'author': '',  # Docling doesn't provide author in basic extraction
+                'page_count': len(pages),
+            }
 
             # Step 1: Semantic segmentation (text-based findings)
             logger.info("Step 1: Semantic segmentation...")
@@ -149,12 +157,12 @@ class EnhancedPDFExtractor:
 
         except ImportError as e:
             logger.error(f"Required library not installed: {e}")
-            raise RuntimeError(f"PDF extraction failed: {e}. Install PyMuPDF: pip install PyMuPDF")
+            raise RuntimeError(f"PDF extraction failed: {e}. Install Docling: pip install docling")
         except Exception as e:
             logger.error(f"Error extracting PDF {pdf_path}: {e}")
             raise
 
-    def semantic_segment(self, text: str, page_boundaries: List[Tuple[int, int, int]]) -> List[Dict[str, Any]]:
+    def semantic_segment(self, text: str, page_boundaries: list[tuple[int, int, int]]) -> list[dict[str, Any]]:
         """
         Segment text by semantic boundaries (discourse-aware chunking)
 
@@ -263,7 +271,7 @@ class EnhancedPDFExtractor:
 
         return chunks
 
-    def _tokenize_sentences(self, text: str) -> List[str]:
+    def _tokenize_sentences(self, text: str) -> list[str]:
         """
         Tokenize text into sentences
 
@@ -285,7 +293,7 @@ class EnhancedPDFExtractor:
 
         return cleaned
 
-    def _detect_discourse_boundaries(self, sentences: List[str]) -> List[Tuple[int, int]]:
+    def _detect_discourse_boundaries(self, sentences: list[str]) -> list[tuple[int, int]]:
         """
         Detect discourse boundaries for semantic chunking
 
@@ -364,7 +372,7 @@ class EnhancedPDFExtractor:
 
         return False
 
-    def _estimate_page(self, char_pos: int, page_boundaries: List[Tuple[int, int, int]]) -> int:
+    def _estimate_page(self, char_pos: int, page_boundaries: list[tuple[int, int, int]]) -> int:
         """Estimate page number from character position"""
         for start_pos, end_pos, page_num in page_boundaries:
             if start_pos <= char_pos < end_pos:
@@ -373,7 +381,7 @@ class EnhancedPDFExtractor:
         # Fallback: last page
         return page_boundaries[-1][2] if page_boundaries else 1
 
-    def extract_tables_as_findings(self, pdf_path: str) -> List[Dict[str, Any]]:
+    def extract_tables_as_findings(self, pdf_path: str) -> list[dict[str, Any]]:
         """
         Extract ALL tables from PDF and convert to findings
 
@@ -440,7 +448,7 @@ class EnhancedPDFExtractor:
 
         return table_findings
 
-    def _table_to_narrative(self, table: List[List[Any]]) -> str:
+    def _table_to_narrative(self, table: list[list[Any]]) -> str:
         """
         Convert table to narrative text
 
@@ -469,7 +477,7 @@ class EnhancedPDFExtractor:
 
         return ' '.join(narrative_parts)
 
-    def _extract_table_metrics(self, table: List[List[Any]]) -> List[Dict[str, Any]]:
+    def _extract_table_metrics(self, table: list[list[Any]]) -> list[dict[str, Any]]:
         """Extract numeric metrics from table"""
         metrics = []
 
@@ -499,7 +507,7 @@ class EnhancedPDFExtractor:
 
         return metrics
 
-    def extract_entities(self, text: str) -> Dict[str, List[str]]:
+    def extract_entities(self, text: str) -> dict[str, list[str]]:
         """
         Extract entities: organizations, dates, quantities
 
@@ -534,7 +542,7 @@ class EnhancedPDFExtractor:
 
         return entities
 
-    def _regex_entity_extraction(self, text: str) -> Dict[str, List[str]]:
+    def _regex_entity_extraction(self, text: str) -> dict[str, list[str]]:
         """Regex fallback for entity extraction"""
         # Organizations: Capitalized multi-word phrases
         org_pattern = r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3}\b'
@@ -554,7 +562,7 @@ class EnhancedPDFExtractor:
             'quantities': quantities[:20]
         }
 
-    def extract_relationships(self, text: str, entities: Dict[str, List[str]]) -> List[Dict[str, str]]:
+    def extract_relationships(self, text: str, entities: dict[str, list[str]]) -> list[dict[str, str]]:
         """
         Extract relationships: partnerships, commitments, policies
 
@@ -591,7 +599,7 @@ class EnhancedPDFExtractor:
 
         return relationships[:10]  # Limit to top 10
 
-    def _extract_metrics(self, text: str) -> List[Dict[str, Any]]:
+    def _extract_metrics(self, text: str) -> list[dict[str, Any]]:
         """Extract quantitative metrics from text"""
         metrics = []
 

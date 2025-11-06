@@ -1,0 +1,38 @@
+﻿{
+    "purpose":  "Baseline archive before PyMuPDF to Docling migration",
+    "archived_at":  "2025-11-05 12:39:24",
+    "timestamp":  "20251105_123924",
+    "task":  "037-remediation-031-035",
+    "files_archived":  [
+                           {
+                               "path":  "libs\\extraction\\backend_docling.py",
+                               "last_modified":  "2025-11-04 14:37:13",
+                               "size":  7303
+                           },
+                           {
+                               "path":  "libs\\chunking\\structure_aware_chunker.py",
+                               "last_modified":  "2025-11-04 23:30:59",
+                               "size":  17846
+                           },
+                           {
+                               "path":  "agents\\retrieval\\hybrid_retriever.py",
+                               "last_modified":  "2025-11-04 14:37:13",
+                               "size":  15647
+                           },
+                           {
+                               "path":  "scripts\\edgar_validate.py",
+                               "last_modified":  "2025-10-27 15:07:58",
+                               "size":  2872
+                           },
+                           {
+                               "path":  "scripts\\chunk_cli.py",
+                               "last_modified":  "2025-11-03 23:21:59",
+                               "size":  1500
+                           },
+                           {
+                               "path":  "scripts\\hybrid_cli.py",
+                               "last_modified":  "2025-11-04 00:18:25",
+                               "size":  6316
+                           }
+                       ]
+}

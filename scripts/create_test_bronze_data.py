@@ -17,19 +17,29 @@ from agents.crawler.writers.parquet_writer import ParquetWriter
 
 
 def create_test_pdf() -> str:
-    """Create a test PDF with ESG-like content"""
-    try:
-        import fitz  # PyMuPDF
+    """Create a test PDF with ESG-like content
 
-        # Create temporary PDF
-        temp_dir = tempfile.gettempdir()
-        pdf_path = os.path.join(temp_dir, 'test_esg_report_2024.pdf')
+    NOTE: PyMuPDF dependency removed. This function now returns a path to an
+    existing test PDF or creates a simple text file as a fallback.
+    For creating actual test PDFs, use external tools or existing sample PDFs.
+    """
+    # Look for existing test PDFs first
+    test_pdfs = [
+        Path("data/raw_sample/LSE_HEAD_2025.pdf"),
+        Path("tests/fixtures/headlam_group_plc_2025.pdf"),
+        Path("data/raw/test_esg_report.pdf")
+    ]
 
-        doc = fitz.open()
+    for pdf_path in test_pdfs:
+        if pdf_path.exists():
+            return str(pdf_path.absolute())
 
-        # Page 1: Title and Executive Summary
-        page1 = doc.new_page()
-        text1 = """Environmental, Social, and Governance Report 2024
+    # Fallback: Create a simple text file instead
+    temp_dir = tempfile.gettempdir()
+    text_path = os.path.join(temp_dir, 'test_esg_report_2024.txt')
+
+    with open(text_path, 'w', encoding='utf-8') as f:
+        f.write("""Environmental, Social, and Governance Report 2024
 
 Test Corporation Environmental Sustainability Report
 
@@ -47,12 +57,7 @@ Key Achievements 2024:
 - 100% renewable energy procurement for all operations
 - TCFD-aligned climate risk disclosure
 - ISO 14001 certified environmental management system
-        """
-        page1.insert_text((72, 72), text1, fontsize=11)
-
-        # Page 2: Targets and Metrics
-        page2 = doc.new_page()
-        text2 = """Climate Targets and Performance Metrics
+Climate Targets and Performance Metrics
 
 Science-Based Targets (SBTi Approved):
 - Near-term: 50% absolute reduction in Scope 1+2 by 2030 (vs 2020)
@@ -72,12 +77,8 @@ Data Quality and Governance:
 - Automated data collection via centralized EMS platform
 - Real-time validation and lineage tracking
 - Quarterly audits by ESG Steering Committee
-        """
-        page2.insert_text((72, 72), text2, fontsize=10)
 
-        # Page 3: Frameworks and Compliance
-        page3 = doc.new_page()
-        text3 = """Reporting Frameworks and Compliance
+Reporting Frameworks and Compliance
 
 Our ESG reporting aligns with multiple frameworks:
 
@@ -105,17 +106,9 @@ Data Systems:
 - Apache Iceberg-based data lake architecture
 - Automated ETL pipelines with Parquet storage
 - Real-time dashboards for KPI monitoring
-        """
-        page3.insert_text((72, 72), text3, fontsize=10)
+""")
 
-        doc.save(pdf_path)
-        doc.close()
-
-        return pdf_path
-
-    except ImportError:
-        print("ERROR: PyMuPDF not installed - cannot create test PDF")
-        return None
+    return text_path
 
 
 def main():
@@ -123,21 +116,21 @@ def main():
     print("CREATE TEST BRONZE DATA")
     print("="*60)
 
-    # Create test PDF
-    print(f"\n1. Creating test ESG report PDF...")
-    pdf_path = create_test_pdf()
+    # Create test PDF or use existing one
+    print(f"\n1. Creating/locating test ESG report...")
+    test_path = create_test_pdf()
 
-    if not pdf_path:
-        print("   FAILED - PyMuPDF not available")
+    if not test_path:
+        print("   FAILED - No test file available")
         return False
 
-    print(f"   Created: {pdf_path}")
+    print(f"   Using: {test_path}")
 
     # Extract PDF
     print(f"\n2. Extracting PDF content...")
     try:
         extractor = PDFExtractor()
-        result = extractor.extract(pdf_path)
+        result = extractor.extract(test_path)
 
         print(f"   Pages: {result['page_count']}")
         print(f"   Text length: {len(result['text'])} characters")
@@ -175,7 +168,7 @@ def main():
         'org_id': company,
         'year': year,
         'doc_id': doc_id,
-        'source_url': f'file://{pdf_path}',
+        'source_url': f'file://{test_path}',
         'doc_type': 'pdf',
         'extraction_timestamp': datetime.now(),
         'sha256': result['sha256'],

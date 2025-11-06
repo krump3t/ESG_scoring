@@ -7,22 +7,23 @@ Author: Scientific Coding Agent v13.8-MEA
 Date: 2025-10-24
 """
 
-import os
 import json
+import os
 import time
-from typing import Optional, Dict, Any, List
 from datetime import datetime
-from ibm_watsonx_ai import Credentials, APIClient
+from typing import Any
+
+from ibm_watsonx_ai import APIClient, Credentials
 from ibm_watsonx_ai.foundation_models import ModelInference
 
 from agents.extraction.pdf_text_extractor import PDFTextExtractor
-from libs.models.esg_metrics import ESGMetrics
 from libs.contracts.extraction_contracts import (
-    MetricsExtractionResult,
+    ExtractionError,
     ExtractionQuality,
-    ExtractionError
+    MetricsExtractionResult,
 )
 from libs.contracts.ingestion_contracts import CompanyReport
+from libs.models.esg_metrics import ESGMetrics
 
 
 class LLMExtractor:
@@ -67,13 +68,13 @@ class LLMExtractor:
         )
 
         self.pdf_extractor = PDFTextExtractor()
-        self.errors: List[ExtractionError] = []
+        self.errors: list[ExtractionError] = []
 
     def extract(self, report: CompanyReport) -> MetricsExtractionResult:
         """Extract ESG metrics from PDF report using LLM.
 
         Workflow:
-        1. Extract text from PDF using PyMuPDF
+        1. Extract text from PDF using Docling backend
         2. Construct LLM prompt with text + JSON schema
         3. Call watsonx.ai API with retry logic (or use cache)
         4. Parse LLM JSON response into ESGMetrics
@@ -196,7 +197,7 @@ If a metric is not found in the text, use null. Do NOT fabricate values."""
 
         return prompt
 
-    def _call_llm_with_cache(self, prompt: str, cache_key: str) -> Dict[str, Any]:
+    def _call_llm_with_cache(self, prompt: str, cache_key: str) -> dict[str, Any]:
         """Call watsonx.ai LLM with caching for deterministic tests.
 
         Args:
@@ -213,7 +214,7 @@ If a metric is not found in the text, use null. Do NOT fabricate values."""
 
         # Check cache first
         if self.use_cache and os.path.exists(cache_file):
-            with open(cache_file, "r", encoding="utf-8") as f:
+            with open(cache_file, encoding="utf-8") as f:
                 cached = json.load(f)
                 return cached["response"]
 
@@ -260,16 +261,16 @@ If a metric is not found in the text, use null. Do NOT fabricate values."""
 
                 return response_json
 
-            except Exception as e:
+            except Exception:
                 if attempt == max_retries - 1:
                     raise
                 time.sleep(2 ** attempt)  # Exponential backoff
 
     def _parse_llm_response(
         self,
-        response_json: Dict[str, Any],
+        response_json: dict[str, Any],
         report: CompanyReport
-    ) -> Optional[ESGMetrics]:
+    ) -> ESGMetrics | None:
         """Parse LLM JSON response into ESGMetrics.
 
         Args:
@@ -309,7 +310,7 @@ If a metric is not found in the text, use null. Do NOT fabricate values."""
             ))
             return None
 
-    def _calculate_quality(self, metrics: Optional[ESGMetrics]) -> ExtractionQuality:
+    def _calculate_quality(self, metrics: ESGMetrics | None) -> ExtractionQuality:
         """Calculate extraction quality metrics.
 
         Args:

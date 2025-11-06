@@ -1,0 +1,48 @@
+{
+  "critical_path_modules": [
+    "agents/retrieval/hybrid_retriever.py",
+    "agents/orchestration/langgraph_orchestrator.py",
+    "libs/chunking/structure_aware_chunker.py",
+    "libs/fusion/rrf_fusion.py",
+    "libs/retrieval/bm25_search.py",
+    "libs/retrieval/vector_search_astra.py",
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/parity_validator.py"
+  ],
+  "total_cp_modules": 8,
+  "all_present": true,
+  "module_status": {
+    "agents/retrieval/hybrid_retriever.py": {
+      "exists": true,
+      "size_kb": 15.28
+    },
+    "agents/orchestration/langgraph_orchestrator.py": {
+      "exists": true,
+      "size_kb": 16.0
+    },
+    "libs/chunking/structure_aware_chunker.py": {
+      "exists": true,
+      "size_kb": 17.04
+    },
+    "libs/fusion/rrf_fusion.py": {
+      "exists": true,
+      "size_kb": 5.52
+    },
+    "libs/retrieval/bm25_search.py": {
+      "exists": true,
+      "size_kb": 4.34
+    },
+    "libs/retrieval/vector_search_astra.py": {
+      "exists": true,
+      "size_kb": 5.06
+    },
+    "agents/scoring/rubric_v3_scorer.py": {
+      "exists": true,
+      "size_kb": 5.28
+    },
+    "agents/scoring/parity_validator.py": {
+      "exists": true,
+      "size_kb": 3.13
+    }
+  }
+}

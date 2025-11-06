@@ -1,0 +1,32 @@
+{
+  "required_files": {
+    "agents/retrieval/hybrid_retriever.py": true,
+    "agents/orchestration/langgraph_orchestrator.py": true,
+    "libs/chunking/structure_aware_chunker.py": true,
+    "libs/fusion/rrf_fusion.py": true,
+    "libs/retrieval/bm25_search.py": true,
+    "libs/retrieval/vector_search_astra.py": true,
+    "agents/scoring/rubric_v3_scorer.py": true,
+    "agents/scoring/parity_validator.py": true,
+    ".env.template": true,
+    "rubrics/esg_rubric_schema_v3.json": true
+  },
+  "missing_files": [],
+  "present_files": [
+    "agents/retrieval/hybrid_retriever.py",
+    "agents/orchestration/langgraph_orchestrator.py",
+    "libs/chunking/structure_aware_chunker.py",
+    "libs/fusion/rrf_fusion.py",
+    "libs/retrieval/bm25_search.py",
+    "libs/retrieval/vector_search_astra.py",
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/parity_validator.py",
+    ".env.template",
+    "rubrics/esg_rubric_schema_v3.json"
+  ],
+  "env_template_check": {
+    "file_exists": true,
+    "all_keys_present": true,
+    "missing_keys": []
+  }
+}

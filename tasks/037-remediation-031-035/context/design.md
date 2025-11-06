@@ -2,7 +2,7 @@
 
 ## Overview
 
-Transform experimental stub/wrapper modules into authentic, production-grade implementations with proper infrastructure integration, CLI interfaces, and comprehensive validation. Replace simple wrappers with real algorithms and data structures.
+Transition the ingestion pipeline to a Docling-only backend while delivering production-grade retrieval and orchestration with comprehensive validation. Retire PyMuPDF dependencies and ensure all PDF parsing, chunking, and downstream components operate on Docling outputs.
 
 ---
 
@@ -15,15 +15,15 @@ Transform experimental stub/wrapper modules into authentic, production-grade imp
 │                   Task 037 Remediation                       │
 │                                                              │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │  Structure   │  │   Hybrid     │  │  LangGraph   │      │
-│  │    Aware     │→ │  Retriever   │→ │ Orchestrator │      │
-│  │   Chunker    │  │              │  │              │      │
+│  │  Docling     │  │   Hybrid     │  │  LangGraph   │      │
+│  │  Backend     │→ │  Retriever   │→ │ Orchestrator │      │
+│  │ + Chunker    │  │              │  │              │      │
 │  └──────────────┘  └──────────────┘  └──────────────┘      │
 │         ↓                 ↓                   ↓             │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │  PyMuPDF     │  │  BM25 Index  │  │   SQLite     │      │
-│  │  Font        │  │  AstraDB     │  │  Checkpoint  │      │
-│  │  Analysis    │  │  Embeddings  │  │  StateGraph  │      │
+│  │  Docling     │  │  BM25 Index  │  │   SQLite     │      │
+│  │  Markdown    │  │  AstraDB     │  │  Checkpoint  │      │
+│  │  Pages       │  │  Embeddings  │  │  StateGraph  │      │
 │  └──────────────┘  └──────────────┘  └──────────────┘      │
 │                                                              │
 │  ┌────────────────────────────────────────────────────┐     │
@@ -37,86 +37,48 @@ Transform experimental stub/wrapper modules into authentic, production-grade imp
 
 ## Component Design
 
-### 1. Structure-Aware Chunker
+### 1. Docling Backend + Structure-Aware Chunker
 
-**File:** `libs/chunking/structure_aware_chunker.py`
+**Files:** `libs/extraction/backend_docling.py`, `libs/chunking/structure_aware_chunker.py`
 
 **Design Goals:**
-- Real PDF parsing with PyMuPDF (not naive text splitting)
-- Font-based header detection (size, weight, style)
-- Table boundary preservation (no mid-table splits)
-- List/bullet point awareness
-- Paragraph-level semantic boundaries
+- Use Docling vision models as the single ingestion backend
+- Preserve Docling markdown semantics (tables, headings, lists)
+- Produce chunk metadata compatible with downstream retrieval
+- Eliminate PyMuPDF dependencies while retaining deterministic behavior
 
-**Algorithm:**
+**Pipeline:**
 ```python
-1. Load PDF with PyMuPDF
-2. Extract pages with layout info
-3. For each page:
-   a. Identify headers (font size > threshold)
-   b. Detect tables (layout analysis)
-   c. Detect lists (bullet patterns)
-   d. Split paragraphs (double newlines)
-4. Create chunks respecting boundaries:
-   a. Never split mid-table
-   b. Never split mid-list
-   c. Prefer paragraph boundaries
-   d. Target 512 tokens ± 50
-5. Attach metadata:
-   a. section_title (from headers)
-   b. page_num
-   c. chunk_type (header/table/list/text)
-   d. char_start, char_end
+1. DoclingBackend.convert(pdf_path) → Document object
+2. Export markdown / per-page content with table annotations
+3. StructureAwareChunker consumes Docling pages:
+   a. Map Docling headings to section titles
+   b. Treat markdown tables as atomic chunks
+   c. Preserve list prefixes based on markdown tokens
+   d. Split paragraphs by semantic separators (##, ###, blank lines)
+4. Emit Chunk dataclass instances with Docling provenance metadata
+5. Persist chunks to parquet for retrieval pipelines
 ```
 
-**Data Structures:**
+**Chunk Data Structure:**
 ```python
 @dataclass
 class Chunk:
     text: str
     page_num: int
-    chunk_type: ChunkType  # Enum: HEADER, TABLE, LIST, TEXT
-    section_title: str
+    chunk_type: ChunkType  # HEADER, TABLE, LIST, TEXT
+    section_title: Optional[str]
     char_start: int
     char_end: int
-    metadata: Dict[str, Any]
-
-class StructureAwareChunker:
-    def __init__(self, chunk_size: int = 512, overlap: int = 50):
-        self.chunk_size = chunk_size
-        self.overlap = overlap
-        self.tokenizer = SimpleTokenizer()
-
-    def chunk_pdf(self, pdf_path: str) -> List[Chunk]:
-        """Main entry point"""
-        doc = fitz.open(pdf_path)
-        chunks = []
-        current_section = ""
-
-        for page_num, page in enumerate(doc):
-            page_chunks = self._process_page(page, page_num, current_section)
-            chunks.extend(page_chunks)
-            # Update section from last header found
-            headers = [c for c in page_chunks if c.chunk_type == ChunkType.HEADER]
-            if headers:
-                current_section = headers[-1].text
-
-        return chunks
-
-    def _process_page(self, page, page_num, section) -> List[Chunk]:
-        # Font analysis for headers
-        # Table detection
-        # List detection
-        # Paragraph splitting
-        # Chunk assembly
-        pass
+    metadata: Dict[str, Any]  # docling_source, markdown_type, confidence
 ```
 
 **Verification Strategy:**
-- Test with varied PDFs (reports, papers, forms)
-- Validate no mid-table splits
-- Validate header detection accuracy
-- Validate chunk size distribution (mean=512, std<100)
+- Compare Docling chunk output to PyMuPDF baseline for regression confidence
+- Ensure tables remain intact (markdown pipe count ≥ 2)
+- Validate headings and list detection against Docling metadata
+- Confirm chunk distribution meets target size (mean≈512 tokens, std<100)
+*** End Patch*** End Patch to=functions.apply_patch code Outputs: 
 
 ---
 
@@ -266,7 +228,7 @@ class HybridRetriever:
 
 ### 3. LangGraph Orchestrator
 
-**File:** `agents/orchestrator/langgraph_runner.py`
+**File:** `agents/orchestration/langgraph_orchestrator.py`
 
 **Design Goals:**
 - Real LangGraph StateGraph (not just JSON logging)
@@ -680,7 +642,8 @@ if __name__ == '__main__':
 
 ## Technology Stack
 
-- **PDF Parsing:** PyMuPDF (fitz)
+- **PDF Parsing:** Docling
+- **Chunking:** Docling-aware StructureAwareChunker
 - **Search:** rank-bm25, AstraDB
 - **Embeddings:** sentence-transformers
 - **Fusion:** Custom RRF implementation

@@ -1,0 +1,58 @@
+{
+  "cp": [
+    "libs/extraction/backend_docling.py",
+    "libs/chunking/structure_aware_chunker.py",
+    "agents/retrieval/hybrid_retriever.py",
+    "agents/orchestration/langgraph_orchestrator.py",
+    "scripts/generate_cli_wrapper.py",
+    "scripts/update_cp_manifest.py",
+    "scripts/context_report_assembler.py",
+    "scripts/update_design_refs.py",
+    "scripts/reconcile_plan.py",
+    "scripts/qa_sweep.py",
+    "scripts/emit_contract.py",
+    "scripts/finalize_validation.py",
+    "scripts/chunk_cli.py",
+    "scripts/hybrid_cli.py",
+    "scripts/langgraph_cli.py"
+  ],
+  "entry_points": [
+    "scripts/chunk_cli.py",
+    "scripts/hybrid_cli.py",
+    "scripts/langgraph_cli.py"
+  ],
+  "dependencies": [
+    "libs/retrieval/bm25_search.py",
+    "libs/retrieval/vector_search_astra.py",
+    "libs/fusion/rrf_fusion.py",
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/parity_validator.py"
+  ],
+  "test_files": [
+    "tests/cp/test_structure_aware_chunker_037.py",
+    "tests/cp/test_hybrid_retriever_037.py",
+    "tests/cp/test_langgraph_orchestrator_037.py",
+    "tests/cp/test_utility_scripts_037.py"
+  ],
+  "note": "Task 037 remediation-031-035 - Docling-only ingestion and retrieval remediation. All 15 CP files represent production-grade code with real algorithms, infrastructure integration, and comprehensive testing. Created 2025-11-04. Updated to retire PyMuPDF and standardize on Docling backend.",
+  "implementation_status": "in_progress",
+  "quality_gates": {
+    "coverage_threshold": ">=95%",
+    "determinism_requirement": "3-run hash match 100%",
+    "cli_success_rate": "100% with valid inputs",
+    "infrastructure_integration": "all_services_functional",
+    "documentation_alignment": "100% claims verified"
+  },
+  "promotion_criteria": {
+    "current_status": "EXPERIMENTAL",
+    "target_status": "PROVEN",
+    "gates_required": [
+      "test_coverage_gte_95",
+      "e2e_determinism_pass",
+      "cli_functionality_verified",
+      "infrastructure_working",
+      "documentation_aligned"
+    ],
+    "estimated_completion": "2025-11-11"
+  }
+}
