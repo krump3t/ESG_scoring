@@ -1,0 +1,109 @@
+{
+  "task_id": "009-integrated-remediation",
+  "execution_timestamp": "2025-11-19T21:45:56.114001Z",
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "year": 2024,
+  "report_type": "10-K",
+  "pipeline_method": "Remediated: Task 003 -> XBRL Cleaning (Task 008) -> 004 -> 005 -> 006",
+  "findings_scored": 3,
+  "aggregate_score": {
+    "maturity_level": 1.71,
+    "maturity_label": "Maturing",
+    "confidence": 0.67,
+    "dimension_breakdown": {
+      "TSP": 0.67,
+      "OSP": 2.67,
+      "DM": 2.67,
+      "GHG": 2.33,
+      "RD": 1.33,
+      "EI": 1.0,
+      "RMM": 1.33
+    }
+  },
+  "individual_scores": [
+    {
+      "query": "climate risk",
+      "finding_text": "17; or third parties&#8217; systems and services. To help protect customers and the Company, the Com",
+      "retrieval_score": 0.3137279025690793,
+      "maturity_level": 2.43,
+      "maturity_label": "Maturing",
+      "confidence": 0.766,
+      "dimension_breakdown": {
+        "TSP": 2,
+        "OSP": 4,
+        "DM": 4,
+        "GHG": 4,
+        "RD": 0,
+        "EI": 3,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 23,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "f771263b8b0be969"
+      }
+    },
+    {
+      "query": "environmental regulations",
+      "finding_text": " for that reporting period could be materially adversely affected. Further, such an outcome can resu",
+      "retrieval_score": 0.3241018617760822,
+      "maturity_level": 2.71,
+      "maturity_label": "Maturing",
+      "confidence": 0.793,
+      "dimension_breakdown": {
+        "TSP": 0,
+        "OSP": 4,
+        "DM": 4,
+        "GHG": 3,
+        "RD": 4,
+        "EI": 0,
+        "RMM": 4
+      },
+      "source_metadata": {
+        "page": 25,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "f771263b8b0be969"
+      }
+    },
+    {
+      "query": "carbon emissions",
+      "finding_text": "o effectively mitigate all adverse impacts from such measures. For example, the Company is subject t",
+      "retrieval_score": 0.04926646390821466,
+      "maturity_level": 0.0,
+      "maturity_label": "Nascent",
+      "confidence": 0.45,
+      "dimension_breakdown": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 26,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "f771263b8b0be969"
+      }
+    }
+  ],
+  "cleaning_stats": {
+    "original_size": 1503780,
+    "cleaned_size": 216697,
+    "reduction_percent": 85.6
+  },
+  "provenance": {
+    "source_file": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\sec_edgar\\AAPL_2024_10K.htm",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+    "chunks_extracted": 121,
+    "chunks_indexed": 50,
+    "queries_executed": 3,
+    "total_retrieval_results": 9
+  },
+  "success": true
+}
