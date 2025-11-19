@@ -1,0 +1,97 @@
+{
+  "task_id": "006-scoring-integration",
+  "execution_timestamp": "2025-11-19T20:01:24.864590Z",
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "year": 2024,
+  "report_type": "10-K",
+  "scoring_method": "RubricV3Scorer",
+  "rubric_version": "3.0",
+  "findings_scored": 3,
+  "aggregate_score": {
+    "maturity_level": 1.91,
+    "maturity_label": "Advanced",
+    "confidence": 0.691,
+    "dimension_breakdown": {
+      "TSP": 2.0,
+      "OSP": 2.67,
+      "DM": 2.67,
+      "GHG": 2.67,
+      "RD": 0.0,
+      "EI": 2.0,
+      "RMM": 1.33
+    }
+  },
+  "individual_scores": [
+    {
+      "query": "climate risk",
+      "finding_text": "rm 10-K&#8221;) contains forward-looking statements, within the meaning of the Private Securities Li",
+      "retrieval_score": 0.4999999999999999,
+      "maturity_level": 3.0,
+      "maturity_label": "Advanced",
+      "confidence": 0.827,
+      "dimension_breakdown": {
+        "TSP": 2,
+        "OSP": 4,
+        "DM": 4,
+        "GHG": 4,
+        "RD": 0,
+        "EI": 3,
+        "RMM": 4
+      },
+      "source_metadata": {
+        "page": 8,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    },
+    {
+      "query": "environmental regulations",
+      "finding_text": "nd expensive. New and changing laws and regulations can adversely affect the Company&#8217;s busines",
+      "retrieval_score": 0.19999999999999996,
+      "maturity_level": 2.29,
+      "maturity_label": "Maturing",
+      "confidence": 0.739,
+      "dimension_breakdown": {
+        "TSP": 2,
+        "OSP": 4,
+        "DM": 4,
+        "GHG": 3,
+        "RD": 0,
+        "EI": 3,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 30,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    },
+    {
+      "query": "carbon emissions",
+      "finding_text": "aapl-20240928 false 2024 FY 0000320193 P1Y P1Y P1Y P1Y http://fasb.org/us-gaap/2024#MarketableSecuri",
+      "retrieval_score": 0.0,
+      "maturity_level": 0.43,
+      "maturity_label": "Nascent",
+      "confidence": 0.507,
+      "dimension_breakdown": {
+        "TSP": 2,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 1,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    }
+  ],
+  "success": true
+}

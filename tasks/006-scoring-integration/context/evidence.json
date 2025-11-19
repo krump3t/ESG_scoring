@@ -1,0 +1,28 @@
+{
+  "primary_sources": [
+    {
+      "source_id": "task_005_retrieval_results",
+      "title": "Task 005 Retrieval Integration - Apple 2024 10-K Search Results",
+      "type": "artifact",
+      "url": "file://tasks/005-retrieval-integration/artifacts/retrieval_results.json",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Retrieval results for 3 ESG queries against Apple 2024 10-K chunks. Contains 9 results total with relevance scores (0.0-0.5), text snippets, and full provenance metadata. Queries: 'climate risk', 'environmental regulations', 'carbon emissions'."
+    },
+    {
+      "source_id": "rubric_v3_scorer",
+      "title": "RubricV3Scorer Implementation",
+      "type": "code",
+      "url": "file://agents/scoring/rubric_v3_scorer.py",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Deterministic ESG scoring engine using keyword-based maturity rubric (v3.0). Scores findings across multiple dimensions (Climate, Governance, etc.) using stage characteristics and keywords. Returns maturity level (0-5), confidence, and dimension breakdown."
+    },
+    {
+      "source_id": "rubric_models",
+      "title": "Rubric Data Models",
+      "type": "code",
+      "url": "file://agents/scoring/rubric_models.py",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Pydantic models defining rubric structure: MaturityRubric, Theme, Stage, Characteristic. Supports loading from JSON/YAML and provides structured access to scoring criteria."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "globs": [
+    "apps/index/vector_store.py",
+    "apps/index/retriever.py",
+    "libs/retrieval/**/*.py",
+    "tasks/004-extraction-integration/artifacts/apple_2024_findings.json"
+  ],
+  "entry_points": [
+    "apps/index/vector_store.py::VectorStore.upsert",
+    "apps/index/vector_store.py::VectorStore.knn"
+  ],
+  "note": "Task 005 validates retrieval pipeline can ingest and search Apple 10-K chunks from Task 004"
+}

@@ -1,0 +1,27 @@
+{
+  "pilot_id": "003-live-ingestion-pilot",
+  "execution_timestamp": "2025-11-19T18:39:00.345056Z",
+  "company": {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "year": 2024,
+    "report_type": "10-K"
+  },
+  "download": {
+    "file_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\sec_edgar\\AAPL_2024_10K.htm",
+    "file_size_bytes": 1503780,
+    "file_size_mb": 1.43,
+    "sha256_hash": "24a830a0f1256e371d36a1f7f72e5e85a38037d1de2f6f966eb8457db42ff6d6",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+    "provider": "SECEdgarProvider"
+  },
+  "metadata": {
+    "cik": "0000320193",
+    "accession_number": "0000320193-24-000123",
+    "filing_date": "2024-11-01",
+    "report_date": "2024-09-28",
+    "primary_document": "aapl-20240928.htm",
+    "fetch_timestamp": "2025-11-19T18:39:00.345056"
+  },
+  "success": true
+}

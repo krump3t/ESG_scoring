@@ -1,0 +1,13 @@
+{
+  "globs": [
+    "agents/scoring/rubric_v3_scorer.py",
+    "agents/scoring/rubric_loader.py",
+    "agents/scoring/rubric_models.py",
+    "rubrics/*.json",
+    "tasks/005-retrieval-integration/artifacts/retrieval_results.json"
+  ],
+  "entry_points": [
+    "agents/scoring/rubric_v3_scorer.py::RubricV3Scorer.score_finding"
+  ],
+  "note": "Task 006 validates scoring pipeline can consume Task 005 retrieval results and produce ESG maturity scores"
+}

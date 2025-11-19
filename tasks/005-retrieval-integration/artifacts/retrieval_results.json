@@ -1,0 +1,126 @@
+{
+  "task_id": "005-retrieval-integration",
+  "execution_timestamp": "2025-11-19T19:39:58.990551Z",
+  "vector_store_type": "local_stub",
+  "vocabulary_size": 30,
+  "chunks_ingested": 50,
+  "chunks_stored": 50,
+  "queries_executed": 3,
+  "retrieval_results": {
+    "climate risk": [
+      {
+        "rank": 1,
+        "chunk_id": "chunk_0012",
+        "score": 0.4999999999999999,
+        "text_snippet": "rm 10-K&#8221;) contains forward-looking statements, within the meaning of the Private Securities Li",
+        "metadata": {
+          "page": 8,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 2,
+        "chunk_id": "chunk_0045",
+        "score": 0.2886751345948129,
+        "text_snippet": "echnologies like multifactor authentication, monitors its services and systems for unusual activity ",
+        "metadata": {
+          "page": 28,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 3,
+        "chunk_id": "chunk_0046",
+        "score": 0.2886751345948129,
+        "text_snippet": "lly adversely affect the Company&#8217;s business, reputation, results of operations and financial c",
+        "metadata": {
+          "page": 28,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      }
+    ],
+    "environmental regulations": [
+      {
+        "rank": 1,
+        "chunk_id": "chunk_0049",
+        "score": 0.19999999999999996,
+        "text_snippet": "nd expensive. New and changing laws and regulations can adversely affect the Company&#8217;s busines",
+        "metadata": {
+          "page": 30,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 2,
+        "chunk_id": "chunk_0022",
+        "score": 0.1889822365046136,
+        "text_snippet": "ncludes press releases and other information about financial performance, information on environment",
+        "metadata": {
+          "page": 14,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 3,
+        "chunk_id": "chunk_0000",
+        "score": 0.0,
+        "text_snippet": "aapl-20240928 false 2024 FY 0000320193 P1Y P1Y P1Y P1Y http://fasb.org/us-gaap/2024#MarketableSecuri",
+        "metadata": {
+          "page": 1,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      }
+    ],
+    "carbon emissions": [
+      {
+        "rank": 1,
+        "chunk_id": "chunk_0000",
+        "score": 0.0,
+        "text_snippet": "aapl-20240928 false 2024 FY 0000320193 P1Y P1Y P1Y P1Y http://fasb.org/us-gaap/2024#MarketableSecuri",
+        "metadata": {
+          "page": 1,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 2,
+        "chunk_id": "chunk_0001",
+        "score": 0.0,
+        "text_snippet": "3 aapl:A3.600NotesDue2042Member 2023-10-01 2024-09-28 0000320193 2024-03-29 0000320193 2024-10-18 00",
+        "metadata": {
+          "page": 1,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      },
+      {
+        "rank": 3,
+        "chunk_id": "chunk_0002",
+        "score": 0.0,
+        "text_snippet": "20193 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-10-01 2024-09-28 0000320193 us-gaap:Acc",
+        "metadata": {
+          "page": 2,
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "provider": "SECEdgarProvider",
+          "doc_hash": "24a830a0f1256e37"
+        }
+      }
+    ]
+  },
+  "success": true
+}

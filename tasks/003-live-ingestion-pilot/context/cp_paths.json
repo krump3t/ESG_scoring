@@ -1,0 +1,11 @@
+{
+  "globs": [
+    "agents/crawler/multi_source_crawler.py",
+    "agents/crawler/data_providers/sec_edgar_provider.py",
+    "data/raw/sec_edgar/**"
+  ],
+  "entry_points": [
+    "agents/crawler/data_providers/sec_edgar_provider.py::SECEdgarProvider.fetch_report"
+  ],
+  "note": "Live pilot tests end-to-end integration of Task 002 deliverables"
+}

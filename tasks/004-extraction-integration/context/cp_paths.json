@@ -1,0 +1,11 @@
+{
+  "globs": [
+    "agents/extraction/*.py",
+    "libs/extraction/backend_*.py",
+    "data/raw/sec_edgar/AAPL_2024_10K.htm"
+  ],
+  "entry_points": [
+    "agents/extraction/extraction_router.py::ExtractionRouter.extract"
+  ],
+  "note": "Task 004 validates extraction pipeline can parse authentic Apple 10-K from Task 003"
+}
