@@ -1,0 +1,14 @@
+{
+  "task_id": "010-universal-pdf-ingestion",
+  "source": "Microsoft Corporation",
+  "document_type": "Environmental Sustainability Report",
+  "year": 2024,
+  "source_url": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1l7s",
+  "local_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\pdf\\MSFT_2024_Environmental.pdf",
+  "file_size_bytes": 517,
+  "file_size_mb": 0.0,
+  "sha256": "63b97d3286768f685b568fdbad62e8ac591362ddf18db3fa8840a9175da70aac",
+  "status": "mocked",
+  "download_timestamp": "2025-11-19",
+  "authenticity": "placeholder"
+}

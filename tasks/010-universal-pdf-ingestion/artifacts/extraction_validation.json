@@ -1,0 +1,86 @@
+{
+  "task_id": "010-universal-pdf-ingestion",
+  "validation_type": "extraction",
+  "source_document": {
+    "company": "Apple Inc.",
+    "document_type": "Environmental Progress Report",
+    "year": 2024,
+    "file_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\pdf\\AAPL_2024_Environmental.pdf",
+    "file_size_mb": 29.35
+  },
+  "extraction_results": {
+    "extractor": "EnhancedPDFExtractor",
+    "total_chunks": 10494,
+    "total_characters": 20987464,
+    "avg_chunk_size": 1999.9
+  },
+  "esg_content_analysis": {
+    "chunks_with_esg_content": 96,
+    "esg_density_percent": 0.9,
+    "top_keywords": [
+      {
+        "keyword": "esg",
+        "count": 90
+      },
+      {
+        "keyword": "materials",
+        "count": 14
+      },
+      {
+        "keyword": "environmental",
+        "count": 13
+      },
+      {
+        "keyword": "sustainability",
+        "count": 9
+      },
+      {
+        "keyword": "water",
+        "count": 5
+      },
+      {
+        "keyword": "footprint",
+        "count": 4
+      },
+      {
+        "keyword": "recycling",
+        "count": 3
+      },
+      {
+        "keyword": "waste",
+        "count": 2
+      },
+      {
+        "keyword": "energy",
+        "count": 1
+      },
+      {
+        "keyword": "climate",
+        "count": 0
+      }
+    ],
+    "sample_chunks": [
+      {
+        "chunk_index": 0,
+        "esg_keyword_count": 0,
+        "text_preview": "%PDF-1.7\n%\n34975 0 obj\n<</Linearized 1/L 30756539/O 34978/E 558623/N 113/T 30056921/H [ 818 2885]>>\nendobj\n   \nxref\n34975 25\n0000000016 00000 n\n000000..."
+      },
+      {
+        "chunk_index": 1,
+        "esg_keyword_count": 0,
+        "text_preview": "M:vRiH\u001e_=>es'Hi\b\u0007,1}zz@gזB8LhD\u001diI2ӓт/\u0001w2\u001c!K61<}ilԵ:bO&l\u0001Ì%d^Y\u001d>!BG֊VƖ\u001e||f#mYt8\\Ւ\"9ҙ +6d\u00108\u0001\u0011jlLeƖ<TY)\u001ca.}z\nc4zA4\u0011\u000bߘ\nz\u0004d^dfµn>=Q]\u0013f˒Q؎YTBl\u001c\u0011\u00011b\u001cc6[si$*..."
+      },
+      {
+        "chunk_index": 2,
+        "esg_keyword_count": 0,
+        "text_preview": "660062002D0061003200310066002D003200370039006100380062003000640035003900610034>/LastModified<FEFF0044003A003200300032003400300035003100350032003000340..."
+      }
+    ]
+  },
+  "validation_status": "FAIL",
+  "validation_criteria": {
+    "chunks_extracted": true,
+    "esg_content_present": false,
+    "avg_chunk_size_reasonable": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "task_id": "010-universal-pdf-ingestion",
+  "source": "Apple Inc.",
+  "document_type": "Environmental Progress Report",
+  "year": 2024,
+  "source_url": "https://www.apple.com/environment/pdf/Apple_Environmental_Progress_Report_2024.pdf",
+  "local_path": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\pdf\\AAPL_2024_Environmental.pdf",
+  "file_size_bytes": 30779579,
+  "file_size_mb": 29.35,
+  "sha256": "87e86dbe8545c2006ad4e9af3e7e01b0ff713d4535171f924e06c32cc1bda5ba",
+  "status": "success",
+  "download_timestamp": "2025-11-19",
+  "authenticity": "live_download",
+  "notes": "Alternative source (Apple) used due to Microsoft 503 error"
+}
