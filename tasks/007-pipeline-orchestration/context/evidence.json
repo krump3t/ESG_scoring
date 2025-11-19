@@ -1,0 +1,60 @@
+{
+  "primary_sources": [
+    {
+      "source_id": "task_003_ingestion_artifact",
+      "title": "Task 003: Live Ingestion - Apple 2024 10-K HTML",
+      "type": "artifact",
+      "url": "file://data/raw/sec_edgar/AAPL_2024_10K.htm",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "1.43 MB SEC EDGAR 10-K filing for Apple Inc. (FY 2024). Downloaded via Task 003 SEC Edgar provider. Verified authentic source URL, SHA256 hash documented."
+    },
+    {
+      "source_id": "task_004_extraction_verification",
+      "title": "Task 004: Extraction Integration - Verification Results",
+      "type": "artifact",
+      "url": "file://tasks/004-extraction-integration/HANDOFF.md",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Verified EnhancedPDFExtractor can process Apple 10-K HTML. Extracted 129 chunks (256,563 characters total). Confirmed extract_from_file() API signature and output format."
+    },
+    {
+      "source_id": "task_005_retrieval_verification",
+      "title": "Task 005: Retrieval Integration - Search Results",
+      "type": "artifact",
+      "url": "file://tasks/005-retrieval-integration/artifacts/retrieval_results.json",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Verified VectorStore indexing and retrieval. 50 chunks indexed with keyword-based vectorization. 3 test queries executed ('climate risk', 'environmental regulations', 'carbon emissions'). Top result scored 0.500."
+    },
+    {
+      "source_id": "task_006_scoring_verification",
+      "title": "Task 006: Scoring Integration - ESG Maturity Scores",
+      "type": "artifact",
+      "url": "file://tasks/006-scoring-integration/artifacts/apple_2024_score.json",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Verified RubricV3Scorer can score retrieval results. Apple 2024 aggregate maturity: 1.91/5.0 (Advanced), confidence: 69.1%. 3 findings scored across 7 ESG dimensions. Confirmed score_finding() API and output schema."
+    },
+    {
+      "source_id": "enhanced_pdf_extractor_code",
+      "title": "EnhancedPDFExtractor Implementation",
+      "type": "code",
+      "url": "file://agents/extraction/enhanced_pdf_extractor.py",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Production HTML extraction via regex tag stripping. extract_from_file(file_path, doc_id, chunk_size) returns list of Finding objects with text, metadata, provenance."
+    },
+    {
+      "source_id": "vector_store_code",
+      "title": "VectorStore In-Memory Implementation",
+      "type": "code",
+      "url": "file://apps/index/vector_store.py",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "30-line Python dict-based vector store with cosine similarity search. API: upsert(_id, vector, metadata), knn(query, k, where). Validated in Task 005."
+    },
+    {
+      "source_id": "rubric_v3_scorer_code",
+      "title": "RubricV3Scorer Implementation",
+      "type": "code",
+      "url": "file://agents/scoring/rubric_v3_scorer.py",
+      "date_retrieved": "2025-11-19",
+      "synthesis": "Deterministic keyword-based ESG scoring. score_finding(finding) returns {maturity_level, maturity_label, confidence, dimension_breakdown}. Uses rubrics/maturity_v3.json."
+    }
+  ]
+}

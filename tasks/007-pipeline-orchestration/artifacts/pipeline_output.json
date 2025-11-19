@@ -1,0 +1,105 @@
+{
+  "task_id": "007-pipeline-orchestration",
+  "execution_timestamp": "2025-11-19T20:38:44.016108Z",
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "year": 2024,
+  "report_type": "10-K",
+  "pipeline_method": "Orchestrated: Task 003 → 004 → 005 → 006",
+  "findings_scored": 3,
+  "aggregate_score": {
+    "maturity_level": 0.29,
+    "maturity_label": "Nascent",
+    "confidence": 0.487,
+    "dimension_breakdown": {
+      "TSP": 0.67,
+      "OSP": 0.0,
+      "DM": 1.0,
+      "GHG": 0.33,
+      "RD": 0.0,
+      "EI": 0.0,
+      "RMM": 0.0
+    }
+  },
+  "individual_scores": [
+    {
+      "query": "climate risk",
+      "finding_text": "iesMember 2024-09-28 0000320193 us-gaap:ForeignExchangeContractMember 2023-10-01 2024-09-28 00003201",
+      "retrieval_score": 0.7071067811865475,
+      "maturity_level": 0.43,
+      "maturity_label": "Nascent",
+      "confidence": 0.504,
+      "dimension_breakdown": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 3,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 3,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    },
+    {
+      "query": "environmental regulations",
+      "finding_text": ", disgorgement of revenue or profits, remedial corporate measures or injunctive relief against the C",
+      "retrieval_score": 0.25717224993681986,
+      "maturity_level": 0.0,
+      "maturity_label": "Nascent",
+      "confidence": 0.45,
+      "dimension_breakdown": {
+        "TSP": 0,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 0,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 29,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    },
+    {
+      "query": "carbon emissions",
+      "finding_text": "aapl-20240928 false 2024 FY 0000320193 P1Y P1Y P1Y P1Y http://fasb.org/us-gaap/2024#MarketableSecuri",
+      "retrieval_score": 0.0,
+      "maturity_level": 0.43,
+      "maturity_label": "Nascent",
+      "confidence": 0.507,
+      "dimension_breakdown": {
+        "TSP": 2,
+        "OSP": 0,
+        "DM": 0,
+        "GHG": 1,
+        "RD": 0,
+        "EI": 0,
+        "RMM": 0
+      },
+      "source_metadata": {
+        "page": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "provider": "SECEdgarProvider",
+        "doc_hash": "24a830a0f1256e37"
+      }
+    }
+  ],
+  "provenance": {
+    "source_file": "C:\\projects\\Work Projects\\ibm-projects\\ESG Evaluation\\prospecting-engine\\data\\raw\\sec_edgar\\AAPL_2024_10K.htm",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+    "doc_hash": "24a830a0f1256e37",
+    "chunks_extracted": 129,
+    "chunks_indexed": 50,
+    "queries_executed": 3,
+    "total_retrieval_results": 9
+  },
+  "success": true
+}

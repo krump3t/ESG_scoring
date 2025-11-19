@@ -1,0 +1,14 @@
+{
+  "globs": [
+    "tasks/007-pipeline-orchestration/scripts/orchestrate_pipeline.py"
+  ],
+  "entry_points": [
+    "tasks/007-pipeline-orchestration/scripts/orchestrate_pipeline.py::EsgPipeline.run"
+  ],
+  "dependencies": [
+    "agents/extraction/enhanced_pdf_extractor.py",
+    "apps/index/vector_store.py",
+    "agents/scoring/rubric_v3_scorer.py"
+  ],
+  "note": "Task 007 orchestrates verified components from Tasks 003-006 into unified pipeline"
+}
