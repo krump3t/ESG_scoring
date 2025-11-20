@@ -1,4 +1,10 @@
 """
+Task 012: Deploy Wired API
+Overwrites apps/api/main.py with the fully integrated logic.
+"""
+from pathlib import Path
+
+API_CONTENT = '''"""
 FastAPI ESG Scoring API - SCA v13.8 (Live Wired)
 """
 from typing import Any, Dict, List, Optional
@@ -139,3 +145,13 @@ async def score_esg(
         except Exception as e:
              raise HTTPException(status_code=500, detail=str(e))
 
+'''
+
+def main():
+    dest = Path("apps/api/main.py")
+    print(f"Overwriting {dest} with wired V2 API...")
+    dest.write_text(API_CONTENT, encoding='utf-8')
+    print("Success.")
+
+if __name__ == "__main__":
+    main()
