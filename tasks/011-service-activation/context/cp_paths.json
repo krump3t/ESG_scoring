@@ -1,0 +1,108 @@
+{
+  "task_id": "011-service-activation",
+  "protocol": "SCA v13.8-MEA",
+  "critical_path_files": [
+    "agents/crawler/crawler_adapter.py",
+    "apps/pipeline_orchestrator.py",
+    "apps/api/main.py"
+  ],
+  "critical_path_tests": [
+    "tests/agents/crawler/test_crawler_adapter.py",
+    "tests/apps/test_pipeline_orchestrator_wiring.py",
+    "tests/apps/api/test_score_routing.py"
+  ],
+  "entry_points": [
+    {
+      "name": "API /score endpoint",
+      "file": "apps/api/main.py",
+      "function": "score",
+      "line_approximate": 155,
+      "description": "Main entry point for ESG scoring requests. Auto-detects offline/online mode."
+    },
+    {
+      "name": "CrawlerAdapter",
+      "file": "agents/crawler/crawler_adapter.py",
+      "class": "CrawlerAdapter",
+      "method": "crawl_company",
+      "description": "Adapter between PipelineOrchestrator and MultiSourceCrawler APIs."
+    },
+    {
+      "name": "PipelineOrchestrator initialization",
+      "file": "apps/pipeline_orchestrator.py",
+      "method": "__init__",
+      "line_approximate": 88,
+      "description": "Crawler initialization point. Previously None, now wired with CrawlerAdapter."
+    }
+  ],
+  "coverage_requirements": {
+    "agents/crawler/crawler_adapter.py": {
+      "line_coverage": 95,
+      "branch_coverage": 95,
+      "rationale": "Core adapter logic, critical for API translation"
+    },
+    "apps/pipeline_orchestrator.py": {
+      "line_coverage": 85,
+      "branch_coverage": 80,
+      "rationale": "Modified for crawler init, but large file with existing coverage"
+    },
+    "apps/api/main.py": {
+      "line_coverage": 85,
+      "branch_coverage": 85,
+      "rationale": "Routing logic critical, but existing /score endpoint already tested"
+    }
+  },
+  "validation_gates": {
+    "tdd": {
+      "description": "Tests must exist before implementation",
+      "files_to_check": [
+        "tests/agents/crawler/test_crawler_adapter.py",
+        "tests/apps/test_pipeline_orchestrator_wiring.py",
+        "tests/apps/api/test_score_routing.py"
+      ],
+      "enforcement": "Fail if test file missing for CP file"
+    },
+    "type_safety": {
+      "description": "mypy --strict on all CP files",
+      "command": "mypy --strict agents/crawler/crawler_adapter.py apps/pipeline_orchestrator.py apps/api/main.py",
+      "threshold": 0,
+      "unit": "errors"
+    },
+    "coverage_cp": {
+      "description": "Coverage on critical path files",
+      "command": "pytest --cov=agents/crawler/crawler_adapter.py --cov=apps/pipeline_orchestrator.py --cov=apps/api/main.py --cov-report=term",
+      "threshold": 90,
+      "unit": "percent"
+    },
+    "complexity": {
+      "description": "Cyclomatic complexity check",
+      "command": "lizard agents/crawler/crawler_adapter.py apps/pipeline_orchestrator.py apps/api/main.py",
+      "threshold_ccn": 10,
+      "threshold_cognitive": 15
+    },
+    "security": {
+      "description": "No secrets, no vulnerabilities",
+      "commands": [
+        "detect-secrets scan agents/crawler/crawler_adapter.py",
+        "bandit -r agents/crawler/crawler_adapter.py"
+      ],
+      "threshold": 0,
+      "unit": "findings"
+    }
+  },
+  "non_critical_path_files": [
+    "tasks/011-service-activation/context/*.md",
+    "tasks/011-service-activation/context/*.json",
+    "tasks/011-service-activation/scripts/smoke_test.py",
+    "tasks/011-service-activation/scripts/verify_config_alignment.py",
+    "tasks/011-service-activation/HANDOFF.md",
+    "Dockerfile",
+    "docker-compose.live.yml",
+    ".env.example"
+  ],
+  "rationale": {
+    "cp_selection": "Critical path focuses on code that enables service activation: adapter (new), orchestrator init (modified), API routing (modified). All other files are infrastructure/documentation/testing.",
+    "test_requirements": "Each CP file requires dedicated test file with @pytest.mark.cp marker. Adapter requires 100% coverage due to greenfield implementation. Orchestrator and API require ≥85% coverage on modified sections.",
+    "exclusions": "Docker configs excluded from CP (infrastructure, not logic). Context files excluded (documentation). Integration tests excluded (validation, not production code)."
+  },
+  "validation_date": "2025-11-19"
+}

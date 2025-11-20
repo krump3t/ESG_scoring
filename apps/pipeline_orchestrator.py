@@ -21,21 +21,21 @@ Execution:
 - Log-and-continue on warnings
 """
 
-import time
 import logging
-from pathlib import Path
-from typing import Dict, Any, Optional
 from dataclasses import dataclass, field
-from datetime import datetime
+from pathlib import Path
+from typing import Any
+
 from libs.utils.clock import get_clock
+
 clock = get_clock()
 
-from agents.crawler.multi_source_crawler_v2 import MultiSourceCrawler
+from agents.crawler.multi_source_crawler import MultiSourceCrawler
+from agents.crawler.crawler_adapter import CrawlerAdapter
 from agents.extraction.extraction_router import ExtractionRouter
-from libs.models.esg_metrics import ESGMetrics
-from libs.data_lake.parquet_writer import ParquetWriter
 from libs.data_lake.duckdb_reader import DuckDBReader
-
+from libs.data_lake.parquet_writer import ParquetWriter
+from libs.models.esg_metrics import ESGMetrics
 
 # ============================================================================
 # Data Models
@@ -49,12 +49,12 @@ class PipelineResult:
     company_name: str
     cik: str
     fiscal_year: int
-    error: Optional[str] = None
-    error_phase: Optional[str] = None
-    metrics: Optional[Dict[str, Any]] = None
-    latencies: Dict[str, float] = field(default_factory=dict)
+    error: str | None = None
+    error_phase: str | None = None
+    metrics: dict[str, Any] | None = None
+    latencies: dict[str, float] = field(default_factory=dict)
     total_latency: float = 0.0
-    parquet_file: Optional[Path] = None
+    parquet_file: Path | None = None
 
     def __str__(self) -> str:
         """String representation of pipeline result."""
@@ -82,7 +82,7 @@ class PipelineError(Exception):
 class PipelineOrchestrator:
     """Orchestrates end-to-end ESG data pipeline."""
 
-    def __init__(self, project_config: Dict[str, Any]):
+    def __init__(self, project_config: dict[str, Any]):
         """Initialize orchestrator with Phase 2-4 components.
 
         Args:
@@ -95,9 +95,13 @@ class PipelineOrchestrator:
             raise ValueError("project_config cannot be None")
 
         self.project_config = project_config
-        # Note: MultiSourceCrawler requires provider tiers; this is a placeholder
-        # In real usage, Phase 2 would initialize with proper provider configuration
-        self.crawler = None  # TODO: Initialize with Phase 2 providers
+
+        # Initialize MultiSourceCrawler with adapter pattern
+        # CrawlerAdapter bridges PipelineOrchestrator API (crawl_company)
+        # to MultiSourceCrawler API (search_company_reports)
+        multi_source_crawler = MultiSourceCrawler()
+        self.crawler = CrawlerAdapter(multi_source_crawler)
+
         self.extractor = ExtractionRouter(project_config)
         self.writer = ParquetWriter(
             base_path=project_config.get("paths", {}).get("data_lake", "data_lake/")
@@ -210,7 +214,7 @@ class PipelineOrchestrator:
                 total_latency=total_latency,
             )
 
-    def _phase2_crawl(self, company_cik: str, fiscal_year: int) -> Dict[str, Any]:
+    def _phase2_crawl(self, company_cik: str, fiscal_year: int) -> dict[str, Any]:
         """Phase 2: Crawl SEC EDGAR for company report.
 
         Args:
@@ -247,7 +251,7 @@ class PipelineOrchestrator:
                 raise
             raise PipelineError(f"Crawler error: {str(e)}", "Phase 2")
 
-    def _phase3_extract(self, report: Dict[str, Any]) -> ESGMetrics:
+    def _phase3_extract(self, report: dict[str, Any]) -> ESGMetrics:
         """Phase 3: Extract metrics from report.
 
         Args:

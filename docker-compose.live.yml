@@ -12,7 +12,7 @@ services:
       - PYTHONUNBUFFERED=1
       - SEED=42
       - PYTHONHASHSEED=0
-      - ALLOW_NETWORK=${ALLOW_NETWORK:-false}
+      - ALLOW_NETWORK=${ALLOW_NETWORK:-true}
       - LIVE_EMBEDDINGS=${LIVE_EMBEDDINGS:-false}
     volumes: [".:/app:rw"]
     networks: [esgnet]
@@ -25,7 +25,7 @@ services:
     environment:
       - SEED=42
       - PYTHONHASHSEED=0
-      - ALLOW_NETWORK=${ALLOW_NETWORK:-false}
+      - ALLOW_NETWORK=${ALLOW_NETWORK:-true}
       - LIVE_EMBEDDINGS=${LIVE_EMBEDDINGS:-false}
     volumes: [".:/app:rw"]
     networks: [esgnet]

@@ -1,0 +1,123 @@
+{
+  "task_id": "011-service-activation",
+  "protocol": "SCA v13.8-MEA",
+  "sources": [
+    {
+      "source_id": "DS011-001",
+      "name": "SEC EDGAR API",
+      "type": "external_api",
+      "provider": "U.S. Securities and Exchange Commission",
+      "base_url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "description": "Primary source for live company filings (10-K, 10-Q, 8-K)",
+      "data_format": "HTML (iXBRL embedded)",
+      "update_frequency": "Real-time (on filing)",
+      "pii_flag": false,
+      "authentication": "none",
+      "rate_limits": "10 requests/second per SEC guidelines",
+      "sha256": "N/A (live API, no static file)",
+      "provenance": "Official government source",
+      "retention_policy": "Cache for 24 hours, purge on new filing",
+      "data_quality": "high",
+      "usage_notes": "Requires ALLOW_NETWORK=true. Subject to network failures. Fallback to offline mode if unavailable."
+    },
+    {
+      "source_id": "DS011-002",
+      "name": "Demo Flow Manifest",
+      "type": "local_cache",
+      "file_path": "artifacts/demo/companies.json",
+      "description": "Offline manifest of pre-fetched company data for deterministic testing",
+      "data_format": "JSON",
+      "update_frequency": "Manual (updated per task)",
+      "pii_flag": false,
+      "sha256": "computed_per_run",
+      "provenance": "Cached from Tasks 003-009",
+      "retention_policy": "Permanent (version controlled)",
+      "data_quality": "high (validated)",
+      "usage_notes": "Used when ALLOW_NETWORK=false. Ensures deterministic scores for CI/CD."
+    },
+    {
+      "source_id": "DS011-003",
+      "name": "Data Source Registry",
+      "type": "configuration",
+      "file_path": "configs/data_source_registry.json",
+      "description": "Registry of available data providers for MultiSourceCrawler",
+      "data_format": "JSON",
+      "update_frequency": "Manual (configuration changes)",
+      "pii_flag": false,
+      "sha256": "computed_at_runtime",
+      "provenance": "Task 011 multi-source phase 2",
+      "retention_policy": "Permanent (version controlled)",
+      "data_quality": "high",
+      "usage_notes": "Required for crawler initialization. Defines SEC, GRI, CDP, SASB providers."
+    },
+    {
+      "source_id": "DS011-004",
+      "name": "Ticker Lookup Database",
+      "type": "local_reference",
+      "provider": "TickerLookupProvider",
+      "description": "CIK to company name mapping for adapter translation",
+      "data_format": "Internal provider API",
+      "update_frequency": "Static (embedded in provider)",
+      "pii_flag": false,
+      "provenance": "SEC CIK list",
+      "data_quality": "high",
+      "usage_notes": "Used by CrawlerAdapter to translate CIK (e.g., '0000320193') to company name (e.g., 'Apple Inc')."
+    }
+  ],
+  "data_flow": [
+    {
+      "step": 1,
+      "description": "API receives /score request with company CIK and year",
+      "input": "HTTP POST payload",
+      "output": "ScoreRequest object",
+      "validation": "Pydantic schema validation"
+    },
+    {
+      "step": 2,
+      "description": "Check ALLOW_NETWORK environment variable",
+      "input": "os.getenv('ALLOW_NETWORK')",
+      "output": "boolean (true/false)",
+      "routing": "true → orchestrator, false → demo_flow"
+    },
+    {
+      "step": 3a,
+      "description": "Offline mode: Demo flow loads from manifest cache",
+      "input": "artifacts/demo/companies.json",
+      "output": "Cached scores",
+      "data_source": "DS011-002"
+    },
+    {
+      "step": 3b,
+      "description": "Online mode: Orchestrator fetches live data",
+      "input": "SEC EDGAR API via crawler",
+      "output": "Fresh filings",
+      "data_source": "DS011-001"
+    },
+    {
+      "step": 4,
+      "description": "Adapter translates CIK to company name (online mode only)",
+      "input": "CIK from request",
+      "output": "Company name for crawler",
+      "data_source": "DS011-004"
+    },
+    {
+      "step": 5,
+      "description": "Crawler fetches reports from providers",
+      "input": "Company name + year",
+      "output": "dict[str, list[CompanyReport]]",
+      "data_source": "DS011-001, DS011-003"
+    },
+    {
+      "step": 6,
+      "description": "Pipeline processes: Bronze → Silver → Gold → Score",
+      "input": "Raw reports",
+      "output": "ESG maturity score",
+      "transformations": "XBRL cleaning, chunking, retrieval, scoring"
+    }
+  ],
+  "data_lineage": {
+    "offline_mode": "API → demo_flow → cached manifest (DS011-002) → score",
+    "online_mode": "API → orchestrator → crawler_adapter → multi_source_crawler → SEC EDGAR (DS011-001) → pipeline → score"
+  },
+  "validation_date": "2025-11-19"
+}

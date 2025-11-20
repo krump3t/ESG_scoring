@@ -1,0 +1,87 @@
+{
+  "task_id": "011-service-activation",
+  "protocol": "SCA v13.8-MEA",
+  "evidence_sources": [
+    {
+      "id": "E011-001",
+      "type": "primary",
+      "title": "MultiSourceCrawler API Documentation",
+      "source": "agents/crawler/multi_source_crawler.py",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "MultiSourceCrawler provides search_company_reports(company_name, year) method returning dict[str, list[CompanyReport]]. Incompatible with PipelineOrchestrator expectation of crawl_company(cik, year).",
+      "relevance": "Confirms need for adapter pattern to bridge API gap",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-002",
+      "type": "primary",
+      "source": "apps/pipeline_orchestrator.py:229",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "PipelineOrchestrator line 229 calls self.crawler.crawl_company(company_cik, fiscal_year). Current state: self.crawler = None (line 98) will cause AttributeError at runtime.",
+      "relevance": "Validates hypothesis that crawler initialization prevents runtime failures",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-003",
+      "type": "primary",
+      "source": "apps/api/main.py:155-180",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "API /score endpoint currently hardcoded to use demo_flow. No conditional routing based on ALLOW_NETWORK. PipelineOrchestrator never invoked from API layer.",
+      "relevance": "Confirms need for auto-detection routing logic",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-004",
+      "type": "secondary",
+      "title": "Docker Configuration Inconsistency",
+      "source": "docker-compose.yml, docker-compose.live.yml, Dockerfile, .env.example",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "ALLOW_NETWORK defaults are inconsistent: docker-compose.yml=true, docker-compose.live.yml=false, Dockerfile=false, .env.example=false. Creates confusion about intended production behavior.",
+      "relevance": "Justifies configuration alignment requirement",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-005",
+      "type": "secondary",
+      "title": "Demo Flow Offline Capability",
+      "source": "apps/pipeline/demo_flow.py:56-61",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "Demo flow has fallback logic for ALLOW_NETWORK=true via _build_bronze_from_live(). Demonstrates that offline/online dual-mode pattern already exists in codebase, just not formalized at API layer.",
+      "relevance": "Validates feasibility of auto-detection approach",
+      "confidence": "medium"
+    },
+    {
+      "id": "E011-006",
+      "type": "tertiary",
+      "title": "Adapter Pattern (Gang of Four)",
+      "source": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "url": "https://en.wikipedia.org/wiki/Adapter_pattern",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "Adapter pattern converts interface of class into another interface clients expect. Allows classes to work together despite incompatible interfaces. Recommended for bridging legacy systems or third-party APIs.",
+      "relevance": "Architectural pattern justification for CrawlerAdapter",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-007",
+      "type": "primary",
+      "title": "TickerLookupProvider CIK Resolution",
+      "source": "agents/crawler/data_providers/ticker_lookup.py",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "TickerLookupProvider can resolve CIK to company name via lookup_by_cik() method. Required for adapter to translate CIK-based orchestrator calls to name-based crawler calls.",
+      "relevance": "Confirms technical feasibility of CIK → name translation in adapter",
+      "confidence": "high"
+    },
+    {
+      "id": "E011-008",
+      "type": "secondary",
+      "title": "Task 010 PDF Extraction Failure",
+      "source": "tasks/010-universal-pdf-ingestion/HANDOFF.md",
+      "retrieval_date": "2025-11-19",
+      "synthesis": "Task 010 documented that pipeline is currently SEC HTML-only, not universal. PDF extraction failed. Validates decision to focus Task 011 on SEC EDGAR live mode, not PDF ingestion.",
+      "relevance": "Scoping justification - defer PDF to future task",
+      "confidence": "high"
+    }
+  ],
+  "evidence_summary": "Research confirms three critical gaps: (1) API method signature mismatch requiring adapter, (2) Uninitialized crawler in orchestrator causing runtime failures, (3) Hardcoded demo_flow in API preventing live mode. Configuration audit reveals inconsistent ALLOW_NETWORK defaults across Docker files. All gaps addressable via adapter pattern + auto-detection routing + config alignment.",
+  "validation_date": "2025-11-19"
+}

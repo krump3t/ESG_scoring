@@ -5,12 +5,23 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=0 \
     SEED=42 \
     LIVE_EMBEDDINGS=false \
-    ALLOW_NETWORK=false \
-    PORT=8000
+    ALLOW_NETWORK=true \
+    PORT=8000 \
+    HF_HOME=/app/.cache/huggingface \
+    TRANSFORMERS_CACHE=/app/.cache/huggingface
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl build-essential && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    build-essential \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 
@@ -20,7 +31,10 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . /app
 
-RUN useradd --create-home --shell /usr/sbin/nologin appuser && chown -R appuser:appuser /app
+RUN useradd --create-home --shell /usr/sbin/nologin appuser && \
+    chown -R appuser:appuser /app && \
+    mkdir -p /usr/local/lib/python3.11/site-packages/rapidocr/models && \
+    chown -R appuser:appuser /usr/local/lib/python3.11/site-packages/rapidocr
 
 USER appuser
 
