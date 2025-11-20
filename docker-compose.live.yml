@@ -18,6 +18,9 @@ services:
     networks: [esgnet]
 
   runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: esg-scoring:live
     env_file: [.env]
     working_dir: /app
